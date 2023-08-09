@@ -10,7 +10,7 @@ import {User, Mail, Phone, PenSquare, SendHorizonal, AlertTriangle, Loader2} fro
 import {cn} from '@/lib/utils'
 
 const DEV_MODE = process.env.NODE_ENV === 'development'
-const ORIGIN = DEV_MODE ? 'http://localhost:3000' : process.env.VERCEL_URL
+
 
 interface FormProps {
   locale: string
@@ -18,6 +18,7 @@ interface FormProps {
 
 const Form = ({locale}: FormProps) => {
   const {register, handleSubmit, reset, formState: {errors, isSubmitting}} = useForm<FormValues>()
+  const ORIGIN = DEV_MODE ? 'http://localhost:3000' : window.location.origin
   const endpoint = `${ORIGIN}/${locale}/api`
 
   const onSubmit = async (data: FormValues) => {
