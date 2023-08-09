@@ -4,12 +4,9 @@ import * as React from 'react'
 import Image from 'next/image'
 import Map, {Marker, Popup} from 'react-map-gl'
 import {TypographySmall} from '@/components/typography/TypographySmall'
-import {MapPin, Pin, Phone, Mail, LocateFixed} from 'lucide-react'
+import {MapPin, Phone, Mail, LocateFixed} from 'lucide-react'
 import logo from '@/public/logo.svg'
 import 'mapbox-gl/dist/mapbox-gl.css'
-
-const DEV_MODE = process.env.NODE_ENV === 'development'
-const TOKEN = DEV_MODE ? process.env.NEXT_PUBLIC_MAPBOX_TOKEN_DEV : process.env.MAPBOX_TOKEN
 
 const YuppiiLocation = {
   lat: 40.84336093510751,
@@ -23,7 +20,7 @@ const Navigation = () => {
     <article className='max-w-5xl mx-auto'>
       <div className='overflow-hidden rounded-md shadow-md flex'>
         <Map
-          mapboxAccessToken={TOKEN}
+          mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
           initialViewState={{
             latitude: YuppiiLocation.lat,
             longitude: YuppiiLocation.lon,

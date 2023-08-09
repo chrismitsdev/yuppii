@@ -16,15 +16,14 @@ interface FormProps {
 }
 
 const Form = ({locale}: FormProps) => {
-  const {register, handleSubmit, formState: {errors, isSubmitting}} = useForm<FormValues>()
-  const endpoint = `${DEV_MODE ? 'http://localhost:3000' : 'https://yuppii.gr'}/${locale}/api`
+  const {register, handleSubmit, formState: {errors, isSubmitting}, reset} = useForm<FormValues>()
+  const endpoint = `${DEV_MODE ? 'http://localhost:3000' : process.env.VERCEL_URL}/${locale}/api`
 
   const onSubmit = async (data: FormValues) => {
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
@@ -33,6 +32,7 @@ const Form = ({locale}: FormProps) => {
     
     if (ok) {
       toast.success(message)
+      reset()
     } else {
       toast.error(message)
     }
