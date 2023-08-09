@@ -1,0 +1,6 @@
+export {default as carnival1thumb} from './ALE_0559_thumb.webp'
+export {default as carnival2thumb} from './ALE_0566_thumb.webp'
+export {default as carnival3thumb} from './ALE_0567_thumb.webp'
+export {default as carnival4thumb} from './ALE_0574_thumb.webp'
+export {default as carnival5thumb} from './ALE_0623_thumb.webp'
+export {default as carnival6thumb} from './ALE_0624_thumb.webp'

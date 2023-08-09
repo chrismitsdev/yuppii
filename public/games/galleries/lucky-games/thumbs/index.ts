@@ -1,0 +1,6 @@
+export {default as lucky1Thumb} from './ALE_0763_thumb.webp'
+export {default as lucky2Thumb} from './ALE_0794_thumb.webp'
+export {default as lucky3Thumb} from './ALE_5198_thumb.webp'
+export {default as lucky4Thumb} from './ALE_5209_thumb.webp'
+export {default as lucky5Thumb} from './ALE_5220_thumb.webp'
+export {default as lucky6Thumb} from './ALE_5228_thumb.webp'

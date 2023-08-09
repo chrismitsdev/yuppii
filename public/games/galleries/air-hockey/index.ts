@@ -1,0 +1,7 @@
+export {default as tableHockey1} from './ALE_0848.webp'
+export {default as tableHockey2} from './ALE_0851.webp'
+export {default as tableHockey3} from './ALE_0852.webp'
+export {default as tableHockey4} from './ALE_0858.webp'
+export {default as tableHockey5} from './ALE_5269.webp'
+export {default as tableHockey6} from './ALE_5280.webp'
+export * from './thumbs'

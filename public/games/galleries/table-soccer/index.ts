@@ -1,0 +1,7 @@
+export {default as tableSoccer1} from './ALE_0813.webp'
+export {default as tableSoccer2} from './ALE_0819.webp'
+export {default as tableSoccer3} from './ALE_0864.webp'
+export {default as tableSoccer4} from './ALE_0869.webp'
+export {default as tableSoccer5} from './ALE_5240.webp'
+export {default as tableSoccer6} from './ALE_5244.webp'
+export * from './thumbs'

@@ -1,0 +1,6 @@
+export {default as dryslope1thumb} from './ALE_0520_thumb.webp'
+export {default as dryslope2thumb} from './ALE_0525_thumb.webp'
+export {default as dryslope3thumb} from './ALE_0529_thumb.webp'
+export {default as dryslope4thumb} from './ALE_0540_thumb.webp'
+export {default as dryslope5thumb} from './ALE_0629_thumb.webp'
+export {default as dryslope6thumb} from './ALE_5316_thumb.webp'

@@ -1,0 +1,7 @@
+export {default as punchesKicks1} from './ALE_0873.webp'
+export {default as punchesKicks2} from './ALE_5169.webp'
+export {default as punchesKicks3} from './ALE_5178.webp'
+export {default as punchesKicks4} from './ALE_5179.webp'
+export {default as punchesKicks5} from './ALE_5258.webp'
+export {default as punchesKicks6} from './ALE_5293.webp'
+export * from './thumbs'

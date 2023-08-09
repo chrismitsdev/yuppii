@@ -1,0 +1,6 @@
+export {default as train1thumb} from './ALE_0686_thumb.webp'
+export {default as train2thumb} from './ALE_5407_thumb.webp'
+export {default as train3thumb} from './ALE_5408_thumb.webp'
+export {default as train4thumb} from './ALE_8531_thumb.webp'
+export {default as train5thumb} from './ALE_8533_thumb.webp'
+export {default as train6thumb} from './ALE_8709_thumb.webp'

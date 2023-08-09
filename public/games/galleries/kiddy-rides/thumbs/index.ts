@@ -1,0 +1,6 @@
+export {default as kiddyRides1thumb} from './ALE_0691_thumb.webp'
+export {default as kiddyRides2thumb} from './ALE_0889_thumb.webp'
+export {default as kiddyRides3thumb} from './ALE_5186_thumb.webp'
+export {default as kiddyRides4thumb} from './ALE_5188_thumb.webp'
+export {default as kiddyRides5thumb} from './ALE_5342_thumb.webp'
+export {default as kiddyRides6thumb} from './ALE_5389_thumb.webp'

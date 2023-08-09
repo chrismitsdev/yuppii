@@ -1,0 +1,6 @@
+export {default as cinema1thumb} from './ALE_0894_thumb.webp'
+export {default as cinema2thumb} from './ALE_0895_thumb.webp'
+export {default as cinema3thumb} from './ALE_0896_thumb.webp'
+export {default as cinema4thumb} from './ALE_8487_thumb.webp'
+export {default as cinema5thumb} from './ALE_8509_thumb.webp'
+export {default as cinema6thumb} from './ALE_8657_thumb.webp'

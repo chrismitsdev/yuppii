@@ -1,0 +1,7 @@
+export {default as junior1} from './ALE_0695.webp'
+export {default as junior2} from './ALE_0698.webp'
+export {default as junior3} from './ALE_0713.webp'
+export {default as junior4} from './ALE_0730.webp'
+export {default as junior5} from './ALE_0736.webp'
+export {default as junior6} from './ALE_0739.webp'
+export * from './thumbs'

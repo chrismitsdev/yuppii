@@ -1,0 +1,7 @@
+export {default as electricCars1} from './IMG_7684.webp'
+export {default as electricCars2} from './IMG_7686.webp'
+export {default as electricCars3} from './IMG_7688.webp'
+export {default as electricCars4} from './IMG_7690.webp'
+export {default as electricCars5} from './IMG_7691.webp'
+export {default as electricCars6} from './IMG_7692.webp'
+export * from './thumbs'

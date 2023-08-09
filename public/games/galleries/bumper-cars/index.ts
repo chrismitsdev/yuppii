@@ -1,0 +1,7 @@
+export {default as bumperCars1} from './ALE_0654.webp'
+export {default as bumperCars2} from './ALE_0659.webp'
+export {default as bumperCars3} from './ALE_0663.webp'
+export {default as bumperCars4} from './ALE_5184.webp'
+export {default as bumperCars5} from './ALE_5368.webp'
+export {default as bumperCars6} from './ALE_5483.webp'
+export * from './thumbs'

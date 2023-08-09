@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 176 38% 86%;
+    --primary-foreground: 180 14% 1%; 
+
+    --secondary: 349 78% 70%;
+    --secondary-foreground: 180 14% 1%;
+
+    --accent: 180 14% 1%;
+    --accent-foreground: 349 78% 70%;
+
+    --border: 180 14% 1%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-primary;
+    @apply text-accent;
+    @apply selection:bg-secondary;
+    
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+.pswp__counter {
+  color: #ee778d !important;
+  font-weight: 700 !important;
+}
+
+.mapboxgl-popup {
+  @apply rounded-sm !important;
+  @apply overflow-hidden !important;
+  @apply shadow-md !important;
+  @apply min-w-[150px] !important;
+}
+
+.mapboxgl-popup-content {
+  font-family: '__Arima_67d565', '__Arima_Fallback_67d565' !important;
+  @apply p-0 !important;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 24px !important;
+  @apply text-secondary;
+  @apply top-2 !important;
+  @apply right-2 !important;
+  @apply outline-none !important;
+  @apply w-4 !important;
+  @apply h-4 !important;
+}
+
+.mapboxgl-popup-tip {
+  @apply hidden !important;
+}

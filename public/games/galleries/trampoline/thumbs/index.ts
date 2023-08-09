@@ -1,0 +1,6 @@
+export {default as trampoline1thumb} from './ALE_0643_thumb.webp'
+export {default as trampoline2thumb} from './ALE_0898_thumb.webp'
+export {default as trampoline3thumb} from './ALE_0934_thumb.webp'
+export {default as trampoline4thumb} from './AL_07496_thumb.webp'
+export {default as trampoline5thumb} from './AL_07497_thumb.webp'
+export {default as trampoline6thumb} from './AL_07503_thumb.webp'

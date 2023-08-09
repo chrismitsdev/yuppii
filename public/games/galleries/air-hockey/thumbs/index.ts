@@ -1,0 +1,6 @@
+export {default as tableHockey1Thumb} from './ALE_0848_thumb.webp'
+export {default as tableHockey2Thumb} from './ALE_0851_thumb.webp'
+export {default as tableHockey3Thumb} from './ALE_0852_thumb.webp'
+export {default as tableHockey4Thumb} from './ALE_0858_thumb.webp'
+export {default as tableHockey5Thumb} from './ALE_5269_thumb.webp'
+export {default as tableHockey6Thumb} from './ALE_5280_thumb.webp'

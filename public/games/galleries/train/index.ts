@@ -1,0 +1,7 @@
+export {default as train1} from './ALE_0686.webp'
+export {default as train2} from './ALE_5407.webp'
+export {default as train3} from './ALE_5408.webp'
+export {default as train4} from './ALE_8531.webp'
+export {default as train5} from './ALE_8533.webp'
+export {default as train6} from './ALE_8709.webp'
+export * from './thumbs'

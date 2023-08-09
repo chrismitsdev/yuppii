@@ -1,0 +1,7 @@
+export {default as lucky1} from './ALE_0763.webp'
+export {default as lucky2} from './ALE_0794.webp'
+export {default as lucky3} from './ALE_5198.webp'
+export {default as lucky4} from './ALE_5209.webp'
+export {default as lucky5} from './ALE_5220.webp'
+export {default as lucky6} from './ALE_5228.webp'
+export * from './thumbs'

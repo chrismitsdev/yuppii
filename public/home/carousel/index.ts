@@ -1,0 +1,11 @@
+export {default as stairs} from './stairs.jpg'
+export {default as junior} from './junior.jpg'
+export {default as snack} from './snack.jpg'
+export {default as soccer} from './soccer.jpg'
+export {default as bumper} from './bumper.jpg'
+
+export {default as stairsMobile} from './stairs_mobile.jpg'
+export {default as juniorMobile} from './junior_mobile.jpg'
+export {default as snackMobile} from './snack_mobile.jpg'
+export {default as soccerMobile} from './soccer_mobile.jpg'
+export {default as bumperMobile} from './bumper_mobile.jpg'

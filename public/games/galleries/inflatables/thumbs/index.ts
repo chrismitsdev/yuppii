@@ -1,0 +1,6 @@
+export {default as inflatables1thumb} from './ALE_0421_thumb.webp'
+export {default as inflatables2thumb} from './ALE_0448_thumb.webp'
+export {default as inflatables3thumb} from './ALE_0454_thumb.webp'
+export {default as inflatables4thumb} from './ALE_0469_thumb.webp'
+export {default as inflatables5thumb} from './ALE_0479_thumb.webp'
+export {default as inflatables6thumb} from './ALE_0488_thumb.webp'

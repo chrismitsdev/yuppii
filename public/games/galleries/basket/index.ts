@@ -1,0 +1,7 @@
+export {default as basket1} from './ALE_0839.webp'
+export {default as basket2} from './ALE_5252.webp'
+export {default as basket3} from './ALE_5260.webp'
+export {default as basket4} from './ALE_5261.webp'
+export {default as basket5} from './ALE_5267.webp'
+export {default as basket6} from './ALE_5413.webp'
+export * from './thumbs'
