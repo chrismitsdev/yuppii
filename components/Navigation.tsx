@@ -72,13 +72,14 @@ const Navigation = ({links, locale, localeContent}: NavigationProps) => {
               return (
                 <Link 
                   key={link.label} 
-                  className={buttonVariants({variant: active ? 'accent' : 'ghost-accent'})} 
+                  className={buttonVariants({variant: active ? 'accent' : 'ghost-accent', size: 'lg'})} 
                   href={link.href}
-                  lang={locale}
                   onClick={() => setOpen(false)}
                 >
                   {link.icon}
-                  <span className='leading-4'>{link.label}</span> 
+                  <span className='leading-4'>
+                    {locale === 'gr' ? link.label.toLocaleUpperCase('el-GR') : link.label}
+                  </span> 
                 </Link>
               )
             })}

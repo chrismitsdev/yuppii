@@ -18,7 +18,7 @@ const Footer = () => {
         <div className='px-6 py-4 absolute bg-[#72CBC2] flex items-center rounded -top-16 left-4'>
           <Image src={logo} height={90} alt='Yuppii Luna Park' />
         </div>
-        <article className='grid gap-10 sm:grid-rows-[1fr,_auto] sm:grid-cols-3'>
+        <article className='grid gap-10 sm:grid-rows-[1fr,_auto] sm:grid-cols-4'>
           <div className='space-y-2'>
             <TypographyLarge>{translate('Box1.title')}</TypographyLarge>
             <Input 
@@ -59,6 +59,14 @@ const Footer = () => {
               <TypographySmall>{translate('Box2.info4')}</TypographySmall>
             </div>
           </div>
+          <div className='space-y-2 sm:justify-self-center'>
+            <TypographyLarge>{translate('Box4.title')}</TypographyLarge>
+            <div className='flex flex-col gap-y-2'>
+              <TypographySmall>{translate('Box4.info1')}</TypographySmall>
+              <TypographySmall>{translate('Box4.info2')}</TypographySmall>
+              <TypographySmall>{translate('Box4.info3')}</TypographySmall>
+            </div>
+          </div>
           <div className='space-y-2 sm:justify-self-center min-w-[180px]'>
             <TypographyLarge>{translate('Box3.title')}</TypographyLarge>
             <div className='flex flex-col gap-y-2'>
@@ -74,7 +82,7 @@ const Footer = () => {
             <TypographySmall>
               Copyright &copy; {new Date().getFullYear()} Yuppii Luna Park
             </TypographySmall>
-            <TypographySmall className='mt-2 sm:mt-0 sm:col-start-3 sm:justify-self-center'>
+            <TypographySmall className='mt-2 sm:mt-0 sm:col-start-4 sm:justify-self-center'>
               Designed & Developed by CM
             </TypographySmall>
           </div>

@@ -11,12 +11,37 @@ import {cn} from '@/lib/utils'
 
 const DEV_MODE = process.env.NODE_ENV === 'development'
 
-
 interface FormProps {
   locale: string
+  translations: {
+    name: {
+      label: string
+      required: string
+      pattern: string
+    }
+    email: {
+      label: string
+      required: string
+      pattern: string
+      providers: string
+    }
+    phone: {
+      label: string
+      required: string
+      pattern: string
+    }
+    feedback: {
+      label: string
+      required: string
+    }
+    button: {
+      label: string
+      loading: string
+    }
+  }
 }
 
-const Form = ({locale}: FormProps) => {
+const Form = ({locale, translations}: FormProps) => {
   const {register, handleSubmit, reset, formState: {errors, isSubmitting}} = useForm<FormValues>()
   const ORIGIN = DEV_MODE ? 'http://localhost:3000' : window.location.origin
   const endpoint = `${ORIGIN}/${locale}/api`
@@ -49,21 +74,21 @@ const Form = ({locale}: FormProps) => {
           label={
             <>
               <User />
-              <span>Ονοματεπώνυμο</span>
+              <span>{translations.name.label}</span>
             </>
           }
           {...register('name', {
             required: {
               value: true,
-              message: 'Υποχρεωτικό πεδίο'
+              message: translations.name.required
             },
             minLength: {
               value: 5,
-              message: 'Το όνομα πρέπει να είναι 5-20 χαρακτήρες.'
+              message: translations.name.pattern
             },
             maxLength: {
               value: 20,
-              message: 'Το όνομα πρέπει να είναι 5-20 χαρακτήρες.'
+              message: translations.name.pattern
             }
           })}
           errors={errors.name?.message}
@@ -74,17 +99,17 @@ const Form = ({locale}: FormProps) => {
           label={
             <>
               <Mail />
-              <span>Διεύθυνση email</span>
+              <span>{translations.email.label}</span>
             </>
           }
           {...register('email', {
             required: {
               value: true,
-              message: 'Υποχρεωτικό πεδίο'
+              message: translations.email.required
             },
             pattern: {
               value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-              message: 'Μη έγκυρη μορφή email'
+              message: translations.email.pattern
             },
             validate: {
               whitelistedProviders: (fieldValue) => {
@@ -94,7 +119,7 @@ const Form = ({locale}: FormProps) => {
                   fieldValue.endsWith('@outlook.com') ||
                   fieldValue.endsWith('@hotmail.com') ||
                   fieldValue.endsWith('@icloud.com') ||
-                  'Aυτός ο πάροχος δεν υποστηρίζεται'
+                  translations.email.providers
                 )
               }
             }
@@ -107,17 +132,17 @@ const Form = ({locale}: FormProps) => {
           label={
             <>
               <Phone />
-              <span>Αριθμός τηλεφώνου</span>
+              <span>{translations.phone.label}</span>
             </>
           }
           {...register('phone', {
             required: {
               value: true,
-              message: 'Υποχρεωτικό πεδίο'
+              message: translations.phone.required
             },
             pattern: {
               value: /^(2\d|69)\d{8}$/g,
-              message: 'Μη έγκυρη μορφή τηλεφώνου'
+              message: translations.phone.pattern
             }
           })}
           errors={errors.phone?.message}
@@ -128,7 +153,7 @@ const Form = ({locale}: FormProps) => {
             className='flex items-center font-medium text-sm sm:text-base [&>svg]:w-3.5 [&>svg]:h-3.5 [&>svg]:mb-[3px] [&>svg]:mr-1.5 group-focus-within:font-semibold transition-[font-weight] duration-300'
           >
             <PenSquare />
-            <span>Το μήνυμά σας</span>
+            <span>{translations.feedback.label}</span>
           </label>
           <Textarea 
             id='feedback' 
@@ -137,7 +162,7 @@ const Form = ({locale}: FormProps) => {
             {...register('feedback', {
               required: {
                 value: true,
-                message: 'Υποχρεωτικό πεδίο'
+                message: translations.feedback.required
               }
             })}
           />
@@ -151,18 +176,18 @@ const Form = ({locale}: FormProps) => {
           )}
         </div>
 
-        <Button size='lg' type='submit' className='self-end min-w-[160px]' disabled={isSubmitting}>
+        <Button size='lg' type='submit' className='self-end min-w-[180px]' disabled={isSubmitting}>
           {isSubmitting 
             ? (
               <>
-                <span>Αποστολή</span>
+                <span>{translations.button.loading}</span>
                 <Loader2 className='animate-spin'/>
               </>
             ) 
             : (
               <>
-              <span>Υποβολη</span>
-              <SendHorizonal />
+                <span>{translations.button.label}</span>
+                <SendHorizonal />
               </>
             )
           }

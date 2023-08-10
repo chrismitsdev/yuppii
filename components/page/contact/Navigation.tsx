@@ -13,7 +13,15 @@ const YuppiiLocation = {
   lon: 25.875331041502044
 } as Coords
 
-const Navigation = () => {
+interface NavigationProps {
+  translations: {
+    location: string
+    email: string
+    phone: string
+  }
+}
+
+const Navigation = ({translations}: NavigationProps) => {
   const [showPopup, setShowPopup] = React.useState<boolean>(false)
 
   return (
@@ -26,7 +34,6 @@ const Navigation = () => {
             longitude: YuppiiLocation.lon,
             zoom: 15,
           }}
-          fog={undefined}
           style={{width: '100%', minHeight: 424}}
           mapStyle='mapbox://styles/mapbox/streets-v10'
           attributionControl={false}
@@ -58,19 +65,19 @@ const Navigation = () => {
                   <TypographySmall className='text-xs font-semibold flex items-center gap-1'>
                     <LocateFixed className='mb-0.5' size={14} />
                     <a className='outline-none' href='https://www.google.com/maps/dir/?api=1&destination=Yuppii+Luna+Park' target='_blank'>
-                      Πως θα έρθετε
+                      {translations.location}
                     </a>
                   </TypographySmall>
                   <TypographySmall className='text-xs font-semibold flex items-center gap-1'>
                     <Mail className='mb-0.5' size={14} />
                     <a className='outline-none' href='mailto:yuppiilunapark@gmail.com' target='_blank'>
-                      Email
+                      {translations.email}
                     </a>
                   </TypographySmall>
                   <TypographySmall className='text-xs font-semibold flex items-center gap-1'>
                     <Phone className='mb-0.5' size={14} />
                     <a className='outline-none' href='tel:+306973433980'>
-                      Τηλέφωνο
+                      {translations.phone}
                     </a>
                   </TypographySmall>
                 </div>

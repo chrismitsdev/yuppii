@@ -3,23 +3,25 @@ import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Form} from '@/components/page/contact/Form'
 import {Navigation} from '@/components/page/contact/Navigation'
+import {getContactPromise} from '@/lib/promises/getContactPromise'
 
-const Contact = () => {
+const Contact = async () => {
   const locale = useLocale()
+  const {formSection, translatedFormFields, navigationSection, translatedNavigation} = await getContactPromise(locale)
 
   return (
     <Container>
       <Section
-        title='Επικοινωνήστε μαζί μας'
-        subtitle='Συμπληρώστε την παρακάτω φόρμα για να επικοινωνήσετε μαζί μας για πληροφορίες ή ερωτήσεις σχετικά με το Yuppii Luna Park'
+        title={formSection.title}
+        subtitle={formSection.subtitle}
       >
-        <Form locale={locale} />
+        <Form locale={locale} translations={translatedFormFields} />
       </Section>
       <Section 
-        title='Που θα μας βρείτε'
-        subtitle='Το Yuppii Luna Park βρίσκεται ακριβώς κάτω απο τον Φάρο στην παραλιακή Αλεξανδρούπολης.'
+        title={navigationSection.title}
+        subtitle={navigationSection.subtitle}
       >
-        <Navigation />
+        <Navigation translations={translatedNavigation} />
       </Section>
     </Container>
   )

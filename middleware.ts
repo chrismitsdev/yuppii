@@ -6,7 +6,7 @@ export default createMiddleware({
   // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
   defaultLocale: 'gr',
   // If you want to rely entirely on the URL to resolve the locale, you can disable locale detection based on the accept-language header and a potentially existing cookie value from a previous visit.
-  localeDetection: false
+  localeDetection: true
 })
  
 export const config = {

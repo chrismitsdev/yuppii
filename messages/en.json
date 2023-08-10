@@ -17,7 +17,7 @@
       "placeholder": "Type your email address"
     },
     "Box2": {
-      "title": "INFORMATION",
+      "title": "OPERATING",
       "info1": "Operation during the summer season",
       "info2": "Operation during the Christmas season",
       "info3": "Operation on National Holidays",
@@ -27,6 +27,12 @@
       "title": "USEFUL LINKS",
       "link1": "Privacy Policy",
       "link2": "Use of Cookies"
+    },
+    "Box4": {
+      "title": "INFORMATION",
+      "info1": "Alexandroupolis Port",
+      "info2": "George Mokalis",
+      "info3": "+30 6973433980"
     }
   },
   "Home": {
@@ -930,7 +936,42 @@
       "subtitle": "Fill out the form below to contact us for information or questions regarding Yuppii Luna Park",
       "Form": {
         "success": "Successful submission",
-        "error": "Failed submission"
+        "error": "Failed submission",
+        "Fields": {
+          "name": {
+            "label": "Full name",
+            "required": "Mandatory field",
+            "pattern": "Must be 5 - 20 characters"
+          },
+          "email": {
+            "label": "Email address",
+            "required": "Mandatory field",
+            "pattern": "Invalid email format",
+            "providers": "This provider is not supported"
+          },
+          "phone": {
+            "label": "Phone number",
+            "required": "Mandatory field",
+            "pattern": "Invalid phone number format"
+          },
+          "feedback": {
+            "label": "Your message",
+            "required": "Mandatory field"
+          },
+          "button": {
+            "label": "Submit",
+            "loading": "Sending"
+          }
+        }
+      }
+    },
+    "Section2": {
+      "title": "Where to find us",
+      "subtitle": "Yuppii Luna Park is located right below the Lighthouse on the coastal avenue of Alexandroupolis",
+      "Navigation": {
+        "location": "How to get here",
+        "email": "Email",
+        "phone": "Phone"
       }
     }
   },
