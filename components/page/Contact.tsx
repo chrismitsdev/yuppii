@@ -1,4 +1,4 @@
-import {useLocale} from 'next-intl'
+import {useLocale as getLocale} from 'next-intl'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Form} from '@/components/page/contact/Form'
@@ -6,7 +6,7 @@ import {Navigation} from '@/components/page/contact/Navigation'
 import {getContactPromise} from '@/lib/promises/getContactPromise'
 
 const Contact = async () => {
-  const locale = useLocale()
+  const locale = getLocale()
   const {formSection, translatedFormFields, navigationSection, translatedNavigation} = await getContactPromise(locale)
 
   return (
