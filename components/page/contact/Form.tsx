@@ -147,7 +147,7 @@ const Form = ({locale, translations}: FormProps) => {
           })}
           errors={errors.phone?.message}
         />
-        <div className='relative px-3 py-4 bg-secondary/50 rounded focus-within:bg-secondary transition group'>
+        <div className='relative px-3 py-4 bg-secondary/50 border border-secondary rounded focus-within:bg-secondary transition group'>
           <label 
             htmlFor='feedback' 
             className='flex items-center font-medium text-sm sm:text-base [&>svg]:w-3.5 [&>svg]:h-3.5 [&>svg]:mb-[3px] [&>svg]:mr-1.5 group-focus-within:font-semibold transition-[font-weight] duration-300'
@@ -176,7 +176,7 @@ const Form = ({locale, translations}: FormProps) => {
           )}
         </div>
 
-        <Button size='lg' type='submit' className='self-end min-w-[180px]' disabled={isSubmitting}>
+        <Button variant='outline' size='lg' type='submit' className='self-end min-w-[180px]' disabled={isSubmitting}>
           {isSubmitting 
             ? (
               <>

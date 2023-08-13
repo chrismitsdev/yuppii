@@ -16,7 +16,7 @@ const FormField = React.forwardRef<
   return (
     <div 
       className={cn(
-        'relative px-3 py-4 bg-secondary/50 rounded focus-within:bg-secondary transition group',
+        'relative px-3 py-4 bg-secondary/50 border border-secondary rounded focus-within:bg-secondary transition group',
         className
       )}
     >

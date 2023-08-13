@@ -5,7 +5,7 @@ import Link from 'next-intl/link'
 import {usePathname} from 'next-intl/client'
 import {Tooltip, TooltipProvider, TooltipTrigger, TooltipPortal, TooltipContent} from '@/components/ui/Tooltip'
 import {Drawer, DrawerTrigger, DrawerContent} from '@/components/ui/Drawer'
-import {Button, buttonVariants} from '@/components/ui/Button'
+import {buttonVariants} from '@/components/ui/Button'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
 import {Menu} from 'lucide-react'
 import {isActive} from '@/lib/utils'
@@ -58,10 +58,13 @@ const Navigation = ({links, locale, localeContent}: NavigationProps) => {
         </TooltipProvider>
       </nav>
       <Drawer open={open} onOpenChange={setOpen}>
-        <DrawerTrigger className='flex @lg:hidden data-open:opacity-0 transition-opacity' asChild>
-          <Button variant='primary' size='icon'>
-            <Menu strokeWidth={2.5} />
-          </Button>
+        <DrawerTrigger 
+          className={buttonVariants({
+            variant: 'primary', 
+            size: 'icon', 
+            className: 'flex @lg:hidden data-open:opacity-0 transition-opacity'
+          })}>
+          <Menu strokeWidth={2.5} />
         </DrawerTrigger>
         <DrawerContent className='p-4 h-[calc(100%-72px)] mt-[72px]'>
           <div className='mx-auto w-16 h-1 flex-shrink-0 rounded-full bg-accent/50 mb-8' />

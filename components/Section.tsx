@@ -17,10 +17,12 @@ const Section = React.forwardRef<
     ref={ref} 
     {...props}
   >
-    <article className='mb-12 flex flex-col'>
-      {title && <TypographyH2 className='text-center'>{title}</TypographyH2>}
-      {subtitle && <TypographyLead className='text-center'>{subtitle}</TypographyLead>}
-    </article>
+    {(title || subtitle) && (
+      <article className='mb-12 flex flex-col'>
+        {title && <TypographyH2 className='text-center'>{title}</TypographyH2>}
+        {subtitle && <TypographyLead className='text-center'>{subtitle}</TypographyLead>}
+      </article>
+    )}
     {children}
   </section>
 ))

@@ -11,10 +11,11 @@ import {List} from 'lucide-react'
 import {cn} from '@/lib/utils'
 
 interface GameGalleriesProps {
+  locale: string
   games: Array<Game & {images: StaticImageData[]}> 
 }
 
-const GameGalleries = ({games}: GameGalleriesProps) => {
+const GameGalleries = ({locale, games}: GameGalleriesProps) => {
   const [open, setOpen] = React.useState(false)
   const [game, setGame] = React.useState(games[0]?.value)
   
@@ -38,7 +39,9 @@ const GameGalleries = ({games}: GameGalleriesProps) => {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger className={buttonVariants({size: 'lg'})}>
             <List />
-            <span>{getGameProperty?.value}</span>
+            <span>
+              {locale === 'gr' ? getGameProperty?.value.toLocaleUpperCase('el-GR'): getGameProperty?.value}
+            </span>
           </SheetTrigger>
           <SheetContent side='left' className='sm:max-w-[280px]'>
             <SheetTitle className='p-6'>Επέλεξε παιχνίδι</SheetTitle>

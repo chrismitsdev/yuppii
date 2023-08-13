@@ -16,6 +16,7 @@ const Information = () => {
           alt='Yuppii 1'
           sizes='(min-width: 1280px) 448px, (min-width: 1040px) 480px, (min-width: 780px) 352px, (min-width: 680px) 608px, calc(94.44vw - 15px)'
           placeholder='blur'
+          priority
         />
         <div className='space-y-2'>
           <TypographyH4>
@@ -33,6 +34,7 @@ const Information = () => {
           alt='Yuppii 1'
           sizes='(min-width: 1280px) 448px, (min-width: 1040px) 480px, (min-width: 780px) 352px, (min-width: 680px) 608px, calc(94.44vw - 15px)'
           placeholder='blur'
+          priority
         />
         <div className='space-y-2'>
           <TypographyH4>

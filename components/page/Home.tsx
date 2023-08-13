@@ -10,32 +10,32 @@ const Home = () => {
   const carouselTranslate = useTranslations('Home.Section1.Carousel')
 
   return (
-    <>  
-      <Carousel 
-        messages={{
-          slide1Title: carouselTranslate('Slide1.title'),
-          slide1Subtitle: carouselTranslate('Slide1.subtitle'),
-          slide2Title: carouselTranslate('Slide2.title'),
-          slide2Subtitle: carouselTranslate('Slide2.subtitle'),
-          slide3Title: carouselTranslate('Slide3.title'),
-          slide3Subtitle: carouselTranslate('Slide3.subtitle')
-        }} 
-      />
-      <Container>
-        <Section
-          title={translate('Section1.title')}
-          subtitle={translate('Section1.subtitle')}
-        >
-          <ModalCards />
-        </Section>
-        <Section
-          title={translate('Section2.title')}
-          subtitle={translate('Section2.subtitle')}
-        >
-          <HomeGallery />
-        </Section>
-      </Container>
-    </>
+    <Container>
+      <Section>
+        <Carousel 
+          messages={{
+            slide1Title: carouselTranslate('Slide1.title'),
+            slide1Subtitle: carouselTranslate('Slide1.subtitle'),
+            slide2Title: carouselTranslate('Slide2.title'),
+            slide2Subtitle: carouselTranslate('Slide2.subtitle'),
+            slide3Title: carouselTranslate('Slide3.title'),
+            slide3Subtitle: carouselTranslate('Slide3.subtitle')
+          }} 
+        />
+      </Section>
+      <Section
+        title={translate('Section1.title')}
+        subtitle={translate('Section1.subtitle')}
+      >
+        <ModalCards />
+      </Section>
+      <Section
+        title={translate('Section2.title')}
+        subtitle={translate('Section2.subtitle')}
+      >
+        <HomeGallery />
+      </Section>
+    </Container>
   )
 }
 

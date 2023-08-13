@@ -2,7 +2,7 @@ import {useLocale as getLocale} from 'next-intl'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Form} from '@/components/page/contact/Form'
-import {Navigation} from '@/components/page/contact/Navigation'
+import {Mapbox} from '@/components/page/contact/Mapbox'
 import {getContactPromise} from '@/lib/promises/getContactPromise'
 
 const Contact = async () => {
@@ -21,7 +21,7 @@ const Contact = async () => {
         title={navigationSection.title}
         subtitle={navigationSection.subtitle}
       >
-        <Navigation translations={translatedNavigation} />
+        <Mapbox translations={translatedNavigation} />
       </Section>
     </Container>
   )

@@ -17,7 +17,7 @@ const Games = async () => {
         title={gamesSection.title}
         subtitle={gamesSection.subtitle}
       >
-        <GameGalleries games={translatedGames} />
+        <GameGalleries locale={locale} games={translatedGames} />
       </Section>
       <Section
         title={reviewsSection.title}

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next-intl/link'
-import {usePathname} from 'next/navigation'
+import {usePathname} from 'next-intl/client'
 import {Tooltip, TooltipPortal, TooltipTrigger, TooltipContent} from '@/components/ui/Tooltip'
 import {GreeceFlag} from '@/components/flags/GreeceFlag'
 import {AmericaFlag} from '@/components/flags/AmericaFlag'
@@ -15,7 +15,7 @@ interface LanguagePickerProps {
 }
 
 const LocaleSwitcher = ({locale, type = 'desktop', tooltipContent}: LanguagePickerProps) => {
-  const currentPath = usePathname().replace('en', '')
+  const currentPath = usePathname()
   const switchLocale = locale === 'gr' ? 'en' : 'gr'
   
   if (type === 'desktop') {

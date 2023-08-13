@@ -31,8 +31,7 @@
     "Box4": {
       "title": "ΠΛΗΡΟΦΟΡΙΕΣ",
       "info1": "Λιμάνι Αλεξανδρούπολης",
-      "info2": "Γιώργος Μόκαλης",
-      "info3": "+30 6973433980"
+      "info2": "+30 6973433980"
     }
   },
   "Home": {
@@ -141,61 +140,61 @@
       "subtitle": "Με πάνω από 40 μοναδικά και διαφορετικά παιχνίδια από όλο τον κόσμο, μπορεί να φιλοξενήσει όλες τις ηλικίες.",
       "Galleries": {
         "Inflatables": {
-          "label": "Φουσκωτα"
+          "label": "Φουσκωτά"
         },
         "Playground": {
-          "label": "Παιδοτοπος"
+          "label": "Παιχνιδοκατασκευή"
         },
         "Trampoline": {
-          "label": "Τραμπολινο"
+          "label": "Τραμπολίνο"
         },
         "Cinema": {
           "label": "Cinema 7D"
         },
         "Dryslope": {
-          "label": "Τσουληθρα"
+          "label": "Τσουλήθρα"
         },
         "BumperCars": {
-          "label": "Συγκροουμενα"
+          "label": "Συγκρουόμενα"
         },
         "Junior": {
-          "label": "Παιδοτοπος Junior"
+          "label": "Παιδότοπος Junior"
         },
         "FormulaCars": {
-          "label": "Φορμουλες"
+          "label": "Φόρμουλες"
         },
         "Train": {
-          "label": "Τρενακι"
+          "label": "Τρενάκι"
         },
         "CarnivalGames": {
-          "label": "Παιχνιδια Carnival"
+          "label": "Παιχνίδια Carnival"
         },
         "TableSoccer": {
-          "label": "Ποδοσφαιρακια"
+          "label": "Ποδοσφαιράκια"
         },
         "Basket": {
-          "label": "Μπασκετ"
+          "label": "Μπάσκετ"
         },
         "KiddyRides":{
-          "label": "Κουνιστα"
+          "label": "Κουνιστά"
         },
         "HawaiianSurfing": {
           "label": "Hawaiian Surfing"
         },
         "ElectricCars": {
-          "label": "Ηλεκτροκινητα Αμαξια"
+          "label": "Ηλεκτροκίνητα Οχήματα"
         },
         "AirHockey": {
           "label": "Air Hockey"
         },
         "PowerGames": {
-          "label": "Παιχνιδια Δυναμης"
+          "label": "Παιχνίδια Δύναμης"
         },
         "Cranes": {
-          "label": "Γερανοι Δωρων"
+          "label": "Γερανοί Δώρων"
         },
         "GiftGames": {
-          "label": "Δωρομηχανες"
+          "label": "Δωρομηχανές"
         }
       }
     },
