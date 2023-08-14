@@ -6,6 +6,7 @@ import {useLocale} from 'next-intl'
 import {Header} from '@/components/Header'
 import {Footer} from '@/components/Footer'
 import {Toaster} from 'react-hot-toast'
+import {Analytics} from '@vercel/analytics/react'
 
 const arima = Arima({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({children, params}: {children: React.ReactNod
           position='top-right' 
           toastOptions={{duration: 5000}}
         />
+        <Analytics />
       </body>
     </html>
   )

@@ -1,7 +1,8 @@
+import Link from 'next-intl/link'
 import {useTranslations} from 'next-intl'
-import {Button} from '@/components/ui/Button'
+import {Button, buttonVariants} from '@/components/ui/Button'
 import {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter} from '@/components/ui/Card'
-import {Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription} from '@/components/ui/Dialog'
+import {Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from '@/components/ui/Dialog'
 import {ChevronRight, Castle, PartyPopper, Store, Pin} from 'lucide-react'
 
 const ModalCards = () => {
@@ -36,6 +37,11 @@ const ModalCards = () => {
                   {translate('Card1.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
+              <DialogFooter>
+                <Link href='/games' className={buttonVariants({variant: 'accent'})}>
+                  {translate('Card1.DialogTrigger')}
+                </Link>
+              </DialogFooter>
             </DialogContent>
           </Dialog>
         </CardFooter>
@@ -67,6 +73,11 @@ const ModalCards = () => {
                   {translate('Card2.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
+              <DialogFooter>
+                <Link href='/services' className={buttonVariants({variant: 'accent'})}>
+                  {translate('Card2.DialogTrigger')}
+                </Link>
+              </DialogFooter>
             </DialogContent>
           </Dialog>
         </CardFooter>
@@ -98,6 +109,11 @@ const ModalCards = () => {
                   {translate('Card3.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
+              <DialogFooter>
+                <Link href='/services' className={buttonVariants({variant: 'accent'})}>
+                  {translate('Card3.DialogTrigger')}
+                </Link>
+              </DialogFooter>
             </DialogContent>
           </Dialog>
         </CardFooter>
@@ -129,6 +145,11 @@ const ModalCards = () => {
                   {translate('Card4.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
+              <DialogFooter>
+                <Link href='/contact' className={buttonVariants({variant: 'accent'})}>
+                  {translate('Card4.DialogTrigger')}
+                </Link>
+              </DialogFooter>
             </DialogContent>
           </Dialog>
         </CardFooter>

@@ -38,6 +38,7 @@ const Mapbox = ({translations}: MapboxProps) => {
           mapStyle='mapbox://styles/mapbox/streets-v10'
           attributionControl={false}
           doubleClickZoom={false}
+          reuseMaps
         >
           <Marker 
             latitude={YuppiiLocation.lat} 
