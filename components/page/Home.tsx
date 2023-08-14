@@ -7,21 +7,11 @@ import {HomeGallery} from '@/components/page/home/HomeGallery'
 
 const Home = () => {
   const translate = useTranslations('Home')
-  const carouselTranslate = useTranslations('Home.Section1.Carousel')
 
   return (
     <Container>
       <Section>
-        <Carousel 
-          messages={{
-            slide1Title: carouselTranslate('Slide1.title'),
-            slide1Subtitle: carouselTranslate('Slide1.subtitle'),
-            slide2Title: carouselTranslate('Slide2.title'),
-            slide2Subtitle: carouselTranslate('Slide2.subtitle'),
-            slide3Title: carouselTranslate('Slide3.title'),
-            slide3Subtitle: carouselTranslate('Slide3.subtitle')
-          }} 
-        />
+        <Carousel />
       </Section>
       <Section
         title={translate('Section1.title')}

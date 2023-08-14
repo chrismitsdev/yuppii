@@ -37,7 +37,7 @@ const ModalCards = () => {
                   {translate('Card1.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
-              <DialogFooter>
+              <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/games' className={buttonVariants({variant: 'accent'})}>
                   {translate('Card1.DialogTrigger')}
                 </Link>
@@ -73,7 +73,7 @@ const ModalCards = () => {
                   {translate('Card2.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
-              <DialogFooter>
+              <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/services' className={buttonVariants({variant: 'accent'})}>
                   {translate('Card2.DialogTrigger')}
                 </Link>
@@ -109,7 +109,7 @@ const ModalCards = () => {
                   {translate('Card3.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
-              <DialogFooter>
+              <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/services' className={buttonVariants({variant: 'accent'})}>
                   {translate('Card3.DialogTrigger')}
                 </Link>
@@ -145,7 +145,7 @@ const ModalCards = () => {
                   {translate('Card4.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
-              <DialogFooter>
+              <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/contact' className={buttonVariants({variant: 'accent'})}>
                   {translate('Card4.DialogTrigger')}
                 </Link>

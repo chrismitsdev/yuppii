@@ -9,23 +9,23 @@ import {ChevronLeft, ChevronRight, X, ZoomIn} from 'lucide-react'
 
 const options: PhotoSwipeOptions = {
   arrowPrevSVG: ReactDOMServer.renderToString(
-    <Button size='icon' className='h-8 w-8 rounded-sm lg:w-10 lg:h-10 lg:rounded-md'>
-      <ChevronLeft strokeWidth={2.5} className='w-6 h-6' />
+    <Button size='icon'>
+      <ChevronLeft strokeWidth={2.5} />
     </Button>
   ),
   arrowNextSVG: ReactDOMServer.renderToString(
-    <Button size='icon' className='h-8 w-8 rounded-sm lg:w-10 lg:h-10 lg:rounded-md'>
-      <ChevronRight strokeWidth={2.5} className='w-6 h-6' />
+    <Button size='icon'>
+      <ChevronRight strokeWidth={2.5} />
     </Button>
   ),
   closeSVG: ReactDOMServer.renderToString(
-    <Button size='icon' className='h-8 w-8 rounded-sm lg:w-10 lg:h-10 lg:rounded-md'>
-      <X strokeWidth={2.5} className='w-6 h-6' />
+    <Button size='icon'>
+      <X strokeWidth={2.5} />
     </Button>
   ),
   zoomSVG: ReactDOMServer.renderToString(
-    <Button size='icon' className='h-8 w-8 rounded-sm lg:w-10 lg:h-10 lg:rounded-md'>
-      <ZoomIn strokeWidth={2.5} className='w-6 h-6' />
+    <Button size='icon'>
+      <ZoomIn strokeWidth={2.5} />
     </Button>
   ),
   bgClickAction: 'close'
@@ -40,7 +40,7 @@ const GalleryImages = ({images}: ImagesProps) => {
     const rawImageName = image.src.split('/').pop()?.split('.')[0]!
     const foundThumb = arr.find(i => i.src.includes(`${rawImageName}_thumb`))
 
-    if (!rawImageName.includes('_thumb')) {
+    if (!rawImageName.includes('_thumb') && foundThumb) {
       return (
         <Item
           key={image.src}
@@ -52,11 +52,11 @@ const GalleryImages = ({images}: ImagesProps) => {
           {({ref, open}) => (
             <Image 
               className='cursor-pointer w-full rounded shadow-md hover:scale-105 transition'
-              src={foundThumb!}
-              alt={foundThumb?.src!}
-              ref={ref as React.MutableRefObject<HTMLImageElement>}
+              src={foundThumb}
+              alt={foundThumb.src}
               onClick={open}
               placeholder='blur'
+              ref={ref as React.MutableRefObject<HTMLImageElement>}
             />
           )}
         </Item>

@@ -18,9 +18,9 @@
     },
     "Box2": {
       "title": "OPERATING",
-      "info1": "Operation during the summer season",
-      "info2": "Operation during the Christmas season",
-      "info3": "Operation on National Holidays",
+      "info1": "Summer season",
+      "info2": "Christmas season",
+      "info3": "National holidays",
       "info4": "Daily 18:00 - 23:30"
     },
     "Box3": {
@@ -38,20 +38,6 @@
     "Section1": {
       "title": "Game without limits",
       "subtitle": "Join us for a truly unforgettable experience.",
-      "Carousel": {
-        "Slide1": {
-          "title": "Have fun at Yuppii!",
-          "subtitle": "Join us for a truly unforgettable experience."
-        },
-        "Slide2": {
-          "title": "Play at Yuppii!",
-          "subtitle": "Unique games for both young and old in a safe environment."
-        },
-        "Slide3": {
-          "title": "Yuppii Beverages & Snacks",
-          "subtitle": "Enjoy your beverage while the children play safely."
-        }
-      },
       "ModalCards": {
         "Card1": {
           "Title": "Unique Games",
