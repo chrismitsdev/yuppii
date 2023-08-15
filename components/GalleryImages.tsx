@@ -33,9 +33,10 @@ const options: PhotoSwipeOptions = {
 
 interface ImagesProps {
   images: StaticImageData[]
+  sizes?: string
 }
 
-const GalleryImages = ({images}: ImagesProps) => {
+const GalleryImages = ({images, sizes}: ImagesProps) => {
   return images.map((image, _, arr) => {
     const rawImageName = image.src.split('/').pop()?.split('.')[0]!
     const foundThumb = arr.find(i => i.src.includes(`${rawImageName}_thumb`))
@@ -56,6 +57,7 @@ const GalleryImages = ({images}: ImagesProps) => {
               alt={foundThumb.src}
               onClick={open}
               placeholder='blur'
+              sizes={sizes}
               ref={ref as React.MutableRefObject<HTMLImageElement>}
             />
           )}

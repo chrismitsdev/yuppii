@@ -1,18 +1,19 @@
 'use client'
 
 import {Gallery} from 'react-photoswipe-gallery'
-import {GalleryImages, options} from '@/components/GalleryImages'
+import {options, GalleryImages} from '@/components/GalleryImages'
 import * as images from '@/public/home/gallery'
 import 'photoswipe/dist/photoswipe.css'
-
-const galleryImages = Array.from (Object.values(images))
 
 const HomeGallery = () => {
   return (
     <article>
       <Gallery options={options}>
-        <div className='grid grid-cols-3 gap-2 sm:gap-4 md:grid-cols-4 lg:grid-cols-6'>
-          <GalleryImages images={galleryImages} /> 
+        <div className='max-w-5xl mx-auto grid gap-4 justify-between grid-cols-[repeat(2,_minmax(0,_150px))] sm:grid-cols-[repeat(4,_minmax(0,_150px))]'>
+          <GalleryImages 
+            images={Array.from(Object.values(images))}
+            sizes='(min-width: 780px) 150px, (min-width: 640px) 140px, (min-width: 380px) 150px, calc(40vw + 6px)'
+          />
         </div>
       </Gallery>
     </article>

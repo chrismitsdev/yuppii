@@ -35,7 +35,7 @@ const Carousel = () => {
   )
 
   return (
-    <article className='relative max-w-7xl mx-auto'>
+    <article className='relative max-w-5xl mx-auto'>
       <div 
         className='p-2 sm:p-4 bg-secondary/50 border border-secondary overflow-hidden rounded-md' 
         ref={emblaRef}
@@ -46,7 +46,7 @@ const Carousel = () => {
               <Image 
                 src={image}
                 className='rounded w-full' 
-                sizes='(min-width: 1280px) 1190px, (min-width: 1040px) 958px, (min-width: 780px) 702px, (min-width: 660px) 574px, calc(95.29vw - 36px)'
+                sizes='(min-width: 1040px) 941px, (min-width: 780px) 702px, (min-width: 660px) 574px, calc(95.29vw - 36px)'
                 placeholder='blur'
                 alt={`Yuppii carousel image ${++i}`}
               />
