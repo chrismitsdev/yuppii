@@ -48,13 +48,8 @@ const getReviewsPromise = async (locale: string) => {
       avatar: avatars.m_papagewrgiou
     },
     {
-      author: 'Kyriakos Xatz', 
-      comment: tReviews('review8'), 
-      avatar: avatars.kyriakos_xatz
-    },
-    {
       author: 'Dimsideris', 
-      comment: tReviews('review9'), 
+      comment: tReviews('review8'), 
       avatar: avatars.dimsideris
     }
   ]

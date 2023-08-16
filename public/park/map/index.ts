@@ -1,2 +1,2 @@
-export {default as mapGr} from './yuppii_map_gr.jpg'
-export {default as mapEn} from './yuppii_map_en.jpg'
+export {default as mapGr} from './map_gr.webp'
+export {default as mapEn} from './map_en.webp'

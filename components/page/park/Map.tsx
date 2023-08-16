@@ -15,7 +15,7 @@ const Map = ({locale}: MapProps) => {
         <Image 
           src={locale === 'en' ? maps.mapEn : maps.mapGr} 
           alt='Yuppii Luna Park map'
-          sizes='(min-width: 1540px) 1504px, (min-width: 1280px) 1248px, (min-width: 1040px) 992px, (min-width: 780px) 736px, (min-width: 680px) 608px, calc(94.44vw - 15px)'
+          sizes='(min-width: 1080px) 992px, calc(95.26vw - 18px)'
           placeholder='blur'
         />
       </figure>

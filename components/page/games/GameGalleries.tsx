@@ -35,7 +35,7 @@ const GameGalleries = ({locale, games}: GameGalleriesProps) => {
 
   return (
     <article>
-      <div className='max-w-5xl mx-auto space-y-6'>
+      <div className='space-y-6'>
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger className={buttonVariants({size: 'lg'})}>
             <List />

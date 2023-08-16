@@ -9,12 +9,12 @@ const ModalCards = () => {
   const translate = useTranslations('Home.Section1.ModalCards')
 
   return (
-    <article className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5'>
+    <article className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4'>
       <Card className='overflow-hidden'>
         <CardHeader className='p-0 bg-accent text-secondary h-48 flex justify-center items-center'>
-          <Castle strokeWidth={0.5} size={124} />
+          <Castle strokeWidth={1} size={82} />
         </CardHeader>
-        <CardContent className='p-4 lg:p-6'>
+        <CardContent className='p-4'>
           <CardTitle>
             {translate('Card1.Title')}
           </CardTitle>
@@ -22,10 +22,10 @@ const ModalCards = () => {
             {translate('Card1.Description')}
           </CardDescription>
         </CardContent>
-        <CardFooter className='p-4 pt-0 lg:p-6 lg:pt-0 justify-end'>
+        <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant='accent'>
+              <Button variant='accent' size='sm'>
                 <span>{translate('Card1.DialogTrigger')}</span>
                 <ChevronRight />
               </Button>
@@ -48,9 +48,9 @@ const ModalCards = () => {
       </Card>
       <Card className='overflow-hidden'>
         <CardHeader className='p-0 bg-accent text-secondary h-48 flex justify-center items-center'>
-          <PartyPopper strokeWidth={0.5} size={124} />
+          <PartyPopper strokeWidth={1} size={82} />
         </CardHeader>
-        <CardContent className='p-4 lg:p-6'>
+        <CardContent className='p-4'>
           <CardTitle>
             {translate('Card2.Title')}
           </CardTitle>
@@ -58,10 +58,10 @@ const ModalCards = () => {
             {translate('Card2.Description')}
           </CardDescription>
         </CardContent>
-        <CardFooter className='p-4 pt-0 lg:p-6 lg:pt-0 justify-end'>
+        <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant='accent'>
+              <Button variant='accent' size='sm'>
                 <span>{translate('Card2.DialogTrigger')}</span>
                 <ChevronRight className='ml-1 mb-[3px] h-4 w-4' />
               </Button>
@@ -84,9 +84,9 @@ const ModalCards = () => {
       </Card>
       <Card className='overflow-hidden'>
         <CardHeader className='p-0 bg-accent text-secondary h-48 flex justify-center items-center'>
-          <Store strokeWidth={0.5} size={124} />
+          <Store strokeWidth={1} size={82} />
         </CardHeader>
-        <CardContent className='p-4 lg:p-6'>
+        <CardContent className='p-4'>
           <CardTitle>
             {translate('Card3.Title')}
           </CardTitle>
@@ -94,10 +94,10 @@ const ModalCards = () => {
             {translate('Card3.Description')}
           </CardDescription>
         </CardContent>
-        <CardFooter className='p-4 pt-0 lg:p-6 lg:pt-0 justify-end'>
+        <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant='accent'>
+              <Button variant='accent' size='sm'>
                 <span>{translate('Card3.DialogTrigger')}</span>
                 <ChevronRight className='ml-1 mb-[3px] h-4 w-4' />
               </Button>
@@ -120,9 +120,9 @@ const ModalCards = () => {
       </Card>
       <Card className='overflow-hidden'>
         <CardHeader className='p-0 bg-accent text-secondary h-48 flex justify-center items-center'>
-          <Pin strokeWidth={0.5} size={124} />
+          <Pin strokeWidth={1} size={82} />
         </CardHeader>
-        <CardContent className='p-4 lg:p-6'>
+        <CardContent className='p-4'>
           <CardTitle>
             {translate('Card4.Title')}
           </CardTitle>
@@ -130,10 +130,10 @@ const ModalCards = () => {
             {translate('Card4.Description')}
           </CardDescription>
         </CardContent>
-        <CardFooter className='p-4 pt-0 lg:p-6 lg:pt-0 justify-end'>
+        <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant='accent'>
+              <Button variant='accent' size='sm'>
                 <span>{translate('Card4.DialogTrigger')}</span>
                 <ChevronRight className='ml-1 mb-[3px] h-4 w-4' />
               </Button>

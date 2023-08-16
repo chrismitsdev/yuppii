@@ -116,7 +116,6 @@ const DataTable = <TData, TValue>({columns, data, messages}: DataTableProps<TDat
                 <DropdownMenuCheckboxItem
                   key={category}
                   checked={isSelected}
-                  onSelect={e => e.preventDefault()}
                   onCheckedChange={() => {
                     isSelected 
                       ? selectedCategories.delete(category) 

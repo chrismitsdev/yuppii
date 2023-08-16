@@ -25,7 +25,7 @@ const Mapbox = ({translations}: MapboxProps) => {
   const [showPopup, setShowPopup] = React.useState<boolean>(false)
 
   return (
-    <article className='max-w-5xl mx-auto'>
+    <article>
       <div className='overflow-hidden rounded-md shadow-md flex'>
         <Map
           mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}

@@ -35,7 +35,7 @@ const Carousel = () => {
   )
 
   return (
-    <article className='relative max-w-5xl mx-auto'>
+    <article className='relative'>
       <div 
         className='p-2 sm:p-4 bg-secondary/50 border border-secondary overflow-hidden rounded-md' 
         ref={emblaRef}

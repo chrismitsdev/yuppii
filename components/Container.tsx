@@ -7,7 +7,7 @@ const Container = React.forwardRef<
 >(({className, ...props}, ref) => (
   <div 
     className={cn(
-      'container', 
+      'container max-w-5xl', 
       className
     )} 
     ref={ref} 

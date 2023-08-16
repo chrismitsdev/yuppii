@@ -66,7 +66,7 @@ const Form = ({locale, translations}: FormProps) => {
   }
 
   return (
-    <div className='max-w-5xl mx-auto'>
+    <div>
       <form className='flex flex-col gap-4' onSubmit={handleSubmit(onSubmit)} noValidate>
         <FormField 
           id='name'

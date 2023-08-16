@@ -1,6 +1,6 @@
+import Image from 'next/image'
 import Link from 'next-intl/link'
 import {useTranslations} from 'next-intl'
-import Image from 'next/image'
 import {Container} from '@/components/Container'
 import {TypographyLarge} from '@/components/typography/TypographyLarge'
 import {TypographySmall} from '@/components/typography/TypographySmall'

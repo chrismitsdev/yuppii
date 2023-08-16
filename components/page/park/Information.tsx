@@ -2,7 +2,7 @@ import Image from 'next/image'
 import {useTranslations} from 'next-intl'
 import {TypographyH4} from '@/components/typography/TypographyH4'
 import {TypographyP} from '@/components/typography/TypographyP'
-import * as images from '@/public/park/info'
+import * as aeroImages from '@/public/park/information'
 
 const Information = () => {
   const translate = useTranslations('Park.Section1')
@@ -12,9 +12,9 @@ const Information = () => {
       <div className='w-full space-y-4'>
         <Image 
           className='w-full h-auto rounded-lg'
-          src={images.aero1}
+          src={aeroImages.aero1}
           alt='Yuppii Luna Park aero photo 1'
-          sizes='(min-width: 1540px) 712px, (min-width: 1280px) 584px, (min-width: 1040px) 456px, (min-width: 780px) 328px, (min-width: 680px) 608px, calc(94.44vw - 15px)'
+          sizes='(min-width: 1100px) 456px, (min-width: 780px) calc(40.67vw + 17px), calc(100vw - 32px)'
           placeholder='blur'
         />
         <div className='space-y-2'>
@@ -29,9 +29,9 @@ const Information = () => {
       <div className='w-full space-y-4'>
         <Image 
           className='w-full h-auto rounded-lg'
-          src={images.aero2}
+          src={aeroImages.aero2}
           alt='Yuppii Luna Park aero photo 2'
-          sizes='(min-width: 1540px) 712px, (min-width: 1280px) 584px, (min-width: 1040px) 456px, (min-width: 780px) 328px, (min-width: 680px) 608px, calc(94.44vw - 15px)'
+          sizes='(min-width: 1100px) 456px, (min-width: 780px) calc(40.67vw + 17px), calc(100vw - 32px)'
           placeholder='blur'
         />
         <div className='space-y-2'>

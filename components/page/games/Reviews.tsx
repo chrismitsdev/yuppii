@@ -25,7 +25,6 @@ const Reviews = ({reviews}: ReviewsProps) => {
       align: 'center',
       breakpoints: {
         '(min-width: 768px)': {slidesToScroll: 2},
-        '(min-width: 1280px)': {slidesToScroll: 3},
       }
     }, 
     [Autoplay({stopOnInteraction: false})],
@@ -51,7 +50,7 @@ const Reviews = ({reviews}: ReviewsProps) => {
   return (
     <article className='relative'>
       <div className='overflow-hidden max-w-[calc(100vw-32px)] md:max-w-[calc(100vw-47px)]' ref={emblaRef}>
-        <div className='grid grid-flow-col auto-cols-[100%] md:auto-cols-[50%] xl:auto-cols-[33%]'>
+        <div className='grid grid-flow-col auto-cols-[100%] md:auto-cols-[50%]'>
           {reviews.map(review => (
             <div 
               key={review.author} 
