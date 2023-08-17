@@ -9,6 +9,7 @@ import {TypographyLead} from '@/components/typography/TypographyLead'
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/Avatar'
 import {Button} from '@/components/ui/Button'
 import {ChevronLeft, ChevronRight} from 'lucide-react'
+import {options} from '@/lib/emblaOptions'
 
 interface ReviewsProps {
   reviews: Array<{
@@ -19,15 +20,9 @@ interface ReviewsProps {
 }
 
 const Reviews = ({reviews}: ReviewsProps) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-      loop: true,
-      slidesToScroll: 'auto', 
-      align: 'center',
-      breakpoints: {
-        '(min-width: 768px)': {slidesToScroll: 2},
-      }
-    }, 
-    [Autoplay({stopOnInteraction: false})],
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    options, 
+    [Autoplay({stopOnInteraction: false})]
   )
 
   const scrollTo = React.useCallback(
@@ -49,14 +44,14 @@ const Reviews = ({reviews}: ReviewsProps) => {
 
   return (
     <article className='relative'>
-      <div className='overflow-hidden max-w-[calc(100vw-32px)] md:max-w-[calc(100vw-47px)]' ref={emblaRef}>
-        <div className='grid grid-flow-col auto-cols-[100%] md:auto-cols-[50%]'>
+      <div className='overflow-hidden' ref={emblaRef}>
+        <div className='flex'>
           {reviews.map(review => (
             <div 
               key={review.author} 
-              className='p-4 mr-6 space-y-2 bg-secondary/50 rounded border border-secondary cursor-grab'
+              className='p-4 mr-6 min-w-0 flex-[0_0_100%] space-y-2 bg-secondary/50 rounded border border-secondary cursor-grab'
             >
-              <div className='flex items-center gap-x-2'>
+              <div className='flex items-end gap-x-2'>
                 <Avatar>
                   <AvatarImage src={review.avatar.src} />
                   <AvatarFallback>
@@ -67,7 +62,7 @@ const Reviews = ({reviews}: ReviewsProps) => {
                 </Avatar>
                 <TypographyLarge>{review.author}</TypographyLarge>
               </div>
-              <TypographyLead className='text-base mx-2 lg:text-xl italic'>
+              <TypographyLead className='mx-4 sm:mx-0 text-base italic lg:text-xl'>
                 {review.comment}
               </TypographyLead>
             </div>
@@ -76,7 +71,7 @@ const Reviews = ({reviews}: ReviewsProps) => {
       </div>
       <Button 
         id='prev'
-        className='absolute top-1/2 -translate-y-1/2 -left-2' 
+        className='absolute top-1/2 -translate-y-1/2 -left-3 lg:-left-12' 
         size='icon'
         onClick={scrollTo}
       >
@@ -84,7 +79,7 @@ const Reviews = ({reviews}: ReviewsProps) => {
       </Button>
       <Button 
         id='next'
-        className='absolute top-1/2 -translate-y-1/2 -right-2' 
+        className='absolute top-1/2 -translate-y-1/2 -right-3 lg:-right-12' 
         size='icon'
         onClick={scrollTo}
       >

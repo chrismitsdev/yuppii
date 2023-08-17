@@ -28,7 +28,7 @@ export default function RootLayout({children, params}: {children: React.ReactNod
 
   return (
     <html lang={locale} className={arima.className}>
-      <body className='min-h-screen grid grid-rows-[auto,_1fr,_auto]'>
+      <body>
         <Header locale={params.locale} />
         <main className='overflow-auto'>{children}</main>
         <Footer />

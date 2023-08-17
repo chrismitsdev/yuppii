@@ -8,7 +8,11 @@ const Reasons = () => {
   
   return (
     <article>
-      <Accordion type='single' collapsible className='space-y-4'>
+      <Accordion 
+        className='grid sm:grid-cols-2 gap-6 items-start' 
+        type='single' 
+        collapsible
+      >
         <AccordionItem value='item-1'>
           <AccordionTrigger>
             <Rocket className='h-4 w-4 mb-[3px] lg:h-6 lg:w-6' />

@@ -6,14 +6,12 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import {Button} from '@/components/ui/Button'
 import {ChevronLeft, ChevronRight} from 'lucide-react'
+import {options} from '@/lib/emblaOptions'
 import * as carouselImages from '@/public/home/carousel'
 
 const Carousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true, 
-      duration: 15
-    }, 
+    options, 
     [Autoplay({stopOnInteraction: false})]
   )
 
@@ -36,10 +34,7 @@ const Carousel = () => {
 
   return (
     <article className='relative'>
-      <div 
-        className='p-2 sm:p-4 bg-secondary/50 border border-secondary overflow-hidden rounded-md' 
-        ref={emblaRef}
-      >
+      <div className='p-2 overflow-hidden bg-secondary/50 border border-secondary rounded-md sm:p-4' ref={emblaRef}>
         <div className='-ml-2 sm:-ml-4 flex'>
           {Array.from(Object.values(carouselImages).map((image, i) => (
             <div key={image.src} className='pl-2 min-w-0 flex-[0_0_100%] sm:pl-4'>

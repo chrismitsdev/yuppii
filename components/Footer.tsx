@@ -12,7 +12,7 @@ const Footer = () => {
   const translate = useTranslations('Footer')
   
   return (
-    <footer className='mt-24 bg-accent/95 text-primary'>
+    <footer className='mt-12 bg-accent/95 text-primary'>
       <Container className='py-16'>
         <article className='grid gap-10 sm:grid-rows-[1fr,_auto] sm:grid-cols-4'>
           <div className='space-y-3'>
