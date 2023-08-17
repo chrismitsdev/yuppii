@@ -22,8 +22,8 @@ const Navigation = ({links, locale, localeContent}: NavigationProps) => {
   const pathname = usePathname()
 
   return (
-    <>
-      <nav className='hidden items-center gap-x-4 @lg:flex'>
+    <React.Fragment>
+      <nav className='hidden items-center gap-x-4 sm:flex'>
         <TooltipProvider delayDuration={0}>
           {links.map((link, index) => {
             const active = isActive(index, pathname, link.href)
@@ -62,7 +62,7 @@ const Navigation = ({links, locale, localeContent}: NavigationProps) => {
           className={buttonVariants({
             variant: 'primary', 
             size: 'icon', 
-            className: 'flex @lg:hidden data-open:opacity-0 transition-opacity'
+            className: 'flex sm:hidden data-open:opacity-0 transition-opacity'
           })}>
           <Menu strokeWidth={2.5} />
         </DrawerTrigger>
@@ -115,7 +115,7 @@ const Navigation = ({links, locale, localeContent}: NavigationProps) => {
           </div>
         </DrawerContent>
       </Drawer>
-    </>
+    </React.Fragment>
   )
 }
 

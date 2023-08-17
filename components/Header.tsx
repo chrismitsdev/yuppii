@@ -1,15 +1,11 @@
 import * as React from 'react'
 import Link from 'next-intl/link'
-import {useTranslations} from 'next-intl'
+import {useTranslations, useLocale} from 'next-intl'
 import Image from 'next/image'
 import {Container} from '@/components/Container'
 import {Navigation} from '@/components/Navigation'
 import {Home, FerrisWheel, Gamepad, ListChecks, ScrollText} from 'lucide-react'
 import logo from '@/public/logo.svg'
-
-interface HeaderProps {
-  locale: string
-}
 
 const links: Array<HeaderLink> = [
   {
@@ -39,24 +35,30 @@ const links: Array<HeaderLink> = [
   }
 ]
 
-const Header = ({locale}: HeaderProps) => {
-  const t = useTranslations('Metadata.Pages')
+const Header = () => {
+  const locale = useLocale()
+  const translations = useTranslations('Metadata.Pages')
 
-  const translatedLinks = links.map(link => ({
-    ...link,
-    label: t(link.label as 'Home' | 'Park' | 'Games' | 'Services' | 'Contact') 
-  }))
+  const tLinks = React.useMemo(
+    () => (
+      links.map(link => ({
+        ...link,
+        label: translations(link.label as 'Home' | 'Park' | 'Games' | 'Services' | 'Contact') 
+      }))
+    ), 
+    [translations]
+  )
 
   return (
-    <header className='py-4 @container'>
+    <header className='py-4'>
       <Container className='flex justify-between'>
         <Link href='/'>
           <Image src={logo} width={124} alt='Yuppii Luna Park' />
         </Link>
         <Navigation 
-          links={translatedLinks} 
+          links={tLinks} 
           locale={locale} 
-          localeContent={t('LocaleContent')}
+          localeContent={translations('LocaleContent')}
         />
       </Container>
     </header>

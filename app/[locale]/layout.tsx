@@ -15,7 +15,11 @@ const arima = Arima({
 
 export const metadata: Metadata = {
   title: 'Yuppii Luna Park',
-  description: 'The best amusement park in Alexandroupolis',
+  description: 'Yuppii Luna Park amusement park official website',
+  formatDetection: {
+    email: true,
+    telephone: true
+  },
 }
 
 export default function RootLayout({children, params}: {children: React.ReactNode, params: {locale: string}}) {
@@ -29,13 +33,10 @@ export default function RootLayout({children, params}: {children: React.ReactNod
   return (
     <html lang={locale} className={arima.className}>
       <body>
-        <Header locale={params.locale} />
+        <Header />
         <main className='overflow-auto'>{children}</main>
         <Footer />
-        <Toaster 
-          position='top-right' 
-          toastOptions={{duration: 5000}}
-        />
+        <Toaster position='top-right' />
         <Analytics />
       </body>
     </html>
