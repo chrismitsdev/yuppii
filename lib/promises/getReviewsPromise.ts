@@ -1,10 +1,10 @@
 import {StaticImageData} from 'next/image'
-import {getTranslator} from 'next-intl/server'
+import {getTranslations} from 'next-intl/server'
 import * as avatars from '@/public/games/avatars'
 
 const getReviewsPromise = async (locale: string) => {
-  const tSection = await getTranslator(locale, 'Games.Section2')
-  const tReviews = await getTranslator(locale, 'Games.Section2.Reviews')
+  const tSection = await getTranslations({locale, namespace: 'Games.Section2'})
+  const tReviews = await getTranslations({locale, namespace: 'Games.Section2.Reviews'})
 
   const reviewsSection = {
     title: tSection('title'),

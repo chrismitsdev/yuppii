@@ -1,6 +1,10 @@
 type Messages = typeof import('./messages/gr.json')
 declare interface IntlMessages extends Messages {}
 
+type Locale = {
+  locale: string
+}
+
 type Params = {
   params: {
     locale: string
@@ -33,7 +37,7 @@ type FormValues = {
   feedback?: string
 }
 
-type SubmissionStatus = {
+type SubmissionResponse = {
   ok: boolean
   message: string
 }

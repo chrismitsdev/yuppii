@@ -1,10 +1,10 @@
-import {getTranslator} from 'next-intl/server'
+import {getTranslations} from 'next-intl/server'
 import messages from 'messages/gr.json'
 
 const getServicesPromise = async (locale: string) => {
-  const tCafe = await getTranslator(locale, 'Services.Section1')
-  const tSecondaries = await getTranslator(locale, 'Services.Section2')
-  const tMenu = await getTranslator(locale, 'Services.Section1.Menu')
+  const tCafe = await getTranslations({locale, namespace: 'Services.Section1'})
+  const tSecondaries = await getTranslations({locale, namespace: 'Services.Section2'})
+  const tMenu = await getTranslations({locale, namespace: 'Services.Section1.Menu'})
   const {Menu} = messages.Services.Section1
 
   const cafeSection = {

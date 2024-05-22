@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Link from 'next-intl/link'
-import {useTranslations, useLocale} from 'next-intl'
+import {Link} from '@/navigation'
+import {getTranslations} from 'next-intl/server'
 import Image from 'next/image'
 import {Container} from '@/components/Container'
 import {Navigation} from '@/components/Navigation'
@@ -35,19 +35,15 @@ const links: Array<HeaderLink> = [
   }
 ]
 
-const Header = () => {
-  const locale = useLocale()
-  const translations = useTranslations('Metadata.Pages')
+async function Header({locale}: Locale) {
+  const translations = await getTranslations({locale, namespace: 'Metadata.Pages'})
 
-  const tLinks = React.useMemo(
-    () => (
-      links.map(link => ({
-        ...link,
-        label: translations(link.label as 'Home' | 'Park' | 'Games' | 'Services' | 'Contact') 
-      }))
-    ), 
-    [translations]
-  )
+  const tLinks = links.map(link => ({
+    ...link,
+    label: translations(
+      link.label as 'Home' | 'Park' | 'Games' | 'Services' | 'Contact'
+    ) 
+  }))
 
   return (
     <header className='py-4'>

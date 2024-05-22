@@ -1,12 +1,10 @@
 import '@/styles/globals.css'
 import type {Metadata} from 'next'
 import {Arima} from 'next/font/google'
-import {notFound} from 'next/navigation'
-import {useLocale} from 'next-intl'
+import {Toaster} from 'react-hot-toast'
+// import {Analytics} from '@vercel/analytics/react'
 import {Header} from '@/components/Header'
 import {Footer} from '@/components/Footer'
-import {Toaster} from 'react-hot-toast'
-import {Analytics} from '@vercel/analytics/react'
 
 const arima = Arima({
   subsets: ['latin'],
@@ -14,30 +12,33 @@ const arima = Arima({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.yuppii.gr'),
   title: 'Yuppii Luna Park',
   description: 'Yuppii Luna Park amusement park official website',
+  openGraph: {
+    title: 'Yuppii Luna Park',
+    description: 'Yuppii Luna Park amusement park official website'
+  },
   formatDetection: {
     email: true,
     telephone: true
   },
 }
 
-export default function RootLayout({children, params}: {children: React.ReactNode, params: {locale: string}}) {
-  const locale = useLocale()
-
-  // Show a 404 error if the user requests an unknown locale
-  if (params.locale !== locale) {
-    notFound()
+export default function LocaleLayout({children, params: {locale}}: {
+  children: React.ReactNode, 
+  params: {
+    locale: string
   }
-
+}) {
   return (
     <html lang={locale} className={arima.className}>
       <body>
-        <Header />
+        <Header locale={locale} />
         <main className='overflow-auto'>{children}</main>
-        <Footer />
+        <Footer locale={locale} />
         <Toaster position='top-right' />
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   )

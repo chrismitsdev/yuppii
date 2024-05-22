@@ -1,7 +1,0 @@
-export {Home} from '@/components/page/Home'
-export {Park} from '@/components/page/Park'
-export {Contact} from '@/components/page/Contact'
-export {Games} from '@/components/page/Games'
-export {Services} from '@/components/page/Services'
-export {Privacy} from '@/components/page/Privacy'
-export {Cookies} from '@/components/page/Cookies'

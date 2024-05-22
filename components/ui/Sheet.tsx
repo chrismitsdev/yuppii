@@ -1,27 +1,30 @@
 'use client'
  
 import * as React from 'react'
-import * as SheetPrimitive from '@radix-ui/react-dialog'
+import {
+  Root, 
+  Trigger, 
+  Portal, 
+  Overlay, 
+  Content, 
+  Title, 
+  Description, 
+  Close
+} from '@radix-ui/react-dialog'
 import {cva, type VariantProps} from 'class-variance-authority'
 import {X} from 'lucide-react'
 import {cn} from '@/lib/utils'
  
-const Sheet = SheetPrimitive.Root
-const SheetTrigger = SheetPrimitive.Trigger
-const SheetClose = SheetPrimitive.Close
- 
-const SheetPortal = ({className, ...props}: SheetPrimitive.DialogPortalProps) => (
-  <SheetPrimitive.Portal 
-    className={cn(className)} 
-    {...props} 
-  />
-)
+const Sheet = Root
+const SheetTrigger = Trigger
+const SheetPortal = Portal
+const SheetClose = Close
 
 const SheetOverlay = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Overlay>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
+  React.ElementRef<typeof Overlay>,
+  React.ComponentPropsWithoutRef<typeof Overlay>
 >(({className, ...props}, ref) => (
-  <SheetPrimitive.Overlay
+  <Overlay
     className={cn(
       'fixed inset-0 z-50 bg-accent/50 backdrop-blur-sm data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0',
       className
@@ -49,24 +52,24 @@ const sheetVariants = cva(
 )
  
 const SheetContent = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content> & VariantProps<typeof sheetVariants>
+  React.ElementRef<typeof Content>,
+  React.ComponentPropsWithoutRef<typeof Content> & VariantProps<typeof sheetVariants>
 >(({side = 'right', className, children, ...props}, ref) => (
   <SheetPortal>
     <SheetOverlay />
-    <SheetPrimitive.Content
+    <Content
       ref={ref}
       className={cn(sheetVariants({side}), className)}
       {...props}
     >
       {children}
-      <SheetPrimitive.Close 
+      <Close 
         className='absolute right-4 top-4 rounded-sm disabled:pointer-events-none text-secondary'
       >
         <X className='w-5 h-5' strokeWidth={2.5} />
         <span className='sr-only'>Close</span>
-      </SheetPrimitive.Close>
-    </SheetPrimitive.Content>
+      </Close>
+    </Content>
   </SheetPortal>
 ))
  
@@ -80,6 +83,28 @@ const SheetHeader = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>
   />
 )
  
+const SheetTitle = React.forwardRef<
+  React.ElementRef<typeof Title>,
+  React.ComponentPropsWithoutRef<typeof Title>
+>(({className, ...props}, ref) => (
+  <Title
+    className={cn('text-lg font-semibold text-foreground', className)}
+    ref={ref}
+    {...props}
+  />
+))
+ 
+const SheetDescription = React.forwardRef<
+  React.ElementRef<typeof Description>,
+  React.ComponentPropsWithoutRef<typeof Description>
+>(({className, ...props}, ref) => (
+  <Description
+    className={cn('text-sm text-muted-foreground', className)}
+    ref={ref}
+    {...props}
+  />
+))
+
 const SheetFooter = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
@@ -89,36 +114,16 @@ const SheetFooter = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>
     {...props}
   />
 )
- 
-const SheetTitle = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Title>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
->(({className, ...props}, ref) => (
-  <SheetPrimitive.Title
-    className={cn('text-lg font-semibold text-foreground', className)}
-    ref={ref}
-    {...props}
-  />
-))
- 
-const SheetDescription = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Description>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
->(({className, ...props}, ref) => (
-  <SheetPrimitive.Description
-    className={cn('text-sm text-muted-foreground', className)}
-    ref={ref}
-    {...props}
-  />
-))
 
-SheetPortal.displayName = SheetPrimitive.Portal.displayName
-SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
-SheetContent.displayName = SheetPrimitive.Content.displayName
+Sheet.displayName = 'Sheet'
+SheetTrigger.displayName = 'SheetTrigger'
+SheetPortal.displayName = 'SheetPortal'
+SheetOverlay.displayName = 'SheetOverlay'
+SheetContent.displayName = 'SheetContent'
 SheetHeader.displayName = 'SheetHeader'
+SheetTitle.displayName = 'SheetTitle'
+SheetDescription.displayName = 'SheetDescription'
 SheetFooter.displayName = 'SheetFooter'
-SheetTitle.displayName = SheetPrimitive.Title.displayName
-SheetDescription.displayName = SheetPrimitive.Description.displayName
  
 export {
   Sheet,
@@ -126,7 +131,7 @@ export {
   SheetClose,
   SheetContent,
   SheetHeader,
-  SheetFooter,
   SheetTitle,
   SheetDescription,
+  SheetFooter,
 }

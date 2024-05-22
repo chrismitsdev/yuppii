@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --brand: 174 46% 62%;
+    --brand-foreground: 340 82% 79%;
     --primary: 176 38% 86%; /*#cee9e7*/
     --primary-foreground: 180 14% 1%; 
     --secondary: 349 78% 70%; /*	#ee778d*/
@@ -19,41 +21,27 @@
   }
   
   body {
-    @apply bg-primary;
-    @apply text-accent;
-    @apply selection:bg-secondary;
-    
+    @apply bg-primary text-accent selection:bg-secondary;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
 
 .pswp__counter {
-  color: #ee778d !important;
-  font-weight: 700 !important;
+  @apply !text-secondary !font-bold;
 }
 
 .mapboxgl-popup {
-  @apply rounded-sm !important;
-  @apply overflow-hidden !important;
-  @apply shadow-md !important;
-  @apply min-w-[150px] !important;
+  @apply !max-w-[150px] !rounded-sm !overflow-hidden !shadow-md;
 }
 
 .mapboxgl-popup-content {
-  font-family: '__Arima_67d565', '__Arima_Fallback_67d565' !important;
-  @apply p-0 !important;
+  @apply !p-0;
 }
 
 .mapboxgl-popup-close-button {
-  font-size: 24px !important;
-  @apply text-secondary;
-  @apply top-2 !important;
-  @apply right-2 !important;
-  @apply outline-none !important;
-  @apply w-4 !important;
-  @apply h-4 !important;
+  @apply !flex !items-center !justify-center !text-xl !w-4 !h-4 !text-secondary !top-2 !right-2 !outline-none;
 }
 
 .mapboxgl-popup-tip {
-  @apply hidden !important;
+  @apply hidden;
 }

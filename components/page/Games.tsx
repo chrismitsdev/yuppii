@@ -1,4 +1,3 @@
-import {useLocale as getLocale} from 'next-intl'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {GameGalleries} from '@/components/page/games/GameGalleries'
@@ -6,8 +5,7 @@ import {Reviews} from '@/components/page/games/Reviews'
 import {getGalleriesPromise} from '@/lib/promises/getGalleriesPromise'
 import {getReviewsPromise} from '@/lib/promises/getReviewsPromise'
 
-const Games = async () => {
-  const locale = getLocale()
+async function Games({locale}: Locale) {
   const {gamesSection, translatedGames} = await getGalleriesPromise(locale)
   const {reviewsSection, translatedReviews} = await getReviewsPromise(locale)
   

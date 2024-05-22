@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Link from 'next-intl/link'
-import {useTranslations} from 'next-intl'
+import {Link} from '@/navigation'
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {TypographyLarge} from '@/components/typography/TypographyLarge'
 import {TypographySmall} from '@/components/typography/TypographySmall'
@@ -8,15 +8,15 @@ import {buttonVariants} from '@/components/ui/Button'
 import {Facebook, Instagram, Map} from 'lucide-react'
 import logo from '@/public/logo-full.svg'
 
-const Footer = () => {
-  const translate = useTranslations('Footer')
+async function Footer({locale}: Locale) {
+  const translate = await getTranslations({locale, namespace: 'Footer'})
   
   return (
     <footer className='mt-12 bg-accent/95 text-primary'>
       <Container className='py-16'>
         <article className='grid gap-10 sm:grid-rows-[1fr,_auto] sm:grid-cols-4'>
           <div className='space-y-3'>
-            <div className='px-6 py-4 bg-[#72CBC2] inline-block rounded box-border'>
+            <div className='px-6 py-4 bg-brand inline-block rounded box-border'>
               <Image src={logo} width={122} alt='Yuppii Luna Park' />
             </div>
             <div className='space-x-6'>

@@ -6,28 +6,20 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import {Button} from '@/components/ui/Button'
 import {ChevronLeft, ChevronRight} from 'lucide-react'
-import {options} from '@/lib/emblaOptions'
 import * as carouselImages from '@/public/home/carousel'
 
-const Carousel = () => {
+function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    options, 
-    [Autoplay({stopOnInteraction: false})]
+    {loop: true, duration: 15}, 
+    [Autoplay({stopOnInteraction: true})]
   )
 
   const scrollTo = React.useCallback(
-    ({currentTarget: {id}}: React.MouseEvent) => {
-      if (emblaApi) {
-         const {scrollPrev, scrollNext} = emblaApi
-
-        if (id === 'prev') {
-          scrollPrev()
-          emblaApi.plugins().autoplay?.reset()
-        } else {
-          scrollNext()
-          emblaApi.plugins().autoplay?.reset()
-        }
-      }
+    function(e: React.MouseEvent) {
+      if (!emblaApi) return
+      e.currentTarget.id === 'prev' 
+        ? emblaApi.scrollPrev() 
+        : emblaApi.scrollNext()
     },
     [emblaApi]
   )

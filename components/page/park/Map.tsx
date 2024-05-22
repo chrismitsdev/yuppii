@@ -4,11 +4,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import * as maps from '@/public/park/map'
 
-interface MapProps {
-  locale: string
-}
-
-const Map = ({locale}: MapProps) => {
+function Map({locale}: Locale) {
   return (
     <article>
       <figure className='relative w-full rounded-md overflow-hidden shadow-md'>

@@ -1,13 +1,15 @@
-import {useLocale as getLocale} from 'next-intl'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Cafe} from '@/components/page/services/Cafe'
 import {Secondaries} from '@/components/page/services/Secondaries'
 import {getServicesPromise} from '@/lib/promises/getServicesPromise'
 
-const Services = async () => {
-  const locale = getLocale()
-  const {cafeSection, secondariesSection, translatedMenu} = await getServicesPromise(locale)
+async function Services({locale}: Locale) {
+  const {
+    cafeSection, 
+    secondariesSection, 
+    translatedMenu
+  } = await getServicesPromise(locale)
 
   return (
     <Container>
@@ -18,7 +20,7 @@ const Services = async () => {
         <Cafe locale={locale} menu={translatedMenu} />
       </Section>
       <Section title={secondariesSection.title}>
-        <Secondaries />
+        <Secondaries locale={locale} />
       </Section>
     </Container>
   )

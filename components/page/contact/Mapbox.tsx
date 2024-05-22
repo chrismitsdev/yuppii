@@ -14,6 +14,7 @@ interface MapboxProps {
     email: string
     phone: string
   }
+  token: string
 }
 
 const YuppiiLocation = {
@@ -21,14 +22,14 @@ const YuppiiLocation = {
   lon: 25.875331041502044
 } as Coords
 
-const Mapbox = ({translations}: MapboxProps) => {
+function Mapbox({translations, token}: MapboxProps) {
   const [showPopup, setShowPopup] = React.useState<boolean>(false)
 
   return (
     <article>
       <div className='overflow-hidden rounded-md shadow-md flex'>
         <Map
-          mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
+          mapboxAccessToken={token}
           initialViewState={{
             latitude: YuppiiLocation.lat,
             longitude: YuppiiLocation.lon,
@@ -58,24 +59,24 @@ const Mapbox = ({translations}: MapboxProps) => {
               closeOnClick={false}
               onClose={() => setShowPopup(false)}
             >
-              <div className='bg-[#CEE9E7] px-2 py-3'>
-                <div className='mb-3'>
-                  <Image width={60} src={logo} alt='Yuppii Luna Park' />
+              <div className='bg-primary p-4'>
+                <div className='mb-4 mr-6'>
+                  <Image className='w-full' src={logo} alt='Yuppii Luna Park' />
                 </div>
-                <div className='flex flex-col gap-1'>
-                  <TypographySmall className='text-xs font-semibold flex items-center gap-1'>
+                <div className='flex flex-col gap-2'>
+                  <TypographySmall className='flex items-center gap-1 text-xs font-normal'>
                     <LocateFixed className='mb-0.5' size={14} />
                     <a className='outline-none' href='https://www.google.com/maps/dir/?api=1&destination=Yuppii+Luna+Park' target='_blank'>
                       {translations.location}
                     </a>
                   </TypographySmall>
-                  <TypographySmall className='text-xs font-semibold flex items-center gap-1'>
+                  <TypographySmall className='flex items-center gap-1 text-xs font-normal'>
                     <Mail className='mb-0.5' size={14} />
                     <a className='outline-none' href='mailto:yuppiilunapark@gmail.com' target='_blank'>
                       {translations.email}
                     </a>
                   </TypographySmall>
-                  <TypographySmall className='text-xs font-semibold flex items-center gap-1'>
+                  <TypographySmall className='flex items-center gap-1 text-xs font-normal'>
                     <Phone className='mb-0.5' size={14} />
                     <a className='outline-none' href='tel:+306973433980'>
                       {translations.phone}

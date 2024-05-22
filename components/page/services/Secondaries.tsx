@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import {useTranslations} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
 import {Card, CardHeader, CardTitle, CardDescription, CardContent} from '@/components/ui/Card'
 import {Cake, HeartHandshake} from 'lucide-react'
 
-const Secondaries = () => {
-  const translations = useTranslations('Services.Section2.Cards')
+async function Secondaries({locale}: Locale) {
+  const translations = await getTranslations({locale, namespace: 'Services.Section2.Cards'})
 
   return (
     <article className='grid grid-cols-1 sm:grid-cols-5 gap-4'>

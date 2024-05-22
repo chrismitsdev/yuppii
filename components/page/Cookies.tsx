@@ -1,10 +1,10 @@
-import {useTranslations} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {TypographyP} from '@/components/typography/TypographyP'
 
-const Cookies = () => {
-  const translate = useTranslations('Cookies')
+async function Cookies({locale}: Locale) {
+  const translate = await getTranslations({locale, namespace: 'Cookies'})
 
   return (
     <Container>
@@ -12,7 +12,9 @@ const Cookies = () => {
         className='[&>div]:m-0'
         title={translate('section1.title')}
       >
-        <TypographyP className='!mt-0'>{translate('section1.content')}</TypographyP>
+        <TypographyP className='!mt-0'>
+          {translate('section1.content')}
+        </TypographyP>
       </Section>
     </Container>
   )

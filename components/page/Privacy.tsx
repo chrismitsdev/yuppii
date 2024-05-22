@@ -1,10 +1,10 @@
-import {useTranslations} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {TypographyP} from '@/components/typography/TypographyP'
 
-const Privacy = () => {
-  const translate = useTranslations('Privacy')
+async function Privacy({locale}: Locale) {
+  const translate = await getTranslations({locale, namespace: 'Privacy'})
 
   return (
     <Container>

@@ -1,4 +1,4 @@
-import {useTranslations} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
 import {DataTable} from '@/components/page/services/DataTable'
 import {columnsGR, columnsEN} from '@/components/page/services/Columns'
 
@@ -7,8 +7,8 @@ interface CafeProps {
   menu: Array<MenuItem>
 }
 
-const Cafe = ({locale, menu}: CafeProps) => {
-  const translations = useTranslations('Services.Section1.TableControls')
+async function Cafe({locale, menu}: CafeProps) {
+  const translations = await getTranslations({locale, namespace: 'Services.Section1.TableControls'})
 
   return (
     <article>

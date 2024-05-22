@@ -44,21 +44,22 @@ const DrawerContent = React.forwardRef<
   </DrawerPortal>
 ))
 
-DrawerTrigger.displayName = DrawerPrimitive.Trigger.displayName
-DrawerClose.displayName = DrawerPrimitive.Close.displayName
-DrawerPortal.displayName = DrawerPrimitive.Portal.displayName
-DrawerTitle.displayName = DrawerPrimitive.Title.displayName
-DrawerDescription.displayName = DrawerPrimitive.Description.displayName
-DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
-DrawerContent.displayName = DrawerPrimitive.Content.displayName
+DrawerTrigger.displayName = 'DrawerTrigger'
+DrawerPortal.displayName = 'DrawerPortal'
+DrawerOverlay.displayName = 'DrawerOverlay'
+DrawerContent.displayName = 'DrawerContent'
+DrawerTitle.displayName = 'DrawerTitle'
+DrawerDescription.displayName = 'DrawerDescription'
+DrawerClose.displayName = 'DrawerClose'
+
 
 export {
   Drawer,
   DrawerTrigger,
-  DrawerClose,
   DrawerPortal,
-  DrawerTitle,
-  DrawerDescription,
   DrawerOverlay,
   DrawerContent,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerClose
 }

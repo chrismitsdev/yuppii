@@ -1,11 +1,11 @@
+import {getTranslations} from 'next-intl/server'
 import Image from 'next/image'
-import {useTranslations} from 'next-intl'
 import {TypographyH4} from '@/components/typography/TypographyH4'
 import {TypographyP} from '@/components/typography/TypographyP'
 import * as aeroImages from '@/public/park/information'
 
-const Information = () => {
-  const translate = useTranslations('Park.Section1')
+async function Information({locale}: Locale) {
+  const t = await getTranslations({locale, namespace: 'Park.Section1'})
 
   return (
     <article className='flex justify-between gap-y-12 gap-x-20 flex-wrap md:flex-nowrap'>
@@ -19,10 +19,10 @@ const Information = () => {
         />
         <div className='space-y-2'>
           <TypographyH4>
-            {translate('Information.Info1.Title')}
+            {t('Information.Info1.Title')}
           </TypographyH4>
           <TypographyP className='text-justify text-sm md:text-base'>
-            {translate('Information.Info1.Content')}
+            {t('Information.Info1.Content')}
           </TypographyP>
         </div>
       </div>
@@ -36,10 +36,10 @@ const Information = () => {
         />
         <div className='space-y-2'>
           <TypographyH4>
-            {translate('Information.Info2.Title')}
+            {t('Information.Info2.Title')}
           </TypographyH4>
           <TypographyP className='text-justify text-sm md:text-base'>
-            {translate('Information.Info2.Content')}
+            {t('Information.Info2.Content')}
           </TypographyP>
         </div>
       </div>

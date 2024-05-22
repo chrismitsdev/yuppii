@@ -1,12 +1,33 @@
-import Link from 'next-intl/link'
-import {useTranslations} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
+import {Link} from '@/navigation'
 import {Button, buttonVariants} from '@/components/ui/Button'
-import {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter} from '@/components/ui/Card'
-import {Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from '@/components/ui/Dialog'
-import {ChevronRight, Castle, PartyPopper, Store, Pin} from 'lucide-react'
+import {
+  Card, 
+  CardHeader, 
+  CardTitle, 
+  CardDescription, 
+  CardContent, 
+  CardFooter
+} from '@/components/ui/Card'
+import {
+  Dialog, 
+  DialogTrigger, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription,
+  DialogFooter
+} from '@/components/ui/Dialog'
+import {
+  ChevronRight, 
+  Castle, 
+  PartyPopper, 
+  Store, 
+  Pin
+} from 'lucide-react'
 
-const ModalCards = () => {
-  const translate = useTranslations('Home.Section1.ModalCards')
+async function ModalCards({locale}: Locale) {
+  const t = await getTranslations({locale, namespace: 'Home.Section1.ModalCards'})
 
   return (
     <article className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4'>
@@ -16,30 +37,30 @@ const ModalCards = () => {
         </CardHeader>
         <CardContent className='p-4'>
           <CardTitle>
-            {translate('Card1.Title')}
+            {t('Card1.Title')}
           </CardTitle>
           <CardDescription>
-            {translate('Card1.Description')}
+            {t('Card1.Description')}
           </CardDescription>
         </CardContent>
         <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
               <Button variant='accent' size='sm'>
-                <span>{translate('Card1.DialogTrigger')}</span>
+                <span>{t('Card1.DialogTrigger')}</span>
                 <ChevronRight />
               </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>{translate('Card1.Title')}</DialogTitle>
+                <DialogTitle>{t('Card1.Title')}</DialogTitle>
                 <DialogDescription>
-                  {translate('Card1.DialogContent')}
+                  {t('Card1.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/games' className={buttonVariants({variant: 'accent'})}>
-                  {translate('Card1.DialogTrigger')}
+                  {t('Card1.DialogTrigger')}
                 </Link>
               </DialogFooter>
             </DialogContent>
@@ -52,30 +73,30 @@ const ModalCards = () => {
         </CardHeader>
         <CardContent className='p-4'>
           <CardTitle>
-            {translate('Card2.Title')}
+            {t('Card2.Title')}
           </CardTitle>
           <CardDescription>
-            {translate('Card2.Description')}
+            {t('Card2.Description')}
           </CardDescription>
         </CardContent>
         <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
               <Button variant='accent' size='sm'>
-                <span>{translate('Card2.DialogTrigger')}</span>
+                <span>{t('Card2.DialogTrigger')}</span>
                 <ChevronRight className='ml-1 mb-[3px] h-4 w-4' />
               </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>{translate('Card2.Title')}</DialogTitle>
+                <DialogTitle>{t('Card2.Title')}</DialogTitle>
                 <DialogDescription>
-                  {translate('Card2.DialogContent')}
+                  {t('Card2.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/services' className={buttonVariants({variant: 'accent'})}>
-                  {translate('Card2.DialogTrigger')}
+                  {t('Card2.DialogTrigger')}
                 </Link>
               </DialogFooter>
             </DialogContent>
@@ -88,30 +109,30 @@ const ModalCards = () => {
         </CardHeader>
         <CardContent className='p-4'>
           <CardTitle>
-            {translate('Card3.Title')}
+            {t('Card3.Title')}
           </CardTitle>
           <CardDescription>
-            {translate('Card3.Description')}
+            {t('Card3.Description')}
           </CardDescription>
         </CardContent>
         <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
               <Button variant='accent' size='sm'>
-                <span>{translate('Card3.DialogTrigger')}</span>
+                <span>{t('Card3.DialogTrigger')}</span>
                 <ChevronRight className='ml-1 mb-[3px] h-4 w-4' />
               </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>{translate('Card3.Title')}</DialogTitle>
+                <DialogTitle>{t('Card3.Title')}</DialogTitle>
                 <DialogDescription>
-                  {translate('Card3.DialogContent')}
+                  {t('Card3.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/services' className={buttonVariants({variant: 'accent'})}>
-                  {translate('Card3.DialogTrigger')}
+                  {t('Card3.DialogTrigger')}
                 </Link>
               </DialogFooter>
             </DialogContent>
@@ -124,30 +145,30 @@ const ModalCards = () => {
         </CardHeader>
         <CardContent className='p-4'>
           <CardTitle>
-            {translate('Card4.Title')}
+            {t('Card4.Title')}
           </CardTitle>
           <CardDescription>
-            {translate('Card4.Description')}
+            {t('Card4.Description')}
           </CardDescription>
         </CardContent>
         <CardFooter className='p-4 pt-0 justify-end'>
           <Dialog>
             <DialogTrigger asChild>
               <Button variant='accent' size='sm'>
-                <span>{translate('Card4.DialogTrigger')}</span>
+                <span>{t('Card4.DialogTrigger')}</span>
                 <ChevronRight className='ml-1 mb-[3px] h-4 w-4' />
               </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>{translate('Card4.Title')}</DialogTitle>
+                <DialogTitle>{t('Card4.Title')}</DialogTitle>
                 <DialogDescription>
-                  {translate('Card4.DialogContent')}
+                  {t('Card4.DialogContent')}
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter className='sm:flex sm:justify-end'>
                 <Link href='/contact' className={buttonVariants({variant: 'accent'})}>
-                  {translate('Card4.DialogTrigger')}
+                  {t('Card4.DialogTrigger')}
                 </Link>
               </DialogFooter>
             </DialogContent>
@@ -158,6 +179,6 @@ const ModalCards = () => {
   )
 }
 
-ModalCards.displayName = 'Modal Cards'
+ModalCards.displayName = 'ModalCards'
 
 export {ModalCards}

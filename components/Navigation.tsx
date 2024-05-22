@@ -1,8 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import Link from 'next-intl/link'
-import {usePathname} from 'next-intl/client'
+import {Link, usePathname} from '@/navigation'
 import {Tooltip, TooltipProvider, TooltipTrigger, TooltipPortal, TooltipContent} from '@/components/ui/Tooltip'
 import {Drawer, DrawerTrigger, DrawerContent} from '@/components/ui/Drawer'
 import {buttonVariants} from '@/components/ui/Button'

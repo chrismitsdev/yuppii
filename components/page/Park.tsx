@@ -1,33 +1,32 @@
-import {useTranslations, useLocale} from 'next-intl'
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Information} from '@/components/page/park/Information'
 import {Map} from '@/components/page/park/Map'
 import {Reasons} from '@/components/page/park/Reasons'
 
-const Park = () => {
-  const translate = useTranslations('Park')
-  const locale = useLocale()
+async function Park({locale}: Locale) {
+  const t = await getTranslations({locale, namespace: 'Park'})
 
   return (
     <Container>
       <Section 
-        title={translate('Section1.title')}
-        subtitle={translate('Section1.subtitle')}
+        title={t('Section1.title')}
+        subtitle={t('Section1.subtitle')}
       >
-        <Information />
+        <Information locale={locale} />
       </Section>
       <Section 
-        title={translate('Section2.title')}
-        subtitle={translate('Section2.subtitle')}
+        title={t('Section2.title')}
+        subtitle={t('Section2.subtitle')}
       >
         <Map locale={locale} />
       </Section>
       <Section
-        title={translate('Section3.title')}
-        subtitle={translate('Section3.subtitle')}
+        title={t('Section3.title')}
+        subtitle={t('Section3.subtitle')}
       >
-        <Reasons />
+        <Reasons locale={locale} />
       </Section>
     </Container>
   )

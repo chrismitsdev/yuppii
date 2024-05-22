@@ -1,7 +1,6 @@
 'use client'
 
-import Link from 'next-intl/link'
-import {usePathname} from 'next-intl/client'
+import {Link, usePathname} from '@/navigation'
 import {Tooltip, TooltipPortal, TooltipTrigger, TooltipContent} from '@/components/ui/Tooltip'
 import {GreeceFlag} from '@/components/flags/GreeceFlag'
 import {AmericaFlag} from '@/components/flags/AmericaFlag'

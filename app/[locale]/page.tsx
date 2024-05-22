@@ -1,14 +1,14 @@
-import {getTranslator} from 'next-intl/server'
-import {Home} from '@/components/page'
+import {getTranslations} from 'next-intl/server'
+import {Home} from '@/components/page/Home'
 
 export async function generateMetadata({params: {locale}}: Params) {
-  const t = await getTranslator(locale, 'Metadata.Pages')
+  const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
  
   return {
     title: `${t('Home')} | Yuppii Luna Park`
   }
 }
 
-export default async function HomePage() {
-  return <Home />
+export default function IndexPage({params: {locale}}: Params) {
+  return <Home locale={locale} />
 }

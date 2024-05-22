@@ -5,7 +5,7 @@ import {options, GalleryImages} from '@/components/GalleryImages'
 import * as images from '@/public/home/gallery'
 import 'photoswipe/dist/photoswipe.css'
 
-const HomeGallery = () => {
+function HomeGallery() {
   return (
     <article>
       <Gallery options={options}>

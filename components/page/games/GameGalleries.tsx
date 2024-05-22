@@ -24,14 +24,10 @@ const GameGalleries = ({locale, games}: GameGalleriesProps) => {
     [game, games]
   )
 
-  const handleClick = React.useCallback(
-    (e: React.MouseEvent) => {
-      const {textContent} = e.currentTarget
-      setGame(textContent?.trim().toLowerCase())
-      setOpen(false)
-    },
-    []
-  )
+  function handleClick(value: string) {
+    setGame(value)
+    setOpen(false)
+  }
 
   return (
     <article>
@@ -40,12 +36,17 @@ const GameGalleries = ({locale, games}: GameGalleriesProps) => {
           <SheetTrigger className={buttonVariants({size: 'lg'})}>
             <List />
             <span>
-              {locale === 'gr' ? getGameProperty?.value.toLocaleUpperCase('el-GR'): getGameProperty?.value}
+              {locale === 'gr' 
+                ? getGameProperty?.value.toLocaleUpperCase('el-GR')
+                : getGameProperty?.value
+              }
             </span>
           </SheetTrigger>
-          <SheetContent side='left' className='sm:max-w-[280px]'>
-            <SheetTitle className='p-6'>Επέλεξε παιχνίδι</SheetTitle>
-            <ScrollArea className='pl-6 h-[calc(100vh-16rem)]' type='always'>
+          <SheetContent side='left' className='w-full sm:max-w-[280px]'>
+            <SheetTitle className='p-6'>
+              {locale === 'gr' ? 'Επέλεξε παιχνίδι' : 'Choose game'}
+            </SheetTitle>
+            <ScrollArea className='pl-6 h-[calc(100vh-76px)]' type='always'>
               <ul className='space-y-3'>
                 {games.map(({value, label}) => (
                   <li
@@ -54,7 +55,7 @@ const GameGalleries = ({locale, games}: GameGalleriesProps) => {
                       'font-medium cursor-pointer',
                       game === value ? 'font-bold text-accent' : 'text-accent/50'
                     )}
-                    onClick={handleClick}
+                    onClick={() => handleClick(value)}
                   >
                     {label}
                   </li>

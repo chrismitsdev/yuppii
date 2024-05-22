@@ -1,10 +1,10 @@
-import {getTranslator} from 'next-intl/server'
+import {getTranslations} from 'next-intl/server'
 
 const getContactPromise = async (locale: string) => {
-  const tFormSection = await getTranslator(locale, 'Contact.Section1')
-  const tForm = await getTranslator(locale, 'Contact.Section1.Form.Fields')
-  const tNavigationSection = await getTranslator(locale, 'Contact.Section2')
-  const tNavigation = await getTranslator(locale, 'Contact.Section2.Navigation')
+  const tFormSection = await getTranslations({locale, namespace: 'Contact.Section1'})
+  const tForm = await getTranslations({locale, namespace: 'Contact.Section1.Form.Fields'})
+  const tNavigationSection = await getTranslations({locale, namespace: 'Contact.Section2'})
+  const tNavigation = await getTranslations({locale, namespace: 'Contact.Section2.Navigation'})
 
   const formSection = {
     title: tFormSection('title'),

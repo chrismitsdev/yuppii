@@ -58,7 +58,7 @@ const GalleryImages = ({images, sizes}: ImagesProps) => {
               onClick={open}
               placeholder='blur'
               sizes={sizes}
-              ref={ref as React.MutableRefObject<HTMLImageElement>}
+              ref={ref}
             />
           )}
         </Item>

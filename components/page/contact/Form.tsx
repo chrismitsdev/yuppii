@@ -1,5 +1,6 @@
 'use client'
 
+import * as React from 'react'
 import {useForm} from 'react-hook-form'
 import {toast} from 'react-hot-toast'
 import {Button} from '@/components/ui/Button'
@@ -8,8 +9,6 @@ import {FormField} from '@/components/ui/FormField'
 import {Textarea} from '@/components/ui/Textarea'
 import {User, Mail, Phone, PenSquare, SendHorizonal, AlertTriangle, Loader2} from 'lucide-react'
 import {cn} from '@/lib/utils'
-
-const DEV_MODE = process.env.NODE_ENV === 'development'
 
 interface FormProps {
   locale: string
@@ -41,13 +40,31 @@ interface FormProps {
   }
 }
 
-const Form = ({locale, translations}: FormProps) => {
-  const {register, handleSubmit, reset, formState: {errors, isSubmitting}} = useForm<FormValues>()
-  const ORIGIN = DEV_MODE ? 'http://localhost:3000' : window.location.origin
-  const endpoint = `${ORIGIN}/${locale}/api`
+const DEV_MODE = process.env.NODE_ENV === 'development'
+
+function Form({locale, translations}: FormProps) {
+  const {
+    formState: {
+      errors, 
+      isSubmitting
+    },
+    register,
+    handleSubmit,
+    reset  
+  } = useForm<FormValues>()
+  const [origin, setOrigin] = React.useState<string>('')
+  const endpoint = `${origin}/${locale}/api`
+
+  React.useEffect(
+    function() {
+      if (typeof window === 'undefined') return
+      setOrigin(DEV_MODE ? 'http://localhost:3000' : window.location.origin)
+    }, 
+    []
+  )
 
   const onSubmit = async (data: FormValues) => {
-    const response = await fetch(endpoint, {
+    const res = await fetch(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -55,13 +72,13 @@ const Form = ({locale, translations}: FormProps) => {
       body: JSON.stringify(data)
     })
 
-    const {ok, message} = await response.json() as SubmissionStatus
+    const result = await res.json() as SubmissionResponse
     
-    if (ok) {
-      toast.success(message)
+    if (result.ok) {
+      toast.success(result.message)
       reset()
     } else {
-      toast.error(message)
+      toast.error(result.message)
     }
   }
 

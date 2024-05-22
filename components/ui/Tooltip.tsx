@@ -1,14 +1,14 @@
 'use client'
 
 import * as React from 'react'
-import * as TooltipPrimitive from '@radix-ui/react-tooltip'
+import {Provider, Root, Trigger, Portal, Content} from '@radix-ui/react-tooltip'
 import {cva, type VariantProps} from 'class-variance-authority'
 import {cn} from '@/lib/utils'
 
-const TooltipProvider = TooltipPrimitive.Provider
-const Tooltip = TooltipPrimitive.Root
-const TooltipTrigger = TooltipPrimitive.Trigger
-const TooltipPortal = TooltipPrimitive.Portal
+const TooltipProvider = Provider
+const Tooltip = Root
+const TooltipTrigger = Trigger
+const TooltipPortal = Portal
 
 const tooltipVariants = cva(
   'z-50 overflow-hidden rounded-md px-3 py-1.5 text-sm lg:text-base font-black shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
@@ -27,14 +27,14 @@ const tooltipVariants = cva(
 )
 
 interface TooltipContentProps extends 
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>, 
+  React.ComponentPropsWithoutRef<typeof Content>, 
   VariantProps<typeof tooltipVariants> {}
 
 const TooltipContent = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Content>,
+  React.ElementRef<typeof Content>,
   TooltipContentProps
 >(({variant, className, sideOffset = 4, ...props}, ref) => (
-  <TooltipPrimitive.Content
+  <Content
     className={cn(tooltipVariants({variant, className}))}
     sideOffset={sideOffset}
     ref={ref}
@@ -42,6 +42,16 @@ const TooltipContent = React.forwardRef<
   />
 ))
 
-TooltipContent.displayName = TooltipPrimitive.Content.displayName
+TooltipProvider.displayName = 'TooltipProvider'
+Tooltip.displayName = 'Tooltip'
+TooltipTrigger.displayName = 'TooltipTrigger'
+TooltipPortal.displayName = 'TooltipPortal'
+TooltipContent.displayName = 'TooltipContent'
 
-export {Tooltip, TooltipTrigger, TooltipPortal, TooltipContent, TooltipProvider}
+export {
+  Tooltip, 
+  TooltipTrigger, 
+  TooltipPortal, 
+  TooltipContent, 
+  TooltipProvider
+}

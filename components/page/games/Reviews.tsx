@@ -9,7 +9,6 @@ import {TypographyLead} from '@/components/typography/TypographyLead'
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/Avatar'
 import {Button} from '@/components/ui/Button'
 import {ChevronLeft, ChevronRight} from 'lucide-react'
-import {options} from '@/lib/emblaOptions'
 
 interface ReviewsProps {
   reviews: Array<{
@@ -21,22 +20,16 @@ interface ReviewsProps {
 
 const Reviews = ({reviews}: ReviewsProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    options, 
+    {loop: true, duration: 15}, 
     [Autoplay({stopOnInteraction: false})]
   )
 
   const scrollTo = React.useCallback(
     ({currentTarget: {id}}: React.MouseEvent) => {
       if (emblaApi) {
-         const {scrollPrev, scrollNext} = emblaApi
-
-        if (id === 'prev') {
-          scrollPrev()
-          emblaApi.plugins().autoplay?.reset()
-        } else {
-          scrollNext()
-          emblaApi.plugins().autoplay?.reset()
-        }
+        id === 'prev'
+          ? emblaApi.scrollPrev()
+          : emblaApi.scrollNext()
       }
     },
     [emblaApi]
