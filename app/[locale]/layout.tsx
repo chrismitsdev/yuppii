@@ -3,6 +3,7 @@ import type {Metadata} from 'next'
 import {Arima} from 'next/font/google'
 import {Toaster} from 'react-hot-toast'
 import {Analytics} from '@vercel/analytics/react'
+import {SpeedInsights} from '@vercel/speed-insights/next'
 import {Header} from '@/components/Header'
 import {Footer} from '@/components/Footer'
 
@@ -39,6 +40,7 @@ export default function LocaleLayout({children, params: {locale}}: {
         <Footer locale={locale} />
         <Toaster position='top-right' />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
