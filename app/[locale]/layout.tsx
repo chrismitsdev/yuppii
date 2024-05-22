@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import type {Metadata} from 'next'
 import {Arima} from 'next/font/google'
 import {Toaster} from 'react-hot-toast'
-// import {Analytics} from '@vercel/analytics/react'
+import {Analytics} from '@vercel/analytics/react'
 import {Header} from '@/components/Header'
 import {Footer} from '@/components/Footer'
 
@@ -38,7 +38,7 @@ export default function LocaleLayout({children, params: {locale}}: {
         <main className='overflow-auto'>{children}</main>
         <Footer locale={locale} />
         <Toaster position='top-right' />
-        {/* <Analytics /> */}
+        <Analytics />
       </body>
     </html>
   )
