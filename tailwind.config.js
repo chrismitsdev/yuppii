@@ -55,12 +55,22 @@ module.exports = {
       'spin': {
         from: {transform: 'rotate(0deg)'},
         to: {transform: 'rotate(360deg)'}
+      },
+      'slide': {
+        from: {transform: 'translateX(100%)'},
+        to: {transform: 'translateX(0%)'}
+      },
+      'appear': {
+        from: {opacity: 0, transform: 'translateY(4rem)'},
+        to: {opacity: 1, transform: 'translateY(0%)'}
       }
     },
     animation: {
       'accordion-down': 'accordion-down 150ms ease-out',
       'accordion-up': 'accordion-up 150ms ease-out',
-      'spin': 'spin 1s linear infinite'
+      'spin': 'spin 1s linear infinite',
+      'slide': 'slide 750ms ease-in-out',
+      'appear': 'appear 750ms ease-in-out'
     }
   },
   plugins: [

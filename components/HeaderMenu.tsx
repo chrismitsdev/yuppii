@@ -4,12 +4,11 @@ import {Container} from '@/components/Container'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
 import logo from '@/public/logo.svg'
 
-async function HeaderMenu({locale}: Locale) {
-
+function HeaderMenu({locale}: Locale) {
   return (
     <header className='py-4'>
       <Container className='flex justify-between'>
-        <Link href='/'>
+        <Link href='/menu'>
           <Image src={logo} height={40} alt='Yuppii Luna Park' />
         </Link>
         <LocaleSwitcher locale={locale} type='mobile' />
