@@ -1,5 +1,8 @@
 import {getTranslations} from 'next-intl/server'
-import {Menu} from '@/components/page/menu/Menu'
+import {Container} from '@/components/Container'
+import {Section} from '@/components/Section'
+import {MenuCategories} from '@/components/page/menu/MenuCategories'
+import {getMenuPromise} from '@/lib/promises/getMenuPromise'
 
 export async function generateMetadata({params: {locale}}: Params) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
@@ -15,6 +18,17 @@ export async function generateMetadata({params: {locale}}: Params) {
   }
 }
 
-export default function MenuPage({params: {locale}}: Params) {
-  return <Menu locale={locale} />
+export default async function MenuPage({params: {locale}}: Params) {
+  const {translatedSection, translatedCategories} = await getMenuPromise(locale)
+  
+  return (
+    <Container>
+      <Section
+        title={translatedSection.title}
+        subtitle={translatedSection.subtitle}
+      >
+        <MenuCategories categories={translatedCategories} />
+      </Section>
+    </Container>
+  )
 }
