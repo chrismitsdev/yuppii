@@ -1,14 +1,14 @@
 import {getTranslations} from 'next-intl/server'
-import {Park} from '@/components/page/Park'
+import {Menu} from '@/components/page/menu/Menu'
 
 export async function generateMetadata({params: {locale}}: Params) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
  
   return {
-    title: `${t('Park')} | Yuppii Luna Park`
+    title: `${t('Menu')} | Yuppii Luna Park`
   }
 }
 
-export default function ParkPage({params: {locale}}: Params) {
-  return <Park locale={locale} />
+export default function MenuPage({params: {locale}}: Params) {
+  return <Menu locale={locale} />
 }

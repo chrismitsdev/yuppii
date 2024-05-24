@@ -10,10 +10,10 @@ async function Cookies({locale}: Locale) {
     <Container>
       <Section
         className='[&>div]:m-0'
-        title={translate('section1.title')}
+        title={translate('Section1.title')}
       >
         <TypographyP className='!mt-0'>
-          {translate('section1.content')}
+          {translate('Section1.content')}
         </TypographyP>
       </Section>
     </Container>

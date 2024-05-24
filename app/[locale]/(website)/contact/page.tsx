@@ -1,14 +1,14 @@
 import {getTranslations} from 'next-intl/server'
-import {Privacy} from '@/components/page/Privacy'
+import {Contact} from '@/components/page/contact/Contact'
 
 export async function generateMetadata({params: {locale}}: Params) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
  
   return {
-    title: `${t('Privacy')} | Yuppii Luna Park`
+    title: `${t('Contact')} | Yuppii Luna Park`
   }
 }
 
-export default function PrivacyPage({params: {locale}}: Params) {
-  return <Privacy locale={locale} />
+export default function ContactPage({params: {locale}}: Params) {
+  return <Contact locale={locale} />
 }

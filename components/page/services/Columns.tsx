@@ -2,6 +2,7 @@
 
 import {ColumnDef} from '@tanstack/react-table'
 import {Badge} from '@/components/ui/Badge'
+import {formatCurrency} from '@/lib/utils'
 import {ArrowUpDown, ArrowUp, ArrowDown} from 'lucide-react'
 
 const columnsGR: ColumnDef<MenuItem>[] = [
@@ -104,10 +105,7 @@ const columnsEN: ColumnDef<MenuItem>[] = [
     cell: ({row}) => {
       const amount = parseFloat(row.getValue('price'))
       
-      return new Intl.NumberFormat('el-GR', {
-        style: 'currency',
-        currency: 'EUR',
-      }).format(amount)
+      return formatCurrency(amount)
     }
   }
 ]
