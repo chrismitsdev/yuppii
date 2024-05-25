@@ -21,15 +21,20 @@ interface ReviewsProps {
 const Reviews = ({reviews}: ReviewsProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {loop: true, duration: 15}, 
-    [Autoplay({stopOnInteraction: false})]
+    [Autoplay({stopOnInteraction: true})]
   )
 
   const scrollTo = React.useCallback(
-    ({currentTarget: {id}}: React.MouseEvent) => {
-      if (emblaApi) {
-        id === 'prev'
-          ? emblaApi.scrollPrev()
-          : emblaApi.scrollNext()
+    function(e: React.MouseEvent) {
+      const autoplayObj = emblaApi?.plugins().autoplay
+      if (!emblaApi || !autoplayObj) return
+      
+      if (e.currentTarget.id === 'prev') {
+        emblaApi.scrollPrev()
+        autoplayObj.destroy()
+      } else {
+        emblaApi.scrollNext()
+        autoplayObj.destroy()
       }
     },
     [emblaApi]

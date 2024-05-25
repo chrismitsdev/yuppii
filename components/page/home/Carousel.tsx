@@ -3,7 +3,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay, {type AutoplayOptionsType, type AutoplayType} from 'embla-carousel-autoplay'
 import {Button} from '@/components/ui/Button'
 import {ChevronLeft, ChevronRight} from 'lucide-react'
 import * as carouselImages from '@/public/home/carousel'
@@ -16,10 +16,16 @@ function Carousel() {
 
   const scrollTo = React.useCallback(
     function(e: React.MouseEvent) {
-      if (!emblaApi) return
-      e.currentTarget.id === 'prev' 
-        ? emblaApi.scrollPrev() 
-        : emblaApi.scrollNext()
+      const autoplayObj = emblaApi?.plugins().autoplay
+      if (!emblaApi || !autoplayObj) return
+      
+      if (e.currentTarget.id === 'prev') {
+        emblaApi.scrollPrev()
+        autoplayObj.destroy()
+      } else {
+        emblaApi.scrollNext()
+        autoplayObj.destroy()
+      }
     },
     [emblaApi]
   )
