@@ -10,6 +10,11 @@ import {TypographyP} from '@/components/typography/TypographyP'
 import {TypographySmall} from '@/components/typography/TypographySmall'
 import {formatCurrency} from '@/lib/utils'
 import {ArrowLeft} from 'lucide-react'
+import {uniqueCategories} from '@/lib/utils'
+
+export function generateStaticParams() {
+  return uniqueCategories.map(category => ({category}))
+}
 
 export async function generateMetadata({params: {locale, category}}: MenuParams) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})

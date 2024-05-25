@@ -1,5 +1,6 @@
 import {clsx, type ClassValue} from 'clsx'
 import {twMerge} from 'tailwind-merge'
+import Messages from '@/messages/en.json'
 
 // Conditionally add Tailwind CSS classes
 function cn(...inputs: ClassValue[]) {
@@ -23,4 +24,11 @@ function formatCurrency(price: number | string) {
   }).format(amount)
 }
 
-export {cn, isActive, formatCurrency}
+// 'Beverage', 'Refreshment', 'Alcoholic', 'Food'
+const uniqueCategories = [
+  ...new Set(
+    Object.values(Messages.Services.Section1.Menu).map(item => item.category)
+  )
+]
+
+export {cn, isActive, formatCurrency, uniqueCategories}

@@ -1,15 +1,9 @@
 import * as React from 'react'
 import {getTranslations} from 'next-intl/server'
-import Messages from '@/messages/en.json'
+import {uniqueCategories} from '@/lib/utils'
 import {Coffee, CupSoda, Beer, Utensils, CircleHelp} from 'lucide-react'
 
 const uniqueIcons = [Coffee, CupSoda, Beer, Utensils]
-// 'Beverage', 'Refreshment', 'Alcoholic', 'Food'
-const uniqueCategories = [
-  ...new Set(
-    Object.values(Messages.Services.Section1.Menu).map(item => item.category)
-  )
-]
 
 const getMenuPromise = async (locale: string) => {
   const t = await getTranslations({locale, namespace: 'Menu.Section1'})
