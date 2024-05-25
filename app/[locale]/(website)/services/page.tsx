@@ -1,10 +1,19 @@
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Cafe} from '@/components/page/services/Cafe'
 import {Secondaries} from '@/components/page/services/Secondaries'
 import {getServicesPromise} from '@/lib/promises/getServicesPromise'
 
-async function Services({locale}: Locale) {
+export async function generateMetadata({params: {locale}}: Params) {
+  const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
+ 
+  return {
+    title: `${t('Services')} | Yuppii Luna Park`
+  }
+}
+
+export default async function ServicesPage({params: {locale}}: Params) {
   const {
     cafeSection, 
     secondariesSection, 
@@ -25,7 +34,3 @@ async function Services({locale}: Locale) {
     </Container>
   )
 }
-
-Services.displayName = 'Services'
-
-export {Services}

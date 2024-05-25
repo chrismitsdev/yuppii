@@ -1,12 +1,22 @@
-import {getTranslations} from 'next-intl/server'
+import {getTranslations, unstable_setRequestLocale} from 'next-intl/server'
+import {useTranslations} from 'next-intl'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Carousel} from '@/components/page/home/Carousel'
 import {ModalCards} from '@/components/page/home/ModalCards'
 import {HomeGallery} from '@/components/page/home/HomeGallery'
 
-async function Home({locale}: Locale) {
-  const t = await getTranslations({locale, namespace: 'Home'})
+export async function generateMetadata({params: {locale}}: Params) {
+  const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
+ 
+  return {
+    title: `${t('Home')} | Yuppii Luna Park`
+  }
+}
+
+export default function IndexPage({params: {locale}}: Params) {
+  unstable_setRequestLocale(locale)
+  const t = useTranslations('Home')
   
   return (
     <Container>
@@ -28,7 +38,3 @@ async function Home({locale}: Locale) {
     </Container>
   )
 }
-
-Home.displayName = 'Home'
-
-export {Home}

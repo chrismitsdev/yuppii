@@ -5,9 +5,21 @@ type Locale = {
   locale: string
 }
 
+type MenuLocale = {
+  locale: string
+  category: string
+}
+
 type Params = {
   params: {
     locale: string
+  }
+}
+
+type MenuParams = {
+  params: {
+    locale: string
+    category: string
   }
 }
 
@@ -46,3 +58,7 @@ type Coords = {
   lat: number,
   lon: number
 }
+
+type LucideIcon = React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>
+
+type LucideIcon2 = React.FunctionComponentElement<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>

@@ -1,3 +1,4 @@
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Form} from '@/components/page/contact/Form'
@@ -6,7 +7,15 @@ import {getContactPromise} from '@/lib/promises/getContactPromise'
 
 const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN as string
 
-async function Contact({locale}: Locale) {
+export async function generateMetadata({params: {locale}}: Params) {
+  const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
+ 
+  return {
+    title: `${t('Contact')} | Yuppii Luna Park`
+  }
+}
+
+export default async function ContactPage({params: {locale}}: Params) {
   const {
     formSection, 
     translatedFormFields, 
@@ -33,7 +42,3 @@ async function Contact({locale}: Locale) {
     </Container>
   )
 }
-
-Contact.displayName = 'Contact'
-
-export {Contact}

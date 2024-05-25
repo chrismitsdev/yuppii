@@ -1,13 +1,23 @@
-import {getTranslations} from 'next-intl/server'
+import {getTranslations, unstable_setRequestLocale} from 'next-intl/server'
+import {useTranslations} from 'next-intl'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Information} from '@/components/page/park/Information'
 import {Map} from '@/components/page/park/Map'
 import {Reasons} from '@/components/page/park/Reasons'
 
-async function Park({locale}: Locale) {
-  const t = await getTranslations({locale, namespace: 'Park'})
+export async function generateMetadata({params: {locale}}: Params) {
+  const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
+ 
+  return {
+    title: `${t('Park')} | Yuppii Luna Park`
+  }
+}
 
+export default function ParkPage({params: {locale}}: Params) {
+  unstable_setRequestLocale(locale)
+  const t = useTranslations('Park')
+  
   return (
     <Container>
       <Section 
@@ -31,7 +41,3 @@ async function Park({locale}: Locale) {
     </Container>
   )
 }
-
-Park.displayName = 'Park'
-
-export {Park}

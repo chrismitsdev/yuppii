@@ -8,6 +8,7 @@
       "Contact": "Contact",
       "Privacy": "Privacy",
       "Cookies": "Cookies",
+      "Menu": "Menu",
       "LocaleContent": "Ορισμός γλώσσας σε Ελληνικά"
     }
   },
@@ -960,19 +961,26 @@
     }
   },
   "Privacy": {
-    "section1": {
+    "Section1": {
       "title": "General terms",
       "content": "Our website yuppii.gr safeguards the personal nature of your information and cannot disclose it to any third party (natural or legal entity) for any reason, except for relevant legal provisions and solely to the competent authorities. We reserve the right to disclose your personally identifiable information as required by law and when we believe that disclosure is necessary to protect our rights and/or comply with a judicial proceeding, court order, or legal process served on our website. Our website yuppii.gr keeps records of personal information that visitors exclusively submit for communication purposes. Visitors can contact the appropriate department to verify the existence of their personal file, correct it, change it, or delete it. Visitors or users of our website yuppii.gr who are minors have access to its services only with the consent of their parents or guardians and are not obliged to submit their personal information. In case such information is submitted by minors and if the fact becomes known to us, our company deletes all related information. Our business, particularly the marketing department, may process part or all of the information you have submitted for statistical and improvement purposes of the provided services and information. As our business continues to evolve by introducing new products, our Privacy Policy may be updated from time to time. We will only use your personal information in accordance with the Privacy Policy in effect at the time we collected your personal information."
     },
-    "section2": {
+    "Section2": {
       "title": "User agreement",
       "content": "The visitor of the pages and services of our website yuppii.gr grants their consent to the above terms of use, which apply to the entirety of the content, pages, graphics, images, photographs, and files included on the website. Therefore, they should carefully read these terms before visiting or using the pages and services of the yuppii.gr website. If they do not agree, they should refrain from using the services and content of the website. The visitor is requested to check the content of these pages for any possible changes. The continued use of the yuppii.gr website, even after any changes, signifies the visitor's unconditional acceptance of these terms."
     }
   },
   "Cookies": {
-    "section1": {
+    "Section1": {
       "title": "Use of Cookies",
       "content": "We use cookies to enhance your experience on our website and to ensure its effective functioning. By selecting 'Accept' upon entering this website, you give your consent to the use of cookies in accordance with our policy. This website has the ability to use cookies as part of its functionality and services. Cookies are small files (text files) that are sent and stored on the user's computer, allowing websites to operate smoothly and without technical abnormalities, collect multiple user preferences, recognize frequent users, facilitate their access, and gather data to improve the content of the website. Cookies do not cause any harm to users' computers or the files stored on them. We use cookies to provide you with information and to perform the functions and features of the website."
+    }
+  },
+  "Menu": {
+    "Section1": {
+      "title": "Yuppii Menu",
+      "subtitle": "Choose a category",
+      "categories": "Beverage, Refreshment, Alcoholic, Food"
     }
   }
 }

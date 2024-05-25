@@ -4,6 +4,7 @@ import {Link, usePathname} from '@/navigation'
 import {Tooltip, TooltipPortal, TooltipTrigger, TooltipContent} from '@/components/ui/Tooltip'
 import {GreeceFlag} from '@/components/flags/GreeceFlag'
 import {AmericaFlag} from '@/components/flags/AmericaFlag'
+import {EnglishFlag} from '@/components/flags/EnglishFlag'
 import {buttonVariants} from '@/components/ui/Button'
 import {Globe} from 'lucide-react'
 
@@ -43,7 +44,7 @@ const LocaleSwitcher = ({locale, type = 'desktop', tooltipContent}: LanguagePick
     return (
       <div 
         className='relative [&>svg]:absolute [&>svg]:box-content [&>svg]:border-2 [&>svg]:border-primary [&>svg]:rounded-full [&>svg]:-top-1.5 [&>svg]:-right-1.5'>
-        {locale === 'gr' ? <GreeceFlag /> : <AmericaFlag />}
+        {locale === 'gr' ? <GreeceFlag /> : <EnglishFlag />}
         <Link 
           className={buttonVariants({variant: 'accent', size: 'icon'})} 
           href={currentPath}

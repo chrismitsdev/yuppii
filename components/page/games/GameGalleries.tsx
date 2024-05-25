@@ -46,7 +46,7 @@ const GameGalleries = ({locale, games}: GameGalleriesProps) => {
             <SheetTitle className='p-6'>
               {locale === 'gr' ? 'Επέλεξε παιχνίδι' : 'Choose game'}
             </SheetTitle>
-            <ScrollArea className='pl-6 h-[calc(100vh-76px)]' type='always'>
+            <ScrollArea className='pl-6 h-[calc(100svh-76px)]' type='always'>
               <ul className='space-y-3'>
                 {games.map(({value, label}) => (
                   <li
