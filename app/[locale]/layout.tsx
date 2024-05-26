@@ -43,7 +43,7 @@ export default function RootLayout({children, params: {locale}}: {
     <html lang={locale} className={arima.className}>
       <body className='min-h-screen grid grid-rows-[auto_1fr_auto]'>
         {children}
-        <Footer locale={locale} />
+        <Footer />
         <Toaster position='top-right' />
         <Analytics />
         <SpeedInsights />

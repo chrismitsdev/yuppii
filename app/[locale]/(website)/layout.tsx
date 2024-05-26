@@ -12,7 +12,8 @@ export default function WebsiteLayout({children, params: {locale}}: {
   return (
     <> 
       <Header locale={locale} />
-      <main className='overflow-auto'>{children}</main>
+      {children}
+      {/* <main className='overflow-hidden'>{children}</main> */}
     </>
   )
 }

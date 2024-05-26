@@ -27,7 +27,7 @@ export default function IndexPage({params: {locale}}: Params) {
         title={t('Section1.title')}
         subtitle={t('Section1.subtitle')}
       >
-        <ModalCards locale={locale} />
+        <ModalCards />
       </Section>
       <Section
         title={t('Section2.title')}
