@@ -24,7 +24,7 @@ export default function ParkPage({params: {locale}}: Params) {
         title={t('Section1.title')}
         subtitle={t('Section1.subtitle')}
       >
-        <Information locale={locale} />
+        <Information />
       </Section>
       <Section 
         title={t('Section2.title')}
@@ -36,7 +36,7 @@ export default function ParkPage({params: {locale}}: Params) {
         title={t('Section3.title')}
         subtitle={t('Section3.subtitle')}
       >
-        <Reasons locale={locale} />
+        <Reasons />
       </Section>
     </Container>
   )

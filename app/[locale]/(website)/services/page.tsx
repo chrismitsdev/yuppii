@@ -29,7 +29,7 @@ export default async function ServicesPage({params: {locale}}: Params) {
         <Cafe locale={locale} menu={translatedMenu} />
       </Section>
       <Section title={secondariesSection.title}>
-        <Secondaries locale={locale} />
+        <Secondaries />
       </Section>
     </Container>
   )

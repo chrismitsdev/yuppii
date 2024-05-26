@@ -1,4 +1,4 @@
-import {getTranslations} from 'next-intl/server'
+import {useTranslations} from 'next-intl'
 import {DataTable} from '@/components/page/services/DataTable'
 import {columnsGR, columnsEN} from '@/components/page/services/Columns'
 
@@ -7,22 +7,22 @@ interface CafeProps {
   menu: Array<MenuItem>
 }
 
-async function Cafe({locale, menu}: CafeProps) {
-  const translations = await getTranslations({locale, namespace: 'Services.Section1.TableControls'})
+function Cafe({locale, menu}: CafeProps) {
+  const t = useTranslations('Services.Section1.TableControls')
 
   return (
     <article>
       <DataTable 
-        columns={locale === 'gr' ? columnsGR : columnsEN} 
         data={menu} 
+        columns={locale === 'gr' ? columnsGR : columnsEN} 
         messages={{
-          inputPlaceholder: translations('inputPlaceholder'),
-          categoryButton: translations('categoryButton'),
-          categoryBadge: translations('categoryBadge'),
-          dropdownTitle: translations('dropdownTitle'),
-          noResults: translations('noResults'),
-          pageFrom: translations('pageFrom'),
-          pageAll: translations('pageAll')
+          inputPlaceholder: t('inputPlaceholder'),
+          categoryButton: t('categoryButton'),
+          categoryBadge: t('categoryBadge'),
+          dropdownTitle: t('dropdownTitle'),
+          noResults: t('noResults'),
+          pageFrom: t('pageFrom'),
+          pageAll: t('pageAll')
         }}
       />
     </article>

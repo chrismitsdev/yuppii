@@ -1,7 +1,7 @@
 import * as React from 'react'
-import {Link} from '@/navigation'
-import {getTranslations} from 'next-intl/server'
+import {useTranslations} from 'next-intl'
 import Image from 'next/image'
+import {Link} from '@/navigation'
 import {Container} from '@/components/Container'
 import {Navigation} from '@/components/Navigation'
 import {Home, FerrisWheel, Gamepad, ListChecks, ScrollText} from 'lucide-react'
@@ -35,12 +35,12 @@ const links: Array<HeaderLink> = [
   }
 ]
 
-async function Header({locale}: Locale) {
-  const translations = await getTranslations({locale, namespace: 'Metadata.Pages'})
+function Header({locale}: Locale) {
+  const t = useTranslations('Metadata.Pages')
 
   const tLinks = links.map(link => ({
     ...link,
-    label: translations(
+    label: t(
       link.label as 'Home' | 'Park' | 'Games' | 'Services' | 'Contact'
     ) 
   }))
@@ -54,7 +54,7 @@ async function Header({locale}: Locale) {
         <Navigation 
           links={tLinks} 
           locale={locale} 
-          localeContent={translations('LocaleContent')}
+          localeContent={t('LocaleContent')}
         />
       </Container>
     </header>

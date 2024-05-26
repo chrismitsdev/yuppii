@@ -1,4 +1,4 @@
-import {getTranslations} from 'next-intl/server'
+import {useTranslations} from 'next-intl'
 import {Link} from '@/navigation'
 import {Button, buttonVariants} from '@/components/ui/Button'
 import {
@@ -26,8 +26,8 @@ import {
   Pin
 } from 'lucide-react'
 
-async function ModalCards({locale}: Locale) {
-  const t = await getTranslations({locale, namespace: 'Home.Section1.ModalCards'})
+function ModalCards() {
+  const t = useTranslations('Home.Section1.ModalCards')
 
   return (
     <article className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4'>

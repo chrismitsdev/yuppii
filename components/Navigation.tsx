@@ -2,7 +2,13 @@
 
 import * as React from 'react'
 import {Link, usePathname} from '@/navigation'
-import {Tooltip, TooltipProvider, TooltipTrigger, TooltipPortal, TooltipContent} from '@/components/ui/Tooltip'
+import {
+  TooltipProvider,
+  Tooltip, 
+  TooltipTrigger, 
+  TooltipPortal, 
+  TooltipContent
+} from '@/components/ui/Tooltip'
 import {Drawer, DrawerTrigger, DrawerContent} from '@/components/ui/Drawer'
 import {buttonVariants} from '@/components/ui/Button'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
@@ -11,7 +17,7 @@ import {isActive} from '@/lib/utils'
 import {Facebook, Instagram, Map} from 'lucide-react'
 
 interface NavigationProps {
-  links: Array<HeaderLink>
+  links: HeaderLink[]
   locale: string
   localeContent: string
 }

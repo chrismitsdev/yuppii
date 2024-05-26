@@ -1,11 +1,11 @@
-import {getTranslations} from 'next-intl/server'
+import {useTranslations} from 'next-intl'
 import Image from 'next/image'
 import {TypographyH4} from '@/components/typography/TypographyH4'
 import {TypographyP} from '@/components/typography/TypographyP'
 import * as aeroImages from '@/public/park/information'
 
-async function Information({locale}: Locale) {
-  const t = await getTranslations({locale, namespace: 'Park.Section1'})
+function Information() {
+  const t = useTranslations('Park.Section1')
 
   return (
     <article className='flex justify-between gap-y-12 gap-x-20 flex-wrap md:flex-nowrap'>

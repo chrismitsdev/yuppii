@@ -1,6 +1,7 @@
+import {headers} from 'next/headers'
 import Image from 'next/image'
+import {useTranslations} from 'next-intl'
 import {Link} from '@/navigation'
-import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {TypographyLarge} from '@/components/typography/TypographyLarge'
 import {TypographySmall} from '@/components/typography/TypographySmall'
@@ -8,8 +9,11 @@ import {buttonVariants} from '@/components/ui/Button'
 import {Facebook, Instagram, Map} from 'lucide-react'
 import logo from '@/public/logo-full.svg'
 
-async function Footer({locale}: Locale) {
-  const translate = await getTranslations({locale, namespace: 'Footer'})
+function Footer() {
+  const t = useTranslations('Footer')
+  const headersList = headers()
+  const pathname = headersList.get('x-current-path')
+  const isInMenu = pathname && pathname.includes('menu')
   
   return (
     <footer className='bg-accent/95 text-primary'>
@@ -44,34 +48,36 @@ async function Footer({locale}: Locale) {
             </div>
           </div>
           <div className='space-y-3'>
-            <TypographyLarge>{translate('Box2.title')}</TypographyLarge>
+            <TypographyLarge>{t('Box2.title')}</TypographyLarge>
             <div className='flex flex-col gap-y-2'>
-              <TypographySmall>{translate('Box2.info1')}</TypographySmall>
-              <TypographySmall>{translate('Box2.info2')}</TypographySmall>
-              <TypographySmall>{translate('Box2.info3')}</TypographySmall>
-              <TypographySmall>{translate('Box2.info4')}</TypographySmall>
+              <TypographySmall>{t('Box2.info1')}</TypographySmall>
+              <TypographySmall>{t('Box2.info2')}</TypographySmall>
+              <TypographySmall>{t('Box2.info3')}</TypographySmall>
+              <TypographySmall>{t('Box2.info4')}</TypographySmall>
             </div>
           </div>
           <div className='space-y-3'>
-            <TypographyLarge>{translate('Box4.title')}</TypographyLarge>
+            <TypographyLarge>{t('Box4.title')}</TypographyLarge>
             <div className='flex flex-col gap-y-2'>
-              <TypographySmall>{translate('Box4.info1')}</TypographySmall>
-              <TypographySmall>{translate('Box4.info2')}</TypographySmall>
+              <TypographySmall>{t('Box4.info1')}</TypographySmall>
+              <TypographySmall>{t('Box4.info2')}</TypographySmall>
             </div>
           </div>
-          <div className='space-y-3'>
-            <TypographyLarge>{translate('Box3.title')}</TypographyLarge>
-            <div className='flex flex-col gap-y-2'>
-              <Link className='flex hover:underline' href='/privacy'>
-                <TypographySmall>{translate('Box3.link1')}</TypographySmall>
-              </Link>
-              <Link className='flex hover:underline' href='/cookies'>
-                <TypographySmall>{translate('Box3.link2')}</TypographySmall>
-              </Link>
+          {!isInMenu && (
+            <div className='space-y-3'>
+              <TypographyLarge>{t('Box3.title')}</TypographyLarge>
+              <div className='flex flex-col gap-y-2'>
+                <Link className='flex hover:underline' href='/privacy'>
+                  <TypographySmall>{t('Box3.link1')}</TypographySmall>
+                </Link>
+                <Link className='flex hover:underline' href='/cookies'>
+                  <TypographySmall>{t('Box3.link2')}</TypographySmall>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className='block [&>*]:block sm:[&>*]:inline sm:contents'>
-            <TypographySmall>
+          )}
+          <div className='block [&>*]:block sm:[&>*]:inline sm:contents sm:[grid-row:2/2]'>
+            <TypographySmall className='col-start-1'>
               Copyright &copy; {new Date().getFullYear()} Yuppii Luna Park
             </TypographySmall>
             <TypographySmall className='mt-2 sm:mt-0 sm:col-start-4'>

@@ -1,10 +1,10 @@
-import {getTranslations} from 'next-intl/server'
+import {useTranslations} from 'next-intl'
 import {TypographyLarge} from '@/components/typography/TypographyLarge'
 import {Accordion, AccordionTrigger, AccordionContent, AccordionItem} from '@/components/ui/Accordion'
 import {Rocket, LogOut, Users, Flame, Baby, Heart} from 'lucide-react'
 
-async function Reasons({locale}: Locale) {
-  const t = await getTranslations({locale, namespace:'Park.Section3'})
+function Reasons() {
+  const t = useTranslations('Park.Section3')
   
   return (
     <article>
