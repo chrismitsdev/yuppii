@@ -35,7 +35,7 @@ export default async function MenuItemsPage({params: {locale, category}}: MenuPa
     <Container>
       <Section>
         <Card>
-          <CardHeader className='px-4 sticky top-0 bg-[#DBBCC3] border-b border-b-secondary rounded-t-lg'>
+          <CardHeader className='px-4 sticky top-0 bg-[#DBBCC3] border-b border-b-secondary rounded-t-lg shadow-md'>
             <Link 
               href='/menu'
               className={
