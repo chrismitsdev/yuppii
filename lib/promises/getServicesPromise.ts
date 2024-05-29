@@ -1,7 +1,7 @@
 import {getTranslations} from 'next-intl/server'
 import messages from '@/messages/gr.json'
 
-const getServicesPromise = async (locale: string) => {
+export async function getServicesPromise(locale: string) {
   const tCafe = await getTranslations({locale, namespace: 'Services.Section1'})
   const tSecondaries = await getTranslations({locale, namespace: 'Services.Section2'})
   const tMenu = await getTranslations({locale, namespace: 'Services.Section1.Menu'})
@@ -38,5 +38,3 @@ const getServicesPromise = async (locale: string) => {
     translatedMenu
   }
 }
-
-export {getServicesPromise}

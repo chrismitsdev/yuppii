@@ -1,6 +1,6 @@
 import {getTranslations} from 'next-intl/server'
 
-const getContactPromise = async (locale: string) => {
+export async function getContactPromise(locale: string) {
   const tFormSection = await getTranslations({locale, namespace: 'Contact.Section1'})
   const tForm = await getTranslations({locale, namespace: 'Contact.Section1.Form.Fields'})
   const tNavigationSection = await getTranslations({locale, namespace: 'Contact.Section2'})
@@ -56,5 +56,3 @@ const getContactPromise = async (locale: string) => {
     translatedNavigation
   }
 }
-
-export {getContactPromise}

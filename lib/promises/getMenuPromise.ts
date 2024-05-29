@@ -5,7 +5,7 @@ import {Coffee, CupSoda, Beer, Utensils, CircleHelp} from 'lucide-react'
 
 const uniqueIcons = [Coffee, CupSoda, Beer, Utensils]
 
-const getMenuPromise = async (locale: string) => {
+export async function getMenuPromise(locale: string) {
   const t = await getTranslations({locale, namespace: 'Menu.Section1'})
 
   const translatedSection = {
@@ -25,5 +25,3 @@ const getMenuPromise = async (locale: string) => {
     translatedCategories
   }
 }
-
-export {getMenuPromise}

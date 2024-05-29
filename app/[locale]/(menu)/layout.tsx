@@ -12,7 +12,7 @@ export default function MenuLayout({children, params: {locale}}: {
   return (
     <> 
       <HeaderMenu locale={locale} />
-      <main>{children}</main> 
+      {children}
     </>
   )
 }

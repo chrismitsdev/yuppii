@@ -20,7 +20,7 @@ import * as cranes from '@/public/games/galleries/cranes'
 import * as powerGames from '@/public/games/galleries/power-games'
 import * as luckyGames from '@/public/games/galleries/lucky-games'
 
-const getGalleriesPromise = async (locale: string) => {
+export async function getGalleriesPromise(locale: string) {
   const tSection = await getTranslations({locale, namespace: 'Games.Section1'})
   const tGalleries = await getTranslations({locale, namespace: 'Games.Section1.Galleries'})
 
@@ -132,5 +132,3 @@ const getGalleriesPromise = async (locale: string) => {
     translatedGames
   }
 }
-
-export {getGalleriesPromise}

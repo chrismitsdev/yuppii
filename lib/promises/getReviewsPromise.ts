@@ -2,7 +2,7 @@ import {StaticImageData} from 'next/image'
 import {getTranslations} from 'next-intl/server'
 import * as avatars from '@/public/games/avatars'
 
-const getReviewsPromise = async (locale: string) => {
+export async function getReviewsPromise(locale: string) {
   const tSection = await getTranslations({locale, namespace: 'Games.Section2'})
   const tReviews = await getTranslations({locale, namespace: 'Games.Section2.Reviews'})
 
@@ -59,5 +59,3 @@ const getReviewsPromise = async (locale: string) => {
     translatedReviews
   }
 }
-
-export {getReviewsPromise}

@@ -4,7 +4,7 @@ import {Card, CardHeader, CardTitle, CardDescription, CardContent} from '@/compo
 import {Cake, HeartHandshake} from 'lucide-react'
 
 function Secondaries() {
-  const translations = useTranslations('Services.Section2.Cards')
+  const t = useTranslations('Services.Section2.Cards')
 
   return (
     <article className='grid grid-cols-1 sm:grid-cols-5 gap-4'>
@@ -14,10 +14,10 @@ function Secondaries() {
         </CardHeader>
         <CardContent className='p-4 lg:p-6'>
           <CardTitle>
-            {translations('Card1.title')}
+            {t('Card1.title')}
           </CardTitle>
           <CardDescription>
-            {translations('Card1.content')}
+            {t('Card1.content')}
           </CardDescription>
         </CardContent>
       </Card>
@@ -27,10 +27,10 @@ function Secondaries() {
         </CardHeader>
         <CardContent className='p-4 lg:p-6'>
           <CardTitle>
-            {translations('Card2.title')}
+            {t('Card2.title')}
           </CardTitle>
           <CardDescription>
-            {translations.rich('Card2.content', {
+            {t.rich('Card2.content', {
               link: (chunks) => (
                 <Link className='font-bold' href='tel:+306973433980' target='_blank'> 
                   {chunks}
