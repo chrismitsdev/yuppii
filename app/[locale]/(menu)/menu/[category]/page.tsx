@@ -6,7 +6,6 @@ import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Card, CardHeader, CardContent} from '@/components/ui/Card'
 import {buttonVariants} from '@/components/ui/Button'
-import {TypographySmall} from '@/components/typography/TypographySmall'
 import {TypographyP} from '@/components/typography/TypographyP'
 import {Separator} from '@/components/ui/Separator'
 import {formatCurrency} from '@/lib/utils'
@@ -30,9 +29,7 @@ export async function generateMetadata({params: {locale, category}}: MenuParams)
 }
 
 export default async function MenuItemsPage({params: {locale, category}}: MenuParams) {
-  const {translatedCategories} = await getMenuPromise(locale)
   const {translatedMenu} = await getMenuItemsPromise(locale, category)
-  // const foundCategory = translatedCategories.find(({href}) => href.toLowerCase() === category)
 
   return (
     <Container>

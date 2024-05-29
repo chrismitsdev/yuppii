@@ -594,11 +594,11 @@
           "disabled": false
         },
         "Flavored Mojito": {
-          "name": "Mojito με γεύσεις",
+          "name": "Μοχίτο με γεύσεις",
           "category": "Alcoholic",
           "description": { 
-            "2": "Mastic", 
-            "3": "Strawberry" 
+            "2": "Μαστίχα", 
+            "3": "Φράουλα" 
           },
           "price": "6.5",
           "disabled": false
@@ -677,14 +677,14 @@
           "disabled": false
         },
         "Nachos": {
-          "name": "Nachos",
+          "name": "Νάτσος",
           "category": "Φαγητο",
           "description": null,
           "price": "3",
           "disabled": false
         },
         "NachosWithSauce": {
-          "name": "Nachos με σως",
+          "name": "Νάτσος με σως",
           "category": "Φαγητο",
           "description": ["Τσένταρ", "Κόκκινη σάλτσα"],
           "price": "3.5",
