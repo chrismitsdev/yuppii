@@ -1240,7 +1240,7 @@
       "categoryName": "Coffee",
       "categoryNote": [
         "Addition of vegetable cream for +0.50€",
-        "Addition of flavored syrup for +0.50€"
+        "Addition of caramel, hazel or strawberry syrup for +0.50€"
       ],
       "products": {
         "GreekCoffee": {
@@ -1385,7 +1385,9 @@
     },
     "Beverage": {
       "categoryName": "Beverage",
-      "categoryNote": null,
+      "categoryNote": [
+        "Addition of caramel, hazel or strawberry syrup for +0.50€"
+      ],
       "products": {
         "HotTea": {
           "name": "Flavored hot tea",
@@ -1635,7 +1637,7 @@
           "subcategory": null
         },
         "TableWater": {
-          "name": "Table water",
+          "name": "Table water 500ml",
           "description": null,
           "price": "0.5",
           "disabled": false,
@@ -1699,14 +1701,14 @@
       "categoryNote": null,
       "products": {
         "AppleCider": {
-          "name": "Apple cider",
+          "name": "Apple cider 330ml",
           "description": null,
           "price": "4.5",
           "disabled": false,
           "subcategory": null
         },
         "GordonsSpace": {
-          "name": "Gordon's space",
+          "name": "Gordon's space 275ml",
           "description": null,
           "price": "5",
           "disabled": false,
@@ -1724,14 +1726,25 @@
         },
         "RegularDrink": {
           "name": "Regular drink",
-          "description": null,
+          "description": [
+            "Absolut Vodka",
+            "Gordons Gin",
+            "Famous Grouse",
+            "Campari",
+            "Jose Cuervo Blanco",
+            "Jose Cuervo Gold",
+            "Skinos",
+            "Bacardi Carta Blanca"
+          ],
           "price": "6",
           "disabled": false,
           "subcategory": null
         },
         "SpecialDrink": {
           "name": "Special drink",
-          "description": null,
+          "description": [
+            "Chivas Regal 12"
+          ],
           "price": "8",
           "disabled": false,
           "subcategory": null
@@ -1784,63 +1797,63 @@
       "categoryNote": null,
       "products": {
         "Vergina": {
-          "name": "Vergina",
+          "name": "Vergina 330ml",
           "description": null,
           "price": "3.5",
           "disabled": false,
           "subcategory": null
         },
         "Heineken": {
-          "name": "Heineken",
+          "name": "Heineken 330ml",
           "description": null,
           "price": "4",
           "disabled": false,
           "subcategory": null
         },
         "HeinekenZero": {
-          "name": "Heineken zero",
+          "name": "Heineken zero 330ml",
           "description": null,
           "price": "4",
           "disabled": false,
           "subcategory": null
         },
         "Amstel": {
-          "name": "Amstel",
+          "name": "Amstel 330ml",
           "description": null,
           "price": "4",
           "disabled": false,
           "subcategory": null
         },
         "AmstelFree": {
-          "name": "Amstel free",
+          "name": "Amstel free 330ml",
           "description": null,
           "price": "4",
           "disabled": false,
           "subcategory": null
         },
         "AmstelRadler": {
-          "name": "Amstel radler",
+          "name": "Amstel radler 330ml",
           "description": null,
           "price": "4",
           "disabled": false,
           "subcategory": null
         },
         "Sol": {
-          "name": "Sol",
+          "name": "Sol 330ml",
           "description": null,
           "price": "5",
           "disabled": false,
           "subcategory": null
         },
         "BlondeDraftBeer": {
-          "name": "Blonde draft beer",
+          "name": "Draft beer blonde 400ml",
           "description": null,
           "price": "4",
           "disabled": false,
           "subcategory": null
         },
         "WeissDraftBeer": {
-          "name": "Weiss draft beer",
+          "name": "Draft beer weiss 400ml",
           "description": null,
           "price": "4",
           "disabled": true,
