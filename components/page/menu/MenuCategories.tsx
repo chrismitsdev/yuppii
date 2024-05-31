@@ -10,11 +10,11 @@ function MenuCategories({categories}: {
   }[]
 }) {
   return (
-    <div className='flex flex-col gap-6'>
+    <div className='flex flex-col gap-4'>
       {categories.map(category => (
         <Link 
           key={category.href}
-          href={`/menu/${category.href.toLowerCase()}`}
+          href={`/menu/${category.href}`}
           className='bg-secondary/50 text-secondary-foreground border border-secondary rounded-lg flex justify-between items-center py-3 px-6 active:scale-[0.99] duration-75'
         >
           <div className='flex flex-col gap-2'>

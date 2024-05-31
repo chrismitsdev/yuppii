@@ -35,7 +35,7 @@ const links: Array<HeaderLink> = [
   }
 ]
 
-function Header({locale}: Locale) {
+function Header({locale}: {locale: string}) {
   const t = useTranslations('Metadata.Pages')
 
   const tLinks = links.map(link => ({
@@ -49,7 +49,7 @@ function Header({locale}: Locale) {
     <header className='py-4'>
       <Container className='flex justify-between'>
         <Link href='/'>
-          <Image src={logo} width={124} alt='Yuppii Luna Park' />
+          <Image priority src={logo} width={124} alt='Yuppii Luna Park' />
         </Link>
         <Navigation 
           links={tLinks} 

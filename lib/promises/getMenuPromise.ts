@@ -1,12 +1,36 @@
 import * as React from 'react'
 import {getTranslations} from 'next-intl/server'
-import {uniqueCategories} from '@/lib/utils'
-import {Coffee, CupSoda, Beer, Utensils, CircleHelp} from 'lucide-react'
+import Messages from '@/messages/en.json'
+import {Burger} from '@/components/misc-icons/burger'
+import {
+  Coffee, 
+  CupSoda, 
+  GlassWater, 
+  Beer, 
+  Zap, 
+  Utensils, 
+  Pizza, 
+  SaladIcon, 
+  Martini, 
+  CircleHelp
+} from 'lucide-react'
 
-const uniqueIcons = [Coffee, CupSoda, Beer, Utensils]
+const uniqueIcons = [
+  Coffee, 
+  CupSoda, 
+  GlassWater, 
+  Zap, 
+  Martini, 
+  Beer, 
+  Utensils, 
+  Pizza, 
+  Burger, 
+  SaladIcon
+]
 
 export async function getMenuPromise(locale: string) {
   const t = await getTranslations({locale, namespace: 'Menu.Section1'})
+  const t2 = await getTranslations({locale, namespace: 'Catalog'})
 
   const translatedSection = {
     title: t('title'),
@@ -14,11 +38,13 @@ export async function getMenuPromise(locale: string) {
   }
 
   const translatedCategories: {href: string, label: string, icon: React.ReactElement}[] = 
-    uniqueCategories.map((category, i) => ({
-      href: category,
-      label: t('categories').split(',')[i] || '',
-      icon: React.createElement(uniqueIcons[i] || CircleHelp, {strokeWidth: 2.5})
-    }))
+    Object.entries(Messages.Catalog).map(([k], i) => {
+      return {
+        href: k.toLowerCase(),
+        label: t2(`${k}.categoryName` as any),
+        icon: React.createElement(uniqueIcons[i] || CircleHelp, {strokeWidth: 2.5})
+      }
+    })
 
   return {
     translatedSection,

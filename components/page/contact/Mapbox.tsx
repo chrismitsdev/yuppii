@@ -8,7 +8,7 @@ import {MapPin, Phone, Mail, LocateFixed} from 'lucide-react'
 import logo from '@/public/logo.svg'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-interface MapboxProps {
+type MapboxProps = {
   translations: {
     location: string
     email: string
@@ -17,10 +17,15 @@ interface MapboxProps {
   token: string
 }
 
-const YuppiiLocation = {
+type Coords = {
+  lat: number,
+  lon: number
+}
+
+const location: Coords = {
   lat: 40.84336093510751,
   lon: 25.875331041502044
-} as Coords
+}
 
 function Mapbox({translations, token}: MapboxProps) {
   const [showPopup, setShowPopup] = React.useState<boolean>(false)
@@ -31,8 +36,8 @@ function Mapbox({translations, token}: MapboxProps) {
         <Map
           mapboxAccessToken={token}
           initialViewState={{
-            latitude: YuppiiLocation.lat,
-            longitude: YuppiiLocation.lon,
+            latitude: location.lat,
+            longitude: location.lon,
             zoom: 15,
           }}
           style={{width: '100%', minHeight: 424}}
@@ -42,8 +47,8 @@ function Mapbox({translations, token}: MapboxProps) {
           reuseMaps
         >
           <Marker 
-            latitude={YuppiiLocation.lat} 
-            longitude={YuppiiLocation.lon} 
+            latitude={location.lat} 
+            longitude={location.lon} 
             anchor='bottom' 
             style={{cursor: 'pointer'}}
             onClick={() => setShowPopup(prevState => !prevState)}
@@ -52,8 +57,8 @@ function Mapbox({translations, token}: MapboxProps) {
           </Marker>
           {showPopup && (
             <Popup 
-              latitude={YuppiiLocation.lat} 
-              longitude={YuppiiLocation.lon} 
+              latitude={location.lat} 
+              longitude={location.lon} 
               anchor='bottom' 
               offset={35}
               closeOnClick={false}
