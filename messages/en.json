@@ -1606,7 +1606,9 @@
             "Ginger & Stevia",
             "Pomegranate with Lemon Juice",
             "Chios Mastic",
-            "Strawberry with Lemon Juice"
+            "Strawberry with Lemon Juice",
+            "Orangeade",
+            "Grapefruit"
           ],
           "price": "4",
           "disabled": false,
@@ -1752,7 +1754,7 @@
         "Mojito": {
           "name": "Mojito",
           "description": null,
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         },
@@ -1762,7 +1764,7 @@
             "Mastic",
             "Strawberry"
           ],
-          "price": "6.5",
+          "price": "7.5",
           "disabled": false,
           "subcategory": null
         },
@@ -1772,21 +1774,21 @@
             "Original",
             "Ursus"
           ],
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         },
         "Negroni": {
           "name": "Negroni",
           "description": null,
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         },
         "Daiquiri": {
           "name": "Daiquiri",
           "description": null,
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         }
@@ -1879,20 +1881,6 @@
           "disabled": false,
           "subcategory": null
         },
-        "Popcorn": {
-          "name": "Popcorn",
-          "description": null,
-          "price": "2",
-          "disabled": false,
-          "subcategory": null
-        },
-        "BoiledCorn": {
-          "name": "Boiled corn",
-          "description": null,
-          "price": "2.5",
-          "disabled": false,
-          "subcategory": null
-        },
         "ChickenBreadsticks": {
           "name": "Chicken breadsticks",
           "description": null,
@@ -1912,30 +1900,6 @@
           "description": null,
           "price": "2.5",
           "disabled": false,
-          "subcategory": null
-        },
-        "Nachos": {
-          "name": "Nachos",
-          "description": null,
-          "price": "3",
-          "disabled": false,
-          "subcategory": null
-        },
-        "NachosWithSauce": {
-          "name": "Nachos with sauce",
-          "description": [
-            "Cheddar",
-            "Red sauce"
-          ],
-          "price": "3.5",
-          "disabled": false,
-          "subcategory": null
-        },
-        "Churros": {
-          "name": "Churros",
-          "description": null,
-          "price": "3",
-          "disabled": true,
           "subcategory": null
         },
         "ChickenTortilla": {
@@ -2335,6 +2299,50 @@
           "price": "5",
           "disabled": false,
           "subcategory": "salad"
+        }
+      }
+    },
+    "Snack": {
+      "categoryName": "Snack",
+      "categoryNote": null,
+      "products": {
+        "Popcorn": {
+          "name": "Popcorn",
+          "description": null,
+          "price": "2",
+          "disabled": false,
+          "subcategory": null
+        },
+        "BoiledCorn": {
+          "name": "Boiled corn",
+          "description": null,
+          "price": "2.5",
+          "disabled": false,
+          "subcategory": null
+        },
+        "Nachos": {
+          "name": "Nachos",
+          "description": null,
+          "price": "3",
+          "disabled": false,
+          "subcategory": null
+        },
+        "NachosWithSauce": {
+          "name": "Nachos with sauce",
+          "description": [
+            "Cheddar",
+            "Red sauce"
+          ],
+          "price": "3.5",
+          "disabled": false,
+          "subcategory": null
+        },
+        "Churros": {
+          "name": "Churros",
+          "description": null,
+          "price": "3",
+          "disabled": true,
+          "subcategory": null
         }
       }
     }

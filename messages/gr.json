@@ -1606,7 +1606,9 @@
             "Τζίντζερ & στέβια",
             "Ρόδι με χυμό λεμόνι",
             "Μαστίχα Χίου",
-            "Φραουλάδα με χυμό λεμόνι"
+            "Φραουλάδα με χυμό λεμόνι",
+            "Πορτοκαλάδα",
+            "Γκρέϊπφρουτ"
           ],
           "price": "4",
           "disabled": false,
@@ -1752,17 +1754,17 @@
         "Mojito": {
           "name": "Μοχίτο",
           "description": null,
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         },
         "Flavored Mojito": {
-          "name": "Μοχίτο με γεύσεις",
+          "name": "Μοχίτο με γεύση",
           "description": [
             "Μαστίχα",
             "Φράουλα"
           ],
-          "price": "6.5",
+          "price": "7.5",
           "disabled": false,
           "subcategory": null
         },
@@ -1772,21 +1774,21 @@
             "Original",
             "Ursus"
           ],
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         },
         "Negroni": {
           "name": "Νεγκρόνι",
           "description": null,
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         },
         "Daiquiri": {
           "name": "Ντάκιρι",
           "description": null,
-          "price": "6",
+          "price": "7",
           "disabled": false,
           "subcategory": null
         }
@@ -1879,20 +1881,6 @@
           "disabled": false,
           "subcategory": null
         },
-        "Popcorn": {
-          "name": "Πόπ κορν",
-          "description": null,
-          "price": "2",
-          "disabled": false,
-          "subcategory": null
-        },
-        "BoiledCorn": {
-          "name": "Βραστό καλαμπόκι",
-          "description": null,
-          "price": "2.5",
-          "disabled": false,
-          "subcategory": null
-        },
         "ChickenBreadsticks": {
           "name": "Κριτσίνια κοτόπουλο",
           "description": null,
@@ -1912,30 +1900,6 @@
           "description": null,
           "price": "2.5",
           "disabled": false,
-          "subcategory": null
-        },
-        "Nachos": {
-          "name": "Νάτσος",
-          "description": null,
-          "price": "3",
-          "disabled": false,
-          "subcategory": null
-        },
-        "NachosWithSauce": {
-          "name": "Νάτσος με σως",
-          "description": [
-            "Τσένταρ",
-            "Κόκκινη σάλτσα"
-          ],
-          "price": "3.5",
-          "disabled": false,
-          "subcategory": null
-        },
-        "Churros": {
-          "name": "Churros",
-          "description": null,
-          "price": "3",
-          "disabled": true,
           "subcategory": null
         },
         "ChickenTortilla": {
@@ -2335,6 +2299,50 @@
           "price": "5",
           "disabled": false,
           "subcategory": "Σαλάτα"
+        }
+      }
+    },
+    "Snack": {
+      "categoryName": "Σνακ",
+      "categoryNote": null,
+      "products": {
+        "Popcorn": {
+          "name": "Πόπ κορν",
+          "description": null,
+          "price": "2",
+          "disabled": false,
+          "subcategory": null
+        },
+        "BoiledCorn": {
+          "name": "Βραστό καλαμπόκι",
+          "description": null,
+          "price": "2.5",
+          "disabled": false,
+          "subcategory": null
+        },
+        "Nachos": {
+          "name": "Νάτσος",
+          "description": null,
+          "price": "3",
+          "disabled": false,
+          "subcategory": null
+        },
+        "NachosWithSauce": {
+          "name": "Νάτσος με σως",
+          "description": [
+            "Τσένταρ",
+            "Κόκκινη σάλτσα"
+          ],
+          "price": "3.5",
+          "disabled": false,
+          "subcategory": null
+        },
+        "Churros": {
+          "name": "Churros",
+          "description": null,
+          "price": "3",
+          "disabled": true,
+          "subcategory": null
         }
       }
     }

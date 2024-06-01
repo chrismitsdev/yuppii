@@ -12,7 +12,8 @@ import {
   Pizza, 
   SaladIcon, 
   Martini, 
-  CircleHelp
+  Popcorn,
+  CircleHelp,
 } from 'lucide-react'
 
 const uniqueIcons = [
@@ -25,7 +26,8 @@ const uniqueIcons = [
   Utensils, 
   Pizza, 
   Burger, 
-  SaladIcon
+  SaladIcon,
+  Popcorn
 ]
 
 export async function getMenuPromise(locale: string) {
