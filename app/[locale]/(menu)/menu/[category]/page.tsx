@@ -1,18 +1,19 @@
+import * as React from 'react'
 import {getTranslations} from 'next-intl/server'
 import {Link} from '@/navigation'
 import {getMenuPromise} from '@/lib/promises/getMenuPromise'
-import {getMenuItemsPromise} from '@/lib/promises/getMenuItemsPromise'
+import {getMenuProductsPromise} from '@/lib/promises/getMenuProductsPromise'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
-import {Card, CardHeader, CardContent} from '@/components/ui/Card'
+import {Card, CardHeader, CardContent, CardFooter} from '@/components/ui/Card'
 import {buttonVariants} from '@/components/ui/Button'
 import {TypographyP} from '@/components/typography/TypographyP'
+import {TypographySmall} from '@/components/typography/TypographySmall'
 import {Separator} from '@/components/ui/Separator'
 import {formatCurrency} from '@/lib/utils'
 import {Badge} from '@/components/ui/Badge'
 import {ArrowLeft} from 'lucide-react'
 import {uniqueCategories} from '@/lib/utils'
-import React from 'react'
 
 export function generateStaticParams() {
   return uniqueCategories.map(category => ({category}))
@@ -21,7 +22,7 @@ export function generateStaticParams() {
 export async function generateMetadata({params: {locale, category}}: MenuParams) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
   const {translatedCategories} = await getMenuPromise(locale)
-  const foundCategory = translatedCategories.find(({href}) => href.toLowerCase() === category)
+  const foundCategory = translatedCategories.find(({href}) => href === category)
  
   return {
     title: `${t('Menu')} - ${foundCategory?.label} | Yuppii Luna Park`
@@ -29,7 +30,7 @@ export async function generateMetadata({params: {locale, category}}: MenuParams)
 }
 
 export default async function MenuItemsPage({params: {locale, category}}: MenuParams) {
-  const {translatedMenu} = await getMenuItemsPromise(locale, category)
+  const {notes, tProducts} = await getMenuProductsPromise(locale, category)
 
   return (
     <Container>
@@ -41,7 +42,6 @@ export default async function MenuItemsPage({params: {locale, category}}: MenuPa
               className={
                 buttonVariants({
                   variant: 'outline',
-                  size: 'sm'
                 })
               }
             >
@@ -54,32 +54,44 @@ export default async function MenuItemsPage({params: {locale, category}}: MenuPa
               </span>
             </Link>
           </CardHeader>
-          <CardContent className='py-6 px-4'>
-            <div className='grid grid-cols-[1fr_auto] gap-y-2'>
-              {translatedMenu.map((product, i, {length}) => (
-                <React.Fragment key={product.name}>
-                  <div>
-                    <TypographyP className='font-semibold'>{product.name}</TypographyP>
-                    {product.description && (
-                      <div className='flex flex-wrap gap-1 mt-0.5'>
-                        {product.description.map(desc => (
-                          <Badge key={desc} variant='secondary'>
-                            {desc}
-                          </Badge>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <TypographyP className='font-semibold'>
-                      {formatCurrency(product.price)}
-                    </TypographyP>
-                  </div>
-                  {i !== length - 1 && <Separator className='bg-secondary/40 col-span-2' />}
-                </React.Fragment>
-              ))}
-            </div>
+          <CardContent className='py-6 px-4 space-y-6'>
+            {tProducts.map((product, i, {length}) => (
+              <React.Fragment key={product.name}>
+                <div className='grid grid-cols-[1fr_auto] gap-1'>
+                  <TypographyP className='font-semibold col-span-1'>
+                    {product.name}
+                  </TypographyP>
+                  {product.description && (
+                    <div className='flex flex-wrap gap-1.5 row-start-2 col-span-2'>
+                      {product.description.map(desc => (
+                        <Badge key={desc} variant='secondary' className='text-sm font-semibold'>
+                          {desc}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                  <TypographyP className='font-semibold col-start-2'>
+                    {formatCurrency(product.price)}
+                  </TypographyP>
+                </div>
+
+                {i !== length - 1 && <Separator className='bg-secondary/40 col-span-2' />}
+              </React.Fragment>
+            ))}
           </CardContent>
+          {notes && (
+            <CardFooter className='px-4 py-4 border-t border-t-secondary'>
+              <ul className="list-disc pl-5">
+                {notes.map(note => (
+                  <li key={note}>
+                  <TypographySmall className='font-semibold'>
+                    {note}
+                  </TypographySmall>
+                  </li>
+                ))}
+              </ul>
+            </CardFooter>
+          )}
         </Card>
       </Section>
     </Container>

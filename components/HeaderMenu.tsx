@@ -4,7 +4,7 @@ import {Container} from '@/components/Container'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
 import logo from '@/public/logo.svg'
 
-function HeaderMenu({locale}: Locale) {
+function HeaderMenu({locale}: {locale: string}) {
   return (
     <header className='py-4'>
       <Container className='flex justify-between'>

@@ -4,7 +4,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import * as maps from '@/public/park/map'
 
-function Map({locale}: Locale) {
+function Map({locale}: {locale: string}) {
   return (
     <article>
       <figure className='relative w-full rounded-md overflow-hidden shadow-md'>

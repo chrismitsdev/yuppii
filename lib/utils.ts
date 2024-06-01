@@ -31,4 +31,10 @@ const uniqueCategories = [
   )
 ]
 
+export function getUniqueSubcategories(products: MenuProduct[]) {
+  return [
+    ...new Set(Object.values(products).map(product => product.subcategory || 'general'))
+  ]
+}
+
 export {cn, isActive, formatCurrency, uniqueCategories}
