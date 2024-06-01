@@ -1428,7 +1428,7 @@
           "description": [
             "Ζεστή ή κρύα"
           ],
-          "price": "3.5",
+          "price": "4",
           "disabled": false,
           "subcategory": null
         },
@@ -1440,7 +1440,7 @@
             "Φουντούκι",
             "Φράουλα"
           ],
-          "price": "4",
+          "price": "4.5",
           "disabled": false,
           "subcategory": null
         },
@@ -1697,7 +1697,7 @@
       }
     },
     "Alcoholic": {
-      "categoryName": "Οινοπνευματώδη",
+      "categoryName": "Αλκοολούχο",
       "categoryNote": null,
       "products": {
         "AppleCider": {
