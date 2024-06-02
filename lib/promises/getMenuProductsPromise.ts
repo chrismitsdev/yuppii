@@ -1,7 +1,7 @@
 import {getTranslations} from 'next-intl/server'
 import Messages from '@/messages/en.json'
 
-type SimpleMenuProduct = Omit<MenuProduct, 'subcategory' | 'disabled'>
+type SimpleMenuProduct = Omit<MenuProduct, 'disabled'>
 
 export async function getMenuProductsPromise(locale: string, category: string) {
   const t = await getTranslations({locale, namespace: 'Catalog'})

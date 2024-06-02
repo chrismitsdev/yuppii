@@ -1247,29 +1247,25 @@
           "name": "Greek coffee",
           "description": null,
           "price": "2",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "DoubleGreekCoffee": {
           "name": "Greek coffee double",
           "description": null,
           "price": "2.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "InstantCoffeeHot": {
           "name": "Instant coffee hot",
           "description": null,
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "InstantCoffeeCold": {
           "name": "Frappé",
           "description": null,
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "InstantCoffeeColdWithIcecream": {
           "name": "Frappé with ice-cream",
@@ -1278,78 +1274,67 @@
             "Vanilla"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FilteredCoffee": {
           "name": "Filtered coffee",
           "description": null,
           "price": "3",
-          "disabled": true,
-          "subcategory": null
+          "disabled": true
         },
         "FilteredCoffeewithCaramel": {
           "name": "Filtered coffee with caramel",
           "description": null,
           "price": "3.5",
-          "disabled": true,
-          "subcategory": null
+          "disabled": true
         },
         "Espresso": {
           "name": "Espresso",
           "description": null,
           "price": "2.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "EspressoDouble": {
           "name": "Double espresso",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "EspressoLungo": {
           "name": "Espresso lungo",
           "description": null,
           "price": "2.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "EspressoAmericano": {
           "name": "Espresso americano",
           "description": null,
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "EspressoAmericanoDouble": {
           "name": "Double espresso americano",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Cappuccino": {
           "name": "Cappuccino",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "CappuccinoDouble": {
           "name": "Double cappuccino",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "CappuccinoCaramel": {
           "name": "Cappuccino with caramel",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Latte": {
           "name": "Latte",
@@ -1357,29 +1342,25 @@
             "Hot or cold"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FreddoEspresso": {
           "name": "Freddo espresso",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FreddoCappuccino": {
           "name": "Freddo cappuccino",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FreddoCappuccinowithCaramel": {
           "name": "Freddo cappuccino with caramel",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         }
       }
     },
@@ -1399,8 +1380,7 @@
             "Forest fruits"
           ],
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Chocolate": {
           "name": "Chocolate",
@@ -1408,8 +1388,7 @@
             "Hot or cold"
           ],
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ChocolateFlavored": {
           "name": "Flavored chocolate",
@@ -1420,8 +1399,7 @@
             "Strawberry"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ChocolateWhite": {
           "name": "White chocolate",
@@ -1429,8 +1407,7 @@
             "Hot or cold"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ChocolateWhiteFlavored": {
           "name": "Flavored white chocolate",
@@ -1441,8 +1418,7 @@
             "Strawberry"
           ],
           "price": "4.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Mochaccino": {
           "name": "Mochaccino",
@@ -1450,8 +1426,7 @@
             "Hot or cold"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "MochaccinoFlavored": {
           "name": "Flavored mochaccino",
@@ -1462,8 +1437,7 @@
             "Strawberry"
           ],
           "price": "4.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Milkshake": {
           "name": "Milkshake",
@@ -1472,8 +1446,7 @@
             "Vanilla"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         }
       }
     },
@@ -1490,8 +1463,7 @@
             "Zero sugar & caffeine free"
           ],
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Fanta": {
           "name": "Fanta 330ml",
@@ -1502,22 +1474,19 @@
             "Lemon"
           ],
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FantaΕxotic": {
           "name": "Fanta Exotic sugar free 500ml",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FantaShokata": {
           "name": "Fanta Shokata 500ml",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Schweppes": {
           "name": "Schweppes 330ml",
@@ -1529,15 +1498,13 @@
             "Pink"
           ],
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Sprite": {
           "name": "Sprite 330ml",
           "description": null,
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "AmitaJuice": {
           "name": "Amita juice 330ml",
@@ -1551,8 +1518,7 @@
             "Orange apricot apple"
           ],
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "AmitaFun": {
           "name": "Amita FUN! 250ml",
@@ -1561,8 +1527,7 @@
             "4 fruits mixed"
           ],
           "price": "2.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "LiptonIcedTea": {
           "name": "Lipton iced tea 330ml",
@@ -1572,8 +1537,7 @@
             "Green"
           ],
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FuzeIcedTea": {
           "name": "Fuze iced tea 500ml",
@@ -1584,8 +1548,7 @@
             "Passion fruit"
           ],
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Slush": {
           "name": "Slush 330ml",
@@ -1594,8 +1557,7 @@
             "Lemon"
           ],
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "LemonodasosJuice": {
           "name": "Lemonodasos juice",
@@ -1611,8 +1573,7 @@
             "Grapefruit"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Mastiqua": {
           "name": "Mastiqua 330ml",
@@ -1621,29 +1582,25 @@
             "Lemon"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Perrier": {
           "name": "Perrier 330ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "PinkGrapefruit": {
           "name": "Pink grapefruit 200ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "TableWater": {
           "name": "Table water 500ml",
           "description": null,
           "price": "0.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         }
       }
     },
@@ -1658,8 +1615,7 @@
             "Light"
           ],
           "price": "5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Prime": {
           "name": "Prime 500ml",
@@ -1673,8 +1629,7 @@
             "Banana"
           ],
           "price": "5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Monster": {
           "name": "Monster 500ml",
@@ -1693,8 +1648,7 @@
             "Blue zero sugar"
           ],
           "price": "5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         }
       }
     },
@@ -1706,15 +1660,13 @@
           "name": "Apple cider 330ml",
           "description": null,
           "price": "4.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "GordonsSpace": {
           "name": "Gordon's space 275ml",
           "description": null,
           "price": "5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "MiniWine187ml": {
           "name": "Mini wine 187ml",
@@ -1723,8 +1675,7 @@
             "Dry White/Red"
           ],
           "price": "4.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "RegularDrink": {
           "name": "Regular drink",
@@ -1739,8 +1690,7 @@
             "Bacardi Carta Blanca"
           ],
           "price": "6",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "SpecialDrink": {
           "name": "Special drink",
@@ -1748,15 +1698,13 @@
             "Chivas Regal 12"
           ],
           "price": "8",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Mojito": {
           "name": "Mojito",
           "description": null,
           "price": "7",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Flavored Mojito": {
           "name": "Flavored Mojito",
@@ -1765,8 +1713,7 @@
             "Strawberry"
           ],
           "price": "7.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Caipirinha": {
           "name": "Caipirinha",
@@ -1775,22 +1722,19 @@
             "Ursus"
           ],
           "price": "7",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Negroni": {
           "name": "Negroni",
           "description": null,
           "price": "7",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Daiquiri": {
           "name": "Daiquiri",
           "description": null,
           "price": "7",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         }
       }
     },
@@ -1802,64 +1746,55 @@
           "name": "Vergina 330ml",
           "description": null,
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Heineken": {
           "name": "Heineken 330ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "HeinekenZero": {
           "name": "Heineken zero 330ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Amstel": {
           "name": "Amstel 330ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "AmstelFree": {
           "name": "Amstel free 330ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "AmstelRadler": {
           "name": "Amstel radler 330ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Sol": {
           "name": "Sol 330ml",
           "description": null,
           "price": "5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "BlondeDraftBeer": {
           "name": "Draft beer blonde 400ml",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "WeissDraftBeer": {
           "name": "Draft beer weiss 400ml",
           "description": null,
           "price": "4",
-          "disabled": true,
-          "subcategory": null
+          "disabled": true
         }
       }
     },
@@ -1871,36 +1806,31 @@
           "name": "Toast with yellow cheese",
           "description": null,
           "price": "1.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Toast": {
           "name": "Toast",
           "description": null,
           "price": "2",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ChickenBreadsticks": {
           "name": "Chicken breadsticks",
           "description": null,
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "HotDog": {
           "name": "Hot dog",
           "description": null,
           "price": "2.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "FriedFries": {
           "name": "Fried fries",
           "description": null,
           "price": "2.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ChickenTortilla": {
           "name": "Chicken tortilla",
@@ -1911,8 +1841,7 @@
             "Corn"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "VienneseBaguette": {
           "name": "Viennese baguette",
@@ -1924,8 +1853,7 @@
             "Oregano"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ChickenVienneseBaguette": {
           "name": "Chicken viennese baguette",
@@ -1937,43 +1865,37 @@
             "Cheese"
           ],
           "price": "4.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ClubSandwich": {
           "name": "Club sandwich",
           "description": null,
           "price": "5.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ChickenClubSandwich": {
           "name": "Chicken club sandwich",
           "description": null,
           "price": "6",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "YuppiiChickenNuggets": {
           "name": "Yuppii chicken nuggets",
           "description": null,
           "price": "5.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "YuppiiChickys": {
           "name": "Yuppii chicky's",
           "description": null,
           "price": "5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "ColdCutsVariety": {
           "name": "Cold cuts variety",
           "description": null,
           "price": "8",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         }
       }
     },
@@ -1990,8 +1912,7 @@
             "Tomato"
           ],
           "price": "7",
-          "disabled": false,
-          "subcategory": "pizza"
+          "disabled": false
         },
         "SpecialPizza": {
           "name": "Special pizza",
@@ -2004,8 +1925,7 @@
             "Tomato Sauce"
           ],
           "price": "7.5",
-          "disabled": false,
-          "subcategory": "pizza"
+          "disabled": false
         },
         "FourCheesePizza": {
           "name": "Four cheese pizza",
@@ -2017,8 +1937,7 @@
             "Tomato Sauce"
           ],
           "price": "7.5",
-          "disabled": false,
-          "subcategory": "pizza"
+          "disabled": false
         },
         "GreekPizza": {
           "name": "Greek pizza",
@@ -2032,8 +1951,7 @@
             "Tomato Sauce"
           ],
           "price": "7.5",
-          "disabled": false,
-          "subcategory": "pizza"
+          "disabled": false
         },
         "ProsciuttoPizza": {
           "name": "Prosciutto pizza",
@@ -2045,8 +1963,7 @@
             "Tomato Sauce"
           ],
           "price": "7.5",
-          "disabled": false,
-          "subcategory": "pizza"
+          "disabled": false
         },
         "VegetarianPizza": {
           "name": "Vegetarian pizza",
@@ -2058,8 +1975,7 @@
             "Olives"
           ],
           "price": "7.5",
-          "disabled": false,
-          "subcategory": "pizza"
+          "disabled": false
         },
         "ChickenPizza": {
           "name": "Chicken pizza",
@@ -2071,8 +1987,7 @@
             "Mustard Sauce"
           ],
           "price": "7.5",
-          "disabled": false,
-          "subcategory": "pizza"
+          "disabled": false
         },
         "ClassicCrepe": {
           "name": "Classic crepe",
@@ -2081,8 +1996,7 @@
             "Smoked Turkey"
           ],
           "price": "2.5",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "LightCrepe": {
           "name": "Light crepe",
@@ -2093,8 +2007,7 @@
             "Tomato"
           ],
           "price": "3.5",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "GreekCrepe": {
           "name": "Greek crepe",
@@ -2106,8 +2019,7 @@
             "Yogurt Sauce"
           ],
           "price": "4",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "SmokedCrepe": {
           "name": "Smoked crepe",
@@ -2118,8 +2030,7 @@
             "Cheese"
           ],
           "price": "4",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "PhiladelphiaCrepe": {
           "name": "Philadelphia crepe",
@@ -2130,8 +2041,7 @@
             "Philadelphia Cream Cheese"
           ],
           "price": "4",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "MediterraneanCrepe": {
           "name": "Mediterranean crepe",
@@ -2143,8 +2053,7 @@
             "Cheese salad"
           ],
           "price": "4.5",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "BuenoCrepe": {
           "name": "Bueno crepe",
@@ -2153,8 +2062,7 @@
             "Biscuit"
           ],
           "price": "3",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "DoubleDreamCrepe": {
           "name": "Double dream crepe",
@@ -2165,8 +2073,7 @@
             "Truffle"
           ],
           "price": "4.5",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "EnergyCrepe": {
           "name": "Energy crepe",
@@ -2177,8 +2084,7 @@
             "Super Food"
           ],
           "price": "4.5",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "ChocolamaniaCrepe": {
           "name": "Chocolamania crepe",
@@ -2188,8 +2094,7 @@
             "Smarties"
           ],
           "price": "5",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         },
         "OnIceCrepe": {
           "name": "On ice crepe",
@@ -2199,8 +2104,7 @@
             "Oreo"
           ],
           "price": "5",
-          "disabled": true,
-          "subcategory": "crepe"
+          "disabled": true
         }
       }
     },
@@ -2221,8 +2125,7 @@
             "Cheese"
           ],
           "price": "4.5",
-          "disabled": false,
-          "subcategory": "burger"
+          "disabled": false
         },
         "YuppiiCheeseBurger": {
           "name": "Yuppii cheese burger",
@@ -2235,8 +2138,7 @@
             "Ketchup"
           ],
           "price": "4",
-          "disabled": false,
-          "subcategory": "burger"
+          "disabled": false
         },
         "YuppiiChickenBurger": {
           "name": "Yuppii chicken burger",
@@ -2249,8 +2151,7 @@
             "Lettuce"
           ],
           "price": "5",
-          "disabled": false,
-          "subcategory": "burger"
+          "disabled": false
         }
       }
     },
@@ -2269,8 +2170,7 @@
             "Chef's sauce"
           ],
           "price": "5",
-          "disabled": false,
-          "subcategory": "salad"
+          "disabled": false
         },
         "YuppiiSalad": {
           "name": "Yuppii salad",
@@ -2283,8 +2183,7 @@
             "Orange sauce"
           ],
           "price": "5",
-          "disabled": false,
-          "subcategory": "salad"
+          "disabled": false
         },
         "CretanDakosSalad": {
           "name": "Cretan dakos",
@@ -2297,8 +2196,7 @@
             "Oregano"
           ],
           "price": "5",
-          "disabled": false,
-          "subcategory": "salad"
+          "disabled": false
         }
       }
     },
@@ -2310,22 +2208,19 @@
           "name": "Popcorn",
           "description": null,
           "price": "2",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "BoiledCorn": {
           "name": "Boiled corn",
           "description": null,
           "price": "2.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Nachos": {
           "name": "Nachos",
           "description": null,
           "price": "3",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "NachosWithSauce": {
           "name": "Nachos with sauce",
@@ -2334,15 +2229,13 @@
             "Red sauce"
           ],
           "price": "3.5",
-          "disabled": false,
-          "subcategory": null
+          "disabled": false
         },
         "Churros": {
           "name": "Churros",
           "description": null,
           "price": "3",
-          "disabled": true,
-          "subcategory": null
+          "disabled": true
         }
       }
     }

@@ -4,7 +4,7 @@ import {columnsGR, columnsEN} from '@/components/page/services/Columns'
 
 interface CafeProps {
   locale: string
-  menu: Array<MenuItem>
+  menu: MenuItem[]
 }
 
 function Cafe({locale, menu}: CafeProps) {

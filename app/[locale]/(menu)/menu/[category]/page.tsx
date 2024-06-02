@@ -13,10 +13,14 @@ import {Separator} from '@/components/ui/Separator'
 import {formatCurrency} from '@/lib/utils'
 import {Badge} from '@/components/ui/Badge'
 import {ArrowLeft} from 'lucide-react'
-import {uniqueCategories} from '@/lib/utils'
+import Messages from '@/messages/en.json'
 
 export function generateStaticParams() {
-  return uniqueCategories.map(category => ({category}))
+  return Object.keys(Messages.Catalog).map(category => {
+    return {
+      category: category.toLowerCase()
+    }
+  })
 }
 
 export async function generateMetadata({params: {locale, category}}: MenuParams) {

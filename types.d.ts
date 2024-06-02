@@ -17,23 +17,16 @@ type MenuParams = {
 type MenuItem = {
   name: string
   category: string
-  description: Array<string> | null
   price: number
+  description: string[] | null
 }
 
 type MenuProduct = {
   name: string
   description: string[] | null
   price: string
-  disabled: boolean
-  subcategory: string | null
+  disabled?: boolean
 }
-
-// type MenuProduct = {
-//   name: string
-//   description: string[] | null
-//   price: number
-// }
 
 type HeaderLink = {
   href: string,
