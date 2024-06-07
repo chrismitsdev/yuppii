@@ -2,7 +2,7 @@ import * as React from 'react'
 import {getTranslations} from 'next-intl/server'
 import {Link} from '@/navigation'
 import {getMenuPromise} from '@/lib/promises/getMenuPromise'
-import {getMenuProductsPromise} from '@/lib/promises/getMenuProductsPromise'
+import {getCategoryProductsPromise} from '@/lib/promises/getCategoryProductsPromise'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Card, CardHeader, CardContent, CardFooter} from '@/components/ui/Card'
@@ -34,7 +34,7 @@ export async function generateMetadata({params: {locale, category}}: MenuParams)
 }
 
 export default async function MenuItemsPage({params: {locale, category}}: MenuParams) {
-  const {notes, tProducts} = await getMenuProductsPromise(locale, category)
+  const {notes, tProducts} = await getCategoryProductsPromise(locale, category)
 
   return (
     <Container>

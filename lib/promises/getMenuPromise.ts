@@ -30,7 +30,7 @@ const uniqueIcons = [
   Popcorn
 ]
 
-export async function getMenuPromise(locale: string) {
+export async function getMenuPromise(locale: string, iconSize: number = 24) {
   const t = await getTranslations({locale, namespace: 'Menu.Section1'})
   const t2 = await getTranslations({locale, namespace: 'Catalog'})
 
@@ -44,7 +44,14 @@ export async function getMenuPromise(locale: string) {
       return {
         href: k.toLowerCase(),
         label: t2(`${k}.categoryName` as any),
-        icon: React.createElement(uniqueIcons[i] || CircleHelp, {strokeWidth: 2.5})
+        icon: React.createElement(
+          uniqueIcons[i] || CircleHelp, 
+          {
+            strokeWidth: 2.5, 
+            width: iconSize, 
+            height: iconSize
+          }
+        )
       }
     })
 

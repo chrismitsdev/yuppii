@@ -1,8 +1,9 @@
 import {getTranslations} from 'next-intl/server'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
-import {MenuCategories} from '@/components/page/menu/MenuCategories'
+import {Menu} from '@/components/page/menu/Menu'
 import {getMenuPromise} from '@/lib/promises/getMenuPromise'
+import {getAllProductsPromise} from '@/lib/promises/getAllProductsPromise'
 
 export async function generateMetadata({params: {locale}}: Params) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
@@ -20,14 +21,18 @@ export async function generateMetadata({params: {locale}}: Params) {
 
 export default async function MenuPage({params: {locale}}: Params) {
   const {translatedSection, translatedCategories} = await getMenuPromise(locale)
-  
+  const products = await getAllProductsPromise(locale)
+
   return (
     <Container>
       <Section
         title={translatedSection.title}
         subtitle={translatedSection.subtitle}
       >
-        <MenuCategories categories={translatedCategories} />
+        <Menu />
+        {JSON.stringify(products)}
+        {/* <MenuCategories categories={translatedCategories} /> */}
+
       </Section>
     </Container>
   )

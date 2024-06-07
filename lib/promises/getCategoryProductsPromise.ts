@@ -3,7 +3,7 @@ import Messages from '@/messages/en.json'
 
 type SimpleMenuProduct = Omit<MenuProduct, 'disabled'>
 
-export async function getMenuProductsPromise(locale: string, category: string) {
+export async function getCategoryProductsPromise(locale: string, category: string) {
   const t = await getTranslations({locale, namespace: 'Catalog'})
   const Category = category.charAt(0).toUpperCase() + category.slice(1) as keyof IntlMessages['Catalog']
   const {categoryNote, products} = Messages.Catalog[Category]
