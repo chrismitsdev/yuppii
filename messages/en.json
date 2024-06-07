@@ -1550,6 +1550,16 @@
           "price": "3.5",
           "disabled": false
         },
+        "OMGTea": {
+          "name": "OMG Bubble Tea 270ml",
+          "description": [
+            "Passion fruit - Apple",
+            "Lemon - Mango",
+            "Peach - Strawberry"
+          ],
+          "price": "4.5",
+          "disabled": false
+        },
         "Slush": {
           "name": "Slush 330ml",
           "description": [
