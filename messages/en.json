@@ -2217,19 +2217,19 @@
         "Popcorn": {
           "name": "Popcorn",
           "description": null,
-          "price": "2",
+          "price": "2.5",
           "disabled": false
         },
         "BoiledCorn": {
           "name": "Boiled corn",
           "description": null,
-          "price": "2.5",
+          "price": "3",
           "disabled": false
         },
         "Nachos": {
           "name": "Nachos",
           "description": null,
-          "price": "3",
+          "price": "3.5",
           "disabled": false
         },
         "NachosWithSauce": {
@@ -2238,7 +2238,7 @@
             "Cheddar",
             "Red sauce"
           ],
-          "price": "3.5",
+          "price": "4",
           "disabled": false
         },
         "Churros": {
