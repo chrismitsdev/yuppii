@@ -39,10 +39,11 @@ export async function getMenuPromise(locale: string, iconSize: number = 24) {
     subtitle: t('subtitle')
   }
 
-  const translatedCategories: {href: string, label: string, icon: React.ReactElement}[] = 
-    Object.entries(Messages.Catalog).map(([k], i) => {
+  const tLinks: {href: string, label: string, icon: React.ReactElement}[] = 
+    Object.entries(Messages.Catalog).map(([k, v], i) => {
       return {
-        href: k.toLowerCase(),
+        // href: k.toLowerCase(),
+        href: v.categoryName.toLowerCase().replace(' ', '-'),
         label: t2(`${k}.categoryName` as any),
         icon: React.createElement(
           uniqueIcons[i] || CircleHelp, 
@@ -57,6 +58,6 @@ export async function getMenuPromise(locale: string, iconSize: number = 24) {
 
   return {
     translatedSection,
-    translatedCategories
+    tLinks
   }
 }

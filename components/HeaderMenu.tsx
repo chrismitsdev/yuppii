@@ -7,7 +7,7 @@ import logo from '@/public/logo.svg'
 import {getMenuPromise} from '@/lib/promises/getMenuPromise'
 
 async function HeaderMenu({locale}: {locale: string}) {
-  const {translatedCategories} = await getMenuPromise(locale)
+  const {tLinks} = await getMenuPromise(locale)
 
   return (
     <header className='py-4 overflow-hidden'>
@@ -17,7 +17,7 @@ async function HeaderMenu({locale}: {locale: string}) {
         </Link>
         <LocaleSwitcher locale={locale} type='mobile' />
       </Container>
-      <MenuNavigation categories={translatedCategories} />
+      <MenuNavigation links={tLinks} />
     </header>
   )
 }
