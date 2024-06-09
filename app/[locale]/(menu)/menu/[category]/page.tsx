@@ -1,23 +1,19 @@
 import * as React from 'react'
 import {getTranslations} from 'next-intl/server'
 import {getMenuPromise} from '@/lib/promises/getMenuPromise'
+import {getAllProductsPromise} from '@/lib/promises/getAllProductsPromise'
+import {formatCurrency} from '@/lib/utils'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {Card, CardContent, CardFooter} from '@/components/ui/Card'
 import {TypographyP} from '@/components/typography/TypographyP'
 import {TypographySmall} from '@/components/typography/TypographySmall'
 import {Separator} from '@/components/ui/Separator'
-import {formatCurrency} from '@/lib/utils'
 import {Badge} from '@/components/ui/Badge'
-import Messages from '@/messages/en.json'
-import { getAllProductsPromise } from '@/lib/promises/getAllProductsPromise'
 
-export function generateStaticParams() {
-  return Object.keys(Messages.Catalog).map(category => {
-    return {
-      category: category.toLowerCase()
-    }
-  })
+export async function generateStaticParams({params: {locale}}: Params) {
+  const {tMenu} = await getAllProductsPromise(locale)
+  return tMenu.map(ctg => ({category: ctg.name}))
 }
 
 export async function generateMetadata({params: {locale, category}}: MenuParams) {
@@ -32,16 +28,14 @@ export async function generateMetadata({params: {locale, category}}: MenuParams)
 
 export default async function MenuItemsPage({params: {locale, category}}: MenuParams) {
   const {tMenu} = await getAllProductsPromise(locale)
-  const filteredCategory = tMenu
-    .filter(ctg => ctg.name.toLowerCase().replace(' ', '-') === category)
-    .at(0)
+  const filteredCategory = tMenu?.find(ctg => ctg.name === category)
 
   return (
     <Container>
       <Section>
         <Card>
           <CardContent className='py-6 px-4 space-y-6'>
-            {filteredCategory?.products.map((product, i, {length}) => (
+            {filteredCategory?.categoryProducts.map((product, i, {length}) => (
               <React.Fragment key={product.name}>
                 <div className='grid grid-cols-[1fr_auto] gap-1'>
                   <TypographyP className='font-semibold col-span-1'>
@@ -50,7 +44,11 @@ export default async function MenuItemsPage({params: {locale, category}}: MenuPa
                   {product.description && (
                     <div className='flex flex-wrap gap-1.5 row-start-2 col-span-2'>
                       {product.description.map(desc => (
-                        <Badge key={desc} variant='secondary' className='text-sm font-semibold'>
+                        <Badge 
+                          key={desc} 
+                          variant='secondary' 
+                          className='text-sm font-semibold'
+                        >
                           {desc}
                         </Badge>
                       ))}
@@ -65,14 +63,14 @@ export default async function MenuItemsPage({params: {locale, category}}: MenuPa
               </React.Fragment>
             ))}
           </CardContent>
-          {filteredCategory?.notes && (
+          {filteredCategory?.categoryNotes && (
             <CardFooter className='px-4 py-4 border-t border-t-secondary'>
               <ul className="list-disc pl-5">
-                {filteredCategory.notes.map(note => (
+                {filteredCategory.categoryNotes.map(note => (
                   <li key={note}>
-                  <TypographySmall className='font-semibold'>
-                    {note}
-                  </TypographySmall>
+                    <TypographySmall className='font-semibold'>
+                      {note}
+                    </TypographySmall>
                   </li>
                 ))}
               </ul>
