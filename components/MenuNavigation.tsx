@@ -5,33 +5,25 @@ import {ScrollArea} from '@/components/ui/ScrollArea'
 import {TypographyP} from '@/components/typography/TypographyP'
 import {cn} from '@/lib/utils'
 
-type MenuNavigationProps = {
-  links: {
-    href: string, 
-    label: string
-    icon: React.ReactElement
-  }[]
-}
-
-function MenuNavigation({links}: MenuNavigationProps) {
+function MenuNavigation({categories}: {categories: Category[]}) {
   const pathname = usePathname()
 
   return (
-    <div className='px-4 mt-4'>
+    <div className='px-1 mt-4'>
       <ScrollArea orientation='horizontal' invisible>
         <div className='flex gap-2 sm:justify-center'>
-          {links.map(link => (
+          {categories.map(category => (
             <Link 
-              key={link.href} 
-              href={`/menu/${link.href}`}
+              key={category.name} 
+              href={`/menu/${category.name}`}
               className={cn(
                 'py-[5.5px] px-4 flex items-center gap-2 shrink-0 rounded duration-300',
-                pathname.includes(link.href) && 'bg-accent text-accent-foreground'
+                pathname.includes(category.name) && 'bg-accent text-accent-foreground'
               )}
             >
-              {link.icon}
+              {category.categoryIcon}
               <TypographyP className='font-bold mt-[5px]'>
-                {link.label}
+                {category.categoryName}
               </TypographyP>
             </Link>
           ))}

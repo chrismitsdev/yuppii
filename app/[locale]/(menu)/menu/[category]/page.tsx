@@ -1,6 +1,5 @@
 import * as React from 'react'
 import {getTranslations} from 'next-intl/server'
-import {getMenuPromise} from '@/lib/promises/getMenuPromise'
 import {getAllProductsPromise} from '@/lib/promises/getAllProductsPromise'
 import {formatCurrency} from '@/lib/utils'
 import {Container} from '@/components/Container'
@@ -13,20 +12,20 @@ import {Badge} from '@/components/ui/Badge'
 
 export async function generateStaticParams({params: {locale}}: Params) {
   const {tMenu} = await getAllProductsPromise(locale)
-  return tMenu.map(ctg => ({category: ctg.name}))
+  return tMenu.map(({name}) => ({category: name}))
 }
 
 export async function generateMetadata({params: {locale, category}}: MenuParams) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
-  const {tLinks} = await getMenuPromise(locale)
-  const foundCategory = tLinks.find(({href}) => href === category)
+  const {tMenu} = await getAllProductsPromise(locale)
+  const foundCategory = tMenu.find(({name}) => name === category)
  
   return {
-    title: `${t('Menu')} - ${foundCategory?.label} | Yuppii Luna Park`
+    title: `${t('Menu')} - ${foundCategory?.categoryName} | Yuppii Luna Park`
   }
 }
 
-export default async function MenuItemsPage({params: {locale, category}}: MenuParams) {
+export default async function CategoryPage({params: {locale, category}}: MenuParams) {
   const {tMenu} = await getAllProductsPromise(locale)
   const filteredCategory = tMenu?.find(ctg => ctg.name === category)
 

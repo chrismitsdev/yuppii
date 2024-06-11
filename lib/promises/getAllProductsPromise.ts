@@ -1,11 +1,42 @@
+import * as React from 'react'
 import {getTranslations} from 'next-intl/server'
 import Messages from '@/messages/en.json'
+import {Burger} from '@/components/misc-icons/burger'
+import {
+  Coffee, 
+  CupSoda, 
+  GlassWater, 
+  Beer, 
+  Zap, 
+  Utensils, 
+  Pizza, 
+  SaladIcon, 
+  Martini, 
+  Popcorn,
+  CircleHelp,
+} from 'lucide-react'
+
+const uniqueIcons = [
+  Coffee, 
+  CupSoda, 
+  GlassWater, 
+  Zap, 
+  Martini, 
+  Beer, 
+  Utensils, 
+  Pizza, 
+  Burger, 
+  SaladIcon,
+  Popcorn
+]
 
 export async function getAllProductsPromise(locale: string) {
   const t = await getTranslations({locale, namespace: 'Catalog'})
 
-  const tMenu = Object.entries(Messages.Catalog).map(([key, value]) => {
-    return {
+  const tMenu: Category[] = []
+
+  for (const [i, [key, value]] of Object.entries(Messages.Catalog).entries()) {
+    const menuObj: Category = {
       name: value.categoryName.toLowerCase().replace(' ', '-'),
       categoryName: t(`${key as keyof IntlMessages['Catalog']}.categoryName`),
       categoryNotes: value.categoryNote 
@@ -25,9 +56,12 @@ export async function getAllProductsPromise(locale: string) {
                 ? Object.keys(description).map(k => t(`${placeholder}.description.${k}` as any))
                 : null
           }
-        })
-    }
-  })
+        }),
+      categoryIcon: React.createElement(uniqueIcons[i] || CircleHelp, {strokeWidth: 2.5})
+    } 
+
+    tMenu.push(menuObj)
+  }
 
   return {tMenu}
 }

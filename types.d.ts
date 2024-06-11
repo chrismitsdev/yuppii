@@ -14,18 +14,23 @@ type MenuParams = {
   }
 }
 
+type Category = {
+  name: string
+  categoryName: string
+  categoryNotes: string[] | null
+  categoryProducts: {
+    name: string
+    price: string
+    description: string[] | null
+  }[]
+  categoryIcon: React.ReactElement
+}
+
 type MenuItem = {
   name: string
   category: string
   price: number
   description: string[] | null
-}
-
-type MenuProduct = {
-  name: string
-  description: string[] | null
-  price: string
-  disabled?: boolean
 }
 
 type HeaderLink = {

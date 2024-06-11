@@ -6,23 +6,14 @@ import {Badge} from '@/components/ui/Badge'
 import {Separator} from '@/components/ui/Separator'
 import {formatCurrency} from '@/lib/utils'
 
-type MenuProps = {
-  menu: {
-    categoryName: string
-    categoryNotes: string[] | null
-    categoryProducts: {
-      name: string
-      price: string
-      description: string[] | null
-    }[]
-  }[]
-}
-
-function Menu({menu}: MenuProps) {
+function Menu({menu}: {menu: Category[]}) {
   return menu.map(category => (
     <Card key={category.categoryName}>
       <CardHeader className='px-4 sticky top-0 bg-[#DBBCC3] border-b border-b-secondary shadow-md rounded-t-lg'>
-        <CardTitle>{category.categoryName}</CardTitle>
+        <CardTitle className='flex items-center gap-2'>
+          {category.categoryIcon}
+          <span className='mt-1.5'>{category.categoryName}</span>
+        </CardTitle>
       </CardHeader>
       <CardContent className='py-6 px-4 space-y-6'>
         {category.categoryProducts.map((entry, i, {length}) => (

@@ -1,23 +1,23 @@
 import Image from 'next/image'
+import {getAllProductsPromise} from '@/lib/promises/getAllProductsPromise'
 import {Link} from '@/navigation'
 import {MenuNavigation} from '@/components/MenuNavigation'
 import {Container} from '@/components/Container'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
 import logo from '@/public/logo.svg'
-import {getMenuPromise} from '@/lib/promises/getMenuPromise'
 
 async function HeaderMenu({locale}: {locale: string}) {
-  const {tLinks} = await getMenuPromise(locale)
+  const {tMenu} = await getAllProductsPromise(locale)
 
   return (
     <header className='py-4 overflow-hidden'>
       <Container className='flex justify-between'>
         <Link href='/menu'>
-          <Image src={logo} height={40} alt='Yuppii Luna Park' />
+          <Image src={logo} height={40} alt='Yuppii Luna Park' priority />
         </Link>
         <LocaleSwitcher locale={locale} type='mobile' />
       </Container>
-      <MenuNavigation links={tLinks} />
+      <MenuNavigation categories={tMenu} />
     </header>
   )
 }
