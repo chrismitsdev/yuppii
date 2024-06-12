@@ -1,5 +1,5 @@
 import {unstable_setRequestLocale} from 'next-intl/server'
-import {HeaderMenu} from '@/components/HeaderMenu'
+import {MenuHeader} from '@/components/MenuHeader'
 
 export default function MenuLayout({children, params: {locale}}: {
   children: React.ReactNode, 
@@ -10,9 +10,9 @@ export default function MenuLayout({children, params: {locale}}: {
   unstable_setRequestLocale(locale)
   
   return (
-    <> 
-      <HeaderMenu locale={locale} />
+    <div className='min-h-screen grid grid-rows-[auto_auto_1fr]'> 
+      <MenuHeader locale={locale} />
       {children}
-    </>
+    </div>
   )
 }

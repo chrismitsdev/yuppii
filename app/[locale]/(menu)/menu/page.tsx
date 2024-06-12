@@ -4,7 +4,7 @@ import {getServicesPromise} from '@/lib/promises/getServicesPromise'
 import {getAllProductsPromise} from '@/lib/promises/getAllProductsPromise'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
-import {Menu} from '@/components/page/menu/Menu'
+import {AllCategories} from '@/components/page/menu/AllCategories'
 
 export async function generateMetadata({params: {locale}}: Params) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
@@ -25,7 +25,7 @@ export default async function MenuPage({params: {locale}}: Params) {
   return (
     <Container>
       <Section className='space-y-6'>
-        <Menu menu={tMenu} />
+        <AllCategories menu={tMenu} />
       </Section>
     </Container>
   )

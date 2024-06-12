@@ -6,10 +6,10 @@ import {Badge} from '@/components/ui/Badge'
 import {Separator} from '@/components/ui/Separator'
 import {formatCurrency} from '@/lib/utils'
 
-function Menu({menu}: {menu: Category[]}) {
+function AllCategories({menu}: {menu: Category[]}) {
   return menu.map(category => (
     <Card key={category.categoryName}>
-      <CardHeader className='px-4 sticky top-0 bg-[#DBBCC3] border-b border-b-secondary shadow-md rounded-t-lg'>
+      <CardHeader className='p-4 sticky top-0 bg-[#DBBCC3] border-b border-b-secondary shadow-md rounded-t-lg'>
         <CardTitle className='flex items-center gap-2'>
           {category.categoryIcon}
           <span className='mt-1.5'>{category.categoryName}</span>
@@ -57,6 +57,6 @@ function Menu({menu}: {menu: Category[]}) {
   ))
 }
 
-Menu.displayName = 'Menu'
+AllCategories.displayName = 'AllCategories'
 
-export {Menu}
+export {AllCategories}

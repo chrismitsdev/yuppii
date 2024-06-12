@@ -6,22 +6,25 @@ import {Container} from '@/components/Container'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
 import logo from '@/public/logo.svg'
 
-async function HeaderMenu({locale}: {locale: string}) {
+async function MenuHeader({locale}: {locale: string}) {
   const {tMenu} = await getAllProductsPromise(locale)
 
   return (
-    <header className='py-4 overflow-hidden'>
-      <Container className='flex justify-between'>
-        <Link href='/menu'>
-          <Image src={logo} height={40} alt='Yuppii Luna Park' priority />
-        </Link>
-        <LocaleSwitcher locale={locale} type='mobile' />
-      </Container>
+    <>
+      <header className='py-4'>
+        <Container className='flex justify-between'>
+          <Link href='/menu'>
+            <Image src={logo} height={40} alt='Yuppii Luna Park' priority />
+          </Link>
+          <LocaleSwitcher locale={locale} type='mobile' />
+        </Container>
+      </header>
+      
       <MenuNavigation categories={tMenu} />
-    </header>
+    </>
   )
 }
 
-HeaderMenu.displayName = 'HeaderMenu'
+MenuHeader.displayName = 'MenuHeader'
 
-export {HeaderMenu}
+export {MenuHeader}

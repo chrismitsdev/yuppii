@@ -7,7 +7,7 @@ import {Navigation} from '@/components/Navigation'
 import {Home, FerrisWheel, Gamepad, ListChecks, ScrollText} from 'lucide-react'
 import logo from '@/public/logo.svg'
 
-const links: Array<HeaderLink> = [
+const links: HeaderLink[] = [
   {
     label: 'Home', 
     href: '/', 
@@ -35,14 +35,12 @@ const links: Array<HeaderLink> = [
   }
 ]
 
-function Header({locale}: {locale: string}) {
+function WebsiteHeader({locale}: {locale: string}) {
   const t = useTranslations('Metadata.Pages')
 
   const tLinks = links.map(link => ({
     ...link,
-    label: t(
-      link.label as 'Home' | 'Park' | 'Games' | 'Services' | 'Contact'
-    ) 
+    label: t(link.label as keyof IntlMessages['Metadata']['Pages']) 
   }))
 
   return (
@@ -61,6 +59,6 @@ function Header({locale}: {locale: string}) {
   )
 }
 
-Header.displayName = 'Header'
+WebsiteHeader.displayName = 'WebsiteHeader'
 
-export {Header}
+export {WebsiteHeader}
