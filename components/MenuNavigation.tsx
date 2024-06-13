@@ -36,7 +36,7 @@ function MenuNavigation({categories}: {categories: Category[]}) {
         (!rootMenu && yPos > 72) && 'border-b border-b-border/25 shadow-md' 
       )}
     >
-      <ScrollArea orientation='horizontal' invisible>
+      <ScrollArea orientation='horizontal' invisible showShadows>
         <div className='flex gap-1 sm:justify-center'>
           {categories.map(category => (
             <Link 
