@@ -82,7 +82,7 @@ const ScrollAreaViewport = React.forwardRef<
       )}
     >
       <Viewport 
-        className={cn('h-full w-full rounded-[inherit]', className)}
+        className={cn('h-full w-full rounded-[inherit] overscroll-none', className)}
         onScroll={handleShowShadows}
         ref={ref}
         {...props}
