@@ -9,7 +9,8 @@ import {cn} from '@/lib/utils'
 function MenuNavigation({categories}: {categories: Category[]}) {
   const [yPos, setYPos] = React.useState(0)
   const pathname = usePathname()
-  const rootMenu = pathname === '/menu'
+  const rootPath = pathname === '/menu'
+  const categoryPath = pathname.split('/')[pathname.split('/').length - 1]
 
   React.useEffect(
     function() {
@@ -32,8 +33,8 @@ function MenuNavigation({categories}: {categories: Category[]}) {
     <nav 
       className={cn(
         'py-4 px-1 max-w-[100vw] bg-[#cee9e7]',
-        !rootMenu && 'sticky top-0 z-10',
-        (!rootMenu && yPos > 72) && 'border-b border-b-border/25 shadow-md' 
+        !rootPath && 'sticky top-0 z-10',
+        (!rootPath && yPos > 72) && 'border-b border-b-border/25 shadow-md' 
       )}
     >
       <ScrollArea orientation='horizontal' invisible showShadows>
@@ -44,7 +45,8 @@ function MenuNavigation({categories}: {categories: Category[]}) {
               href={`/menu/${category.name}`}
               className={cn(
                 'py-[5.5px] px-4 flex items-center gap-2 shrink-0 rounded duration-300',
-                pathname.includes(category.name) && 'bg-accent text-accent-foreground'
+                categoryPath === category.name && 'bg-accent text-accent-foreground'
+                // pathname.includes(category.name) && 'bg-accent text-accent-foreground'
               )}
               scroll={false}
             >
