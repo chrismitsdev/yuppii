@@ -4,9 +4,15 @@ import * as React from 'react'
 import {Link, usePathname} from '@/navigation'
 import {ScrollArea} from '@/components/ui/ScrollArea'
 import {TypographyP} from '@/components/typography/TypographyP'
+import {SquareMenu} from 'lucide-react'
 import {cn} from '@/lib/utils'
 
-function MenuNavigation({categories}: {categories: Category[]}) {
+type MenuNavigationProps = {
+  locale: string
+  categories: Category[]
+}
+
+function MenuNavigation({locale, categories}: MenuNavigationProps) {
   const [yPos, setYPos] = React.useState(0)
   const pathname = usePathname()
   const rootPath = pathname === '/menu'
@@ -39,6 +45,19 @@ function MenuNavigation({categories}: {categories: Category[]}) {
     >
       <ScrollArea orientation='horizontal' invisible showShadows>
         <div className='flex gap-1 sm:justify-center'>
+          <Link 
+            href='/menu'
+            className={cn(
+              'py-[5.5px] px-4 flex items-center gap-2 shrink-0 rounded duration-300',
+              rootPath && 'bg-accent text-accent-foreground'
+            )}
+            scroll={false}
+          >
+            <SquareMenu />
+            <TypographyP className='mt-[5px] font-bold'>
+              {locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories'}
+            </TypographyP>
+          </Link>
           {categories.map(category => (
             <Link 
               key={category.name} 
@@ -46,7 +65,6 @@ function MenuNavigation({categories}: {categories: Category[]}) {
               className={cn(
                 'py-[5.5px] px-4 flex items-center gap-2 shrink-0 rounded duration-300',
                 categoryPath === category.name && 'bg-accent text-accent-foreground'
-                // pathname.includes(category.name) && 'bg-accent text-accent-foreground'
               )}
               scroll={false}
             >

@@ -1,7 +1,7 @@
 import * as  React from 'react'
 import {getTranslations} from 'next-intl/server'
 import {getServicesPromise} from '@/lib/promises/getServicesPromise'
-import {getAllProductsPromise} from '@/lib/promises/getAllProductsPromise'
+import {getAllCategoriesPromise} from '@/lib/promises/getAllCategoriesPromise'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
 import {AllCategories} from '@/components/page/menu/AllCategories'
@@ -20,12 +20,12 @@ export async function generateMetadata({params: {locale}}: Params) {
 }
 
 export default async function MenuPage({params: {locale}}: Params) {
-  const {tMenu} = await getAllProductsPromise(locale)
+  const {categories} = await getAllCategoriesPromise(locale)
 
   return (
     <Container>
       <Section className='space-y-6'>
-        <AllCategories menu={tMenu} />
+        <AllCategories categories={categories} />
       </Section>
     </Container>
   )

@@ -6,8 +6,8 @@ import {Badge} from '@/components/ui/Badge'
 import {Separator} from '@/components/ui/Separator'
 import {formatCurrency} from '@/lib/utils'
 
-function AllCategories({menu}: {menu: Category[]}) {
-  return menu.map(category => (
+function AllCategories({categories}: {categories: Category[]}) {
+  return categories.map(category => (
     <Card key={category.categoryName}>
       <CardHeader className='p-4 sticky top-0 bg-[#DBBCC3] border-b border-b-secondary shadow-md rounded-t-lg'>
         <CardTitle className='flex items-center gap-2'>

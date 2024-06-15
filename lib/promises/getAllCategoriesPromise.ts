@@ -30,10 +30,10 @@ const uniqueIcons = [
   Popcorn
 ]
 
-export async function getAllProductsPromise(locale: string) {
+export async function getAllCategoriesPromise(locale: string) {
   const t = await getTranslations({locale, namespace: 'Catalog'})
 
-  const tMenu: Category[] = []
+  const categories: Category[] = []
 
   for (const [i, [key, value]] of Object.entries(Messages.Catalog).entries()) {
     const menuObj: Category = {
@@ -60,8 +60,8 @@ export async function getAllProductsPromise(locale: string) {
       categoryIcon: React.createElement(uniqueIcons[i] || CircleHelp, {strokeWidth: 2.5})
     } 
 
-    tMenu.push(menuObj)
+    categories.push(menuObj)
   }
 
-  return {tMenu}
+  return {categories}
 }

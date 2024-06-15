@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {getAllProductsPromise} from '@/lib/promises/getAllProductsPromise'
+import {getAllCategoriesPromise} from '@/lib/promises/getAllCategoriesPromise'
 import {Link} from '@/navigation'
 import {MenuNavigation} from '@/components/MenuNavigation'
 import {Container} from '@/components/Container'
@@ -7,7 +7,7 @@ import {LocaleSwitcher} from '@/components/LocaleSwitcher'
 import logo from '@/public/logo.svg'
 
 async function MenuHeader({locale}: {locale: string}) {
-  const {tMenu} = await getAllProductsPromise(locale)
+  const {categories} = await getAllCategoriesPromise(locale)
 
   return (
     <>
@@ -20,7 +20,7 @@ async function MenuHeader({locale}: {locale: string}) {
         </Container>
       </header>
       
-      <MenuNavigation categories={tMenu} />
+      <MenuNavigation locale={locale} categories={categories} />
     </>
   )
 }
