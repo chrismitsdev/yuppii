@@ -33,7 +33,7 @@ function MenuNavigation({categories}: {categories: Category[]}) {
   return (
     <nav 
       className={cn(
-        'py-4 px-1 max-w-[100vw] bg-[#cee9e7]',
+        'py-4 px-1 max-w-[100vw] !bg-primary',
         !rootPath && 'sticky top-0 z-10',
         (!rootPath && yPos > 72) && 'border-b border-b-border/25 shadow-md' 
       )}
@@ -62,7 +62,7 @@ function MenuNavigation({categories}: {categories: Category[]}) {
                 <span className='relative z-[1] mix-blend-difference'>
                   {category.categoryIcon}
                 </span>
-                <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-difference'>
+                <TypographyP className='mt-[5px] relative z-[1] font-semibold mix-blend-difference'>
                   {category.categoryName}
                 </TypographyP>
               </Link>
