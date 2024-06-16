@@ -63,10 +63,10 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
                   }}
                 />
               )}
-              <span className='relative z-[1] mix-blend-difference'>
+              <span className='relative z-[1] mix-blend-exclusion'>
                 <SquareMenu />
               </span>
-              <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-difference'>
+              <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-exclusion'>
                 {locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories'}
               </TypographyP>
             </Link>
@@ -88,10 +88,10 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
                     }}
                   />
                 )}
-                <span className='relative z-[1] mix-blend-difference'>
+                <span className='relative z-[1] mix-blend-exclusion'>
                   {category.categoryIcon}
                 </span>
-                <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-difference'>
+                <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-exclusion'>
                   {category.categoryName}
                 </TypographyP>
               </Link>
