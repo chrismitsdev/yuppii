@@ -43,10 +43,9 @@ function MenuNavigation({categories}: {categories: Category[]}) {
               key={category.categoryName} 
               href={`/menu/${category.name}`}
               className={cn(
-                'py-[5.5px] px-4 flex items-center gap-2 shrink-0 rounded',
+                'py-[5.5px] px-4 flex items-center gap-2 shrink-0 rounded duration-300',
                 ((rootPath && !category.name) || categoryPath === category.name) && 'bg-accent text-accent-foreground'
               )}
-              scroll={false}
             >
               {category.categoryIcon}
               <TypographyP className='mt-[5px] font-bold'>

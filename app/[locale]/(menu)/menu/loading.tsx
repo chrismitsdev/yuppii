@@ -3,8 +3,11 @@ import {LoaderCircle} from 'lucide-react'
 
 export default function Loading() {
   return (
-    <Section className='flex justify-center'>
-      <LoaderCircle className='animate-spin text-secondary h-14 w-14' />
+    <Section className='h-full flex items-center justify-center'>
+      <LoaderCircle 
+        className='animate-spin text-secondary h-1/2 w-1/2' 
+        strokeWidth={1.5} 
+      />
     </Section>
   )
 }
