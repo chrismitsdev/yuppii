@@ -9,10 +9,10 @@ import logo from '@/public/logo.svg'
 
 async function MenuHeader({locale}: {locale: string}) {
   const {categories} = await getAllCategoriesPromise(locale)
-  const isGR = locale === 'gr'
+  // Mutate categories to add a home link
   const homeCategory: Category = {
     name: '',
-    categoryName: isGR ? 'Όλες οι κατηγορίες' : 'All categories',
+    categoryName: locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories',
     categoryNotes: null,
     categoryProducts: [],
     categoryIcon: <SquareMenu />
