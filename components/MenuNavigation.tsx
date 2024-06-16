@@ -49,7 +49,7 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
           <LazyMotion features={domMax}>
             <Link 
               href='/menu'
-              className='py-[5.5px] px-4 relative flex items-center gap-2 shrink-0 text-primary'
+              className='py-[5.5px] px-4 relative flex items-center gap-2 shrink-0'
               scroll={false}
             >
               {rootPath && (
@@ -63,10 +63,10 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
                   }}
                 />
               )}
-              <span className='relative z-[1] mix-blend-difference'>
+              <span className='relative z-[1] text-primary mix-blend-difference'>
                 <SquareMenu />
               </span>
-              <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-difference'>
+              <TypographyP className='mt-[5px] relative font-semibold z-[1] text-primary mix-blend-difference'>
                 {locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories'}
               </TypographyP>
             </Link>
@@ -74,7 +74,7 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
               <Link 
                 key={category.name} 
                 href={`/menu/${category.name}`}
-                className='py-[5.5px] px-4 relative flex items-center gap-2 shrink-0 text-primary'
+                className='py-[5.5px] px-4 relative flex items-center gap-2 shrink-0'
                 scroll={false}
               >
                 {categoryPath === category.name && (
@@ -88,10 +88,10 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
                     }}
                   />
                 )}
-                <span className='relative z-[1] mix-blend-difference'>
+                <span className='relative z-[1] text-primary mix-blend-difference'>
                   {category.categoryIcon}
                 </span>
-                <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-difference'>
+                <TypographyP className='mt-[5px] relative font-semibold z-[1] text-primary mix-blend-difference'>
                   {category.categoryName}
                 </TypographyP>
               </Link>
