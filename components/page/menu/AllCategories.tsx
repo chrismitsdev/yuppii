@@ -9,7 +9,7 @@ import {formatCurrency} from '@/lib/utils'
 function AllCategories({categories}: {categories: Category[]}) {
   return categories.map(category => (
     <Card key={category.categoryName}>
-      <CardHeader className='p-4 sticky top-0 bg-[#DBBCC3] border-b border-b-secondary shadow-md rounded-t-lg'>
+      <CardHeader className='p-4 bg-secondary/20 border-b border-b-secondary'>
         <CardTitle className='flex items-center gap-2'>
           {category.categoryIcon}
           <span className='mt-1.5'>{category.categoryName}</span>
@@ -41,7 +41,7 @@ function AllCategories({categories}: {categories: Category[]}) {
         ))}
       </CardContent>
       {category.categoryNotes && (
-        <CardFooter className='px-4 py-4 border-t border-t-secondary'>
+        <CardFooter className='p-4 bg-secondary/20 border-t border-t-secondary'>
           <ul className='pl-5 list-disc'>
             {category.categoryNotes.map(note => (
               <li key={note}>

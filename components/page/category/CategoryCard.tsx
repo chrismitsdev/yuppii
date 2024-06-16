@@ -39,7 +39,7 @@ function CategoryCard({category}: {category: Category}) {
         ))}
       </CardContent>
       {category?.categoryNotes && (
-        <CardFooter className='px-4 py-4 border-t border-t-secondary'>
+        <CardFooter className='p-4 bg-secondary/20 border-t border-t-secondary'>
           <ul className="list-disc pl-5">
             {category.categoryNotes.map(note => (
               <li key={note}>

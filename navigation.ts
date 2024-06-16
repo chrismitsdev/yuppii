@@ -5,6 +5,5 @@ export const localePrefix = 'always'
 
 export const {
   Link, 
-  usePathname,
-  useRouter
+  usePathname
 } = createSharedPathnamesNavigation({locales, localePrefix})
