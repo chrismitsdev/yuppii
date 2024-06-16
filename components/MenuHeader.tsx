@@ -4,11 +4,21 @@ import {Link} from '@/navigation'
 import {MenuNavigation} from '@/components/MenuNavigation'
 import {Container} from '@/components/Container'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
+import {SquareMenu} from 'lucide-react'
 import logo from '@/public/logo.svg'
 
 async function MenuHeader({locale}: {locale: string}) {
   const {categories} = await getAllCategoriesPromise(locale)
-
+  const isGR = locale === 'gr'
+  const homeCategory: Category = {
+    name: '',
+    categoryName: isGR ? 'Όλες οι κατηγορίες' : 'All categories',
+    categoryNotes: null,
+    categoryProducts: [],
+    categoryIcon: <SquareMenu />
+  }
+  categories.unshift(homeCategory)
+  
   return (
     <>
       <header className='py-4'>
@@ -20,7 +30,7 @@ async function MenuHeader({locale}: {locale: string}) {
         </Container>
       </header>
       
-      <MenuNavigation locale={locale} categories={categories} />
+      <MenuNavigation categories={categories} />
     </>
   )
 }
