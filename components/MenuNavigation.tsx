@@ -44,7 +44,7 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
         (!rootPath && yPos > 72) && 'border-b border-b-border/25 shadow-md' 
       )}
     >
-      <ScrollArea orientation='horizontal' invisible showShadows>
+      <ScrollArea type='always' orientation='horizontal' invisible showShadows>
         <div className='flex gap-1 sm:justify-center'>
           <LazyMotion features={domMax}>
             <Link 
@@ -63,10 +63,10 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
                   }}
                 />
               )}
-              <span className='relative z-[1] mix-blend-exclusion'>
+              <span className='relative z-[1] mix-blend-difference'>
                 <SquareMenu />
               </span>
-              <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-exclusion'>
+              <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-difference'>
                 {locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories'}
               </TypographyP>
             </Link>
@@ -88,10 +88,10 @@ function MenuNavigation({locale, categories}: MenuNavigationProps) {
                     }}
                   />
                 )}
-                <span className='relative z-[1] mix-blend-exclusion'>
+                <span className='relative z-[1] mix-blend-difference'>
                   {category.categoryIcon}
                 </span>
-                <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-exclusion'>
+                <TypographyP className='mt-[5px] relative font-semibold z-[1] mix-blend-difference'>
                   {category.categoryName}
                 </TypographyP>
               </Link>
