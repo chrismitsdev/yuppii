@@ -1550,6 +1550,16 @@
           "price": "3.5",
           "disabled": false
         },
+        "OMGTea": {
+          "name": "OMG Bubble Tea 270ml",
+          "description": [
+            "Φρούτα του πάθους - Μήλο",
+            "Λεμόνι - Μάνγκο",
+            "Ροδάκινο - Φράουλα"
+          ],
+          "price": "4.5",
+          "disabled": false
+        },
         "Slush": {
           "name": "Γρανίτα 330ml",
           "description": [
