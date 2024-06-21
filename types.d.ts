@@ -23,7 +23,7 @@ type Category = {
     price: string
     description: string[] | null
   }[]
-  categoryIcon: React.ReactElement
+  categoryIcon?: React.ReactElement
 }
 
 type MenuItem = {

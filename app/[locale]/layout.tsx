@@ -40,7 +40,7 @@ export default function RootLayout({children, params: {locale}}: {
   
   return (
     <html lang={locale} className={arima.className}>
-      <body>
+      <body className='overflow-x-clip'>
         {children}
         <Footer />
         <Toaster position='top-right' />

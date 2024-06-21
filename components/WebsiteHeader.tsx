@@ -3,7 +3,7 @@ import {useTranslations} from 'next-intl'
 import Image from 'next/image'
 import {Link} from '@/navigation'
 import {Container} from '@/components/Container'
-import {Navigation} from '@/components/Navigation'
+import {WebsiteNavigation} from '@/components/WebsiteNavigation'
 import {Home, FerrisWheel, Gamepad, ListChecks, ScrollText} from 'lucide-react'
 import logo from '@/public/logo.svg'
 
@@ -49,7 +49,7 @@ function WebsiteHeader({locale}: {locale: string}) {
         <Link href='/'>
           <Image priority src={logo} width={124} alt='Yuppii Luna Park' />
         </Link>
-        <Navigation 
+        <WebsiteNavigation 
           links={tLinks} 
           locale={locale} 
           localeContent={t('LocaleContent')}

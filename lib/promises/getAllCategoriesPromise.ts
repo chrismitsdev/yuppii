@@ -14,6 +14,7 @@ import {
   Martini, 
   Popcorn,
   CircleHelp,
+  LucideProps
 } from 'lucide-react'
 
 const uniqueIcons = [
@@ -30,7 +31,7 @@ const uniqueIcons = [
   Popcorn
 ]
 
-export async function getAllCategoriesPromise(locale: string) {
+export async function getAllCategoriesPromise(locale: string, svgProps: LucideProps = {strokeWidth: 2.2}) {
   const t = await getTranslations({locale, namespace: 'Catalog'})
 
   const categories: Category[] = []
@@ -57,7 +58,7 @@ export async function getAllCategoriesPromise(locale: string) {
                 : null
           }
         }),
-      categoryIcon: React.createElement(uniqueIcons[i] || CircleHelp, {strokeWidth: 2.5})
+      categoryIcon: React.createElement(uniqueIcons[i] || CircleHelp, svgProps)
     } 
 
     categories.push(menuObj)

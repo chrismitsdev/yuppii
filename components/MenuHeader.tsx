@@ -4,18 +4,17 @@ import {Link} from '@/navigation'
 import {MenuNavigation} from '@/components/MenuNavigation'
 import {Container} from '@/components/Container'
 import {LocaleSwitcher} from '@/components/LocaleSwitcher'
-import {SquareMenu} from 'lucide-react'
 import logo from '@/public/logo.svg'
 
 async function MenuHeader({locale}: {locale: string}) {
   const {categories} = await getAllCategoriesPromise(locale)
-  // Mutate categories to add a home link
+
+  // Mutate categories to add link which leads to "/menu" route
   const homeCategory: Category = {
     name: '',
     categoryName: locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories',
     categoryNotes: null,
     categoryProducts: [],
-    categoryIcon: <SquareMenu />
   }
   categories.unshift(homeCategory)
   

@@ -41,6 +41,9 @@ module.exports = {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      boxShadow: {
+        'menu-nav': 'inset 0 -1px hsl(var(--secondary) / 0.4)'
       }
     },
     keyframes: {
