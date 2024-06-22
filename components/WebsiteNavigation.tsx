@@ -16,13 +16,13 @@ import {Menu} from 'lucide-react'
 import {isActive} from '@/lib/utils'
 import {Facebook, Instagram, Map} from 'lucide-react'
 
-interface NavigationProps {
+interface WebsiteNavigationProps {
   links: HeaderLink[]
   locale: string
   localeContent: string
 }
 
-const Navigation = ({links, locale, localeContent}: NavigationProps) => {
+const WebsiteNavigation = ({links, locale, localeContent}: WebsiteNavigationProps) => {
   const [open, setOpen] = React.useState<boolean>(false)
   const pathname = usePathname()
 
@@ -124,6 +124,6 @@ const Navigation = ({links, locale, localeContent}: NavigationProps) => {
   )
 }
 
-Navigation.displayName = 'Navigation'
+WebsiteNavigation.displayName = 'WebsiteNavigation'
 
-export {Navigation}
+export {WebsiteNavigation}

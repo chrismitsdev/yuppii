@@ -1,33 +1,31 @@
+import * as  React from 'react'
 import {getTranslations} from 'next-intl/server'
+import {getServicesPromise} from '@/lib/promises/getServicesPromise'
+import {getAllCategoriesPromise} from '@/lib/promises/getAllCategoriesPromise'
 import {Container} from '@/components/Container'
 import {Section} from '@/components/Section'
-import {MenuCategories} from '@/components/page/menu/MenuCategories'
-import {getMenuPromise} from '@/lib/promises/getMenuPromise'
+import {AllCategories} from '@/components/page/menu/AllCategories'
 
 export async function generateMetadata({params: {locale}}: Params) {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
+  const {cafeSection} = await getServicesPromise(locale)
  
   return {
     title: `${t('Menu')} | Yuppii Luna Park`,
     openGraph: {
-      title: locale === 'en' ? 'Yuppii Menu' : 'Yuppii Μενού',
-      description: locale === 'en' 
-        ? 'Discover our comprehensive menu of beverages, drinks, and food' 
-        : 'Ανακαλύψτε το ολοκληρωμένο μενού μας με ποτά, αναψυκτικά και φαγητό'
-    },
+      title: `Yuppii ${t('Menu')}`,
+      description: cafeSection.subtitle
+    }
   }
 }
 
 export default async function MenuPage({params: {locale}}: Params) {
-  const {translatedSection, translatedCategories} = await getMenuPromise(locale)
-  
+  const {categories} = await getAllCategoriesPromise(locale)
+
   return (
     <Container>
-      <Section
-        title={translatedSection.title}
-        subtitle={translatedSection.subtitle}
-      >
-        <MenuCategories categories={translatedCategories} />
+      <Section className='space-y-6'>
+        <AllCategories categories={categories} />
       </Section>
     </Container>
   )

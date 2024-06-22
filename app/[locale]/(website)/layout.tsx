@@ -1,5 +1,5 @@
 import {unstable_setRequestLocale} from 'next-intl/server'
-import {Header} from '@/components/Header'
+import {WebsiteHeader} from '@/components/WebsiteHeader'
 
 export default function WebsiteLayout({children, params: {locale}}: {
   children: React.ReactNode, 
@@ -10,9 +10,9 @@ export default function WebsiteLayout({children, params: {locale}}: {
   unstable_setRequestLocale(locale)
   
   return (
-    <> 
-      <Header locale={locale} />
+    <div className='min-h-screen grid grid-rows-[auto_1fr]'> 
+      <WebsiteHeader locale={locale} />
       {children}
-    </>
+    </div>
   )
 }
