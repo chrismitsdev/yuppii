@@ -1921,7 +1921,7 @@
             "Βασιλικός",
             "Ντομάτα"
           ],
-          "price": "7",
+          "price": "8",
           "disabled": false
         },
         "SpecialPizza": {
@@ -1934,7 +1934,7 @@
             "Μανιτάρια",
             "Σάλτσα ντομάτας"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "FourCheesePizza": {
@@ -1946,7 +1946,7 @@
             "Μοτσαρέλα",
             "Σάλτσα ντομάτας"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "GreekPizza": {
@@ -1960,7 +1960,7 @@
             "Κρεμμύδι",
             "Σάλτσα ντομάτας"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "ProsciuttoPizza": {
@@ -1972,7 +1972,7 @@
             "Ρόκα",
             "Σάλτσα ντομάτας"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "VegetarianPizza": {
@@ -1984,7 +1984,7 @@
             "Μανιτάρια",
             "Ελιές"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "ChickenPizza": {
@@ -1996,7 +1996,7 @@
             "Καλαμπόκι",
             "Σως μουστάρδας"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "ClassicCrepe": {
