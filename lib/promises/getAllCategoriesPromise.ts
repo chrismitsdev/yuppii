@@ -13,8 +13,7 @@ import {
   SaladIcon, 
   Martini, 
   Popcorn,
-  CircleHelp,
-  LucideProps
+  CircleHelp
 } from 'lucide-react'
 
 const uniqueIcons = [
@@ -31,7 +30,6 @@ const uniqueIcons = [
   Popcorn
 ]
 
-// export async function getAllCategoriesPromise(locale: string, svgProps: LucideProps = {strokeWidth: 2.2}) {
 export async function getAllCategoriesPromise(locale: string) {
   const t = await getTranslations({locale, namespace: 'Catalog'})
 

@@ -9,7 +9,7 @@ function MenuNavigation({categories}: {categories: Category[]}) {
   const pathname = usePathname()
   const rootPath = pathname === '/menu'
   const categoryPath = pathname.split('/')[pathname.split('/').length - 1]
-  const isActive = (str: string) => ((rootPath && !str) || categoryPath === str)
+  const isLinkActive = (str: string) => ((rootPath && !str) || categoryPath === str)
 
   return (
     <nav className='sticky top-0 z-10 w-screen flex justify-center bg-primary shadow-menu-nav'>
@@ -20,8 +20,8 @@ function MenuNavigation({categories}: {categories: Category[]}) {
               key={category.categoryName} 
               href={`/menu/${category.name}`}
               className={cn(
-                'py-4 px-3 relative flex-shrink-0 font-semibold select-none after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-transparent',
-                isActive(category.name) && 'after:bg-secondary'
+                'p-4 relative flex-shrink-0 text-accent/50 duration-200 font-bold select-none after:absolute after:-bottom-1 after:left-0 after:w-full after:h-1 after:rounded-t-lg after:duration-200 sm:px-3',
+                isLinkActive(category.name) && 'after:bg-secondary text-accent after:bottom-0'
               )}
             >
               {category.categoryName}
