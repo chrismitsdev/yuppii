@@ -31,7 +31,8 @@ const uniqueIcons = [
   Popcorn
 ]
 
-export async function getAllCategoriesPromise(locale: string, svgProps: LucideProps = {strokeWidth: 2.2}) {
+// export async function getAllCategoriesPromise(locale: string, svgProps: LucideProps = {strokeWidth: 2.2}) {
+export async function getAllCategoriesPromise(locale: string) {
   const t = await getTranslations({locale, namespace: 'Catalog'})
 
   const categories: Category[] = []
@@ -58,7 +59,9 @@ export async function getAllCategoriesPromise(locale: string, svgProps: LucidePr
                 : null
           }
         }),
-      categoryIcon: React.createElement(uniqueIcons[i] || CircleHelp, svgProps)
+      categoryIcon: React.createElement(
+        uniqueIcons[i] || CircleHelp, {strokeWidth: 2.2} as React.SVGAttributes<SVGElement>
+      )
     } 
 
     categories.push(menuObj)

@@ -9,6 +9,7 @@ type ScrollAreaProps = React.ComponentPropsWithoutRef<typeof Root> & {
   orientation?: 'horizontal' | 'vertical'
   invisible?: boolean
   showShadows?: boolean
+  isFlex?: boolean
 }
 
 const ScrollArea = React.forwardRef<
@@ -22,6 +23,7 @@ const ScrollArea = React.forwardRef<
     orientation = 'vertical', 
     invisible = false,
     showShadows = false,
+    isFlex = false,
     ...props
   } = _props
 
@@ -31,7 +33,7 @@ const ScrollArea = React.forwardRef<
       ref={ref}
       {...props}
     >
-      <ScrollAreaViewport showShadows={showShadows}>
+      <ScrollAreaViewport showShadows={showShadows} isFlex={isFlex}>
         {children}
       </ScrollAreaViewport>
       <ScrollBar orientation={orientation} invisible={invisible} />
@@ -44,8 +46,9 @@ const ScrollAreaViewport = React.forwardRef<
   React.ElementRef<typeof Viewport>,
   React.ComponentPropsWithoutRef<typeof Viewport> & {
     showShadows?: boolean
+    isFlex?: boolean
   }
->(({className, showShadows = true, children, ...props}, ref) => {
+>(({className, showShadows, children, isFlex, ...props}, ref) => {
   const [canScrollLeft, setCanScrollLeft] = React.useState<boolean>(false)
   const [canScrollRight, setCanScrollRight] = React.useState<boolean>(true)
 
@@ -54,6 +57,7 @@ const ScrollAreaViewport = React.forwardRef<
       <Viewport 
         className={cn(
           'h-full w-full rounded-[inherit]', 
+          isFlex && '[&>div]:!flex',
           className
         )}
         ref={ref}
