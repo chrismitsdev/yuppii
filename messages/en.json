@@ -1921,7 +1921,7 @@
             "Basil",
             "Tomato"
           ],
-          "price": "7",
+          "price": "8",
           "disabled": false
         },
         "SpecialPizza": {
@@ -1934,7 +1934,7 @@
             "Mushrooms",
             "Tomato Sauce"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "FourCheesePizza": {
@@ -1946,7 +1946,7 @@
             "Mozzarella",
             "Tomato Sauce"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "GreekPizza": {
@@ -1960,7 +1960,7 @@
             "Onion",
             "Tomato Sauce"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "ProsciuttoPizza": {
@@ -1972,7 +1972,7 @@
             "Arugula",
             "Tomato Sauce"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "VegetarianPizza": {
@@ -1984,7 +1984,7 @@
             "Mushrooms",
             "Olives"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "ChickenPizza": {
@@ -1996,7 +1996,7 @@
             "Corn",
             "Mustard Sauce"
           ],
-          "price": "7.5",
+          "price": "8.5",
           "disabled": false
         },
         "ClassicCrepe": {
