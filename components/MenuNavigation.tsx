@@ -12,7 +12,7 @@ function MenuNavigation({categories}: {categories: Category[]}) {
   const isLinkActive = (str: string) => ((rootPath && !str) || categoryPath === str)
 
   return (
-    <nav className='sticky top-0 z-10 w-screen flex justify-center bg-primary shadow-menu-nav'>
+    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-primary shadow-menu-nav'>
       <ScrollArea orientation='horizontal' invisible isFlex>
         <div className='px-1 flex items-center shrink-0'>
           {categories.map(category => (
