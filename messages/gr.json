@@ -1716,7 +1716,7 @@
           "price": "7",
           "disabled": false
         },
-        "Flavored Mojito": {
+        "FlavoredMojito": {
           "name": "Μοχίτο με γεύση",
           "description": [
             "Μαστίχα",
@@ -1742,6 +1742,12 @@
         },
         "Daiquiri": {
           "name": "Ντάκιρι",
+          "description": null,
+          "price": "7",
+          "disabled": false
+        },
+        "AperolSpritz": {
+          "name": "Άπερολ σπρίντζ",
           "description": null,
           "price": "7",
           "disabled": false
