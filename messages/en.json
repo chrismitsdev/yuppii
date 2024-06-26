@@ -1716,7 +1716,7 @@
           "price": "7",
           "disabled": false
         },
-        "Flavored Mojito": {
+        "FlavoredMojito": {
           "name": "Flavored Mojito",
           "description": [
             "Mastic",
@@ -1742,6 +1742,12 @@
         },
         "Daiquiri": {
           "name": "Daiquiri",
+          "description": null,
+          "price": "7",
+          "disabled": false
+        },
+        "AperolSpritz": {
+          "name": "Aperol Spritz",
           "description": null,
           "price": "7",
           "disabled": false
