@@ -4,6 +4,7 @@ import Messages from '@/messages/en.json'
 import {Burger} from '@/components/misc-icons/burger'
 import {
   Coffee, 
+  Milk,
   CupSoda, 
   GlassWater, 
   Beer, 
@@ -19,8 +20,9 @@ import {
 const uniqueIcons = [
   Coffee, 
   CupSoda, 
-  GlassWater, 
+  Milk,
   Zap, 
+  GlassWater, 
   Martini, 
   Beer, 
   Utensils, 
