@@ -1662,31 +1662,10 @@
         }
       }
     },
-    "Alcoholic": {
-      "categoryName": "Alcoholic",
+    "Spirits": {
+      "categoryName": "Spirit",
       "categoryNote": null,
       "products": {
-        "AppleCider": {
-          "name": "Apple cider 330ml",
-          "description": null,
-          "price": "4.5",
-          "disabled": false
-        },
-        "GordonsSpace": {
-          "name": "Gordon's space 275ml",
-          "description": null,
-          "price": "5",
-          "disabled": false
-        },
-        "MiniWine187ml": {
-          "name": "Mini wine 187ml",
-          "description": [
-            "Semi-sweet White/Red",
-            "Dry White/Red"
-          ],
-          "price": "4.5",
-          "disabled": false
-        },
         "RegularDrink": {
           "name": "Regular drink",
           "description": [
@@ -1710,6 +1689,97 @@
           "price": "8",
           "disabled": false
         },
+        "AppleCider": {
+          "name": "Apple cider 330ml",
+          "description": null,
+          "price": "4.5",
+          "disabled": false
+        },
+        "GordonsSpace": {
+          "name": "Gordon's space 275ml",
+          "description": null,
+          "price": "5",
+          "disabled": false
+        },
+        "MiniWine187ml": {
+          "name": "Mini wine 187ml",
+          "description": [
+            "Semi-sweet White/Red",
+            "Dry White/Red"
+          ],
+          "price": "4.5",
+          "disabled": false
+        }
+      }
+    },
+    "Cocktail": {
+      "categoryName": "Cocktail",
+      "categoryNote": null,
+      "products": {
+        "AperolSpritz": {
+          "name": "Aperol Spritz",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "AperolSpritzGrapefruit": {
+          "name": "Aperol Spritz with Grapefruit",
+          "description": null,
+          "price": "8",
+          "disabled": false
+        },
+        "Negroni": {
+          "name": "Negroni",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Paloma": {
+          "name": "Paloma",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "AppleMartini": {
+          "name": "Apple Martini",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Daiquiri": {
+          "name": "Daiquiri",
+          "description": [
+            "Strawberry",
+            "Mango",
+            "Passion fruit"
+          ],
+          "price": "7.5",
+          "disabled": false
+        },
+        "Caipirinha": {
+          "name": "Caipirinha",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Caipiroska": {
+          "name": "Caipiroska",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Caipassoa": {
+          "name": "Caipassoa",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Margarita": {
+          "name": "Margarita",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
         "Mojito": {
           "name": "Mojito",
           "description": null,
@@ -1719,37 +1789,10 @@
         "FlavoredMojito": {
           "name": "Flavored Mojito",
           "description": [
-            "Mastic",
-            "Strawberry"
+            "Strawberry",
+            "Passion fruit"
           ],
           "price": "7.5",
-          "disabled": false
-        },
-        "Caipirinha": {
-          "name": "Caipirinha",
-          "description": [
-            "Original",
-            "Ursus"
-          ],
-          "price": "7",
-          "disabled": false
-        },
-        "Negroni": {
-          "name": "Negroni",
-          "description": null,
-          "price": "7",
-          "disabled": false
-        },
-        "Daiquiri": {
-          "name": "Daiquiri",
-          "description": null,
-          "price": "7",
-          "disabled": false
-        },
-        "AperolSpritz": {
-          "name": "Aperol Spritz",
-          "description": null,
-          "price": "7",
           "disabled": false
         }
       }

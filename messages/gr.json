@@ -1662,31 +1662,10 @@
         }
       }
     },
-    "Alcoholic": {
-      "categoryName": "Αλκοολούχο",
+    "Spirits": {
+      "categoryName": "Οινοπνευματώδη",
       "categoryNote": null,
       "products": {
-        "AppleCider": {
-          "name": "Μηλοκλέφτης 330ml",
-          "description": null,
-          "price": "4.5",
-          "disabled": false
-        },
-        "GordonsSpace": {
-          "name": "Gordon's space 275ml",
-          "description": null,
-          "price": "5",
-          "disabled": false
-        },
-        "MiniWine187ml": {
-          "name": "Ατομικό κρασί 187ml",
-          "description": [
-            "Ημίγλυκο Λευκό/Κόκκινο",
-            "Ξηρό Λευκό/Κόκκινο"
-          ],
-          "price": "4.5",
-          "disabled": false
-        },
         "RegularDrink": {
           "name": "Ποτό απλό",
           "description": [
@@ -1710,17 +1689,69 @@
           "price": "8",
           "disabled": false
         },
-        "Mojito": {
-          "name": "Μοχίτο",
+        "AppleCider": {
+          "name": "Μηλοκλέφτης 330ml",
           "description": null,
-          "price": "7",
+          "price": "4.5",
           "disabled": false
         },
-        "FlavoredMojito": {
-          "name": "Μοχίτο με γεύση",
+        "GordonsSpace": {
+          "name": "Gordon's space 275ml",
+          "description": null,
+          "price": "5",
+          "disabled": false
+        },
+        "MiniWine187ml": {
+          "name": "Ατομικό κρασί 187ml",
           "description": [
-            "Μαστίχα",
-            "Φράουλα"
+            "Ημίγλυκο Λευκό/Κόκκινο",
+            "Ξηρό Λευκό/Κόκκινο"
+          ],
+          "price": "4.5",
+          "disabled": false
+        }
+      }
+    },
+    "Cocktail": {
+      "categoryName": "Κόκτεϊλ",
+      "categoryNote": null,
+      "products": {
+        "AperolSpritz": {
+          "name": "Άπερολ σπρίντζ",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "AperolSpritzGrapefruit": {
+          "name": "Άπερολ σπρίντζ με γκρέϊπφρουτ",
+          "description": null,
+          "price": "8",
+          "disabled": false
+        },
+        "Negroni": {
+          "name": "Νεγκρόνι",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Paloma": {
+          "name": "Παλόμα",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "AppleMartini": {
+          "name": "Άπλ Μαρτίνι",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Daiquiri": {
+          "name": "Ντάκιρι",
+          "description": [
+            "Φράουλα",
+            "Μάνγκο",
+            "Φρούτα του πάθους"
           ],
           "price": "7.5",
           "disabled": false
@@ -1731,25 +1762,40 @@
             "Original",
             "Ursus"
           ],
-          "price": "7",
+          "price": "7.5",
           "disabled": false
         },
-        "Negroni": {
-          "name": "Νεγκρόνι",
+        "Caipiroska": {
+          "name": "Καϊπιρόσκα",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Caipassoa": {
+          "name": "Καϊπασόα",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Margarita": {
+          "name": "Μαργαρίτα",
+          "description": null,
+          "price": "7.5",
+          "disabled": false
+        },
+        "Mojito": {
+          "name": "Μοχίτο",
           "description": null,
           "price": "7",
           "disabled": false
         },
-        "Daiquiri": {
-          "name": "Ντάκιρι",
-          "description": null,
-          "price": "7",
-          "disabled": false
-        },
-        "AperolSpritz": {
-          "name": "Άπερολ σπρίντζ",
-          "description": null,
-          "price": "7",
+        "FlavoredMojito": {
+          "name": "Μοχίτο με γεύση",
+          "description": [
+            "Φράουλα",
+            "Φρούτα του πάθους"
+          ],
+          "price": "7.5",
           "disabled": false
         }
       }
