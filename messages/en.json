@@ -1807,6 +1807,12 @@
           "price": "3.5",
           "disabled": false
         },
+        "Alfa": {
+          "name": "Alfa 330ml",
+          "description": null,
+          "price": "4",
+          "disabled": false
+        },
         "Heineken": {
           "name": "Heineken 330ml",
           "description": null,
