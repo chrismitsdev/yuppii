@@ -33,7 +33,7 @@
     "eslint-config-next": "14.2.5",
     "lucide-react": "^0.408.0",
     "mapbox-gl": "^3.5.1",
-    "next": "14.2.5",
+    "next": "14.2.18",
     "next-intl": "3.16.0",
     "photoswipe": "^5.4.4",
     "postcss": "8.4.39",
