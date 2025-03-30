@@ -25,7 +25,7 @@
       "info4": "Daily 18:00 - 23:30"
     },
     "Box3": {
-      "title": "LINKS",
+      "title": "TERMS & POLICIES",
       "link1": "Privacy Policy",
       "link2": "Use of Cookies"
     },
@@ -33,6 +33,9 @@
       "title": "INFORMATION",
       "info1": "Port of Alexandroupoli",
       "info2": "+30 6973433980"
+    },
+    "Box5": {
+      "title": "OUR BRANDS"
     }
   },
   "Home": {
@@ -258,10 +261,7 @@
         "InstantCoffeeColdWithIcecream": {
           "name": "Frappé with ice-cream",
           "category": "Beverage",
-          "description": [
-            "Chocolate",
-            "Vanilla"
-          ],
+          "description": ["Chocolate", "Vanilla"],
           "price": "4",
           "disabled": false
         },
@@ -338,10 +338,7 @@
         "Latte": {
           "name": "Latte",
           "category": "Beverage",
-          "description": [
-            "Cold",
-            "Hot"
-          ],
+          "description": ["Cold", "Hot"],
           "price": "4",
           "disabled": false
         },
@@ -369,83 +366,56 @@
         "Chocolate": {
           "name": "Chocolate",
           "category": "Beverage",
-          "description": [
-            "Cold",
-            "Hot"
-          ],
+          "description": ["Cold", "Hot"],
           "price": "3.5",
           "disabled": false
         },
         "ChocolateFlavored": {
           "name": "Flavored chocolate",
           "category": "Beverage",
-          "description": [
-            "Caramel",
-            "Hazel",
-            "Strawberry"
-          ],
+          "description": ["Caramel", "Hazel", "Strawberry"],
           "price": "4",
           "disabled": false
         },
         "ChocolateWhite": {
           "name": "Chocolate white",
           "category": "Beverage",
-          "description": [
-            "Cold",
-            "Hot"
-          ],
+          "description": ["Cold", "Hot"],
           "price": "3.5",
           "disabled": false
         },
         "ChocolateWhiteFlavored": {
           "name": "Flavored chocolate white",
           "category": "Beverage",
-          "description": [
-            "Caramel",
-            "Hazel",
-            "Strawberry"
-          ],
+          "description": ["Caramel", "Hazel", "Strawberry"],
           "price": "4",
           "disabled": false
         },
         "Mochaccino": {
           "name": "Mochaccino",
           "category": "Beverage",
-          "description": [
-            "Cold",
-            "Hot"
-          ],
+          "description": ["Cold", "Hot"],
           "price": "4",
           "disabled": false
         },
         "MochaccinoFlavored": {
           "name": "Flavored hot/cold mochaccino",
           "category": "Beverage",
-          "description": [
-            "Caramel",
-            "Hazel",
-            "Strawberry"
-          ],
+          "description": ["Caramel", "Hazel", "Strawberry"],
           "price": "4.5",
           "disabled": false
         },
         "Milkshake": {
           "name": "Milkshake",
           "category": "Beverage",
-          "description": [
-            "Chocolate",
-            "Vanilla"
-          ],
+          "description": ["Chocolate", "Vanilla"],
           "price": "4",
           "disabled": false
         },
         "Slush": {
           "name": "Slush",
           "category": "Refreshment",
-          "description": [
-            "Strawberry",
-            "Lemon"
-          ],
+          "description": ["Strawberry", "Lemon"],
           "price": "3.5",
           "disabled": false
         },
@@ -459,47 +429,28 @@
         "Beverage330ml": {
           "name": "Carbonated refreshment 330ml",
           "category": "Refreshment",
-          "description": [
-            "Coca-Cola",
-            "Sprite",
-            "Fanta",
-            "Soda",
-            "Tonic"
-          ],
+          "description": ["Coca-Cola", "Sprite", "Fanta", "Soda", "Tonic"],
           "price": "3",
           "disabled": false
         },
         "AmitaJuice": {
           "name": "Amita juice",
           "category": "Refreshment",
-          "description": [
-            "Orange",
-            "Sour Cherry",
-            "Banana",
-            "Peach",
-            "Mixed"
-          ],
+          "description": ["Orange", "Sour Cherry", "Banana", "Peach", "Mixed"],
           "price": "3",
           "disabled": false
         },
         "AmitaKidsJuice": {
           "name": "Amita juice for kids",
           "category": "Refreshment",
-          "description": [
-            "Strawberry",
-            "Apple"
-          ],
+          "description": ["Strawberry", "Apple"],
           "price": "2",
           "disabled": false
         },
         "LiptonIcedTea": {
           "name": "Lipton iced tea",
           "category": "Refreshment",
-          "description": [
-            "Lemon",
-            "Peach",
-            "Green"
-          ],
+          "description": ["Lemon", "Peach", "Green"],
           "price": "3.5",
           "disabled": false
         },
@@ -521,10 +472,7 @@
         "Mastiqua": {
           "name": "Mastiqua",
           "category": "Refreshment",
-          "description": [
-            "Sparkling",
-            "Lemon"
-          ],
+          "description": ["Sparkling", "Lemon"],
           "price": "4",
           "disabled": false
         },
@@ -636,10 +584,7 @@
         "MiniWine187ml": {
           "name": "Mini wine 187ml",
           "category": "Alcoholic",
-          "description": [
-            "Semi-sweet White/Red",
-            "Dry White/Red"
-          ],
+          "description": ["Semi-sweet White/Red", "Dry White/Red"],
           "price": "4.5",
           "disabled": false
         },
@@ -667,20 +612,14 @@
         "Flavored Mojito": {
           "name": "Flavored Mojito",
           "category": "Alcoholic",
-          "description": [
-            "Mastic",
-            "Strawberry"
-          ],
+          "description": ["Mastic", "Strawberry"],
           "price": "6.5",
           "disabled": false
         },
         "Caipirinha": {
           "name": "Caipirinha",
           "category": "Alcoholic",
-          "description": [
-            "Original",
-            "Ursus"
-          ],
+          "description": ["Original", "Ursus"],
           "price": "6",
           "disabled": false
         },
@@ -757,10 +696,7 @@
         "NachosWithSauce": {
           "name": "Nachos with sauce",
           "category": "Food",
-          "description": [
-            "Cheddar",
-            "Red sauce"
-          ],
+          "description": ["Cheddar", "Red sauce"],
           "price": "3.5",
           "disabled": false
         },
@@ -774,12 +710,7 @@
         "ChickenTortilla": {
           "name": "Chicken tortilla",
           "category": "Food",
-          "description": [
-            "Chicken salad",
-            "Tomato",
-            "Lettuce",
-            "Corn"
-          ],
+          "description": ["Chicken salad", "Tomato", "Lettuce", "Corn"],
           "price": "4",
           "disabled": false
         },
@@ -933,12 +864,7 @@
         "MargheritaPizza": {
           "name": "Margherita pizza",
           "category": "Food",
-          "description": [
-            "Gouda",
-            "Tomato Sauce",
-            "Basil",
-            "Tomato"
-          ],
+          "description": ["Gouda", "Tomato Sauce", "Basil", "Tomato"],
           "price": "7",
           "disabled": false
         },
@@ -1026,22 +952,14 @@
         "ClassicCrepe": {
           "name": "Classic crepe",
           "category": "Food",
-          "description": [
-            "Gouda",
-            "Smoked Turkey"
-          ],
+          "description": ["Gouda", "Smoked Turkey"],
           "price": "2.5",
           "disabled": true
         },
         "LightCrepe": {
           "name": "Light crepe",
           "category": "Food",
-          "description": [
-            "Smoked Turkey",
-            "Corn",
-            "Low-Fat Cheese",
-            "Tomato"
-          ],
+          "description": ["Smoked Turkey", "Corn", "Low-Fat Cheese", "Tomato"],
           "price": "3.5",
           "disabled": true
         },
@@ -1098,56 +1016,35 @@
         "BuenoCrepe": {
           "name": "Bueno crepe",
           "category": "Food",
-          "description": [
-            "Bueno Praline",
-            "Biscuit"
-          ],
+          "description": ["Bueno Praline", "Biscuit"],
           "price": "3",
           "disabled": true
         },
         "DoubleDreamCrepe": {
           "name": "Double dream crepe",
           "category": "Food",
-          "description": [
-            "Strawberry Praline",
-            "Banana",
-            "Biscuit",
-            "Truffle"
-          ],
+          "description": ["Strawberry Praline", "Banana", "Biscuit", "Truffle"],
           "price": "4.5",
           "disabled": true
         },
         "EnergyCrepe": {
           "name": "Energy crepe",
           "category": "Food",
-          "description": [
-            "Nutella",
-            "Banana",
-            "Walnut",
-            "Super Food"
-          ],
+          "description": ["Nutella", "Banana", "Walnut", "Super Food"],
           "price": "4.5",
           "disabled": true
         },
         "ChocolamaniaCrepe": {
           "name": "Chocolamania crepe",
           "category": "Food",
-          "description": [
-            "Chocolate Praline",
-            "Oreo",
-            "Smarties"
-          ],
+          "description": ["Chocolate Praline", "Oreo", "Smarties"],
           "price": "5",
           "disabled": true
         },
         "OnIceCrepe": {
           "name": "On ice crepe",
           "category": "Food",
-          "description": [
-            "Ice Cream",
-            "Chocolate Praline",
-            "Oreo"
-          ],
+          "description": ["Ice Cream", "Chocolate Praline", "Oreo"],
           "price": "5",
           "disabled": true
         }
@@ -1269,10 +1166,7 @@
         },
         "InstantCoffeeColdWithIcecream": {
           "name": "Frappé with ice-cream",
-          "description": [
-            "Chocolate",
-            "Vanilla"
-          ],
+          "description": ["Chocolate", "Vanilla"],
           "price": "4",
           "disabled": false
         },
@@ -1338,9 +1232,7 @@
         },
         "Latte": {
           "name": "Latte",
-          "description": [
-            "Hot or cold"
-          ],
+          "description": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
@@ -1384,67 +1276,43 @@
         },
         "Chocolate": {
           "name": "Chocolate",
-          "description": [
-            "Hot or cold"
-          ],
+          "description": ["Hot or cold"],
           "price": "3.5",
           "disabled": false
         },
         "ChocolateFlavored": {
           "name": "Flavored chocolate",
-          "description": [
-            "Hot or cold",
-            "Caramel",
-            "Hazel",
-            "Strawberry"
-          ],
+          "description": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
           "price": "4",
           "disabled": false
         },
         "ChocolateWhite": {
           "name": "White chocolate",
-          "description": [
-            "Hot or cold"
-          ],
+          "description": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
         "ChocolateWhiteFlavored": {
           "name": "Flavored white chocolate",
-          "description": [
-            "Hot or cold",
-            "Caramel",
-            "Hazel",
-            "Strawberry"
-          ],
+          "description": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
           "price": "4.5",
           "disabled": false
         },
         "Mochaccino": {
           "name": "Mochaccino",
-          "description": [
-            "Hot or cold"
-          ],
+          "description": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
         "MochaccinoFlavored": {
           "name": "Flavored mochaccino",
-          "description": [
-            "Hot or cold",
-            "Caramel",
-            "Hazel",
-            "Strawberry"
-          ],
+          "description": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
           "price": "4.5",
           "disabled": false
         },
         "Milkshake": {
           "name": "Milkshake",
-          "description": [
-            "Chocolate",
-            "Vanilla"
-          ],
+          "description": ["Chocolate", "Vanilla"],
           "price": "4",
           "disabled": false
         }
@@ -1490,13 +1358,7 @@
         },
         "Schweppes": {
           "name": "Schweppes 330ml",
-          "description": [
-            "Soda",
-            "Tonic",
-            "Lemon",
-            "Orangeade",
-            "Pink"
-          ],
+          "description": ["Soda", "Tonic", "Lemon", "Orangeade", "Pink"],
           "price": "3",
           "disabled": false
         },
@@ -1522,31 +1384,19 @@
         },
         "AmitaFun": {
           "name": "Amita FUN! 250ml",
-          "description": [
-            "Strawberry",
-            "4 fruits mixed"
-          ],
+          "description": ["Strawberry", "4 fruits mixed"],
           "price": "2.5",
           "disabled": false
         },
         "LiptonIcedTea": {
           "name": "Lipton iced tea 330ml",
-          "description": [
-            "Lemon",
-            "Peach",
-            "Green"
-          ],
+          "description": ["Lemon", "Peach", "Green"],
           "price": "3.5",
           "disabled": false
         },
         "FuzeIcedTea": {
           "name": "Fuze iced tea 500ml",
-          "description": [
-            "Watermelon",
-            "Peach",
-            "Lemon",
-            "Passion fruit"
-          ],
+          "description": ["Watermelon", "Peach", "Lemon", "Passion fruit"],
           "price": "3.5",
           "disabled": false
         },
@@ -1562,10 +1412,7 @@
         },
         "Slush": {
           "name": "Slush 330ml",
-          "description": [
-            "Strawberry",
-            "Lemon"
-          ],
+          "description": ["Strawberry", "Lemon"],
           "price": "3.5",
           "disabled": false
         },
@@ -1587,10 +1434,7 @@
         },
         "Mastiqua": {
           "name": "Mastiqua 330ml",
-          "description": [
-            "Sparkling",
-            "Lemon"
-          ],
+          "description": ["Sparkling", "Lemon"],
           "price": "4",
           "disabled": false
         },
@@ -1620,10 +1464,7 @@
       "products": {
         "RedBull": {
           "name": "Red Bull 250ml",
-          "description": [
-            "Original",
-            "Light"
-          ],
+          "description": ["Original", "Light"],
           "price": "5",
           "disabled": false
         },
@@ -1683,9 +1524,7 @@
         },
         "SpecialDrink": {
           "name": "Special drink",
-          "description": [
-            "Chivas Regal 12"
-          ],
+          "description": ["Chivas Regal 12"],
           "price": "8",
           "disabled": false
         },
@@ -1703,10 +1542,7 @@
         },
         "MiniWine187ml": {
           "name": "Mini wine 187ml",
-          "description": [
-            "Semi-sweet White/Red",
-            "Dry White/Red"
-          ],
+          "description": ["Semi-sweet White/Red", "Dry White/Red"],
           "price": "4.5",
           "disabled": false
         }
@@ -1748,11 +1584,7 @@
         },
         "Daiquiri": {
           "name": "Daiquiri",
-          "description": [
-            "Strawberry",
-            "Mango",
-            "Passion fruit"
-          ],
+          "description": ["Strawberry", "Mango", "Passion fruit"],
           "price": "7.5",
           "disabled": false
         },
@@ -1788,10 +1620,7 @@
         },
         "FlavoredMojito": {
           "name": "Flavored Mojito",
-          "description": [
-            "Strawberry",
-            "Passion fruit"
-          ],
+          "description": ["Strawberry", "Passion fruit"],
           "price": "7.5",
           "disabled": false
         }
@@ -1899,12 +1728,7 @@
         },
         "ChickenTortilla": {
           "name": "Chicken tortilla",
-          "description": [
-            "Chicken salad",
-            "Tomato",
-            "Lettuce",
-            "Corn"
-          ],
+          "description": ["Chicken salad", "Tomato", "Lettuce", "Corn"],
           "price": "4",
           "disabled": false
         },
@@ -1970,12 +1794,7 @@
       "products": {
         "MargheritaPizza": {
           "name": "Margherita pizza",
-          "description": [
-            "Gouda",
-            "Tomato Sauce",
-            "Basil",
-            "Tomato"
-          ],
+          "description": ["Gouda", "Tomato Sauce", "Basil", "Tomato"],
           "price": "8",
           "disabled": false
         },
@@ -2056,21 +1875,13 @@
         },
         "ClassicCrepe": {
           "name": "Classic crepe",
-          "description": [
-            "Gouda",
-            "Smoked Turkey"
-          ],
+          "description": ["Gouda", "Smoked Turkey"],
           "price": "2.5",
           "disabled": true
         },
         "LightCrepe": {
           "name": "Light crepe",
-          "description": [
-            "Smoked Turkey",
-            "Corn",
-            "Low-Fat Cheese",
-            "Tomato"
-          ],
+          "description": ["Smoked Turkey", "Corn", "Low-Fat Cheese", "Tomato"],
           "price": "3.5",
           "disabled": true
         },
@@ -2122,52 +1933,31 @@
         },
         "BuenoCrepe": {
           "name": "Bueno crepe",
-          "description": [
-            "Bueno Praline",
-            "Biscuit"
-          ],
+          "description": ["Bueno Praline", "Biscuit"],
           "price": "3",
           "disabled": true
         },
         "DoubleDreamCrepe": {
           "name": "Double dream crepe",
-          "description": [
-            "Strawberry Praline",
-            "Banana",
-            "Biscuit",
-            "Truffle"
-          ],
+          "description": ["Strawberry Praline", "Banana", "Biscuit", "Truffle"],
           "price": "4.5",
           "disabled": true
         },
         "EnergyCrepe": {
           "name": "Energy crepe",
-          "description": [
-            "Nutella",
-            "Banana",
-            "Walnut",
-            "Super Food"
-          ],
+          "description": ["Nutella", "Banana", "Walnut", "Super Food"],
           "price": "4.5",
           "disabled": true
         },
         "ChocolamaniaCrepe": {
           "name": "Chocolamania crepe",
-          "description": [
-            "Chocolate Praline",
-            "Oreo",
-            "Smarties"
-          ],
+          "description": ["Chocolate Praline", "Oreo", "Smarties"],
           "price": "5",
           "disabled": true
         },
         "OnIceCrepe": {
           "name": "On ice crepe",
-          "description": [
-            "Ice Cream",
-            "Chocolate Praline",
-            "Oreo"
-          ],
+          "description": ["Ice Cream", "Chocolate Praline", "Oreo"],
           "price": "5",
           "disabled": true
         }
@@ -2289,10 +2079,7 @@
         },
         "NachosWithSauce": {
           "name": "Nachos with sauce",
-          "description": [
-            "Cheddar",
-            "Red sauce"
-          ],
+          "description": ["Cheddar", "Red sauce"],
           "price": "4",
           "disabled": false
         },

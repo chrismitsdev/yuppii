@@ -7,7 +7,7 @@
     --brand: 174 46% 62%;
     --brand-foreground: 340 82% 79%;
     --primary: 176 38% 86%; /*#cee9e7*/
-    --primary-foreground: 180 14% 1%; 
+    --primary-foreground: 180 14% 1%;
     --secondary: 349 78% 70%; /*	#ee778d*/
     --secondary-foreground: 180 14% 1%;
     --accent: 180 14% 1%;
@@ -19,9 +19,9 @@
   * {
     @apply border-border;
   }
-  
+
   body {
-    @apply bg-primary text-accent selection:bg-secondary;
+    @apply bg-primary text-accent selection:bg-secondary selection:text-secondary-foreground;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
