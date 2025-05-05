@@ -77,8 +77,8 @@ export default async function LocaleLayout({
             }}
           />
         </NextIntlClientProvider>
-        {/* <SpeedInsights /> */}
-        {/* <Analytics /> */}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
