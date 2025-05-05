@@ -1,6 +1,0 @@
-export {default as tableSoccer1thumb} from './ALE_0813_thumb.webp'
-export {default as tableSoccer2thumb} from './ALE_0819_thumb.webp'
-export {default as tableSoccer3thumb} from './ALE_0864_thumb.webp'
-export {default as tableSoccer4thumb} from './ALE_0869_thumb.webp'
-export {default as tableSoccer5thumb} from './ALE_5240_thumb.webp'
-export {default as tableSoccer6thumb} from './ALE_5244_thumb.webp'

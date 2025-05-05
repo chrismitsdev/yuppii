@@ -1,6 +1,0 @@
-export {default as electricCars1thumb} from './IMG_7684_thumb.webp'
-export {default as electricCars2thumb} from './IMG_7686_thumb.webp'
-export {default as electricCars3thumb} from './IMG_7688_thumb.webp'
-export {default as electricCars4thumb} from './IMG_7690_thumb.webp'
-export {default as electricCars5thumb} from './IMG_7691_thumb.webp'
-export {default as electricCars6thumb} from './IMG_7692_thumb.webp'

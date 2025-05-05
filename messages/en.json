@@ -3,7 +3,6 @@
     "Pages": {
       "Home": "Home",
       "Park": "Park",
-      "Games": "Games",
       "Services": "Services",
       "Contact": "Contact",
       "Privacy": "Privacy",
@@ -12,1259 +11,414 @@
       "LocaleContent": "Ορισμός γλώσσας σε Ελληνικά"
     }
   },
-  "Footer": {
-    "Box1": {
-      "title": "NEWSLETTER",
-      "placeholder": "Type your email address"
-    },
-    "Box2": {
-      "title": "OPERATING",
-      "info1": "Summer season",
-      "info2": "Christmas season",
-      "info3": "National holidays",
-      "info4": "Daily 18:00 - 23:30"
-    },
-    "Box3": {
-      "title": "TERMS & POLICIES",
-      "link1": "Privacy Policy",
-      "link2": "Use of Cookies"
-    },
-    "Box4": {
-      "title": "INFORMATION",
-      "info1": "Port of Alexandroupoli",
-      "info2": "+30 6973433980"
-    },
-    "Box5": {
-      "title": "OUR BRANDS"
-    }
-  },
-  "Home": {
-    "Section1": {
-      "title": "Game without limits",
-      "subtitle": "Join us for a truly unforgettable experience.",
-      "ModalCards": {
-        "Card1": {
-          "Title": "Unique Games",
-          "Description": "Unique and fantastic games from all around the world, for both young and old, in a safe environment.",
-          "DialogTrigger": "More",
-          "DialogContent": "Yuppii Luna Park is a one-way ticket to your children's amusement and you can find it below the Lighthouse, on the seaside promenade of Alexandroupolis. It offers over 40 unique and diverse games from all around the world, catering to all age groups."
+  "Pages": {
+    "Home": {
+      "HomeCards": {
+        "title": "Game without limits",
+        "subtitle": "Join us for a truly unforgettable experience.",
+        "card1": {
+          "title": "Unique Games",
+          "description": "Unique and fantastic games from all around the world, for both young and old, in a safe environment.",
+          "trigger": "More",
+          "content": "Yuppii Luna Park is a one-way ticket to your children's amusement and you can find it below the Lighthouse, on the seaside promenade of Alexandroupolis. It offers over 40 unique and diverse games from all around the world, catering to all age groups."
         },
-        "Card2": {
-          "Title": "Children's Party",
-          "Description": "Organize unforgettable birthday parties at Yuppii Luna Park with games, activities, and endless fun.",
-          "DialogTrigger": "More",
-          "DialogContent": "Plan your child's party at Yuppii Luna Park. It's the perfect venue for children of all ages to have fun, as well as for friends and guests to have a great time. The park offers a variety of games and a full menu with food, drinks, and refreshments. Contact us here to discuss your event, whether it's a birthday party, name day celebration, Christmas gathering, end-of-school-year event, or any other occasion you have in mind to celebrate."
+        "card2": {
+          "title": "Children’s Parties",
+          "description": "Organize unforgettable birthday parties at Yuppii Luna Park with games, activities, and endless fun.",
+          "trigger": "More",
+          "content": "Plan your child's party at Yuppii Luna Park. It's the perfect venue for children of all ages to have fun, as well as for friends and guests to have a great time. The park offers a variety of games and a full menu with food, drinks, and refreshments. Contact us here to discuss your event, whether it's a birthday party, name day celebration, Christmas gathering, end-of-school-year event, or any other occasion you have in mind to celebrate."
         },
-        "Card3": {
-          "Title": "Our Café",
-          "Description": "Relax and enjoy a snack or a beverage from our full menu while your kids play safely.",
-          "DialogTrigger": "More",
-          "DialogContent": "Enjoy a tasty break and refresh yourself with a beverage at our specially designed Café area. Our menu includes a wide variety of sandwiches, toast, hamburgers, hot dogs, fries, boiled corn, popcorn, ice creams, soft drinks, sorbets, beers, cocktails, coffee, and many other snacks."
-        },
-        "Card4": {
-          "Title": "School Excursions",
-          "Description": "Plan your school excursion to Yuppii Luna Park for a Yuppii experience with your classmates.",
-          "DialogTrigger": "More",
-          "DialogContent": "Under normal circumstances, Yuppii Luna Park opens in the afternoon, but specifically for groups and school excursions, the park can open in the morning after making a phone call arrangement. Call us or contact us here. We offer a variety of discounts based on the group size (10+ individuals, 10-19 individuals, 20-29 individuals, 30+ individuals). Come and have a wonderful time at Yuppii Luna Park."
+        "card3": {
+          "title": "School Trips",
+          "description": "Plan your school excursion to Yuppii Luna Park for a Yuppii experience with your classmates.",
+          "trigger": "More",
+          "content": "Under normal circumstances, Yuppii Luna Park opens in the afternoon, but specifically for groups and school excursions, the park can open in the morning after making a phone call arrangement. Call us or contact us here. We offer a variety of discounts based on the group size (10+ individuals, 10-19 individuals, 20-29 individuals, 30+ individuals). Come and have a wonderful time at Yuppii Luna Park."
         }
-      }
-    },
-    "Section2": {
-      "title": "Photo Gallery",
-      "subtitle": "Step into our magical world with a small sample."
-    }
-  },
-  "Park": {
-    "Section1": {
-      "title": "A few words",
-      "subtitle": "Under the Lighthouse of Alexandroupolis, Yuppii Luna Park awaits you for an unforgettable experience.",
-      "Information": {
-        "Info1": {
-          "Title": "We are celebrating 12 years of operation.",
-          "Content": "Yuppii opened its doors for the first time in 2011 and offers a plethora of unique games for both kids and adults. Yuppii Luna Park is located in the busiest summer area, the coastal part of Alexandroupolis. It operates on an area of 5,500 sq.m. at the Port of Alexandroupolis, right under the Lighthouse. The park is ISO certified, adheres to all safety standards, and is certified by ELOT-EBETAM. All Yuppii's staff is experienced and specialized."
-        },
-        "Info2": {
-          "Title": "Entrance to Yuppii is free.",
-          "Content": "Our main operating season is from March 25th to September 30th. We also operate during the Christmas season and on National Holidays. Additionally, during the off-season, we open on some weekends when the weather permits. Our regular operating hours during the main season are from 18:00 to 23:30, while on national holiday parades, we open in the morning. We look forward to welcoming you for an unforgettable experience."
-        }
-      }
-    },
-    "Section2": {
-      "title": "Map of Yuppii",
-      "subtitle": "Explore our games from above! Endless fun in a magical view."
-    },
-    "Section3": {
-      "title": "6 reasons to come",
-      "subtitle": "Discover below six reasons that prove how this form of entertainment is beneficial for the body and soul!",
-      "Reasons": {
-        "Reason1": {
-          "Title": "A different world",
-          "Content": "Have you ever dreamed of traveling to another world? At Yuppii Luna Park, you can leave your daily life behind and immerse yourself in a space of fantasy and fun! Here, you can transport yourself to the world of fairies, pirates, clowns, astronauts, and more! You could even become an explorer in a world of wonders or a familiar fairy tale. Surrounded by joy and happiness, you can dive into imagination for as long as you are there."
-        },
-        "Reason2": {
-          "Title": "Escape daily stress",
-          "Content": "Life can be tumultuous and stressful at times. At Yuppii Luna Park, simply forget about the problems or work of the next day, enjoy, and live in the moment. According to clinical psychologist Judy Kurianski, fast rides can serve as outlets when you feel anxious because they expose you to 'good fear.' So, while you may feel a bit nervous beforehand, a ride on the bumper cars can be truly therapeutic, especially if you leave all your worries and anxiety aside for a while!"
-        },
-        "Reason3": {
-          "Title": "Strengthen the bonds",
-          "Content": "Spending time with friends and family is a great way to strengthen the bonds between you, and where better to do it than at Yuppii Luna Park? Just think about it: you can share the adventure with your loved ones and create lasting memories with the people you cherish. The next time you plan a weekend getaway, consider Yuppii Luna Park and don't forget to invite all your friends and family!"
-        },
-        "Reason4": {
-          "Title": "Burn calories",
-          "Content": "...In more than one way! While it may be known as a 'park' - which sometimes evokes images of soft grass and benches - Yuppii Luna Park covers quite a large area, approximately 5,500 sq.m. Due to this size, it requires quite a bit of walking to explore all the games it offers. As a result, you often end up walking much farther than you imagine, sometimes even several kilometers. We don't notice it because we are focused not on how far we go but on all the fun things we can do! Can you think of a more enjoyable way to lose weight?"
-        },
-        "Reason5": {
-          "Title": "Emotional experiences",
-          "Content": "Yuppii Luna Park offers a unique and unforgettable experience that will delight and rejuvenate you, creating everlasting memories. From the moment you pass through the park's gates, you'll immerse yourself in a marvelous atmosphere filled with joy and excitement. The thrilling rides, skill games, and entertaining activities will make you feel alive and smile from the heart. These unique moments shared with friends and family will accompany you for a long time, always bringing a smile to your face whenever you remember them. Enjoy the adventure, vibrancy, and magic that await you at Yuppii Luna Park!"
-        },
-        "Reason6": {
-          "Title": "Excuse to become a child",
-          "Content": "By far, this is the best reason for adults. Just because we take our kids to amusement parks doesn't mean we have to be adults all the time. What's so amazing about Yuppii Luna Park is that it gives us the opportunity to unleash our inner child and reconnect with that sense of fun and joy. In fact, Yuppii encourages us to become kids ourselves, to have fun, and fully embrace the chance to momentarily forget the outside world where we have to be responsible and just live in this magical moment. We often forget how wonderful it is to be a child, so let's not forget that there is a place in Alexandroupolis that not only encourages us but also gives us an excuse to become a child again!"
-        }
-      }
-    }
-  },
-  "Games": {
-    "Section1": {
-      "title": "Our Games",
-      "subtitle": "With over 40 unique and different games from all around the world, it can accommodate all ages.",
-      "Galleries": {
-        "Inflatables": {
-          "label": "Inflatables"
-        },
-        "Playground": {
-          "label": "Playground"
-        },
-        "Trampoline": {
-          "label": "Trampoline"
-        },
-        "Cinema": {
-          "label": "Cinema 7D"
-        },
-        "Dryslope": {
-          "label": "Dry Slope"
-        },
-        "BumperCars": {
-          "label": "Bumper Cars"
-        },
-        "Junior": {
-          "label": "Junior Playground"
-        },
-        "FormulaCars": {
-          "label": "Formula Cars"
-        },
-        "Train": {
-          "label": "Train"
-        },
-        "CarnivalGames": {
-          "label": "Carnival Games"
-        },
-        "TableSoccer": {
-          "label": "Table Soccer"
-        },
-        "Basket": {
-          "label": "Basketball"
-        },
-        "KiddyRides": {
-          "label": "Kiddy Rides"
-        },
-        "HawaiianSurfing": {
-          "label": "Hawaiian Surfing"
-        },
-        "ElectricCars": {
-          "label": "Electric Cars"
-        },
-        "AirHockey": {
-          "label": "Air Hockey"
-        },
-        "PowerGames": {
-          "label": "Power Games"
-        },
-        "Cranes": {
-          "label": "Gift Cranes"
-        },
-        "GiftGames": {
-          "label": "Gift Games"
-        }
-      }
-    },
-    "Section2": {
-      "title": "Your comments",
-      "subtitle": "Yuppii Luna Park has hosted thousands of young and old friends. Check out some of their comments!",
-      "Reviews": {
-        "review1": "It's a wonderful place, amazing service from very polite staff, the girls at the playground are incredible with all the kids, my little one loves them a lot. A park with the goal of making kids and parents have a great time!",
-        "review2": "Very good Luna Park where you can find everything! Even a virtual reality room with rotating chairs according to the theme you're watching with 3D glasses! Prices are reasonable.",
-        "review3": "Nicely designed and kid-friendly space! There are activities that are rare even in big urban centers! Friendly and helpful staff prioritizing safety during fun!",
-        "review4": "Spacious area with plenty of games for kids, according to their age. It has large inflatables for the younger ones. Prices are reasonable for a Luna Park.",
-        "review5": "Affordable prices, very helpful staff, kind and pleasant! Wide variety of activities and games, highly recommended!",
-        "review6": "Nice park for children under 10 years old and not only. A large number of staff to ensure peace of mind with your kids.",
-        "review7": "A very good place to relax while your kids get exhausted! Not to mention, you might be tempted to become a kid yourself..!!",
-        "review8": "Excellent location with many games for both young and old. Friendly and welcoming staff, and affordable prices for games and activities!"
-      }
-    }
-  },
-  "Services": {
-    "Section1": {
-      "title": "Our Café",
-      "subtitle": "Relax while your kids play. We offer a comprehensive menu of beverages, drinks, and food.",
-      "TableControls": {
-        "inputPlaceholder": "Search product",
-        "categoryButton": "Category",
-        "categoryBadge": "Categories",
-        "dropdownTitle": "Choose category",
-        "noResults": "No results",
-        "pageFrom": "Page",
-        "pageAll": "from"
       },
-      "Menu": {
-        "GreekCoffee": {
-          "name": "Greek coffee",
-          "category": "Beverage",
-          "description": null,
-          "price": "2",
-          "disabled": false
-        },
-        "DoubleGreekCoffee": {
-          "name": "Greek coffee double",
-          "category": "Beverage",
-          "description": null,
-          "price": "2.5",
-          "disabled": false
-        },
-        "HotTea": {
-          "name": "Flavored hot tea",
-          "category": "Beverage",
-          "description": [
-            "Black",
-            "Green",
-            "Chamomile",
-            "Ginger",
-            "Forest fruits"
-          ],
-          "price": "3",
-          "disabled": false
-        },
-        "InstantCoffeeHot": {
-          "name": "Instant coffee hot",
-          "category": "Beverage",
-          "description": null,
-          "price": "3",
-          "disabled": false
-        },
-        "InstantCoffeeCold": {
-          "name": "Frappé",
-          "category": "Beverage",
-          "description": null,
-          "price": "3",
-          "disabled": false
-        },
-        "InstantCoffeeColdWithIcecream": {
-          "name": "Frappé with ice-cream",
-          "category": "Beverage",
-          "description": ["Chocolate", "Vanilla"],
-          "price": "4",
-          "disabled": false
-        },
-        "FilteredCoffee": {
-          "name": "Filtered coffee",
-          "category": "Beverage",
-          "description": null,
-          "price": "3",
-          "disabled": true
-        },
-        "FilteredCoffeewithCaramel": {
-          "name": "Filtered coffee with caramel",
-          "category": "Beverage",
-          "description": null,
-          "price": "3.5",
-          "disabled": true
-        },
-        "Espresso": {
-          "name": "Espresso",
-          "category": "Beverage",
-          "description": null,
-          "price": "2.5",
-          "disabled": false
-        },
-        "DoubleEspresso": {
-          "name": "Double espresso",
-          "category": "Beverage",
-          "description": null,
-          "price": "3.5",
-          "disabled": false
-        },
-        "EspressoLungo": {
-          "name": "Espresso lungo",
-          "category": "Beverage",
-          "description": null,
-          "price": "2.5",
-          "disabled": false
-        },
-        "EspressoAmericano": {
-          "name": "Espresso americano",
-          "category": "Beverage",
-          "description": null,
-          "price": "3",
-          "disabled": false
-        },
-        "DoubleEspressoAmericano": {
-          "name": "Double espresso americano",
-          "category": "Beverage",
-          "description": null,
-          "price": "3.5",
-          "disabled": false
-        },
-        "Cappuccino": {
-          "name": "Cappuccino",
-          "category": "Beverage",
-          "description": null,
-          "price": "3.5",
-          "disabled": false
-        },
-        "DoubleCappuccino": {
-          "name": "Double cappuccino",
-          "category": "Beverage",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "CappuccinowithCaramel": {
-          "name": "Cappuccino with caramel",
-          "category": "Beverage",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "Latte": {
-          "name": "Latte",
-          "category": "Beverage",
-          "description": ["Cold", "Hot"],
-          "price": "4",
-          "disabled": false
-        },
-        "FreddoEspresso": {
-          "name": "Freddo espresso",
-          "category": "Beverage",
-          "description": null,
-          "price": "3.5",
-          "disabled": false
-        },
-        "FreddoCappuccino": {
-          "name": "Freddo cappuccino",
-          "category": "Beverage",
-          "description": null,
-          "price": "3.5",
-          "disabled": false
-        },
-        "FreddoCappuccinowithCaramel": {
-          "name": "Freddo cappuccino with caramel",
-          "category": "Beverage",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "Chocolate": {
-          "name": "Chocolate",
-          "category": "Beverage",
-          "description": ["Cold", "Hot"],
-          "price": "3.5",
-          "disabled": false
-        },
-        "ChocolateFlavored": {
-          "name": "Flavored chocolate",
-          "category": "Beverage",
-          "description": ["Caramel", "Hazel", "Strawberry"],
-          "price": "4",
-          "disabled": false
-        },
-        "ChocolateWhite": {
-          "name": "Chocolate white",
-          "category": "Beverage",
-          "description": ["Cold", "Hot"],
-          "price": "3.5",
-          "disabled": false
-        },
-        "ChocolateWhiteFlavored": {
-          "name": "Flavored chocolate white",
-          "category": "Beverage",
-          "description": ["Caramel", "Hazel", "Strawberry"],
-          "price": "4",
-          "disabled": false
-        },
-        "Mochaccino": {
-          "name": "Mochaccino",
-          "category": "Beverage",
-          "description": ["Cold", "Hot"],
-          "price": "4",
-          "disabled": false
-        },
-        "MochaccinoFlavored": {
-          "name": "Flavored hot/cold mochaccino",
-          "category": "Beverage",
-          "description": ["Caramel", "Hazel", "Strawberry"],
-          "price": "4.5",
-          "disabled": false
-        },
-        "Milkshake": {
-          "name": "Milkshake",
-          "category": "Beverage",
-          "description": ["Chocolate", "Vanilla"],
-          "price": "4",
-          "disabled": false
-        },
-        "Slush": {
-          "name": "Slush",
-          "category": "Refreshment",
-          "description": ["Strawberry", "Lemon"],
-          "price": "3.5",
-          "disabled": false
-        },
-        "TableWater": {
-          "name": "Table water",
-          "category": "Refreshment",
-          "description": null,
-          "price": "0.5",
-          "disabled": false
-        },
-        "Beverage330ml": {
-          "name": "Carbonated refreshment 330ml",
-          "category": "Refreshment",
-          "description": ["Coca-Cola", "Sprite", "Fanta", "Soda", "Tonic"],
-          "price": "3",
-          "disabled": false
-        },
-        "AmitaJuice": {
-          "name": "Amita juice",
-          "category": "Refreshment",
-          "description": ["Orange", "Sour Cherry", "Banana", "Peach", "Mixed"],
-          "price": "3",
-          "disabled": false
-        },
-        "AmitaKidsJuice": {
-          "name": "Amita juice for kids",
-          "category": "Refreshment",
-          "description": ["Strawberry", "Apple"],
-          "price": "2",
-          "disabled": false
-        },
-        "LiptonIcedTea": {
-          "name": "Lipton iced tea",
-          "category": "Refreshment",
-          "description": ["Lemon", "Peach", "Green"],
-          "price": "3.5",
-          "disabled": false
-        },
-        "LemonodasosJuice": {
-          "name": "Lemonodasos juice",
-          "category": "Refreshment",
-          "description": [
-            "100% Lemon",
-            "Cucumber Juice & Agave",
-            "Sour Cherry with Lemon Juice",
-            "Ginger & Stevia",
-            "Pomegranate with Lemon Juice",
-            "Chios Mastic",
-            "Strawberry with Lemon Juice"
-          ],
-          "price": "4",
-          "disabled": false
-        },
-        "Mastiqua": {
-          "name": "Mastiqua",
-          "category": "Refreshment",
-          "description": ["Sparkling", "Lemon"],
-          "price": "4",
-          "disabled": false
-        },
-        "Perrier": {
-          "name": "Perrier",
-          "category": "Refreshment",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "PinkGrapefruit": {
-          "name": "Pink grapefruit",
-          "category": "Refreshment",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "Vergina": {
-          "name": "Vergina",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "3.5",
-          "disabled": false
-        },
-        "Heineken": {
-          "name": "Heineken",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "HeinekenZero": {
-          "name": "Heineken zero",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "Amstel": {
-          "name": "Amstel",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "AmstelFree": {
-          "name": "Amstel free",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "AmstelRadler": {
-          "name": "Amstel radler",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "Sol": {
-          "name": "Sol",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "5",
-          "disabled": false
-        },
-        "BlondeDraftBeer": {
-          "name": "Blonde draft beer",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "WeissDraftBeer": {
-          "name": "Weiss draft beer",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4",
-          "disabled": true
-        },
-        "AppleCider": {
-          "name": "Apple cider",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "4.5",
-          "disabled": false
-        },
-        "RedBull": {
-          "name": "Red bull",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "5",
-          "disabled": false
-        },
-        "RedBullLight": {
-          "name": "Red bull light",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "5",
-          "disabled": false
-        },
-        "GordonsSpace": {
-          "name": "Gordon's space",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "5",
-          "disabled": false
-        },
-        "MiniWine187ml": {
-          "name": "Mini wine 187ml",
-          "category": "Alcoholic",
-          "description": ["Semi-sweet White/Red", "Dry White/Red"],
-          "price": "4.5",
-          "disabled": false
-        },
-        "RegularDrink": {
-          "name": "Regular drink",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "6",
-          "disabled": false
-        },
-        "SpecialDrink": {
-          "name": "Special drink",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "8",
-          "disabled": false
-        },
-        "Mojito": {
-          "name": "Mojito",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "6",
-          "disabled": false
-        },
-        "Flavored Mojito": {
-          "name": "Flavored Mojito",
-          "category": "Alcoholic",
-          "description": ["Mastic", "Strawberry"],
-          "price": "6.5",
-          "disabled": false
-        },
-        "Caipirinha": {
-          "name": "Caipirinha",
-          "category": "Alcoholic",
-          "description": ["Original", "Ursus"],
-          "price": "6",
-          "disabled": false
-        },
-        "Negroni": {
-          "name": "Negroni",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "6",
-          "disabled": false
-        },
-        "Daiquiri": {
-          "name": "Daiquiri",
-          "category": "Alcoholic",
-          "description": null,
-          "price": "6",
-          "disabled": false
-        },
-        "ToastCheese": {
-          "name": "Toast with yellow cheese",
-          "category": "Food",
-          "description": null,
-          "price": "1.5",
-          "disabled": false
-        },
-        "Toast": {
-          "name": "Toast",
-          "category": "Food",
-          "description": null,
-          "price": "2",
-          "disabled": false
-        },
-        "Popcorn": {
-          "name": "Popcorn",
-          "category": "Food",
-          "description": null,
-          "price": "2",
-          "disabled": false
-        },
-        "BoiledCorn": {
-          "name": "Boiled corn",
-          "category": "Food",
-          "description": null,
-          "price": "2.5",
-          "disabled": false
-        },
-        "ChickenBreadsticks": {
-          "name": "Chicken breadsticks",
-          "category": "Food",
-          "description": null,
-          "price": "4",
-          "disabled": false
-        },
-        "HotDog": {
-          "name": "Hot dog",
-          "category": "Food",
-          "description": null,
-          "price": "2.5",
-          "disabled": false
-        },
-        "FriedFries": {
-          "name": "Fried fries",
-          "category": "Food",
-          "description": null,
-          "price": "2.5",
-          "disabled": false
-        },
-        "Nachos": {
-          "name": "Nachos",
-          "category": "Food",
-          "description": null,
-          "price": "3",
-          "disabled": false
-        },
-        "NachosWithSauce": {
-          "name": "Nachos with sauce",
-          "category": "Food",
-          "description": ["Cheddar", "Red sauce"],
-          "price": "3.5",
-          "disabled": false
-        },
-        "Churros": {
-          "name": "Churros",
-          "category": "Food",
-          "description": null,
-          "price": "3",
-          "disabled": true
-        },
-        "ChickenTortilla": {
-          "name": "Chicken tortilla",
-          "category": "Food",
-          "description": ["Chicken salad", "Tomato", "Lettuce", "Corn"],
-          "price": "4",
-          "disabled": false
-        },
-        "YuppiiBurger": {
-          "name": "Yuppii burger",
-          "category": "Food",
-          "description": [
-            "Comes with fried fries",
-            "Brioche Bun",
-            "Beef Patty",
-            "Bacon",
-            "Tomato",
-            "Lettuce",
-            "Barbecue Sauce",
-            "Cheese"
-          ],
-          "price": "4.5",
-          "disabled": false
-        },
-        "YuppiiCheeseBurger": {
-          "name": "Yuppii cheese burger",
-          "category": "Food",
-          "description": [
-            "Comes with fried fries",
-            "Brioche Bun",
-            "Beef Patty",
-            "Mayonnaise",
-            "Cheddar",
-            "Ketchup"
-          ],
-          "price": "4",
-          "disabled": false
-        },
-        "YuppiiChickenBurger": {
-          "name": "Yuppii chicken burger",
-          "category": "Food",
-          "description": [
-            "Comes with fried fries",
-            "Brioche Bun",
-            "Breaded Chicken",
-            "Mustard Sauce",
-            "Ketchup",
-            "Lettuce"
-          ],
-          "price": "5",
-          "disabled": false
-        },
-        "VienneseBaguette": {
-          "name": "Viennese baguette",
-          "category": "Food",
-          "description": [
-            "Greek feta",
-            "Olives",
-            "Tomato",
-            "Cheese Sauce",
-            "Oregano"
-          ],
-          "price": "4",
-          "disabled": false
-        },
-        "ChickenVienneseBaguette": {
-          "name": "Chicken viennese baguette",
-          "category": "Food",
-          "description": [
-            "Chicken Fillet",
-            "Mayonnaise",
-            "Tomato",
-            "Lettuce",
-            "Cheese"
-          ],
-          "price": "4.5",
-          "disabled": false
-        },
-        "ClubSandwich": {
-          "name": "Club sandwich",
-          "category": "Food",
-          "description": null,
-          "price": "5.5",
-          "disabled": false
-        },
-        "ChickenClubSandwich": {
-          "name": "Chicken club sandwich",
-          "category": "Food",
-          "description": null,
-          "price": "6",
-          "disabled": false
-        },
-        "YuppiiChickenNuggets": {
-          "name": "Yuppii chicken nuggets",
-          "category": "Food",
-          "description": null,
-          "price": "5.5",
-          "disabled": false
-        },
-        "YuppiiChickys": {
-          "name": "Yuppii chicky's",
-          "category": "Food",
-          "description": null,
-          "price": "5",
-          "disabled": false
-        },
-        "ColdCutsVariety": {
-          "name": "Cold cuts variety",
-          "category": "Food",
-          "description": null,
-          "price": "8",
-          "disabled": false
-        },
-        "ChefSalad": {
-          "name": "Chef salad",
-          "category": "Food",
-          "description": [
-            "Lettuce",
-            "Tomatoes",
-            "Corn",
-            "Ham",
-            "Gouda",
-            "Chef's sauce"
-          ],
-          "price": "5",
-          "disabled": false
-        },
-        "YuppiiSalad": {
-          "name": "Yuppii salad",
-          "category": "Food",
-          "description": [
-            "Lettuce",
-            "Lola",
-            "Cherry tomatoes",
-            "Chicken fillet",
-            "Parmesan",
-            "Orange sauce"
-          ],
-          "price": "5",
-          "disabled": false
-        },
-        "CretanDakosSalad": {
-          "name": "Cretan dakos",
-          "category": "Food",
-          "description": [
-            "Cherry tomatoes",
-            "Olives",
-            "Greek feta",
-            "Capers",
-            "Parsley",
-            "Oregano"
-          ],
-          "price": "5",
-          "disabled": false
-        },
-        "MargheritaPizza": {
-          "name": "Margherita pizza",
-          "category": "Food",
-          "description": ["Gouda", "Tomato Sauce", "Basil", "Tomato"],
-          "price": "7",
-          "disabled": false
-        },
-        "SpecialPizza": {
-          "name": "Special pizza",
-          "category": "Food",
-          "description": [
-            "Gouda",
-            "Mozzarella",
-            "Bacon",
-            "Green Pepper",
-            "Mushrooms",
-            "Tomato Sauce"
-          ],
-          "price": "7.5",
-          "disabled": false
-        },
-        "FourCheesePizza": {
-          "name": "Four cheese pizza",
-          "category": "Food",
-          "description": [
-            "Cheddar",
-            "Gouda",
-            "Smoked Gouda",
-            "Mozzarella",
-            "Tomato Sauce"
-          ],
-          "price": "7.5",
-          "disabled": false
-        },
-        "GreekPizza": {
-          "name": "Greek pizza",
-          "category": "Food",
-          "description": [
-            "Greek Feta",
-            "Olives",
-            "Tomato",
-            "Gouda",
-            "Oregano",
-            "Onion",
-            "Tomato Sauce"
-          ],
-          "price": "7.5",
-          "disabled": false
-        },
-        "ProsciuttoPizza": {
-          "name": "Prosciutto pizza",
-          "category": "Food",
-          "description": [
-            "Prosciutto",
-            "Mozzarella",
-            "Cheddar",
-            "Arugula",
-            "Tomato Sauce"
-          ],
-          "price": "7.5",
-          "disabled": false
-        },
-        "VegetarianPizza": {
-          "name": "Vegetarian pizza",
-          "category": "Food",
-          "description": [
-            "Fasting Cheese",
-            "Corn",
-            "Green Pepper",
-            "Mushrooms",
-            "Olives"
-          ],
-          "price": "7.5",
-          "disabled": false
-        },
-        "ChickenPizza": {
-          "name": "Chicken pizza",
-          "category": "Food",
-          "description": [
-            "Chicken",
-            "Cream Cheese",
-            "Basil",
-            "Corn",
-            "Mustard Sauce"
-          ],
-          "price": "7.5",
-          "disabled": false
-        },
-        "ClassicCrepe": {
-          "name": "Classic crepe",
-          "category": "Food",
-          "description": ["Gouda", "Smoked Turkey"],
-          "price": "2.5",
-          "disabled": true
-        },
-        "LightCrepe": {
-          "name": "Light crepe",
-          "category": "Food",
-          "description": ["Smoked Turkey", "Corn", "Low-Fat Cheese", "Tomato"],
-          "price": "3.5",
-          "disabled": true
-        },
-        "GreekCrepe": {
-          "name": "Greek crepe",
-          "category": "Food",
-          "description": [
-            "Greek feta",
-            "Tomato",
-            "Olives",
-            "Bell Pepper",
-            "Yogurt Sauce"
-          ],
-          "price": "4",
-          "disabled": true
-        },
-        "SmokedCrepe": {
-          "name": "Smoked crepe",
-          "category": "Food",
-          "description": [
-            "Smoked Beef",
-            "Tomato",
-            "Spicy Cheese Spread",
-            "Cheese"
-          ],
-          "price": "4",
-          "disabled": true
-        },
-        "PhiladelphiaCrepe": {
-          "name": "Philadelphia crepe",
-          "category": "Food",
-          "description": [
-            "Gouda",
-            "Egg",
-            "Tomato",
-            "Philadelphia Cream Cheese"
-          ],
-          "price": "4",
-          "disabled": true
-        },
-        "MediterraneanCrepe": {
-          "name": "Mediterranean crepe",
-          "category": "Food",
-          "description": [
-            "Chicken fillet",
-            "Tzatziki",
-            "Corn",
-            "Tomato",
-            "Cheese salad"
-          ],
-          "price": "4.5",
-          "disabled": true
-        },
-        "BuenoCrepe": {
-          "name": "Bueno crepe",
-          "category": "Food",
-          "description": ["Bueno Praline", "Biscuit"],
-          "price": "3",
-          "disabled": true
-        },
-        "DoubleDreamCrepe": {
-          "name": "Double dream crepe",
-          "category": "Food",
-          "description": ["Strawberry Praline", "Banana", "Biscuit", "Truffle"],
-          "price": "4.5",
-          "disabled": true
-        },
-        "EnergyCrepe": {
-          "name": "Energy crepe",
-          "category": "Food",
-          "description": ["Nutella", "Banana", "Walnut", "Super Food"],
-          "price": "4.5",
-          "disabled": true
-        },
-        "ChocolamaniaCrepe": {
-          "name": "Chocolamania crepe",
-          "category": "Food",
-          "description": ["Chocolate Praline", "Oreo", "Smarties"],
-          "price": "5",
-          "disabled": true
-        },
-        "OnIceCrepe": {
-          "name": "On ice crepe",
-          "category": "Food",
-          "description": ["Ice Cream", "Chocolate Praline", "Oreo"],
-          "price": "5",
-          "disabled": true
-        }
+      "HomeGallery": {
+        "title": "Photo Gallery",
+        "subtitle": "Step into our magical world with a small sample."
       }
     },
-    "Section2": {
-      "title": "Events & Sales - Rentals",
-      "Cards": {
-        "Card1": {
-          "title": "Parties & Events",
-          "content": "Organize your party or any festive event at Yuppii Luna Park! You can inform us about the number of guests so that appropriate table reservations can be made."
-        },
-        "Card2": {
-          "title": "Rentals & Sales",
-          "content": "After years of research at various exhibitions in Greece, Europe, Asia, and America, our company specializes in the sales of children's toys, offering you the best state-of-the-art toys from around the world at the best market prices. Contact <link>George Mokalis</link> if you are interested in renting, purchasing, or importing children's toys, so he can guide you and assist you in making the most advantageous choices."
+    "Park": {
+      "ParkInfo": {
+        "title": "A few words",
+        "subtitle": "Under the Lighthouse of Alexandroupolis, Yuppii Luna Park awaits you for an unforgettable experience.",
+        "information": {
+          "info1": {
+            "title": "We are celebrating 12 years of operation.",
+            "content": "Yuppii opened its doors for the first time in 2011 and offers a plethora of unique games for both kids and adults. Yuppii Luna Park is located in the busiest summer area, the coastal part of Alexandroupolis. It operates on an area of 5,500 sq.m. at the Port of Alexandroupolis, right under the Lighthouse. The park is ISO certified, adheres to all safety standards, and is certified by ELOT-EBETAM. All Yuppii's staff is experienced and specialized."
+          },
+          "info2": {
+            "title": "Entrance to Yuppii is free.",
+            "content": "Our main operating season is from March 25th to September 30th. We also operate during the Christmas season and on National Holidays. Additionally, during the off-season, we open on some weekends when the weather permits. Our regular operating hours during the main season are from 18:00 to 23:30, while on national holiday parades, we open in the morning. We look forward to welcoming you for an unforgettable experience."
+          }
         }
-      }
-    }
-  },
-  "Contact": {
-    "Section1": {
-      "title": "Contact us",
-      "subtitle": "Fill out the form below to contact us for information or questions regarding Yuppii Luna Park",
-      "Form": {
-        "success": "Successful submission",
-        "error": "Failed submission",
-        "Fields": {
-          "name": {
-            "label": "Full name",
-            "required": "Mandatory field",
-            "pattern": "Must be 5 - 20 characters"
+      },
+      "ParkMap": {
+        "title": "Map of Yuppii",
+        "subtitle": "Explore our games from above! Endless fun in a magical view."
+      },
+      "ParkReasons": {
+        "title": "6 reasons to come",
+        "subtitle": "Discover below six reasons that prove how this form of entertainment is beneficial for the body and soul!",
+        "accordion": {
+          "accordion1": {
+            "title": "A different world",
+            "content": "Have you ever dreamed of traveling to another world? At Yuppii Luna Park, you can leave your daily life behind and immerse yourself in a space of fantasy and fun! Here, you can transport yourself to the world of fairies, pirates, clowns, astronauts, and more! You could even become an explorer in a world of wonders or a familiar fairy tale. Surrounded by joy and happiness, you can dive into imagination for as long as you are there."
           },
-          "email": {
-            "label": "Email address",
-            "required": "Mandatory field",
-            "pattern": "Invalid email format",
-            "providers": "This provider is not supported"
+          "accordion2": {
+            "title": "Escape daily stress",
+            "content": "Life can be tumultuous and stressful at times. At Yuppii Luna Park, simply forget about the problems or work of the next day, enjoy, and live in the moment. According to clinical psychologist Judy Kurianski, fast rides can serve as outlets when you feel anxious because they expose you to 'good fear.' So, while you may feel a bit nervous beforehand, a ride on the bumper cars can be truly therapeutic, especially if you leave all your worries and anxiety aside for a while!"
           },
-          "phone": {
-            "label": "Phone number",
-            "required": "Mandatory field",
-            "pattern": "Invalid phone number format"
+          "accordion3": {
+            "title": "Strengthen the bonds",
+            "content": "Spending time with friends and family is a great way to strengthen the bonds between you, and where better to do it than at Yuppii Luna Park? Just think about it: you can share the adventure with your loved ones and create lasting memories with the people you cherish. The next time you plan a weekend getaway, consider Yuppii Luna Park and don't forget to invite all your friends and family!"
           },
-          "feedback": {
-            "label": "Your message",
-            "required": "Mandatory field"
+          "accordion4": {
+            "title": "Burn calories",
+            "content": "...In more than one way! While it may be known as a 'park' - which sometimes evokes images of soft grass and benches - Yuppii Luna Park covers quite a large area, approximately 5,500 sq.m. Due to this size, it requires quite a bit of walking to explore all the games it offers. As a result, you often end up walking much farther than you imagine, sometimes even several kilometers. We don't notice it because we are focused not on how far we go but on all the fun things we can do! Can you think of a more enjoyable way to lose weight?"
           },
-          "button": {
-            "label": "Submit",
-            "loading": "Sending"
+          "accordion5": {
+            "title": "Emotional experiences",
+            "content": "Yuppii Luna Park offers a unique and unforgettable experience that will delight and rejuvenate you, creating everlasting memories. From the moment you pass through the park's gates, you'll immerse yourself in a marvelous atmosphere filled with joy and excitement. The thrilling rides, skill games, and entertaining activities will make you feel alive and smile from the heart. These unique moments shared with friends and family will accompany you for a long time, always bringing a smile to your face whenever you remember them. Enjoy the adventure, vibrancy, and magic that await you at Yuppii Luna Park!"
+          },
+          "accordion6": {
+            "title": "Excuse to become a child",
+            "content": "By far, this is the best reason for adults. Just because we take our kids to amusement parks doesn't mean we have to be adults all the time. What's so amazing about Yuppii Luna Park is that it gives us the opportunity to unleash our inner child and reconnect with that sense of fun and joy. In fact, Yuppii encourages us to become kids ourselves, to have fun, and fully embrace the chance to momentarily forget the outside world where we have to be responsible and just live in this magical moment. We often forget how wonderful it is to be a child, so let's not forget that there is a place in Alexandroupolis that not only encourages us but also gives us an excuse to become a child again!"
           }
         }
       }
     },
-    "Section2": {
-      "title": "Where to find us",
-      "subtitle": "Yuppii Luna Park is located right below the Lighthouse on the coastal avenue of Alexandroupolis",
-      "Navigation": {
-        "location": "How to get here",
-        "email": "Email",
-        "phone": "Phone"
+    "Services": {
+      "ServicesGallery": {
+        "title": "Our Games",
+        "subtitle": "With over 40 unique and different games from around the world, we cater to all ages.",
+        "header": "Choose game",
+        "galleries": {
+          "inflatables": {
+            "label": "Inflatables"
+          },
+          "playground": {
+            "label": "Playground"
+          },
+          "trampoline": {
+            "label": "Trampoline"
+          },
+          "cinema": {
+            "label": "Cinema 7D"
+          },
+          "dryslope": {
+            "label": "Dry Slope"
+          },
+          "bumper-cars": {
+            "label": "Bumper Cars"
+          },
+          "junior": {
+            "label": "Junior Playground"
+          },
+          "formula-cars": {
+            "label": "Formula Cars"
+          },
+          "train": {
+            "label": "Train"
+          },
+          "carnival-games": {
+            "label": "Carnival Games"
+          },
+          "table-soccer": {
+            "label": "Table Soccer"
+          },
+          "basket": {
+            "label": "Basketball"
+          },
+          "kiddy-rides": {
+            "label": "Kiddy Rides"
+          },
+          "hawaiian-surfing": {
+            "label": "Hawaiian Surfing"
+          },
+          "electric-cars": {
+            "label": "Electric Cars"
+          },
+          "air-hockey": {
+            "label": "Air Hockey"
+          },
+          "power-games": {
+            "label": "Power Games"
+          },
+          "cranes": {
+            "label": "Gift Cranes"
+          },
+          "lucky-games": {
+            "label": "Lucky Games"
+          }
+        }
+      },
+      "ServicesReviews": {
+        "title": "Your comments",
+        "subtitle": "Yuppii Luna Park has hosted thousands of young and old friends. Check out some of their comments!",
+        "reviews": {
+          "elena": {
+            "name": "Elena M",
+            "review": "It's a wonderful place, amazing service from very polite staff, the girls at the playground are incredible with all the kids, my little one loves them a lot. A park with the goal of making kids and parents have a great time!"
+          },
+          "olga": {
+            "name": "Olga Politi",
+            "review": "Very good Luna Park where you can find everything! Even a virtual reality room with rotating chairs according to the theme you're watching with 3D glasses! Prices are reasonable."
+          },
+          "petros": {
+            "name": "Petros Kilamenakis",
+            "review": "Nicely designed and kid-friendly space! There are activities that are rare even in big urban centers! Friendly and helpful staff prioritizing safety during fun!"
+          },
+          "zoe": {
+            "name": "Zoe Bah",
+            "review": "Spacious area with plenty of games for kids, according to their age. It has large inflatables for the younger ones. Prices are reasonable for a Luna Park."
+          },
+          "iosif": {
+            "name": "Iosif Darousis",
+            "review": "Affordable prices, very helpful staff, kind and pleasant! Wide variety of activities and games, highly recommended!"
+          },
+          "stella": {
+            "name": "Stella Daviti",
+            "review": "Nice park for children under 10 years old and not only. A large number of staff to ensure peace of mind with your kids."
+          },
+          "papagewrgiou": {
+            "name": "M Papagewrgiou",
+            "review": "A very good place to relax while your kids get exhausted! Not to mention, you might be tempted to become a kid yourself..!!"
+          },
+          "sideris": {
+            "name": "Dimsideris",
+            "review": "Excellent location with many games for both young and old. Friendly and welcoming staff, and affordable prices for games and activities!"
+          }
+        }
+      },
+      "ServicesCards": {
+        "title": "Events & Sales - Rentals",
+        "subtitle": "Learn about events, rentals, and sales at Yuppii Luna Park.",
+        "cards": {
+          "card1": {
+            "title": "Parties & Events",
+            "content": "Organize your party or any festive event at Yuppii Luna Park! You can inform us about the number of guests so that appropriate table reservations can be made."
+          },
+          "card2": {
+            "title": "Rentals & Sales",
+            "content": "After years of research at various exhibitions in Greece, Europe, Asia, and America, our company specializes in the sales of children's toys, offering you the best state-of-the-art toys from around the world at the best market prices. Contact <link>George Mokalis</link> if you are interested in renting, purchasing, or importing children's toys, so he can guide you and assist you in making the most advantageous choices."
+          }
+        }
+      }
+    },
+    "Contact": {
+      "ContactForm": {
+        "title": "Contact us",
+        "subtitle": "Fill in the form and we’ll get back shortly.",
+        "fields": {
+          "fullname": "Full name",
+          "email": "Email address",
+          "phone": "Phone number",
+          "message": "Your message"
+        },
+        "submit": "Submit",
+        "toast": {
+          "success": {
+            "description": "Form submission was successful. We will contact you shortly."
+          },
+          "error": {
+            "validation": {
+              "description": "Please check the highlighted fields and correct any errors before resubmitting."
+            },
+            "api": {
+              "description": "An error occurred while contacting the email service. Please try again later."
+            }
+          }
+        }
+      },
+      "ContactMap": {
+        "title": "Where to find us",
+        "subtitle": "Yuppii Luna Park is located right below the Lighthouse on the coastal avenue of Alexandroupolis",
+        "popup": {
+          "location": "How to get here",
+          "phone": "Call us"
+        }
+      }
+    },
+    "Privacy": {
+      "PrivacyTerms": {
+        "title": "General terms",
+        "subtitle": "Our website yuppii.gr safeguards the personal nature of your information and cannot disclose it to any third party (natural or legal entity) for any reason, except for relevant legal provisions and solely to the competent authorities. We reserve the right to disclose your personally identifiable information as required by law and when we believe that disclosure is necessary to protect our rights and/or comply with a judicial proceeding, court order, or legal process served on our website. Our website yuppii.gr keeps records of personal information that visitors exclusively submit for communication purposes. Visitors can contact the appropriate department to verify the existence of their personal file, correct it, change it, or delete it. Visitors or users of our website yuppii.gr who are minors have access to its services only with the consent of their parents or guardians and are not obliged to submit their personal information. In case such information is submitted by minors and if the fact becomes known to us, our company deletes all related information. Our business, particularly the marketing department, may process part or all of the information you have submitted for statistical and improvement purposes of the provided services and information. As our business continues to evolve by introducing new products, our Privacy Policy may be updated from time to time. We will only use your personal information in accordance with the Privacy Policy in effect at the time we collected your personal information."
+      },
+      "PrivacyAgreement": {
+        "title": "User agreement",
+        "subtitle": "The visitor of the pages and services of our website yuppii.gr grants their consent to the above terms of use, which apply to the entirety of the content, pages, graphics, images, photographs, and files included on the website. Therefore, they should carefully read these terms before visiting or using the pages and services of the yuppii.gr website. If they do not agree, they should refrain from using the services and content of the website. The visitor is requested to check the content of these pages for any possible changes. The continued use of the yuppii.gr website, even after any changes, signifies the visitor's unconditional acceptance of these terms."
+      }
+    },
+    "Cookies": {
+      "CookiesInfo": {
+        "title": "Use of Cookies",
+        "subtitle": "We use cookies to enhance your experience on our website and to ensure its effective functioning. By selecting 'Accept' upon entering this website, you give your consent to the use of cookies in accordance with our policy. This website has the ability to use cookies as part of its functionality and services. Cookies are small files (text files) that are sent and stored on the user's computer, allowing websites to operate smoothly and without technical abnormalities, collect multiple user preferences, recognize frequent users, facilitate their access, and gather data to improve the content of the website. Cookies do not cause any harm to users' computers or the files stored on them. We use cookies to provide you with information and to perform the functions and features of the website."
       }
     }
   },
-  "Privacy": {
-    "Section1": {
-      "title": "General terms",
-      "content": "Our website yuppii.gr safeguards the personal nature of your information and cannot disclose it to any third party (natural or legal entity) for any reason, except for relevant legal provisions and solely to the competent authorities. We reserve the right to disclose your personally identifiable information as required by law and when we believe that disclosure is necessary to protect our rights and/or comply with a judicial proceeding, court order, or legal process served on our website. Our website yuppii.gr keeps records of personal information that visitors exclusively submit for communication purposes. Visitors can contact the appropriate department to verify the existence of their personal file, correct it, change it, or delete it. Visitors or users of our website yuppii.gr who are minors have access to its services only with the consent of their parents or guardians and are not obliged to submit their personal information. In case such information is submitted by minors and if the fact becomes known to us, our company deletes all related information. Our business, particularly the marketing department, may process part or all of the information you have submitted for statistical and improvement purposes of the provided services and information. As our business continues to evolve by introducing new products, our Privacy Policy may be updated from time to time. We will only use your personal information in accordance with the Privacy Policy in effect at the time we collected your personal information."
+  "Components": {
+    "Footer": {
+      "columns": {
+        "operating": {
+          "title": "OPERATING",
+          "info1": "Summer season",
+          "info2": "Christmas season",
+          "info3": "National holidays",
+          "info4": "Daily 18:00 - 23:30"
+        },
+        "policies": {
+          "title": "TERMS & POLICIES",
+          "link1": "Privacy Policy",
+          "link2": "Use of Cookies"
+        },
+        "information": {
+          "title": "INFORMATION",
+          "info1": "Port of Alexandroupoli",
+          "info2": "+30 6973433980"
+        },
+        "brands": {
+          "title": "OUR BRANDS"
+        }
+      }
     },
-    "Section2": {
-      "title": "User agreement",
-      "content": "The visitor of the pages and services of our website yuppii.gr grants their consent to the above terms of use, which apply to the entirety of the content, pages, graphics, images, photographs, and files included on the website. Therefore, they should carefully read these terms before visiting or using the pages and services of the yuppii.gr website. If they do not agree, they should refrain from using the services and content of the website. The visitor is requested to check the content of these pages for any possible changes. The continued use of the yuppii.gr website, even after any changes, signifies the visitor's unconditional acceptance of these terms."
-    }
-  },
-  "Cookies": {
-    "Section1": {
-      "title": "Use of Cookies",
-      "content": "We use cookies to enhance your experience on our website and to ensure its effective functioning. By selecting 'Accept' upon entering this website, you give your consent to the use of cookies in accordance with our policy. This website has the ability to use cookies as part of its functionality and services. Cookies are small files (text files) that are sent and stored on the user's computer, allowing websites to operate smoothly and without technical abnormalities, collect multiple user preferences, recognize frequent users, facilitate their access, and gather data to improve the content of the website. Cookies do not cause any harm to users' computers or the files stored on them. We use cookies to provide you with information and to perform the functions and features of the website."
+    "CategoryNotFound": {
+      "title": "Category not found",
+      "subtitle": "There are no products in this category."
     }
   },
   "Menu": {
-    "Section1": {
-      "title": "Yuppii Menu",
-      "subtitle": "Choose a category",
-      "categories": "Beverage, Refreshment, Alcoholic, Food"
-    }
-  },
-  "Catalog": {
     "Coffee": {
-      "categoryName": "Coffee",
-      "categoryNote": [
-        "Addition of vegetable cream for +0.50€",
-        "Addition of caramel, hazel or strawberry syrup for +0.50€"
-      ],
+      "name": "Coffee",
       "products": {
         "GreekCoffee": {
           "name": "Greek coffee",
-          "description": null,
+          "variants": null,
           "price": "2",
           "disabled": false
         },
         "DoubleGreekCoffee": {
           "name": "Greek coffee double",
-          "description": null,
+          "variants": null,
           "price": "2.5",
           "disabled": false
         },
         "InstantCoffeeHot": {
           "name": "Instant coffee hot",
-          "description": null,
+          "variants": null,
           "price": "3",
           "disabled": false
         },
         "InstantCoffeeCold": {
           "name": "Frappé",
-          "description": null,
+          "variants": null,
           "price": "3",
           "disabled": false
         },
         "InstantCoffeeColdWithIcecream": {
           "name": "Frappé with ice-cream",
-          "description": ["Chocolate", "Vanilla"],
+          "variants": ["Chocolate", "Vanilla"],
           "price": "4",
           "disabled": false
         },
         "FilteredCoffee": {
           "name": "Filtered coffee",
-          "description": null,
+          "variants": null,
           "price": "3",
           "disabled": true
         },
         "FilteredCoffeewithCaramel": {
           "name": "Filtered coffee with caramel",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": true
         },
         "Espresso": {
           "name": "Espresso",
-          "description": null,
+          "variants": null,
           "price": "2.5",
           "disabled": false
         },
         "EspressoDouble": {
           "name": "Double espresso",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "EspressoLungo": {
           "name": "Espresso lungo",
-          "description": null,
+          "variants": null,
           "price": "2.5",
           "disabled": false
         },
         "EspressoAmericano": {
           "name": "Espresso americano",
-          "description": null,
+          "variants": null,
           "price": "3",
           "disabled": false
         },
         "EspressoAmericanoDouble": {
           "name": "Double espresso americano",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "Cappuccino": {
           "name": "Cappuccino",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "CappuccinoDouble": {
           "name": "Double cappuccino",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "CappuccinoCaramel": {
           "name": "Cappuccino with caramel",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "Latte": {
           "name": "Latte",
-          "description": ["Hot or cold"],
+          "variants": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
         "FreddoEspresso": {
           "name": "Freddo espresso",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "FreddoCappuccino": {
           "name": "Freddo cappuccino",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "FreddoCappuccinowithCaramel": {
           "name": "Freddo cappuccino with caramel",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         }
-      }
+      },
+      "notes": [
+        "Addition of vegetable cream for +0.50€",
+        "Addition of caramel, hazel or strawberry syrup for +0.50€"
+      ]
     },
     "Beverage": {
-      "categoryName": "Beverage",
-      "categoryNote": [
-        "Addition of caramel, hazel or strawberry syrup for +0.50€"
-      ],
+      "name": "Beverage",
       "products": {
         "HotTea": {
           "name": "Flavored hot tea",
-          "description": [
+          "variants": [
             "Black",
             "Green",
             "Chamomile",
@@ -1276,55 +430,55 @@
         },
         "Chocolate": {
           "name": "Chocolate",
-          "description": ["Hot or cold"],
+          "variants": ["Hot or cold"],
           "price": "3.5",
           "disabled": false
         },
         "ChocolateFlavored": {
           "name": "Flavored chocolate",
-          "description": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
+          "variants": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
           "price": "4",
           "disabled": false
         },
         "ChocolateWhite": {
           "name": "White chocolate",
-          "description": ["Hot or cold"],
+          "variants": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
         "ChocolateWhiteFlavored": {
           "name": "Flavored white chocolate",
-          "description": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
+          "variants": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
           "price": "4.5",
           "disabled": false
         },
         "Mochaccino": {
           "name": "Mochaccino",
-          "description": ["Hot or cold"],
+          "variants": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
         "MochaccinoFlavored": {
           "name": "Flavored mochaccino",
-          "description": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
+          "variants": ["Hot or cold", "Caramel", "Hazel", "Strawberry"],
           "price": "4.5",
           "disabled": false
         },
         "Milkshake": {
           "name": "Milkshake",
-          "description": ["Chocolate", "Vanilla"],
+          "variants": ["Chocolate", "Vanilla"],
           "price": "4",
           "disabled": false
         }
-      }
+      },
+      "notes": ["Addition of caramel, hazel or strawberry syrup for +0.50€"]
     },
     "Refreshment": {
-      "categoryName": "Refreshment",
-      "categoryNote": null,
+      "name": "Refreshment",
       "products": {
         "CocaCola": {
           "name": "Coca-Cola 330ml",
-          "description": [
+          "variants": [
             "Original",
             "Light",
             "Zero sugar",
@@ -1335,7 +489,7 @@
         },
         "Fanta": {
           "name": "Fanta 330ml",
-          "description": [
+          "variants": [
             "Orange",
             "Orange zero sugar",
             "Orange uncarbonated",
@@ -1346,31 +500,31 @@
         },
         "FantaΕxotic": {
           "name": "Fanta Exotic sugar free 500ml",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "FantaShokata": {
           "name": "Fanta Shokata 500ml",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "Schweppes": {
           "name": "Schweppes 330ml",
-          "description": ["Soda", "Tonic", "Lemon", "Orangeade", "Pink"],
+          "variants": ["Soda", "Tonic", "Lemon", "Orangeade", "Pink"],
           "price": "3",
           "disabled": false
         },
         "Sprite": {
           "name": "Sprite 330ml",
-          "description": null,
+          "variants": null,
           "price": "3",
           "disabled": false
         },
         "AmitaJuice": {
           "name": "Amita juice 330ml",
-          "description": [
+          "variants": [
             "Motion",
             "100% Orange",
             "Orange carot lemon zero sugar",
@@ -1384,25 +538,25 @@
         },
         "AmitaFun": {
           "name": "Amita FUN! 250ml",
-          "description": ["Strawberry", "4 fruits mixed"],
+          "variants": ["Strawberry", "4 fruits mixed"],
           "price": "2.5",
           "disabled": false
         },
         "LiptonIcedTea": {
           "name": "Lipton iced tea 330ml",
-          "description": ["Lemon", "Peach", "Green"],
+          "variants": ["Lemon", "Peach", "Green"],
           "price": "3.5",
           "disabled": false
         },
         "FuzeIcedTea": {
           "name": "Fuze iced tea 500ml",
-          "description": ["Watermelon", "Peach", "Lemon", "Passion fruit"],
+          "variants": ["Watermelon", "Peach", "Lemon", "Passion fruit"],
           "price": "3.5",
           "disabled": false
         },
         "OMGTea": {
           "name": "OMG Bubble Tea 270ml",
-          "description": [
+          "variants": [
             "Passion fruit - Apple",
             "Lemon - Mango",
             "Peach - Strawberry"
@@ -1412,13 +566,13 @@
         },
         "Slush": {
           "name": "Slush 330ml",
-          "description": ["Strawberry", "Lemon"],
+          "variants": ["Strawberry", "Lemon"],
           "price": "3.5",
           "disabled": false
         },
         "LemonodasosJuice": {
           "name": "Lemonodasos juice",
-          "description": [
+          "variants": [
             "100% Lemon",
             "Cucumber Juice & Agave",
             "Sour Cherry with Lemon Juice",
@@ -1434,43 +588,43 @@
         },
         "Mastiqua": {
           "name": "Mastiqua 330ml",
-          "description": ["Sparkling", "Lemon"],
+          "variants": ["Sparkling", "Lemon"],
           "price": "4",
           "disabled": false
         },
         "Perrier": {
           "name": "Perrier 330ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "PinkGrapefruit": {
           "name": "Pink grapefruit 200ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "TableWater": {
           "name": "Table water 500ml",
-          "description": null,
+          "variants": null,
           "price": "0.5",
           "disabled": false
         }
-      }
+      },
+      "notes": null
     },
     "Energy": {
-      "categoryName": "Energy drink",
-      "categoryNote": null,
+      "name": "Energy drink",
       "products": {
         "RedBull": {
           "name": "Red Bull 250ml",
-          "description": ["Original", "Light"],
+          "variants": ["Original", "Light"],
           "price": "5",
           "disabled": false
         },
         "Prime": {
           "name": "Prime 500ml",
-          "description": [
+          "variants": [
             "Ice Pop",
             "Tropical Punch",
             "Lemon Lime",
@@ -1484,7 +638,7 @@
         },
         "Monster": {
           "name": "Monster 500ml",
-          "description": [
+          "variants": [
             "Ripper",
             "The Doctor",
             "Lewis Hamilton",
@@ -1501,15 +655,15 @@
           "price": "5",
           "disabled": false
         }
-      }
+      },
+      "notes": null
     },
     "Spirits": {
-      "categoryName": "Spirit",
-      "categoryNote": null,
+      "name": "Spirit",
       "products": {
         "RegularDrink": {
           "name": "Regular drink",
-          "description": [
+          "variants": [
             "Absolut Vodka",
             "Gordons Gin",
             "Famous Grouse",
@@ -1524,217 +678,217 @@
         },
         "SpecialDrink": {
           "name": "Special drink",
-          "description": ["Chivas Regal 12"],
+          "variants": ["Chivas Regal 12"],
           "price": "8",
           "disabled": false
         },
         "AppleCider": {
           "name": "Apple cider 330ml",
-          "description": null,
+          "variants": null,
           "price": "4.5",
           "disabled": false
         },
         "GordonsSpace": {
           "name": "Gordon's space 275ml",
-          "description": null,
+          "variants": null,
           "price": "5",
           "disabled": false
         },
         "MiniWine187ml": {
           "name": "Mini wine 187ml",
-          "description": ["Semi-sweet White/Red", "Dry White/Red"],
+          "variants": ["Semi-sweet White/Red", "Dry White/Red"],
           "price": "4.5",
           "disabled": false
         }
-      }
+      },
+      "notes": null
     },
     "Cocktail": {
-      "categoryName": "Cocktail",
-      "categoryNote": null,
+      "name": "Cocktail",
       "products": {
         "AperolSpritz": {
           "name": "Aperol Spritz",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "AperolSpritzGrapefruit": {
           "name": "Aperol Spritz with Grapefruit",
-          "description": null,
+          "variants": null,
           "price": "8",
           "disabled": false
         },
         "Negroni": {
           "name": "Negroni",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "Paloma": {
           "name": "Paloma",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "AppleMartini": {
           "name": "Apple Martini",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "Daiquiri": {
           "name": "Daiquiri",
-          "description": ["Strawberry", "Mango", "Passion fruit"],
+          "variants": ["Strawberry", "Mango", "Passion fruit"],
           "price": "7.5",
           "disabled": false
         },
         "Caipirinha": {
           "name": "Caipirinha",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "Caipiroska": {
           "name": "Caipiroska",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "Caipassoa": {
           "name": "Caipassoa",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "Margarita": {
           "name": "Margarita",
-          "description": null,
+          "variants": null,
           "price": "7.5",
           "disabled": false
         },
         "Mojito": {
           "name": "Mojito",
-          "description": null,
+          "variants": null,
           "price": "7",
           "disabled": false
         },
         "FlavoredMojito": {
           "name": "Flavored Mojito",
-          "description": ["Strawberry", "Passion fruit"],
+          "variants": ["Strawberry", "Passion fruit"],
           "price": "7.5",
           "disabled": false
         }
-      }
+      },
+      "notes": null
     },
     "Beer": {
-      "categoryName": "Beer",
-      "categoryNote": null,
+      "name": "Beer",
       "products": {
         "Vergina": {
           "name": "Vergina 330ml",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "Alfa": {
           "name": "Alfa 330ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "Heineken": {
           "name": "Heineken 330ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "HeinekenZero": {
           "name": "Heineken zero 330ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "Amstel": {
           "name": "Amstel 330ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "AmstelFree": {
           "name": "Amstel free 330ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "AmstelRadler": {
           "name": "Amstel radler 330ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "Sol": {
           "name": "Sol 330ml",
-          "description": null,
+          "variants": null,
           "price": "5",
           "disabled": false
         },
         "BlondeDraftBeer": {
           "name": "Draft beer blonde 400ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "WeissDraftBeer": {
           "name": "Draft beer weiss 400ml",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": true
         }
-      }
+      },
+      "notes": null
     },
     "Food": {
-      "categoryName": "Food",
-      "categoryNote": null,
+      "name": "Food",
       "products": {
         "ToastCheese": {
           "name": "Toast with yellow cheese",
-          "description": null,
+          "variants": null,
           "price": "1.5",
           "disabled": false
         },
         "Toast": {
           "name": "Toast",
-          "description": null,
+          "variants": null,
           "price": "2",
           "disabled": false
         },
         "ChickenBreadsticks": {
           "name": "Chicken breadsticks",
-          "description": null,
+          "variants": null,
           "price": "4",
           "disabled": false
         },
         "HotDog": {
           "name": "Hot dog",
-          "description": null,
+          "variants": null,
           "price": "2.5",
           "disabled": false
         },
         "FriedFries": {
           "name": "Fried fries",
-          "description": null,
+          "variants": null,
           "price": "2.5",
           "disabled": false
         },
         "ChickenTortilla": {
           "name": "Chicken tortilla",
-          "description": ["Chicken salad", "Tomato", "Lettuce", "Corn"],
+          "variants": ["Chicken salad", "Tomato", "Lettuce", "Corn"],
           "price": "4",
           "disabled": false
         },
         "VienneseBaguette": {
           "name": "Viennese baguette",
-          "description": [
+          "variants": [
             "Greek feta",
             "Olives",
             "Tomato",
@@ -1746,7 +900,7 @@
         },
         "ChickenVienneseBaguette": {
           "name": "Chicken viennese baguette",
-          "description": [
+          "variants": [
             "Chicken Fillet",
             "Mayonnaise",
             "Tomato",
@@ -1758,49 +912,49 @@
         },
         "ClubSandwich": {
           "name": "Club sandwich",
-          "description": null,
+          "variants": null,
           "price": "5.5",
           "disabled": false
         },
         "ChickenClubSandwich": {
           "name": "Chicken club sandwich",
-          "description": null,
+          "variants": null,
           "price": "6",
           "disabled": false
         },
         "YuppiiChickenNuggets": {
           "name": "Yuppii chicken nuggets",
-          "description": null,
+          "variants": null,
           "price": "5.5",
           "disabled": false
         },
         "YuppiiChickys": {
           "name": "Yuppii chicky's",
-          "description": null,
+          "variants": null,
           "price": "5",
           "disabled": false
         },
         "ColdCutsVariety": {
           "name": "Cold cuts variety",
-          "description": null,
+          "variants": null,
           "price": "8",
           "disabled": false
         }
-      }
+      },
+      "notes": null
     },
     "Pizza": {
-      "categoryName": "Pizza",
-      "categoryNote": null,
+      "name": "Pizza",
       "products": {
         "MargheritaPizza": {
           "name": "Margherita pizza",
-          "description": ["Gouda", "Tomato Sauce", "Basil", "Tomato"],
+          "variants": ["Gouda", "Tomato Sauce", "Basil", "Tomato"],
           "price": "8",
           "disabled": false
         },
         "SpecialPizza": {
           "name": "Special pizza",
-          "description": [
+          "variants": [
             "Gouda",
             "Mozzarella",
             "Bacon",
@@ -1813,7 +967,7 @@
         },
         "FourCheesePizza": {
           "name": "Four cheese pizza",
-          "description": [
+          "variants": [
             "Cheddar",
             "Gouda",
             "Smoked Gouda",
@@ -1825,7 +979,7 @@
         },
         "GreekPizza": {
           "name": "Greek pizza",
-          "description": [
+          "variants": [
             "Greek Feta",
             "Olives",
             "Tomato",
@@ -1839,7 +993,7 @@
         },
         "ProsciuttoPizza": {
           "name": "Prosciutto pizza",
-          "description": [
+          "variants": [
             "Prosciutto",
             "Mozzarella",
             "Cheddar",
@@ -1851,7 +1005,7 @@
         },
         "VegetarianPizza": {
           "name": "Vegetarian pizza",
-          "description": [
+          "variants": [
             "Fasting Cheese",
             "Corn",
             "Green Pepper",
@@ -1863,7 +1017,7 @@
         },
         "ChickenPizza": {
           "name": "Chicken pizza",
-          "description": [
+          "variants": [
             "Chicken",
             "Cream Cheese",
             "Basil",
@@ -1875,19 +1029,19 @@
         },
         "ClassicCrepe": {
           "name": "Classic crepe",
-          "description": ["Gouda", "Smoked Turkey"],
+          "variants": ["Gouda", "Smoked Turkey"],
           "price": "2.5",
           "disabled": true
         },
         "LightCrepe": {
           "name": "Light crepe",
-          "description": ["Smoked Turkey", "Corn", "Low-Fat Cheese", "Tomato"],
+          "variants": ["Smoked Turkey", "Corn", "Low-Fat Cheese", "Tomato"],
           "price": "3.5",
           "disabled": true
         },
         "GreekCrepe": {
           "name": "Greek crepe",
-          "description": [
+          "variants": [
             "Greek feta",
             "Tomato",
             "Olives",
@@ -1899,7 +1053,7 @@
         },
         "SmokedCrepe": {
           "name": "Smoked crepe",
-          "description": [
+          "variants": [
             "Smoked Beef",
             "Tomato",
             "Spicy Cheese Spread",
@@ -1910,18 +1064,13 @@
         },
         "PhiladelphiaCrepe": {
           "name": "Philadelphia crepe",
-          "description": [
-            "Gouda",
-            "Egg",
-            "Tomato",
-            "Philadelphia Cream Cheese"
-          ],
+          "variants": ["Gouda", "Egg", "Tomato", "Philadelphia Cream Cheese"],
           "price": "4",
           "disabled": true
         },
         "MediterraneanCrepe": {
           "name": "Mediterranean crepe",
-          "description": [
+          "variants": [
             "Chicken fillet",
             "Tzatziki",
             "Corn",
@@ -1933,43 +1082,43 @@
         },
         "BuenoCrepe": {
           "name": "Bueno crepe",
-          "description": ["Bueno Praline", "Biscuit"],
+          "variants": ["Bueno Praline", "Biscuit"],
           "price": "3",
           "disabled": true
         },
         "DoubleDreamCrepe": {
           "name": "Double dream crepe",
-          "description": ["Strawberry Praline", "Banana", "Biscuit", "Truffle"],
+          "variants": ["Strawberry Praline", "Banana", "Biscuit", "Truffle"],
           "price": "4.5",
           "disabled": true
         },
         "EnergyCrepe": {
           "name": "Energy crepe",
-          "description": ["Nutella", "Banana", "Walnut", "Super Food"],
+          "variants": ["Nutella", "Banana", "Walnut", "Super Food"],
           "price": "4.5",
           "disabled": true
         },
         "ChocolamaniaCrepe": {
           "name": "Chocolamania crepe",
-          "description": ["Chocolate Praline", "Oreo", "Smarties"],
+          "variants": ["Chocolate Praline", "Oreo", "Smarties"],
           "price": "5",
           "disabled": true
         },
         "OnIceCrepe": {
           "name": "On ice crepe",
-          "description": ["Ice Cream", "Chocolate Praline", "Oreo"],
+          "variants": ["Ice Cream", "Chocolate Praline", "Oreo"],
           "price": "5",
           "disabled": true
         }
-      }
+      },
+      "notes": null
     },
     "Burger": {
-      "categoryName": "Burger",
-      "categoryNote": null,
+      "name": "Burger",
       "products": {
         "YuppiiBurger": {
           "name": "Yuppii burger",
-          "description": [
+          "variants": [
             "Comes with fried fries",
             "Brioche Bun",
             "Beef Patty",
@@ -1984,7 +1133,7 @@
         },
         "YuppiiCheeseBurger": {
           "name": "Yuppii cheese burger",
-          "description": [
+          "variants": [
             "Comes with fried fries",
             "Brioche Bun",
             "Beef Patty",
@@ -1997,7 +1146,7 @@
         },
         "YuppiiChickenBurger": {
           "name": "Yuppii chicken burger",
-          "description": [
+          "variants": [
             "Comes with fried fries",
             "Brioche Bun",
             "Breaded Chicken",
@@ -2008,15 +1157,15 @@
           "price": "5",
           "disabled": false
         }
-      }
+      },
+      "notes": null
     },
     "Salad": {
-      "categoryName": "Salad",
-      "categoryNote": null,
+      "name": "Salad",
       "products": {
         "ChefSalad": {
           "name": "Chef salad",
-          "description": [
+          "variants": [
             "Lettuce",
             "Tomatoes",
             "Corn",
@@ -2029,7 +1178,7 @@
         },
         "YuppiiSalad": {
           "name": "Yuppii salad",
-          "description": [
+          "variants": [
             "Lettuce",
             "Lola",
             "Cherry tomatoes",
@@ -2042,7 +1191,7 @@
         },
         "CretanDakosSalad": {
           "name": "Cretan dakos",
-          "description": [
+          "variants": [
             "Cherry tomatoes",
             "Olives",
             "Greek feta",
@@ -2053,43 +1202,44 @@
           "price": "5",
           "disabled": false
         }
-      }
+      },
+      "notes": null
     },
     "Snack": {
-      "categoryName": "Snack",
-      "categoryNote": null,
+      "name": "Snack",
       "products": {
         "Popcorn": {
           "name": "Popcorn",
-          "description": null,
+          "variants": null,
           "price": "2.5",
           "disabled": false
         },
         "BoiledCorn": {
           "name": "Boiled corn",
-          "description": null,
+          "variants": null,
           "price": "3",
           "disabled": false
         },
         "Nachos": {
           "name": "Nachos",
-          "description": null,
+          "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "NachosWithSauce": {
           "name": "Nachos with sauce",
-          "description": ["Cheddar", "Red sauce"],
+          "variants": ["Cheddar", "Red sauce"],
           "price": "4",
           "disabled": false
         },
         "Churros": {
           "name": "Churros",
-          "description": null,
+          "variants": null,
           "price": "3",
           "disabled": true
         }
-      }
+      },
+      "notes": null
     }
   }
 }

@@ -1,6 +1,0 @@
-export {default as hawaiian1thumb} from './ALE_0495_thumb.webp'
-export {default as hawaiian2thumb} from './ALE_0498_thumb.webp'
-export {default as hawaiian3thumb} from './ALE_0509_thumb.webp'
-export {default as hawaiian4thumb} from './ALE_5325_thumb.webp'
-export {default as hawaiian5thumb} from './ALE_5327_thumb.webp'
-export {default as hawaiian6thumb} from './ALE_5419_thumb.webp'

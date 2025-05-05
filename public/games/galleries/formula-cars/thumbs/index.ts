@@ -1,6 +1,0 @@
-export {default as formulaCars1thumb} from './ALE_0549_thumb.webp'
-export {default as formulaCars2thumb} from './ALE_0550_thumb.webp'
-export {default as formulaCars3thumb} from './ALE_5296_thumb.webp'
-export {default as formulaCars4thumb} from './ALE_5297_thumb.webp'
-export {default as formulaCars5thumb} from './ALE_5299_thumb.webp'
-export {default as formulaCars6thumb} from './ALE_5305_thumb.webp'
