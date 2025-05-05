@@ -3,6 +3,11 @@ import {useTranslations, useLocale} from 'next-intl'
 import {Section} from '@/src/components/section'
 import * as maps from '@/public/park/map'
 
+const imageMap = {
+  gr: maps.mapGr,
+  en: maps.mapEn
+}
+
 const ParkMap: React.FC = () => {
   const t = useTranslations('Pages.Park.ParkMap')
   const locale = useLocale()
@@ -13,12 +18,14 @@ const ParkMap: React.FC = () => {
       subtitle={t('subtitle')}
     >
       <article>
-        <figure className='relative w-full rounded-md overflow-hidden shadow-md'>
+        <figure>
           <Image
-            src={locale === 'en' ? maps.mapEn : maps.mapGr}
+            className='rounded shadow-md'
+            src={imageMap[locale]}
             alt='Yuppii Luna Park map'
-            sizes='(min-width: 1080px) 992px, calc(95.26vw - 18px)'
             placeholder='blur'
+            sizes='(min-width: 1000px) 1000px,
+              calc(100vw - 24px)'
           />
         </figure>
       </article>

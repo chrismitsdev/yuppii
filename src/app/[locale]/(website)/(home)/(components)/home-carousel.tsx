@@ -24,8 +24,10 @@ const HomeCarousel: React.FC = () => {
             className='rounded'
             src={image}
             alt={`Home page carousel image slide ${i + 1}`}
-            sizes='(min-width: 1040px) 941px, (min-width: 780px) 702px, (min-width: 660px) 574px, calc(95.29vw - 36px)'
             priority
+            placeholder='blur'
+            sizes='(min-width: 1000px) 1000px,
+              100vw'
           />
         </EmblaSlide>
       )

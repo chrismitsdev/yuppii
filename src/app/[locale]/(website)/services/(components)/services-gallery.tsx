@@ -124,6 +124,8 @@ const ServicesGallery: React.FC = () => {
           src={image}
           alt={`Gallery slide image ${i + 1}`}
           placeholder='blur'
+          sizes='(min-width: 1000px) 1000px,
+            100vw'
         />
       </EmblaSlide>
     )
@@ -248,6 +250,9 @@ const ServicesGalleryTrigger: React.FC<{
         src={src}
         alt={alt}
         placeholder='blur'
+        sizes='(min-width: 1000px) 312px,
+          (min-width: 640px) calc((100vw - 64px) / 3),
+          100vw'
       />
       <div className='hidden absolute inset-0 items-center justify-center group-hover:flex'>
         <ExpandIcon
