@@ -1,6 +1,0 @@
-export {default as punchesKicks1thumb} from './ALE_0873_thumb.webp'
-export {default as punchesKicks2thumb} from './ALE_5169_thumb.webp'
-export {default as punchesKicks3thumb} from './ALE_5178_thumb.webp'
-export {default as punchesKicks4thumb} from './ALE_5179_thumb.webp'
-export {default as punchesKicks5thumb} from './ALE_5258_thumb.webp'
-export {default as punchesKicks6thumb} from './ALE_5293_thumb.webp'

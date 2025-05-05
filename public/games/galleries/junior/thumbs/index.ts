@@ -1,6 +1,0 @@
-export {default as junior1thumb} from './ALE_0695_thumb.webp'
-export {default as junior2thumb} from './ALE_0698_thumb.webp'
-export {default as junior3thumb} from './ALE_0713_thumb.webp'
-export {default as junior4thumb} from './ALE_0730_thumb.webp'
-export {default as junior5thumb} from './ALE_0736_thumb.webp'
-export {default as junior6thumb} from './ALE_0739_thumb.webp'

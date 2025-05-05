@@ -1,0 +1,8 @@
+@custom-variant data-open (&[data-state~="open"]);
+@custom-variant data-closed (&[data-state~="closed"]);
+@custom-variant data-active (&[data-state~="active"]);
+@custom-variant data-selected (&[data-state~="selected"]);
+@custom-variant data-top (&[data-side~="top"]);
+@custom-variant data-right (&[data-side~="right"]);
+@custom-variant data-bottom (&[data-side~="bottom"]);
+@custom-variant data-left (&[data-side~="left"]);

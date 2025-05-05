@@ -1,0 +1,3 @@
+@theme {
+  --shadow-menu-nav: 'inset 0 -1px hsl(var(--color-secondary) / 0.4)';
+}

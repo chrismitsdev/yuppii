@@ -1,6 +1,0 @@
-export {default as basket1thumb} from './ALE_0839_thumb.webp'
-export {default as basket2thumb} from './ALE_5252_thumb.webp'
-export {default as basket3thumb} from './ALE_5260_thumb.webp'
-export {default as basket4thumb} from './ALE_5261_thumb.webp'
-export {default as basket5thumb} from './ALE_5267_thumb.webp'
-export {default as basket6thumb} from './ALE_5413_thumb.webp'

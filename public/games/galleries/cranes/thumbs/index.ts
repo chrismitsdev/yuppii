@@ -1,6 +1,0 @@
-export {default as cranes1thumb} from './ALE_0602_thumb.webp'
-export {default as cranes2thumb} from './ALE_0619_thumb.webp'
-export {default as cranes3thumb} from './ALE_0776_thumb.webp'
-export {default as cranes4thumb} from './ALE_0809_thumb.webp'
-export {default as cranes5thumb} from './ALE_5217_thumb.webp'
-export {default as cranes6thumb} from './ALE_5225_thumb.webp'
