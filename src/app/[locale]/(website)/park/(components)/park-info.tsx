@@ -22,7 +22,11 @@ const ParkInfo: React.FC = () => {
             placeholder='blur'
           />
           <div className='space-y-4 text-center sm:text-left'>
-            <Typography variant='h4'>{t('information.info1.title')}</Typography>
+            <Typography variant='h4'>
+              {t('information.info1.title', {
+                years: new Date().getFullYear() - 2011
+              })}
+            </Typography>
             <Typography variant='large'>
               {t('information.info1.content')}
             </Typography>
