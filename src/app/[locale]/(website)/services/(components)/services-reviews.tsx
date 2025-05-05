@@ -88,6 +88,7 @@ const ServicesReviewSlide: React.FC<{
             width={36}
             src={authorAvatar}
             alt='Avatar'
+            placeholder='blur'
           />
           <Typography
             variant='lead'
