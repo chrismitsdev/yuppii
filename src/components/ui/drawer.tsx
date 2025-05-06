@@ -16,7 +16,7 @@ const DrawerOverlay: React.FC<
 > = ({className, ...props}) => {
   return (
     <Vaul.Overlay
-      className={cn('fixed inset-0 bg-accent/50 backdrop-blur-[1px]')}
+      className={cn('fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px]')}
       {...props}
     />
   )
@@ -32,7 +32,7 @@ const DrawerContent: React.FC<
   return (
     <Vaul.Content
       className={cn(
-        'fixed bottom-0 left-0 right-0 flex flex-col bg-primary outline-none',
+        'fixed inset-x-0 bottom-0 z-1 flex flex-col bg-primary outline-none',
         className
       )}
       aria-describedby={ariaDescribedBy}

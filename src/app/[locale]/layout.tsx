@@ -58,10 +58,15 @@ export default async function LocaleLayout({
       lang={locale}
       className={font.className}
     >
-      <body className='bg-primary text-primary-foreground'>
+      <body>
         <NextIntlClientProvider>
-          {children}
-          <Footer />
+          <div
+            className='bg-primary text-primary-foreground'
+            data-vaul-drawer-wrapper
+          >
+            {children}
+            <Footer />
+          </div>
           <Toaster
             position='top-center'
             toastOptions={{

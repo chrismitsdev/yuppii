@@ -105,36 +105,36 @@ const Footer: React.FC = () => {
               size='icon'
               asChild
             >
-              <Link
+              <a
                 href='https://www.facebook.com/yuppii.gr'
                 target='_blank'
               >
                 <FacebookIcon />
-              </Link>
+              </a>
             </Button>
             <Button
               variant='ghost-primary'
               size='icon'
               asChild
             >
-              <Link
+              <a
                 href='https://www.instagram.com/yuppiilunapark/'
                 target='_blank'
               >
                 <InstagramIcon />
-              </Link>
+              </a>
             </Button>
             <Button
               variant='ghost-primary'
               size='icon'
               asChild
             >
-              <Link
+              <a
                 href='https://goo.gl/maps/vWBvWk3Tvcw5XkF87'
                 target='_blank'
               >
                 <MapIcon />
-              </Link>
+              </a>
             </Button>
           </FooterColumn>
           <div className='order-3 flex items-center gap-1'>

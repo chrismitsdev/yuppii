@@ -24,7 +24,7 @@ const DialogOverlay: React.FC<React.ComponentPropsWithRef<typeof Overlay>> = ({
   return (
     <Overlay
       className={cn(
-        'fixed inset-0 z-[1] bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
+        'fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
         className
       )}
       {...props}
@@ -40,7 +40,7 @@ const DialogContent: React.FC<React.ComponentPropsWithRef<typeof Content>> = ({
   return (
     <Content
       className={cn(
-        'p-6 fixed left-1/2 top-1/2 -translate-1/2 origin-center z-[1] w-full max-w-[calc(100%-24px)] bg-primary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:p-8 sm:max-w-xl',
+        'p-6 fixed left-1/2 top-1/2 -translate-1/2 origin-center z-1 w-full max-w-[calc(100%-24px)] bg-primary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:p-8 sm:max-w-xl',
         className
       )}
       aria-describedby={ariaDescribedBy}

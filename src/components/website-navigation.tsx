@@ -105,93 +105,98 @@ const WebsiteNavigation: React.FC = () => {
         <LocaleSwitcher />
       </nav>
 
-      <Drawer
-        open={drawerOpen}
-        onOpenChange={setDrawerOpen}
-      >
-        <DrawerTrigger
-          className='sm:hidden'
-          asChild
+      <div className='flex items-center sm:hidden'>
+        <LocaleSwitcher />
+        <Separator
+          className='mr-0 ml-4'
+          orientation='vertical'
+        />
+
+        <Drawer
+          open={drawerOpen}
+          onOpenChange={setDrawerOpen}
+          shouldScaleBackground
         >
-          <Button
-            variant='ghost'
-            size='icon'
-          >
-            <MenuIcon />
-          </Button>
-        </DrawerTrigger>
-        <DrawerPortal>
-          <DrawerOverlay />
-          <DrawerContent className='h-2/3 rounded-t-lg'>
-            <div className='p-8 h-full flex flex-col'>
-              <DrawerHandle className='mb-10 !w-1/3 !bg-accent/50' />
+          <DrawerTrigger asChild>
+            <Button
+              variant='ghost'
+              size='icon'
+            >
+              <MenuIcon />
+            </Button>
+          </DrawerTrigger>
+          <DrawerPortal>
+            <DrawerOverlay />
+            <DrawerContent className='h-2/3 rounded-t-lg'>
+              <div className='p-8 h-full flex flex-col'>
+                <DrawerHandle className='mb-10 !w-1/3 !bg-accent/50' />
 
-              <VisuallyHidden>
-                <DrawerTitle>Menu</DrawerTitle>
-              </VisuallyHidden>
+                <VisuallyHidden>
+                  <DrawerTitle>Menu</DrawerTitle>
+                </VisuallyHidden>
 
-              <div className='flex flex-col gap-y-4 flex-1'>
-                {links.map(function (link) {
-                  return (
-                    <Button
-                      variant={
-                        pathname === link.href ? 'accent' : 'ghost-secondary'
-                      }
-                      size='lg'
-                      key={link.key}
-                      asChild
+                <div className='flex flex-col gap-y-4 flex-1'>
+                  {links.map(function (link) {
+                    return (
+                      <Button
+                        variant={
+                          pathname === link.href ? 'accent' : 'ghost-secondary'
+                        }
+                        size='lg'
+                        key={link.key}
+                        asChild
+                      >
+                        <Link href={link.href}>
+                          {link.icon({size: 20})}
+                          <Typography locale={locale}>{t(link.key)}</Typography>
+                        </Link>
+                      </Button>
+                    )
+                  })}
+                </div>
+                <div className='space-x-4 flex justify-center'>
+                  <Button
+                    variant='ghost-accent'
+                    size='icon'
+                    asChild
+                  >
+                    <a
+                      href='https://www.facebook.com/yuppii.gr'
+                      target='_blank'
                     >
-                      <Link href={link.href}>
-                        {link.icon({size: 20})}
-                        <Typography locale={locale}>{t(link.key)}</Typography>
-                      </Link>
-                    </Button>
-                  )
-                })}
+                      <FacebookIcon />
+                    </a>
+                  </Button>
+                  <Button
+                    variant='ghost-accent'
+                    size='icon'
+                    asChild
+                  >
+                    <a
+                      href='https://www.instagram.com/yuppiilunapark/'
+                      target='_blank'
+                    >
+                      <InstagramIcon />
+                    </a>
+                  </Button>
+                  <Button
+                    variant='ghost-accent'
+                    size='icon'
+                    asChild
+                  >
+                    <a
+                      href='https://goo.gl/maps/vWBvWk3Tvcw5XkF87'
+                      target='_blank'
+                    >
+                      <MapIcon />
+                    </a>
+                  </Button>
+                </div>
               </div>
-              <div className='flex justify-evenly'>
-                <Button
-                  variant='accent'
-                  size='icon'
-                  asChild
-                >
-                  <a
-                    href='https://www.facebook.com/yuppii.gr'
-                    target='_blank'
-                  >
-                    <FacebookIcon />
-                  </a>
-                </Button>
-                <Button
-                  variant='accent'
-                  size='icon'
-                  asChild
-                >
-                  <a
-                    href='https://www.instagram.com/yuppiilunapark/'
-                    target='_blank'
-                  >
-                    <InstagramIcon />
-                  </a>
-                </Button>
-                <Button
-                  variant='accent'
-                  size='icon'
-                  asChild
-                >
-                  <a
-                    href='https://goo.gl/maps/vWBvWk3Tvcw5XkF87'
-                    target='_blank'
-                  >
-                    <MapIcon />
-                  </a>
-                </Button>
-                <LocaleSwitcher />
-              </div>
-            </div>
-          </DrawerContent>
-        </DrawerPortal>
-      </Drawer>
+            </DrawerContent>
+          </DrawerPortal>
+        </Drawer>
+      </div>
     </React.Fragment>
   )
 }
