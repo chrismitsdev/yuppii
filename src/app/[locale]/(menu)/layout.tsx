@@ -7,7 +7,6 @@ export default function MenuLayout({
   children
 }: Readonly<React.PropsWithChildren<Params>>) {
   const {locale} = React.use(params)
-
   setRequestLocale(locale)
 
   return (
