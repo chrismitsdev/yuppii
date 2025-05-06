@@ -6,7 +6,7 @@ import {
   FootprintsIcon,
   XIcon
 } from 'lucide-react'
-import {Link} from '@/src/i18n/navigation'
+import {ClientLink} from '@/src/components/client-link'
 import {Section} from '@/src/components/section'
 import {
   Card,
@@ -65,7 +65,9 @@ const HomeCards: React.FC = () => {
                   </DialogHeader>
                   <DialogFooter className='flex justify-end'>
                     <Button asChild>
-                      <Link href='/services'>{t('card1.trigger')}</Link>
+                      <ClientLink href='/services'>
+                        {t('card1.trigger')}
+                      </ClientLink>
                     </Button>
                   </DialogFooter>
                   <DialogClose
@@ -110,7 +112,9 @@ const HomeCards: React.FC = () => {
                   </DialogHeader>
                   <DialogFooter className='flex justify-end'>
                     <Button asChild>
-                      <Link href='/services'>{t('card2.trigger')}</Link>
+                      <ClientLink href='/services'>
+                        {t('card2.trigger')}
+                      </ClientLink>
                     </Button>
                   </DialogFooter>
                   <DialogClose
@@ -155,7 +159,9 @@ const HomeCards: React.FC = () => {
                   </DialogHeader>
                   <DialogFooter className='flex justify-end'>
                     <Button asChild>
-                      <Link href='/contact'>{t('card3.trigger')}</Link>
+                      <ClientLink href='/contact'>
+                        {t('card3.trigger')}
+                      </ClientLink>
                     </Button>
                   </DialogFooter>
                   <DialogClose
