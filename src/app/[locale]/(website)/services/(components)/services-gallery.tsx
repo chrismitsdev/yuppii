@@ -163,14 +163,14 @@ const ServicesGallery: React.FC = () => {
                     </div>
                   </Button>
                 </div>
-                <Typography>Δείτε όλα τα διαθέσιμα παιχνίδια</Typography>
+                <Typography>{t('sheet-content-trigger')}</Typography>
               </button>
             </SheetTrigger>
             <SheetPortal>
               <SheetOverlay />
               <SheetContent side='left'>
                 <SheetHeader className='p-6'>
-                  <SheetTitle>{t('header')}</SheetTitle>
+                  <SheetTitle>{t('sheet-content-header')}</SheetTitle>
                 </SheetHeader>
                 <ScrollArea
                   className='h-[calc(100%-72px)]'

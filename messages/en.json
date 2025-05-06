@@ -94,7 +94,8 @@
       "ServicesGallery": {
         "title": "Our Games",
         "subtitle": "With over 40 unique and different games from around the world, we cater to all ages.",
-        "header": "Choose game",
+        "sheet-content-trigger": "See all available games",
+        "sheet-content-header": "Choose game",
         "galleries": {
           "inflatables": {
             "label": "Inflatables"
