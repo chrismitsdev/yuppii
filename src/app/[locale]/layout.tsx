@@ -1,5 +1,5 @@
 import '@/src/styles/index.css'
-import type {Metadata} from 'next'
+import type {Metadata, Viewport} from 'next'
 import {notFound} from 'next/navigation'
 import {Arima} from 'next/font/google'
 import {NextIntlClientProvider, hasLocale} from 'next-intl'
@@ -35,6 +35,10 @@ export const metadata: Metadata = {
     email: true,
     telephone: true
   }
+}
+
+export const viewport: Viewport = {
+  themeColor: '#cee9e7'
 }
 
 export function generateStaticParams() {
