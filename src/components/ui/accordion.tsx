@@ -14,7 +14,7 @@ const AccordionItem: React.FC<React.ComponentPropsWithRef<typeof Item>> = ({
   return (
     <Item
       className={cn(
-        'overflow-hidden bg-secondary/50 rounded-lg shadow transition',
+        'overflow-hidden bg-secondary/50 border border-secondary rounded-lg shadow-md transition',
         className
       )}
       {...props}

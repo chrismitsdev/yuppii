@@ -1,9 +1,8 @@
 import * as React from 'react'
 import {type Messages, useMessages} from 'next-intl'
-import {formatCurrency} from '@/src/lib/utils'
 import {Section} from '@/src/components/section'
+import {MenuProduct} from '@/src/components/menu-product'
 import {Card, CardContent, CardFooter} from '@/src/components/ui/card'
-import {Badge} from '@/src/components/ui/badge'
 import {Typography} from '@/src/components/ui/typography'
 import {Separator} from '@/src/components/ui/separator'
 
@@ -19,9 +18,11 @@ const CategoryProducts: React.FC<{categoryKey: keyof Messages['Menu']}> = ({
         <CardContent>
           <ul>
             {Object.values(category.products).map(function (product, i, a) {
+              if (product.disabled) return
+
               return (
                 <React.Fragment key={product.name}>
-                  <CategoryProduct {...product} />
+                  <MenuProduct {...product} />
                   {i !== a.length - 1 && (
                     <Separator
                       className='my-6 bg-secondary/25'
@@ -54,34 +55,6 @@ const CategoryProducts: React.FC<{categoryKey: keyof Messages['Menu']}> = ({
   )
 }
 
-const CategoryProduct: React.FC<{
-  name: string
-  variants: string[] | null
-  price: string
-}> = ({name, variants, price}) => {
-  return (
-    <li className='grid grid-cols-[1fr_auto] gap-1'>
-      <Typography>{name}</Typography>
-      <Typography>{formatCurrency(price)}</Typography>
-      {variants && (
-        <div className='flex flex-wrap items-center gap-1'>
-          {variants.map(function (variant) {
-            return (
-              <Badge
-                key={variant}
-                variant='secondary'
-              >
-                {variant}
-              </Badge>
-            )
-          })}
-        </div>
-      )}
-    </li>
-  )
-}
-
 CategoryProducts.displayName = 'CategoryProducts'
-CategoryProduct.displayName = 'CategoryProduct'
 
 export {CategoryProducts}

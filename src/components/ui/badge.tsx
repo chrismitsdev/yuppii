@@ -10,7 +10,6 @@ const badgeProps = cva(
     'inline-flex',
     'items-center',
     'text-sm',
-    'font-semibold',
     'tracking-wide',
     'border',
     'rounded',

@@ -1,7 +1,8 @@
 import * as React from 'react'
 import {type Messages, useTranslations, useMessages} from 'next-intl'
-import {formatCurrency, categoryIcons} from '@/src/lib/utils'
+import {categoryIcons} from '@/src/lib/utils'
 import {Section} from '@/src/components/section'
+import {MenuProduct} from '@/src/components/menu-product'
 import {
   Accordion,
   AccordionItem,
@@ -9,7 +10,6 @@ import {
   AccordionContent
 } from '@/src/components/ui/accordion'
 import {Typography} from '@/src/components/ui/typography'
-import {Badge} from '@/src/components/ui/badge'
 import {Separator} from '@/src/components/ui/separator'
 
 const MenuCategories: React.FC = () => {
@@ -44,9 +44,11 @@ const MenuCategories: React.FC = () => {
                 <ul className='p-6'>
                   {Object.values(messages.Menu[categoryKey].products).map(
                     function (product, i, a) {
+                      if (product.disabled) return
+
                       return (
                         <React.Fragment key={product.name}>
-                          <MenuCategoryProduct {...product} />
+                          <MenuProduct {...product} />
                           {i !== a.length - 1 && (
                             <Separator
                               className='my-6 bg-secondary/25'
@@ -59,7 +61,7 @@ const MenuCategories: React.FC = () => {
                   )}
                 </ul>
                 {messages.Menu[categoryKey].notes && (
-                  <ul className='py-6 pr-6 pl-10 border-t border-dashed border-t-secondary'>
+                  <ul className='py-6 pr-6 pl-9.5 border-t border-dashed border-t-secondary'>
                     {messages.Menu[categoryKey].notes.map(function (note) {
                       return (
                         <li
@@ -81,34 +83,6 @@ const MenuCategories: React.FC = () => {
   )
 }
 
-const MenuCategoryProduct: React.FC<{
-  name: string
-  variants: string[] | null
-  price: string
-}> = ({name, variants, price}) => {
-  return (
-    <li className='grid grid-cols-[1fr_auto] gap-1'>
-      <Typography>{name}</Typography>
-      <Typography>{formatCurrency(price)}</Typography>
-      {variants && (
-        <div className='flex flex-wrap items-center gap-1'>
-          {variants.map(function (variant) {
-            return (
-              <Badge
-                key={variant}
-                variant='secondary'
-              >
-                {variant}
-              </Badge>
-            )
-          })}
-        </div>
-      )}
-    </li>
-  )
-}
-
 MenuCategories.displayName = 'MenuCategories'
-MenuCategoryProduct.displayName = 'MenuCategoryProduct'
 
 export {MenuCategories}

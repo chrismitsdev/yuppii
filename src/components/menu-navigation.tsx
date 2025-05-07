@@ -14,7 +14,7 @@ const MenuNavigation: React.FC = () => {
   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
   return (
-    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-primary border-b border-b-secondary/40'>
+    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-primary border-b border-b-secondary/25'>
       <ScrollArea
         orientation='horizontal'
         invisible
@@ -50,8 +50,8 @@ const MenuNavigationLink: React.FC<
   return (
     <Link
       className={cn(
-        'p-4 relative flex-shrink-0 text-accent/50 duration-200 font-bold select-none after:absolute after:-bottom-1 after:left-0 after:w-full after:h-1 after:rounded-t-lg after:duration-200 sm:px-3',
-        isActive && 'after:bg-secondary text-accent after:bottom-0',
+        'p-4 relative flex-shrink-0 text-accent/30 duration-375 font-bold select-none after:h-1 after:absolute after:-bottom-1 after:inset-x-0 after:rounded-t-lg after:duration-375 sm:px-3',
+        isActive && 'text-accent after:bg-secondary after:bottom-0',
         className
       )}
       {...props}

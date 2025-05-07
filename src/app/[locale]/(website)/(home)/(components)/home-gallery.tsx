@@ -117,7 +117,7 @@ const HomeGalleryTrigger: React.FC<{
 }> = ({src, alt, onClick}) => {
   return (
     <DialogTrigger
-      className='relative overflow-hidden rounded shadow before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-0 group'
+      className='relative overflow-hidden rounded shadow-md before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-0 group'
       onClick={onClick}
     >
       <Image
