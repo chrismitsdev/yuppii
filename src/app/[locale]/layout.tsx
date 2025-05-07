@@ -4,7 +4,6 @@ import {notFound} from 'next/navigation'
 import {Arima} from 'next/font/google'
 import {NextIntlClientProvider, hasLocale} from 'next-intl'
 import {setRequestLocale} from 'next-intl/server'
-import {SpeedInsights} from '@vercel/speed-insights/next'
 import {Analytics} from '@vercel/analytics/next'
 import {Toaster} from 'react-hot-toast'
 import {routing} from '@/src/i18n/routing'
@@ -86,7 +85,6 @@ export default async function LocaleLayout({
             }}
           />
         </NextIntlClientProvider>
-        <SpeedInsights />
         <Analytics />
       </body>
     </html>
