@@ -23,9 +23,10 @@ export async function sendContactForm(
     })
 
     if (error) {
+      console.error(error)
       return error
     }
   } catch (error) {
-    console.error(error)
+    console.error(`sendContactForm() catch block error: ${error}`)
   }
 }
