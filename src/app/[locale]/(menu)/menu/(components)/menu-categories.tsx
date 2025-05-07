@@ -42,10 +42,11 @@ const MenuCategories: React.FC = () => {
               </AccordionTrigger>
               <AccordionContent className='p-0 border-t border-dashed border-t-secondary'>
                 <ul className='p-6'>
-                  {Object.values(messages.Menu[categoryKey].products).map(
-                    function (product, i, a) {
-                      if (product.disabled) return
-
+                  {Object.values(messages.Menu[categoryKey].products)
+                    .filter(function (product) {
+                      return !product.disabled
+                    })
+                    .map(function (product, i, a) {
                       return (
                         <React.Fragment key={product.name}>
                           <MenuProduct {...product} />
@@ -57,8 +58,7 @@ const MenuCategories: React.FC = () => {
                           )}
                         </React.Fragment>
                       )
-                    }
-                  )}
+                    })}
                 </ul>
                 {messages.Menu[categoryKey].notes && (
                   <ul className='py-6 pr-6 pl-9.5 border-t border-dashed border-t-secondary'>

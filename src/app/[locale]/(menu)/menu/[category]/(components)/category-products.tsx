@@ -17,21 +17,23 @@ const CategoryProducts: React.FC<{categoryKey: keyof Messages['Menu']}> = ({
       <Card className='relative'>
         <CardContent>
           <ul>
-            {Object.values(category.products).map(function (product, i, a) {
-              if (product.disabled) return
-
-              return (
-                <React.Fragment key={product.name}>
-                  <MenuProduct {...product} />
-                  {i !== a.length - 1 && (
-                    <Separator
-                      className='my-6 bg-secondary/25'
-                      decorative
-                    />
-                  )}
-                </React.Fragment>
-              )
-            })}
+            {Object.values(category.products)
+              .filter(function (product) {
+                return !product.disabled
+              })
+              .map(function (product, i, a) {
+                return (
+                  <React.Fragment key={product.name}>
+                    <MenuProduct {...product} />
+                    {i !== a.length - 1 && (
+                      <Separator
+                        className='my-6 bg-secondary/25'
+                        decorative
+                      />
+                    )}
+                  </React.Fragment>
+                )
+              })}
           </ul>
         </CardContent>
         {category.notes && (
