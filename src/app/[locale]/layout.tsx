@@ -47,7 +47,7 @@ export const viewport: Viewport = {
       media: '(prefers-color-scheme: dark)'
     }
   ],
-  colorScheme: 'normal'
+  colorScheme: 'light dark'
 }
 
 export function generateStaticParams() {
