@@ -71,7 +71,7 @@ export default async function LocaleLayout({
             {children}
             <Footer />
           </div>
-          {/* <Toaster
+          <Toaster
             position='top-center'
             toastOptions={{
               duration: 5000,
@@ -84,7 +84,7 @@ export default async function LocaleLayout({
                 columnGap: 4
               }
             }}
-          /> */}
+          />
         </NextIntlClientProvider>
         <Analytics />
       </body>
