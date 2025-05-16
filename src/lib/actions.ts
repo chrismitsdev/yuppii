@@ -18,44 +18,85 @@ import {
   regex
 } from 'valibot'
 import {sendContactForm} from '@/src/lib/send-contact-form'
+import {bannedKeywordPatterns} from '@/src/lib/utils'
 
 setSpecificMessage(string, 'Πρέπει να είναι γράμματα & αριθμοί', 'gr')
 setSpecificMessage(string, 'Must contain only letters & numbers', 'en')
 setSpecificMessage(nonEmpty, 'Υποχρεωτικό πεδίο', 'gr')
 setSpecificMessage(nonEmpty, 'Mandatory field', 'en')
-setSpecificMessage(minLength, 'Tουλάχιστον 5 χαρακτήρες', 'gr')
-setSpecificMessage(minLength, 'At least 5 characters', 'en')
-setSpecificMessage(maxLength, 'Μέγιστο 25 χαρακτήρες', 'gr')
-setSpecificMessage(maxLength, 'Maximum 25 characters', 'en')
-setSpecificMessage(email, 'Μη έγκυρη μορφή email', 'gr')
-setSpecificMessage(email, 'Invalid email format', 'en')
-setSpecificMessage(check, 'Αποδεκτά email: gmail, icloud, yahoo', 'gr')
-setSpecificMessage(check, 'Accepted email: gmail, icloud, yahoo', 'en')
-setSpecificMessage(regex, 'Μη έγκυρη μορφή αριθμού τηλεφώνου', 'gr')
-setSpecificMessage(regex, 'Invalid phone number format', 'en')
+
+function getValibotMessage(grMessage: string, enMessage: string) {
+  return function ({lang}: {lang?: string}) {
+    return lang === 'gr' ? grMessage : enMessage
+  }
+}
 
 const ContactFormSchema = object({
-  fullname: pipe(string(), trim(), nonEmpty(), minLength(5), maxLength(25)),
+  fullname: pipe(
+    string(),
+    nonEmpty(),
+    trim(),
+    minLength(
+      5,
+      getValibotMessage('Tουλάχιστον 5 χαρακτήρες', 'At least 5 characters')
+    ),
+    maxLength(
+      25,
+      getValibotMessage('Μέγιστο 25 χαρακτήρες', 'Maximum 25 characters')
+    )
+  ),
   email: pipe(
     string(),
-    trim(),
     nonEmpty(),
-    email(),
-    check((input) =>
-      ['@gmail.com', '@icloud.com', '@yahoo.com'].some((provider) =>
-        input.endsWith(provider)
+    trim(),
+    email(getValibotMessage('Μη έγκυρη μορφή email', 'Invalid email format')),
+    check(
+      function (input) {
+        return ['@gmail.com', '@icloud.com', '@yahoo.com'].some(
+          function (provider) {
+            return input.endsWith(provider)
+          }
+        )
+      },
+      getValibotMessage(
+        'Αποδεκτοί πάροχοι email: gmail, icloud, yahoo',
+        'Accepted email providers: gmail, icloud, yahoo'
       )
     )
   ),
-  phone: pipe(string(), trim(), nonEmpty(), regex(/^\d{10,}$/)),
-  message: string()
+  phone: pipe(
+    string(),
+    nonEmpty(),
+    trim(),
+    regex(
+      /^\d{10,}$/,
+      getValibotMessage(
+        'Μη έγκυρη μορφή αριθμού τηλεφώνου',
+        'Invalid phone number format'
+      )
+    )
+  ),
+  message: pipe(
+    string(),
+    nonEmpty(),
+    trim(),
+    check(
+      function (input) {
+        return !bannedKeywordPatterns.some(function (pattern) {
+          return pattern.test(input)
+        })
+      },
+      getValibotMessage(
+        'Βρέθηκε ανεπιθύμητο μήνυμα. Δοκιμάστε να αναδιατυπώσετε.',
+        'Spam-like message detected. Try rephrasing.'
+      )
+    )
+  )
 })
 
 type ContactFormData = InferOutput<typeof ContactFormSchema>
-type ContactFormErrors = Omit<
-  Partial<Record<keyof ContactFormData, string>>,
-  'message'
->
+type ContactFormErrors = Partial<Record<keyof ContactFormData, string>>
+
 type ContactFormResponse =
   | {ok: null}
   | {ok: true}
@@ -82,7 +123,8 @@ export async function contactFormAction(
       errors: {
         fullname: issues.nested?.fullname?.[0],
         email: issues.nested?.email?.[0],
-        phone: issues.nested?.phone?.[0]
+        phone: issues.nested?.phone?.[0],
+        message: issues.nested?.message?.[0]
       },
       ok: false,
       type: 'validation'

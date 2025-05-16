@@ -31,7 +31,7 @@ const FormField: React.FC<FormFieldProps> = ({
 }) => {
   const locale = useLocale()
   const baseClass =
-    'pt-0.5 pl-5.5 w-full leading-6 focus:outline-none disabled:cursor-not-allowed'
+    'pt-0.5 pl-0 sm:pl-5.5 mb-3 w-full leading-6 focus:outline-none disabled:cursor-not-allowed'
 
   return (
     <div
@@ -54,7 +54,7 @@ const FormField: React.FC<FormFieldProps> = ({
 
       {fieldType === 'input' ? (
         <input
-          className={cn(baseClass, 'pb-3')}
+          className={baseClass}
           id={id}
           name={name}
           defaultValue={defaultValue}
@@ -76,9 +76,9 @@ const FormField: React.FC<FormFieldProps> = ({
       )}
 
       {error && (
-        <div className='absolute bottom-0 left-9.5'>
+        <div className='absolute bottom-0 left-4 sm:left-9.5'>
           <Typography
-            className='font-semibold'
+            className='font-semibold text-red-800'
             variant='tiny'
           >
             {error}

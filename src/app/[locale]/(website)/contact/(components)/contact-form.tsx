@@ -96,6 +96,7 @@ const ContactForm: React.FC = () => {
               icon={MessageSquareIcon}
               label={t('fields.message')}
               defaultValue={state.data.message}
+              error={state.errors.message}
               disabled={isPending}
               id='message'
               name='message'
