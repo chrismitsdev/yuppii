@@ -3,6 +3,17 @@
 Repo of the Yuppii Luna Park website.
 You can take a look at the website [here](https://yuppii.gr).
 
+<div style="display: flex; gap: 1rem; align-items: flex-start;">
+  <div>
+    <h4>Desktop View</h4>
+    <img src="public/desktop-readme.png" alt="Desktop View" style="height: 500px;" />
+  </div>
+  <div>
+    <h4>Mobile View</h4>
+    <img src="public/mobile-readme.png" alt="Mobile View" style="height: 500px;" />
+  </div>
+</div>
+
 **Core project tools:**
 
 - [Next.js](https://nextjs.org/) as the meta-framework of choice
