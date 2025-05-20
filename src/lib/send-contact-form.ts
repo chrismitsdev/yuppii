@@ -10,14 +10,15 @@ export async function sendContactForm(
   try {
     const {error} = await resend.emails.send({
       from: 'Yuppii Luna Park <info@moccaliving.com>',
-      subject: 'Φόρμα επικοινωνίας - Yuppii Luna Park',
       react: ContactFormInternal(formData) as React.JSX.Element,
       ...(process.env.NODE_ENV === 'production'
         ? {
+            subject: 'Φόρμα επικοινωνίας - Yuppii Luna Park',
             to: 'mokalis@gmail.com',
             cc: 'chrismits88@gmail.com'
           }
         : {
+            subject: 'Φόρμα επικοινωνίας - Yuppii Luna Park (Dev mode)',
             to: 'chrismits88@gmail.com'
           })
     })
