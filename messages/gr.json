@@ -322,7 +322,7 @@
           "name": "Φραπέ με παγωτό",
           "variants": ["Σοκολάτα", "Βανίλια"],
           "price": "4",
-          "disabled": false
+          "disabled": true
         },
         "FilteredCoffee": {
           "name": "Φίλτρου",
@@ -469,7 +469,7 @@
           "name": "Μιλκσέϊκ",
           "variants": ["Σοκολάτα", "Βανίλια"],
           "price": "4",
-          "disabled": false
+          "disabled": true
         }
       },
       "notes": ["Προσθήκη σιροπιού καραμέλας, φουντουκιού ή φράουλας με +0,50€"]
@@ -821,6 +821,12 @@
           "price": "4",
           "disabled": false
         },
+        "FixZero": {
+          "name": "Fix χωρίς αλκοόλ 330ml",
+          "variants": null,
+          "price": "4",
+          "disabled": false
+        },
         "AmstelRadler": {
           "name": "Amstel radler 330ml",
           "variants": null,
@@ -866,7 +872,7 @@
         "ChickenBreadsticks": {
           "name": "Κριτσίνια κοτόπουλο",
           "variants": null,
-          "price": "4",
+          "price": "5",
           "disabled": false
         },
         "HotDog": {
@@ -884,13 +890,13 @@
         "ChickenTortilla": {
           "name": "Τορτίγια κοτόπουλο",
           "variants": ["Κοτοσαλάτα", "Ντομάτα", "Μαρούλι", "Καλαμπόκι"],
-          "price": "4",
+          "price": "4.5",
           "disabled": false
         },
         "VienneseBaguette": {
           "name": "Βιενέζικη μπαγκέτα",
           "variants": ["Φέτα", "Ελιές", "Ντομάτα", "Σως τυριού", "Ρίγανη"],
-          "price": "4",
+          "price": "4.5",
           "disabled": false
         },
         "ChickenVienneseBaguette": {
@@ -902,7 +908,7 @@
             "Μαρούλι",
             "Κεφαλοτύρι"
           ],
-          "price": "4.5",
+          "price": "5",
           "disabled": false
         },
         "ClubSandwich": {
@@ -914,25 +920,25 @@
         "ChickenClubSandwich": {
           "name": "Club sandwich κοτόπουλο",
           "variants": null,
-          "price": "6",
+          "price": "6.5",
           "disabled": false
         },
         "YuppiiChickenNuggets": {
           "name": "Yuppii κοτομπουκιές",
           "variants": null,
-          "price": "5.5",
+          "price": "6",
           "disabled": false
         },
         "YuppiiChickys": {
           "name": "Yuppii chicky's",
           "variants": null,
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         },
         "ColdCutsVariety": {
           "name": "Ποικιλία μπύρας",
           "variants": null,
-          "price": "8",
+          "price": "9",
           "disabled": false
         }
       },
@@ -944,7 +950,7 @@
         "MargheritaPizza": {
           "name": "Πίτσα μαργαρίτα",
           "variants": ["Γκούντα", "Σάλτσα ντομάτας", "Βασιλικός", "Ντομάτα"],
-          "price": "8",
+          "price": "8.5",
           "disabled": false
         },
         "SpecialPizza": {
@@ -957,7 +963,7 @@
             "Μανιτάρια",
             "Σάλτσα ντομάτας"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "FourCheesePizza": {
@@ -983,7 +989,7 @@
             "Κρεμμύδι",
             "Σάλτσα ντομάτας"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "ProsciuttoPizza": {
@@ -995,7 +1001,7 @@
             "Ρόκα",
             "Σάλτσα ντομάτας"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "VegetarianPizza": {
@@ -1017,9 +1023,10 @@
             "Τυρί κρέμα",
             "Βασιλικός",
             "Καλαμπόκι",
-            "Σως μουστάρδας"
+            "Σως μουστάρδας",
+            "Γκούντα"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "ClassicCrepe": {
@@ -1122,7 +1129,7 @@
             "Σως Μπάρμπεκιου",
             "Κεφαλοτύρι"
           ],
-          "price": "4.5",
+          "price": "5",
           "disabled": false
         },
         "YuppiiCheeseBurger": {
@@ -1135,7 +1142,7 @@
             "Τσένταρ",
             "Κέτσαπ"
           ],
-          "price": "4",
+          "price": "4.5",
           "disabled": false
         },
         "YuppiiChickenBurger": {
@@ -1148,7 +1155,7 @@
             "Τσένταρ",
             "Μαρούλι"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         }
       },
@@ -1167,7 +1174,7 @@
             "Γκούντα",
             "Σως του σεφ"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         },
         "YuppiiSalad": {
@@ -1180,7 +1187,7 @@
             "Παρμεζάνα",
             "Σως πορτοκαλιού"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         },
         "CretanDakosSalad": {
@@ -1193,7 +1200,7 @@
             "Μαϊντανό",
             "Ρίγανη"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         }
       },

@@ -322,7 +322,7 @@
           "name": "Frappé with ice-cream",
           "variants": ["Chocolate", "Vanilla"],
           "price": "4",
-          "disabled": false
+          "disabled": true
         },
         "FilteredCoffee": {
           "name": "Filtered coffee",
@@ -469,7 +469,7 @@
           "name": "Milkshake",
           "variants": ["Chocolate", "Vanilla"],
           "price": "4",
-          "disabled": false
+          "disabled": true
         }
       },
       "notes": ["Addition of caramel, hazel or strawberry syrup for +0.50€"]
@@ -821,6 +821,12 @@
           "price": "4",
           "disabled": false
         },
+        "FixZero": {
+          "name": "Fix free 330ml",
+          "variants": null,
+          "price": "4",
+          "disabled": false
+        },
         "AmstelRadler": {
           "name": "Amstel radler 330ml",
           "variants": null,
@@ -866,7 +872,7 @@
         "ChickenBreadsticks": {
           "name": "Chicken breadsticks",
           "variants": null,
-          "price": "4",
+          "price": "5",
           "disabled": false
         },
         "HotDog": {
@@ -884,7 +890,7 @@
         "ChickenTortilla": {
           "name": "Chicken tortilla",
           "variants": ["Chicken salad", "Tomato", "Lettuce", "Corn"],
-          "price": "4",
+          "price": "4.5",
           "disabled": false
         },
         "VienneseBaguette": {
@@ -896,7 +902,7 @@
             "Cheese Sauce",
             "Oregano"
           ],
-          "price": "4",
+          "price": "4.5",
           "disabled": false
         },
         "ChickenVienneseBaguette": {
@@ -908,7 +914,7 @@
             "Lettuce",
             "Cheese"
           ],
-          "price": "4.5",
+          "price": "5",
           "disabled": false
         },
         "ClubSandwich": {
@@ -920,25 +926,25 @@
         "ChickenClubSandwich": {
           "name": "Chicken club sandwich",
           "variants": null,
-          "price": "6",
+          "price": "6.5",
           "disabled": false
         },
         "YuppiiChickenNuggets": {
           "name": "Yuppii chicken nuggets",
           "variants": null,
-          "price": "5.5",
+          "price": "6",
           "disabled": false
         },
         "YuppiiChickys": {
           "name": "Yuppii chicky's",
           "variants": null,
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         },
         "ColdCutsVariety": {
           "name": "Cold cuts variety",
           "variants": null,
-          "price": "8",
+          "price": "9",
           "disabled": false
         }
       },
@@ -950,7 +956,7 @@
         "MargheritaPizza": {
           "name": "Margherita pizza",
           "variants": ["Gouda", "Tomato Sauce", "Basil", "Tomato"],
-          "price": "8",
+          "price": "8.5",
           "disabled": false
         },
         "SpecialPizza": {
@@ -963,7 +969,7 @@
             "Mushrooms",
             "Tomato Sauce"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "FourCheesePizza": {
@@ -989,7 +995,7 @@
             "Onion",
             "Tomato Sauce"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "ProsciuttoPizza": {
@@ -1001,7 +1007,7 @@
             "Arugula",
             "Tomato Sauce"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "VegetarianPizza": {
@@ -1023,9 +1029,10 @@
             "Cream Cheese",
             "Basil",
             "Corn",
-            "Mustard Sauce"
+            "Mustard Sauce",
+            "Gouda"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
         "ClassicCrepe": {
@@ -1129,7 +1136,7 @@
             "Barbecue Sauce",
             "Cheese"
           ],
-          "price": "4.5",
+          "price": "5",
           "disabled": false
         },
         "YuppiiCheeseBurger": {
@@ -1142,7 +1149,7 @@
             "Cheddar",
             "Ketchup"
           ],
-          "price": "4",
+          "price": "4.5",
           "disabled": false
         },
         "YuppiiChickenBurger": {
@@ -1155,7 +1162,7 @@
             "Ketchup",
             "Lettuce"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         }
       },
@@ -1174,7 +1181,7 @@
             "Gouda",
             "Chef's sauce"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         },
         "YuppiiSalad": {
@@ -1187,7 +1194,7 @@
             "Parmesan",
             "Orange sauce"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         },
         "CretanDakosSalad": {
@@ -1200,7 +1207,7 @@
             "Parsley",
             "Oregano"
           ],
-          "price": "5",
+          "price": "5.5",
           "disabled": false
         }
       },
