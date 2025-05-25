@@ -821,7 +821,7 @@
           "price": "4",
           "disabled": false
         },
-        "FixZero": {
+        "FixFree": {
           "name": "Fix χωρίς αλκοόλ 330ml",
           "variants": null,
           "price": "4",

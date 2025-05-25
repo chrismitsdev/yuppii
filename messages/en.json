@@ -745,7 +745,7 @@
         },
         "Caipirinha": {
           "name": "Caipirinha",
-          "variants": null,
+          "variants": ["Original", "Ursus"],
           "price": "7.5",
           "disabled": false
         },
@@ -821,7 +821,7 @@
           "price": "4",
           "disabled": false
         },
-        "FixZero": {
+        "FixFree": {
           "name": "Fix free 330ml",
           "variants": null,
           "price": "4",

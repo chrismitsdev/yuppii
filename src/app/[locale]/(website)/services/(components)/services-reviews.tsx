@@ -85,9 +85,13 @@ const ServicesReviewSlide: React.FC<{
       <div className='p-8 space-y-3 h-full bg-secondary/40 border border-secondary rounded-lg'>
         <div className='flex items-center gap-3'>
           <Image
-            width={36}
+            width={40}
             src={authorAvatar}
-            alt='Avatar'
+            alt={`Reviewer image avatar ${
+              authorAvatar.src
+                .split('/')
+                [authorAvatar.src.split('/').length - 1].split('.')[0]
+            }`}
             placeholder='blur'
           />
           <Typography
