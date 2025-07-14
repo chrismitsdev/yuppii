@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-import Image, {type StaticImageData} from 'next/image'
 import {type Messages, useTranslations, useLocale} from 'next-intl'
 import {XIcon, ExpandIcon, PlusIcon} from 'lucide-react'
 import {isoLocaleMap} from '@/src/lib/utils'
@@ -36,12 +35,13 @@ import {
 import {ScrollArea} from '@/src/components/ui/scrollarea'
 import {Button} from '@/src/components/ui/button'
 import {Typography} from '@/src/components/ui/typography'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 import * as gamesGalleryImages from '@/public/games/galleries'
 
 interface ImageGallery {
   key: keyof Messages['Pages']['Services']['ServicesGallery']['galleries']
-  images: StaticImageData[]
+  images: React.ComponentProps<typeof CustomImage>['src'][]
 }
 
 const galleries: ImageGallery[] = (
@@ -74,7 +74,7 @@ const galleries: ImageGallery[] = (
 })
 
 const ServicesGallery: React.FC = () => {
-  const [index, setIndex] = React.useState(0)
+  const [index, setIndex] = React.useState<number>(0)
   const [sheetOpen, setSheetOpen] = React.useState<boolean>(false)
   const [selectedGallery, setSelectedGallery] = React.useState<ImageGallery>(
     galleries[0]
@@ -119,13 +119,11 @@ const ServicesGallery: React.FC = () => {
   const slides = selectedGallery.images.map(function (image, i) {
     return (
       <EmblaSlide key={image.src}>
-        <Image
+        <CustomImage
           className='rounded'
           src={image}
           alt={`Gallery slide image ${i + 1}`}
-          placeholder='blur'
-          sizes='(min-width: 1000px) 1000px,
-            100vw'
+          sizes='(min-width: 1000px) 1000px, 100vw'
         />
       </EmblaSlide>
     )
@@ -234,7 +232,7 @@ const ServicesGallery: React.FC = () => {
 }
 
 const ServicesGalleryTrigger: React.FC<{
-  src: StaticImageData
+  src: React.ComponentProps<typeof CustomImage>['src']
   alt: string
   onClick: () => void
 }> = ({src, alt, onClick}) => {
@@ -243,14 +241,15 @@ const ServicesGalleryTrigger: React.FC<{
       className='relative overflow-hidden rounded shadow before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-0 group'
       onClick={onClick}
     >
-      <Image
+      <CustomImage
         className='h-full w-full object-cover'
         src={src}
         alt={alt}
-        placeholder='blur'
-        sizes='(min-width: 1000px) 312px,
+        sizes='
+          (min-width: 1000px) 312px,
           (min-width: 640px) calc((100vw - 64px) / 3),
-          100vw'
+          100vw
+        '
       />
       <div className='hidden absolute inset-0 items-center justify-center group-hover:flex'>
         <ExpandIcon

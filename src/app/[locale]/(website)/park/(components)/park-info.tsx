@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import {useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
 import {parkImageList} from '@/public/park/information'
 
@@ -14,12 +14,11 @@ const ParkInfo: React.FC = () => {
     >
       <article className='grid gap-10 sm:grid-cols-2'>
         <div className='space-y-6'>
-          <Image
+          <CustomImage
             className='rounded w-full'
             src={parkImageList[0]}
             alt='Yuppii Luna Park aero photo 1'
             sizes='(min-width: 1000px) 480px, calc(100vw - 24px)'
-            placeholder='blur'
           />
           <div className='space-y-4 text-center sm:text-left'>
             <Typography variant='lead'>
@@ -33,12 +32,11 @@ const ParkInfo: React.FC = () => {
           </div>
         </div>
         <div className='space-y-6'>
-          <Image
+          <CustomImage
             className='rounded w-full'
             src={parkImageList[1]}
             alt='Yuppii Luna Park aero photo 2'
             sizes='(min-width: 1000px) 480px, calc(100vw - 24px)'
-            placeholder='blur'
           />
           <div className='space-y-4 text-center sm:text-left'>
             <Typography variant='lead'>

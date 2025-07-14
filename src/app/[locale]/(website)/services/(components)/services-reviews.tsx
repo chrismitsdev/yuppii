@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-import Image, {type StaticImageData} from 'next/image'
 import {useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
 import {
@@ -12,6 +11,7 @@ import {
   EmblaButtonPrev,
   EmblaButtonNext
 } from '@/src/components/ui/embla-carousel'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
 import * as avatars from '@/public/games/avatars'
 
@@ -76,7 +76,7 @@ const ServicesReviews = () => {
 }
 
 const ServicesReviewSlide: React.FC<{
-  authorAvatar: StaticImageData
+  authorAvatar: React.ComponentProps<typeof CustomImage>['src']
   authorName: string
   authorReview: string
 }> = ({authorAvatar, authorName, authorReview}) => {
@@ -84,7 +84,7 @@ const ServicesReviewSlide: React.FC<{
     <EmblaSlide>
       <div className='p-8 space-y-3 h-full bg-secondary/40 border border-secondary rounded-lg'>
         <div className='flex items-center gap-3'>
-          <Image
+          <CustomImage
             width={40}
             src={authorAvatar}
             alt={`Reviewer image avatar ${
@@ -92,7 +92,6 @@ const ServicesReviewSlide: React.FC<{
                 .split('/')
                 [authorAvatar.src.split('/').length - 1].split('.')[0]
             }`}
-            placeholder='blur'
           />
           <Typography
             variant='lead'

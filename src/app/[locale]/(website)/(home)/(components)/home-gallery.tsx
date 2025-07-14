@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-// import Image, {type StaticImageData} from 'next/image'
 import {useTranslations} from 'next-intl'
 import {XIcon, ExpandIcon} from 'lucide-react'
 import {Section} from '@/src/components/section'
@@ -49,7 +48,6 @@ const HomeGallery: React.FC = () => {
           className='rounded'
           src={image}
           alt={`Gallery slide image ${i + 1}`}
-          // placeholder='blur'
           sizes='(min-width: 1000px) 1000px, 100vw'
         />
       </EmblaSlide>
@@ -118,10 +116,11 @@ const HomeGalleryTrigger: React.FC<{
         className='h-full w-full object-cover'
         src={src}
         alt={alt}
-        // placeholder='blur'
-        sizes='(min-width: 1000px) 312px,
+        sizes='
+          (min-width: 1000px) 312px,
           (min-width: 640px) calc((100vw - 64px) / 3),
-          100vw'
+          100vw
+        '
       />
       <div className='hidden absolute inset-0 items-center justify-center group-hover:flex'>
         <ExpandIcon

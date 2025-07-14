@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import {useTranslations, useLocale} from 'next-intl'
 import {Section} from '@/src/components/section'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import * as maps from '@/public/park/map'
 
 const imageMap = {
@@ -19,13 +19,11 @@ const ParkMap: React.FC = () => {
     >
       <article>
         <figure>
-          <Image
+          <CustomImage
             className='rounded shadow-md'
             src={imageMap[locale]}
             alt='Yuppii Luna Park map'
-            placeholder='blur'
-            sizes='(min-width: 1000px) 1000px,
-              calc(100vw - 24px)'
+            sizes='(min-width: 1000px) 1000px, calc(100vw - 24px)'
           />
         </figure>
       </article>

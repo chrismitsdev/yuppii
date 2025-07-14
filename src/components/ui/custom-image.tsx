@@ -33,6 +33,10 @@ export function spinnerLoaderCircle(w: number, h: number) {
   const stroke = 2
   const center = size / 2
   const radius = center - stroke
+  const startX = (center + radius * Math.cos(Math.PI / 4)).toFixed(2)
+  const startY = (center - radius * Math.sin(Math.PI / 4)).toFixed(2)
+  const endX = (center - 0.01).toFixed(2)
+  const endY = (center - radius).toFixed(2)
 
   return `
     <svg
@@ -46,8 +50,9 @@ export function spinnerLoaderCircle(w: number, h: number) {
       stroke-linecap='round'
       stroke-linejoin='round'
     >
-      <path d='M${center + radius * Math.cos(Math.PI / 4)} ${center - radius * Math.sin(Math.PI / 4)}
-               A ${radius} ${radius} 0 1 1 ${center - 0.01} ${center - radius}' />
+      <path
+        d='M${startX} ${startY} A ${radius} ${radius} 0 1 1 ${endX} ${endY}'
+      />
       <animateTransform
         attributeName='transform'
         type='rotate'
@@ -57,7 +62,7 @@ export function spinnerLoaderCircle(w: number, h: number) {
         repeatCount='indefinite'
       />
     </svg>
-  `
+  `.trim()
 }
 
 function toBase64(str: string) {
