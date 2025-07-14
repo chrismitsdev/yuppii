@@ -1,5 +1,5 @@
 export {default as kiddyRides1} from './ALE_0691.webp'
-export {default as kiddyRides2} from './ALE_0889.webp'
+export {default as kiddyRides2} from './ALE04477.webp'
 export {default as kiddyRides3} from './ALE_5186.webp'
 export {default as kiddyRides4} from './ALE_5863.webp'
 export {default as kiddyRides5} from './ALE_5342.webp'

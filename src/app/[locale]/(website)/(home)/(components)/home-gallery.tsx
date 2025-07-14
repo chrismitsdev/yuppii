@@ -24,41 +24,36 @@ import {
 } from '@/src/components/ui/embla-carousel'
 import {Button} from '@/src/components/ui/button'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
-import * as galleryImages from '@/public/home/gallery'
+import {galleryImageList} from '@/public/home/gallery'
 
 const HomeGallery: React.FC = () => {
   const [index, setIndex] = React.useState(0)
   const t = useTranslations('Pages.Home.HomeGallery')
 
-  const renderedThumbTriggers = Array.from(Object.values(galleryImages)).map(
-    function (image, i) {
-      return (
-        <HomeGalleryTrigger
-          key={image.src}
-          src={image}
-          alt={`Gallery thumbnail image ${i + 1}`}
-          onClick={() => setIndex(i)}
-        />
-      )
-    }
-  )
+  const triggers = galleryImageList.map(function (image, i) {
+    return (
+      <HomeGalleryTrigger
+        key={image.src}
+        src={image}
+        alt={`Gallery thumbnail image ${i + 1}`}
+        onClick={() => setIndex(i)}
+      />
+    )
+  })
 
-  const renderedEmblaSlides = Array.from(Object.values(galleryImages)).map(
-    function (image, i) {
-      return (
-        <EmblaSlide key={image.src}>
-          <Image
-            className='rounded'
-            src={image}
-            alt={`Gallery slide image ${i + 1}`}
-            placeholder='blur'
-            sizes='(min-width: 1000px) 1000px,
-              100vw'
-          />
-        </EmblaSlide>
-      )
-    }
-  )
+  const slides = galleryImageList.map(function (image, i) {
+    return (
+      <EmblaSlide key={image.src}>
+        <Image
+          className='rounded'
+          src={image}
+          alt={`Gallery slide image ${i + 1}`}
+          placeholder='blur'
+          sizes='(min-width: 1000px) 1000px, 100vw'
+        />
+      </EmblaSlide>
+    )
+  })
 
   return (
     <Section
@@ -67,9 +62,7 @@ const HomeGallery: React.FC = () => {
     >
       <article>
         <Dialog>
-          <div className='grid grid-cols-3 gap-2 sm:gap-8'>
-            {renderedThumbTriggers}
-          </div>
+          <div className='grid grid-cols-3 gap-2 sm:gap-8'>{triggers}</div>
           <DialogPortal>
             <DialogOverlay>
               <DialogContent
@@ -85,7 +78,7 @@ const HomeGallery: React.FC = () => {
                   options={{startIndex: index, loop: true}}
                 >
                   <EmblaViewport className='rounded'>
-                    <EmblaContainer>{renderedEmblaSlides}</EmblaContainer>
+                    <EmblaContainer>{slides}</EmblaContainer>
                   </EmblaViewport>
                   <EmblaButtonPrev className='sm:-left-12' />
                   <EmblaButtonNext className='sm:-right-12' />

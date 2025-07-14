@@ -1,6 +1,15 @@
-export {default as image1} from './ALE_0401.webp'
-export {default as image2} from './ALE_5324.webp'
-export {default as image3} from './ALE_0663.webp'
-export {default as image4} from './ALE_0739.webp'
-export {default as image5} from './ALE_0813.webp'
-export {default as image6} from './ALE_0391.webp'
+import carouselImage1 from './1.webp'
+import carouselImage2 from './2.webp'
+import carouselImage3 from './3.webp'
+import carouselImage4 from './4.webp'
+import carouselImage5 from './5.webp'
+import carouselImage6 from './6.webp'
+
+export const carouselImageList = [
+  carouselImage1,
+  carouselImage2,
+  carouselImage3,
+  carouselImage4,
+  carouselImage5,
+  carouselImage6
+]

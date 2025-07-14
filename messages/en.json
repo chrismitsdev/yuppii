@@ -121,9 +121,6 @@
           "formula-cars": {
             "label": "Formula cars"
           },
-          "train": {
-            "label": "Train"
-          },
           "carnival-games": {
             "label": "Carnival games"
           },
@@ -153,6 +150,9 @@
           },
           "lucky-games": {
             "label": "Lucky games"
+          },
+          "survivor": {
+            "label": "Survivor"
           }
         }
       },

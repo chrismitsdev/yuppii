@@ -121,9 +121,6 @@
           "formula-cars": {
             "label": "Φόρμουλες"
           },
-          "train": {
-            "label": "Τρενάκι"
-          },
           "carnival-games": {
             "label": "Παιχνίδια carnival"
           },
@@ -153,6 +150,9 @@
           },
           "lucky-games": {
             "label": "Δωρομηχανές"
+          },
+          "survivor": {
+            "label": "Survivor"
           }
         }
       },

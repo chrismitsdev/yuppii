@@ -54,7 +54,7 @@ const galleries: ImageGallery[] = (
     {key: 'bumper-cars', images: gamesGalleryImages.bumperCars},
     {key: 'junior', images: gamesGalleryImages.junior},
     {key: 'formula-cars', images: gamesGalleryImages.formulaCars},
-    {key: 'train', images: gamesGalleryImages.train},
+    {key: 'survivor', images: gamesGalleryImages.survivor},
     {key: 'carnival-games', images: gamesGalleryImages.carnivalGames},
     {key: 'table-soccer', images: gamesGalleryImages.tableSoccer},
     {key: 'basket', images: gamesGalleryImages.basket},
@@ -105,7 +105,7 @@ const ServicesGallery: React.FC = () => {
     )
   })
 
-  const renderedThumbTriggers = selectedGallery.images.map(function (image, i) {
+  const triggers = selectedGallery.images.map(function (image, i) {
     return (
       <ServicesGalleryTrigger
         key={image.src}
@@ -116,7 +116,7 @@ const ServicesGallery: React.FC = () => {
     )
   })
 
-  const renderedEmblaSlides = selectedGallery.images.map(function (image, i) {
+  const slides = selectedGallery.images.map(function (image, i) {
     return (
       <EmblaSlide key={image.src}>
         <Image
@@ -193,9 +193,7 @@ const ServicesGallery: React.FC = () => {
             </SheetPortal>
           </Sheet>
 
-          <div className='grid grid-cols-3 gap-2 sm:gap-8'>
-            {renderedThumbTriggers}
-          </div>
+          <div className='grid grid-cols-3 gap-2 sm:gap-8'>{triggers}</div>
           <DialogPortal>
             <DialogOverlay>
               <DialogContent
@@ -210,7 +208,7 @@ const ServicesGallery: React.FC = () => {
                   options={{startIndex: index, loop: true}}
                 >
                   <EmblaViewport className='rounded'>
-                    <EmblaContainer>{renderedEmblaSlides}</EmblaContainer>
+                    <EmblaContainer>{slides}</EmblaContainer>
                   </EmblaViewport>
                   <EmblaButtonPrev className='sm:-left-12' />
                   <EmblaButtonNext className='sm:-right-12' />

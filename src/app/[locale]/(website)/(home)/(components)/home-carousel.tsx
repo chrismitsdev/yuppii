@@ -13,26 +13,23 @@ import {
   EmblaButtonPrev,
   EmblaButtonNext
 } from '@/src/components/ui/embla-carousel'
-import * as carouselImages from '@/public/home/carousel'
+import {carouselImageList} from '@/public/home/carousel'
 
 const HomeCarousel: React.FC = () => {
-  const renderedEmblaSlides = Array.from(Object.values(carouselImages)).map(
-    function (image, i) {
-      return (
-        <EmblaSlide key={image.src}>
-          <Image
-            className='rounded'
-            src={image}
-            alt={`Home page carousel image slide ${i + 1}`}
-            priority
-            placeholder='blur'
-            sizes='(min-width: 1000px) 1000px,
-              100vw'
-          />
-        </EmblaSlide>
-      )
-    }
-  )
+  const slides = carouselImageList.map(function (image, i) {
+    return (
+      <EmblaSlide key={image.src}>
+        <Image
+          className='rounded'
+          src={image}
+          alt={`Home page carousel image slide ${i + 1}`}
+          priority={i === 0}
+          placeholder='blur'
+          sizes='(min-width: 1000px) 1000px, 100vw'
+        />
+      </EmblaSlide>
+    )
+  })
 
   return (
     <Container
@@ -45,7 +42,7 @@ const HomeCarousel: React.FC = () => {
           plugins={[Autoplay()]}
         >
           <EmblaViewport className='rounded'>
-            <EmblaContainer>{renderedEmblaSlides}</EmblaContainer>
+            <EmblaContainer>{slides}</EmblaContainer>
           </EmblaViewport>
           <EmblaButtonPrev className='-left-0 sm:-left-12' />
           <EmblaButtonNext className='-right-0 sm:-right-12' />
