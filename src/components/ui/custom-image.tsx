@@ -14,7 +14,7 @@ function CustomImage({
   return (
     <Image
       placeholder={`data:image/svg+xml;base64,${toBase64(
-        spinner(src.width, src.height)
+        spinnerLoaderCircle(src.width, src.height)
       )}`}
       src={src}
       alt={alt}
@@ -28,38 +28,34 @@ CustomImage.displayName = 'CustomImage'
 
 export {CustomImage}
 
-function spinner(w: number, h: number) {
-  const radius = Math.min(w, h) / 4
-  const cx = w / 2
-  const cy = h / 2
+export function spinnerLoaderCircle(w: number, h: number) {
+  const size = Math.min(w, h)
+  const stroke = 2
+  const center = size / 2
+  const radius = center - stroke
 
   return `
     <svg
+      xmlns='http://www.w3.org/2000/svg'
       width='${w}'
       height='${h}'
-      viewBox='0 0 ${w} ${h}'
-      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 ${size} ${size}'
       fill='none'
+      stroke='%23b1a082'
+      stroke-width='${stroke}'
+      stroke-linecap='round'
+      stroke-linejoin='round'
     >
-      <circle
-        cx='${cx}'
-        cy='${cy}'
-        r='${radius}'
-        stroke='#b1a082'
-        stroke-width='4'
-        stroke-dasharray='60'
-        stroke-linecap='round'
-        stroke-dashoffset='0'
-      >
-        <animateTransform
-          attributeName='transform'
-          type='rotate'
-          from='0 ${cx} ${cy}'
-          to='360 ${cx} ${cy}'
-          dur='1s'
-          repeatCount='indefinite'
-        />
-      </circle>
+      <path d='M${center + radius * Math.cos(Math.PI / 4)} ${center - radius * Math.sin(Math.PI / 4)}
+               A ${radius} ${radius} 0 1 1 ${center - 0.01} ${center - radius}' />
+      <animateTransform
+        attributeName='transform'
+        type='rotate'
+        from='0 ${center} ${center}'
+        to='360 ${center} ${center}'
+        dur='1s'
+        repeatCount='indefinite'
+      />
     </svg>
   `
 }
