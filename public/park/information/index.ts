@@ -1,2 +1,4 @@
-export {default as aero1} from './DJI_0862.webp' 
-export {default as aero2} from './DJI_0879.webp' 
+import parkImage1 from './1.webp'
+import parkImage2 from './2.webp'
+
+export const parkImageList = [parkImage1, parkImage2]

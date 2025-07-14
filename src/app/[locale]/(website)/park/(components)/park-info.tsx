@@ -2,7 +2,7 @@ import Image from 'next/image'
 import {useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
 import {Typography} from '@/src/components/ui/typography'
-import * as aeroImages from '@/public/park/information'
+import {parkImageList} from '@/public/park/information'
 
 const ParkInfo: React.FC = () => {
   const t = useTranslations('Pages.Park.ParkInfo')
@@ -16,10 +16,9 @@ const ParkInfo: React.FC = () => {
         <div className='space-y-6'>
           <Image
             className='rounded w-full'
-            src={aeroImages.aero1}
+            src={parkImageList[0]}
             alt='Yuppii Luna Park aero photo 1'
-            sizes='(min-width: 1000px) 480px,
-              calc(100vw - 24px)'
+            sizes='(min-width: 1000px) 480px, calc(100vw - 24px)'
             placeholder='blur'
           />
           <div className='space-y-4 text-center sm:text-left'>
@@ -36,10 +35,9 @@ const ParkInfo: React.FC = () => {
         <div className='space-y-6'>
           <Image
             className='rounded w-full'
-            src={aeroImages.aero2}
+            src={parkImageList[1]}
             alt='Yuppii Luna Park aero photo 2'
-            sizes='(min-width: 1000px) 480px,
-              calc(100vw - 24px)'
+            sizes='(min-width: 1000px) 480px, calc(100vw - 24px)'
             placeholder='blur'
           />
           <div className='space-y-4 text-center sm:text-left'>
