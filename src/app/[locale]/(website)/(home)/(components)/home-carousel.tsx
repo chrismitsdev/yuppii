@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Autoplay from 'embla-carousel-autoplay'
 import {Section} from '@/src/components/section'
 import {Container} from '@/src/components/container'
@@ -13,18 +13,19 @@ import {
   EmblaButtonPrev,
   EmblaButtonNext
 } from '@/src/components/ui/embla-carousel'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {carouselImageList} from '@/public/home/carousel'
 
 const HomeCarousel: React.FC = () => {
   const slides = carouselImageList.map(function (image, i) {
     return (
       <EmblaSlide key={image.src}>
-        <Image
+        <CustomImage
           className='rounded'
           src={image}
           alt={`Home page carousel image slide ${i + 1}`}
           priority={i === 0}
-          placeholder='blur'
+          // placeholder='blur'
           sizes='(min-width: 1000px) 1000px, 100vw'
         />
       </EmblaSlide>
