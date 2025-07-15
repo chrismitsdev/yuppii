@@ -14,7 +14,7 @@ function CustomImage({
   return (
     <Image
       placeholder={`data:image/svg+xml;base64,${toBase64(
-        spinnerLoaderCircle(src.width, src.height)
+        spinner(src.width, src.height)
       )}`}
       src={src}
       alt={alt}
@@ -28,41 +28,45 @@ CustomImage.displayName = 'CustomImage'
 
 export {CustomImage}
 
-export function spinnerLoaderCircle(w: number, h: number) {
-  const size = Math.min(w, h)
-  const stroke = 2
-  const center = size / 2
-  const radius = center - stroke
-  const startX = (center + radius * Math.cos(Math.PI / 4)).toFixed(2)
-  const startY = (center - radius * Math.sin(Math.PI / 4)).toFixed(2)
-  const endX = (center - 0.01).toFixed(2)
-  const endY = (center - radius).toFixed(2)
+function spinner(w: number, h: number) {
+  const cx = w / 2
+  const cy = h / 2
+  const containerSize = Math.min(w, h)
+  const scale = (containerSize * 0.24) / 24
 
   return `
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='${w}'
-      height='${h}'
-      viewBox='0 0 ${size} ${size}'
-      fill='none'
-      stroke='%23b1a082'
-      stroke-width='${stroke}'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      xmlns="http://www.w3.org/2000/svg"
+      width="${w}"
+      height="${h}"
+      fill="none"
     >
-      <path
-        d='M${startX} ${startY} A ${radius} ${radius} 0 1 1 ${endX} ${endY}'
-      />
-      <animateTransform
-        attributeName='transform'
-        type='rotate'
-        from='0 ${center} ${center}'
-        to='360 ${center} ${center}'
-        dur='1s'
-        repeatCount='indefinite'
-      />
+      <!-- full-canvas background -->
+      <rect width="${w}" height="${h}" fill="#cee9e7" />
+
+      <!-- scaled and centered spinner path -->
+      <g
+        transform="translate(${cx}, ${cy}) scale(${scale}) translate(-12, -12)"
+      >
+        <path
+          d="M21 12a9 9 0 1 1-6.219-8.56"
+          stroke="#ee778d"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            from="0 12 12"
+            to="360 12 12"
+            dur="1s"
+            repeatCount="indefinite"
+          />
+        </path>
+      </g>
     </svg>
-  `.trim()
+  `
 }
 
 function toBase64(str: string) {
