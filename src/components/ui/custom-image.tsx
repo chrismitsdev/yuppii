@@ -32,7 +32,7 @@ function spinner(w: number, h: number) {
   const cx = w / 2
   const cy = h / 2
   const containerSize = Math.min(w, h)
-  const scale = (containerSize * 0.24) / 24
+  const scale = (containerSize * 0.5) / 24
 
   return `
     <svg
