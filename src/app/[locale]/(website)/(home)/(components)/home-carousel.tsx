@@ -21,7 +21,6 @@ const HomeCarousel: React.FC = () => {
     return (
       <EmblaSlide key={image.src}>
         <CustomImage
-          className='rounded'
           src={image}
           alt={`Home page carousel image slide ${i + 1}`}
           priority={i === 0}
@@ -41,7 +40,7 @@ const HomeCarousel: React.FC = () => {
           className='overflow-visible'
           plugins={[Autoplay()]}
         >
-          <EmblaViewport className='rounded'>
+          <EmblaViewport className='sm:rounded'>
             <EmblaContainer>{slides}</EmblaContainer>
           </EmblaViewport>
           <EmblaButtonPrev className='-left-0 sm:-left-12' />
