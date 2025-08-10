@@ -134,9 +134,12 @@ const WebsiteNavigation: React.FC = () => {
           </DrawerTrigger>
           <DrawerPortal>
             <DrawerOverlay />
-            <DrawerContent className='h-2/3 rounded-t-lg'>
+            <DrawerContent className='h-[calc(100%-88px)] rounded-t-lg'>
               <div className='p-8 h-full flex flex-col'>
-                <DrawerHandle className='mb-10 !w-1/3 !bg-accent/50' />
+                <DrawerHandle
+                  aria-hidden
+                  className='mb-10 !w-1/3 !bg-accent/50 shrink-0'
+                />
 
                 <VisuallyHidden>
                   <DrawerTitle>Menu</DrawerTitle>
