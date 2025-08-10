@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import {Link} from '@/src/i18n/navigation'
 import {Container} from '@/src/components/container'
 import {MenuNavigation} from '@/src/components/menu-navigation'
 import {LocaleSwitcher} from '@/src/components/locale-switcher'
@@ -10,14 +9,12 @@ const MenuHeader: React.FC = () => {
     <>
       <header className='py-4'>
         <Container className='flex justify-between'>
-          <Link href='/menu'>
-            <Image
-              src={logo}
-              height={40}
-              alt='Yuppii Luna Park'
-              priority
-            />
-          </Link>
+          <Image
+            src={logo}
+            height={40}
+            alt='Yuppii Luna Park'
+            priority
+          />
           <LocaleSwitcher />
         </Container>
       </header>

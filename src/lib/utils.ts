@@ -54,6 +54,8 @@ export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
   Burger: HamburgerIcon
 }
 
+export const sourceQueryString = '?src=website'
+
 export const bannedKeywordPatterns = [
   // Traffic‑boosting offers
   /\btraffic\b/i,

@@ -2,7 +2,9 @@
 
 import * as React from 'react'
 import {Globe} from 'lucide-react'
+import {useSearchParams} from 'next/navigation'
 import {useLocale} from 'next-intl'
+import {sourceQueryString} from '@/src/lib/utils'
 import {Link, usePathname} from '@/src/i18n/navigation'
 import {Button} from '@/src/components/ui/button'
 import {GreeceFlag} from '@/src/components/flags/greece-flag'
@@ -26,6 +28,8 @@ const flagLookup = {
 const LocaleSwitcher: React.FC = () => {
   const locale = useLocale()
   const pathname = usePathname()
+  const isInternal = useSearchParams().get('src') === 'website'
+  const href = `${pathname}${isInternal ? sourceQueryString : ''}`
 
   return (
     <Button
@@ -35,7 +39,7 @@ const LocaleSwitcher: React.FC = () => {
       asChild
     >
       <Link
-        href={pathname}
+        href={href}
         locale={locale === 'gr' ? 'en' : 'gr'}
       >
         {flagLookup[locale]}

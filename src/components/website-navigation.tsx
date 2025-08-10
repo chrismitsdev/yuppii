@@ -11,9 +11,11 @@ import {
   MenuIcon,
   FacebookIcon,
   InstagramIcon,
-  MapIcon
+  MapIcon,
+  ClipboardListIcon
 } from 'lucide-react'
 import {Link, usePathname} from '@/src/i18n/navigation'
+import {sourceQueryString} from 'src/lib/utils'
 import {LocaleSwitcher} from '@/src/components/locale-switcher'
 import {
   TooltipProvider,
@@ -60,6 +62,11 @@ const links: {
     key: 'Contact',
     href: '/contact',
     icon: (p?: LucideProps) => <MailIcon {...p} />
+  },
+  {
+    key: 'Menu',
+    href: `/menu${sourceQueryString}`,
+    icon: (p?: LucideProps) => <ClipboardListIcon {...p} />
   }
 ]
 

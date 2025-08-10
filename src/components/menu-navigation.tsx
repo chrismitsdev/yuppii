@@ -1,9 +1,11 @@
 'use client'
 
 import * as React from 'react'
+import {useSearchParams} from 'next/navigation'
 import {type Messages, useTranslations, useLocale, useMessages} from 'next-intl'
+import {HomeIcon} from 'lucide-react'
 import {Link, usePathname} from '@/src/i18n/navigation'
-import {cn} from '@/src/lib/utils'
+import {cn, sourceQueryString} from '@/src/lib/utils'
 import {ScrollArea} from '@/src/components/ui/scrollarea'
 
 const MenuNavigation: React.FC = () => {
@@ -11,6 +13,8 @@ const MenuNavigation: React.FC = () => {
   const locale = useLocale()
   const messages = useMessages()
   const pathname = usePathname()
+  const isInternal = useSearchParams().get('src') === 'website'
+  const queryString = isInternal ? sourceQueryString : ''
   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
   return (
@@ -21,8 +25,13 @@ const MenuNavigation: React.FC = () => {
         isFlex
       >
         <div className='px-1 flex items-center shrink-0'>
+          {isInternal && (
+            <MenuNavigationLink href='/'>
+              <HomeIcon />
+            </MenuNavigationLink>
+          )}
           <MenuNavigationLink
-            href='/menu'
+            href={`/menu${queryString}`}
             isActive={pathname === '/menu'}
           >
             {locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories'}
@@ -31,7 +40,7 @@ const MenuNavigation: React.FC = () => {
             return (
               <MenuNavigationLink
                 key={categoryKey}
-                href={`/menu/${categoryKey.toLowerCase()}`}
+                href={`/menu/${categoryKey.toLowerCase()}${queryString}`}
                 isActive={pathname.includes(categoryKey.toLowerCase())}
               >
                 {t(`${categoryKey}.name`)}
@@ -45,7 +54,7 @@ const MenuNavigation: React.FC = () => {
 }
 
 const MenuNavigationLink: React.FC<
-  React.ComponentPropsWithRef<typeof Link> & {isActive: boolean}
+  React.ComponentPropsWithRef<typeof Link> & {isActive?: boolean}
 > = ({className, isActive, ...props}) => {
   return (
     <Link
