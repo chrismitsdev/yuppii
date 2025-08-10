@@ -8,7 +8,7 @@ import logo from '@/public/logo.svg'
 const MenuHeader: React.FC = () => {
   return (
     <>
-      <header className='py-4'>
+      <header className='py-6'>
         <Container className='flex justify-between'>
           <Image
             src={logo}

@@ -113,12 +113,6 @@ const WebsiteNavigation: React.FC = () => {
       </nav>
 
       <div className='flex items-center sm:hidden'>
-        <SuspenseLocaleSwitcher />
-        <Separator
-          className='mr-0 ml-4'
-          orientation='vertical'
-        />
-
         <Drawer
           open={drawerOpen}
           onOpenChange={setDrawerOpen}
@@ -126,7 +120,7 @@ const WebsiteNavigation: React.FC = () => {
         >
           <DrawerTrigger asChild>
             <Button
-              variant='ghost'
+              variant='accent'
               size='icon'
             >
               <MenuIcon />
@@ -166,7 +160,7 @@ const WebsiteNavigation: React.FC = () => {
                 </div>
                 <div className='space-x-4 flex justify-center'>
                   <Button
-                    variant='ghost-accent'
+                    variant='accent'
                     size='icon'
                     asChild
                   >
@@ -178,7 +172,7 @@ const WebsiteNavigation: React.FC = () => {
                     </a>
                   </Button>
                   <Button
-                    variant='ghost-accent'
+                    variant='accent'
                     size='icon'
                     asChild
                   >
@@ -190,7 +184,7 @@ const WebsiteNavigation: React.FC = () => {
                     </a>
                   </Button>
                   <Button
-                    variant='ghost-accent'
+                    variant='accent'
                     size='icon'
                     asChild
                   >
@@ -206,6 +200,11 @@ const WebsiteNavigation: React.FC = () => {
             </DrawerContent>
           </DrawerPortal>
         </Drawer>
+        <Separator
+          className='mx-3'
+          orientation='vertical'
+        />
+        <SuspenseLocaleSwitcher />
       </div>
     </React.Fragment>
   )
