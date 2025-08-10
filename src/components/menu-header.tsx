@@ -1,7 +1,8 @@
+import {Suspense} from 'react'
 import Image from 'next/image'
 import {Container} from '@/src/components/container'
 import {MenuNavigation} from '@/src/components/menu-navigation'
-import {LocaleSwitcher} from '@/src/components/locale-switcher'
+import {SuspenseLocaleSwitcher} from '@/src/components/suspense-locale-switcher'
 import logo from '@/public/logo.svg'
 
 const MenuHeader: React.FC = () => {
@@ -15,11 +16,13 @@ const MenuHeader: React.FC = () => {
             alt='Yuppii Luna Park'
             priority
           />
-          <LocaleSwitcher />
+          <SuspenseLocaleSwitcher />
         </Container>
       </header>
 
-      <MenuNavigation />
+      <Suspense>
+        <MenuNavigation />
+      </Suspense>
     </>
   )
 }

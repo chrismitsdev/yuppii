@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 import {Link, usePathname} from '@/src/i18n/navigation'
 import {sourceQueryString} from 'src/lib/utils'
-import {LocaleSwitcher} from '@/src/components/locale-switcher'
+import {SuspenseLocaleSwitcher} from '@/src/components/suspense-locale-switcher'
 import {
   TooltipProvider,
   Tooltip,
@@ -109,11 +109,11 @@ const WebsiteNavigation: React.FC = () => {
           })}
         </TooltipProvider>
         <Separator orientation='vertical' />
-        <LocaleSwitcher />
+        <SuspenseLocaleSwitcher />
       </nav>
 
       <div className='flex items-center sm:hidden'>
-        <LocaleSwitcher />
+        <SuspenseLocaleSwitcher />
         <Separator
           className='mr-0 ml-4'
           orientation='vertical'
