@@ -1,4 +1,4 @@
-# yuppii
+# yuppii_next
 
 Repo of the Yuppii Luna Park website.
 You can take a look at the website [here](https://yuppii.gr).

@@ -1,6 +1,15 @@
-export {default as cranes1} from './ALE_0602.webp'
-export {default as cranes2} from './ALE_0619.webp'
-export {default as cranes3} from './ALE_0776.webp'
-export {default as cranes4} from './ALE_0809.webp'
-export {default as cranes5} from './ALE03682.webp'
-export {default as cranes6} from './ALE_5225.webp'
+import cranes1 from './1.webp'
+import cranes2 from './2.webp'
+import cranes3 from './3.webp'
+import cranes4 from './4.webp'
+import cranes5 from './5.webp'
+import cranes6 from './6.webp'
+
+export const cranesGallery = [
+  cranes1,
+  cranes2,
+  cranes3,
+  cranes4,
+  cranes5,
+  cranes6
+]

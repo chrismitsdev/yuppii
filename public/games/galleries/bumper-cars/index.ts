@@ -1,6 +1,15 @@
-export {default as bumperCars1} from './ALE_0654.webp'
-export {default as bumperCars2} from './ALE_0659.webp'
-export {default as bumperCars3} from './ALE_0663.webp'
-export {default as bumperCars4} from './ALE_5184.webp'
-export {default as bumperCars5} from './ALE_5368.webp'
-export {default as bumperCars6} from './ALE_5483.webp'
+import bumperCars1 from './1.webp'
+import bumperCars2 from './2.webp'
+import bumperCars3 from './3.webp'
+import bumperCars4 from './4.webp'
+import bumperCars5 from './5.webp'
+import bumperCars6 from './6.webp'
+
+export const bumperCarsGallery = [
+  bumperCars1,
+  bumperCars2,
+  bumperCars3,
+  bumperCars4,
+  bumperCars5,
+  bumperCars6
+]

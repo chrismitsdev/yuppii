@@ -1,6 +1,15 @@
-export {default as punchesKicks1} from './ALE_0873.webp'
-export {default as punchesKicks2} from './ALE_5169.webp'
-export {default as punchesKicks3} from './ALE_5178.webp'
-export {default as punchesKicks4} from './ALE_5179.webp'
-export {default as punchesKicks5} from './ALE_5258.webp'
-export {default as punchesKicks6} from './ALE_5293.webp'
+import powerGames1 from './1.webp'
+import powerGames2 from './2.webp'
+import powerGames3 from './3.webp'
+import powerGames4 from './4.webp'
+import powerGames5 from './5.webp'
+import powerGames6 from './6.webp'
+
+export const powerGamesGallery = [
+  powerGames1,
+  powerGames2,
+  powerGames3,
+  powerGames4,
+  powerGames5,
+  powerGames6
+]

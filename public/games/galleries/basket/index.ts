@@ -1,6 +1,15 @@
-export {default as basket1} from './ALE_0839.webp'
-export {default as basket2} from './ALE_5252.webp'
-export {default as basket3} from './ALE_5260.webp'
-export {default as basket4} from './ALE_5261.webp'
-export {default as basket5} from './ALE_5267.webp'
-export {default as basket6} from './ALE_5413.webp'
+import basket1 from './1.webp'
+import basket2 from './2.webp'
+import basket3 from './3.webp'
+import basket4 from './4.webp'
+import basket5 from './5.webp'
+import basket6 from './6.webp'
+
+export const basketGallery = [
+  basket1,
+  basket2,
+  basket3,
+  basket4,
+  basket5,
+  basket6
+]

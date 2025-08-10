@@ -1,6 +1,15 @@
-export {default as tableHockey1} from './ALE_0848.webp'
-export {default as tableHockey2} from './ALE_0851.webp'
-export {default as tableHockey3} from './ALE_0852.webp'
-export {default as tableHockey4} from './ALE_0858.webp'
-export {default as tableHockey5} from './ALE_5269.webp'
-export {default as tableHockey6} from './ALE_5280.webp'
+import airHockey1 from './1.webp'
+import airHockey2 from './2.webp'
+import airHockey3 from './3.webp'
+import airHockey4 from './4.webp'
+import airHockey5 from './5.webp'
+import airHockey6 from './6.webp'
+
+export const airHockeyGallery = [
+  airHockey1,
+  airHockey2,
+  airHockey3,
+  airHockey4,
+  airHockey5,
+  airHockey6
+]

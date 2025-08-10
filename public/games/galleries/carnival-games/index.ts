@@ -1,6 +1,15 @@
-export {default as carnival1} from './ALE_0559.webp'
-export {default as carnival2} from './ALE_0566.webp'
-export {default as carnival3} from './ALE_0567.webp'
-export {default as carnival4} from './ALE_0574.webp'
-export {default as carnival5} from './ALE_0623.webp'
-export {default as carnival6} from './ALE_0624.webp'
+import carnivalGames1 from './1.webp'
+import carnivalGames2 from './2.webp'
+import carnivalGames3 from './3.webp'
+import carnivalGames4 from './4.webp'
+import carnivalGames5 from './5.webp'
+import carnivalGames6 from './6.webp'
+
+export const carnivalGamesGallery = [
+  carnivalGames1,
+  carnivalGames2,
+  carnivalGames3,
+  carnivalGames4,
+  carnivalGames5,
+  carnivalGames6
+]

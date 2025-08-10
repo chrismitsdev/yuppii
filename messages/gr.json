@@ -106,6 +106,12 @@
           "trampoline": {
             "label": "Τραμπολίνο"
           },
+          "bungee-trampoline": {
+            "label": "Τραμπολίνο bungee"
+          },
+          "ufo": {
+            "label": "UFO"
+          },
           "cinema": {
             "label": "Cinema 7D"
           },

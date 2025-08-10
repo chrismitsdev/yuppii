@@ -1,6 +1,15 @@
-export {default as trampoline1} from './ALE_0643.webp'
-export {default as trampoline2} from './ALE_0898.webp'
-export {default as trampoline3} from './ALE_0934.webp'
-export {default as trampoline4} from './AL_07496.webp'
-export {default as trampoline5} from './AL_07497.webp'
-export {default as trampoline6} from './AL_07503.webp'
+import trampoline1 from './1.webp'
+import trampoline2 from './2.webp'
+import trampoline3 from './3.webp'
+import trampoline4 from './4.webp'
+import trampoline5 from './5.webp'
+import trampoline6 from './6.webp'
+
+export const trampolineGallery = [
+  trampoline1,
+  trampoline2,
+  trampoline3,
+  trampoline4,
+  trampoline5,
+  trampoline6
+]

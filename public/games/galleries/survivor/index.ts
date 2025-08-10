@@ -1,6 +1,15 @@
-export {default as survivor1} from './ALE03584.webp'
-export {default as survivor2} from './ALE03598.webp'
-export {default as survivor3} from './ALE03602.webp'
-export {default as survivor4} from './ALE03604.webp'
-export {default as survivor5} from './ALE03608.webp'
-export {default as survivor6} from './ALE03611.webp'
+import survivor1 from './1.webp'
+import survivor2 from './2.webp'
+import survivor3 from './3.webp'
+import survivor4 from './4.webp'
+import survivor5 from './5.webp'
+import survivor6 from './6.webp'
+
+export const survivorGallery = [
+  survivor1,
+  survivor2,
+  survivor3,
+  survivor4,
+  survivor5,
+  survivor6
+]

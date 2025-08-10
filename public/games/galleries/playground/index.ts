@@ -1,6 +1,15 @@
-export {default as playground1} from './ALE_0422.webp'
-export {default as playground2} from './ALE_0702.webp'
-export {default as playground3} from './ALE_0915.webp'
-export {default as playground4} from './ALE_0921.webp'
-export {default as playground5} from './ALE_0925.webp'
-export {default as playground6} from './ALE_0930.webp'
+import playground1 from './1.webp'
+import playground2 from './2.webp'
+import playground3 from './3.webp'
+import playground4 from './4.webp'
+import playground5 from './5.webp'
+import playground6 from './6.webp'
+
+export const playgroundGallery = [
+  playground1,
+  playground2,
+  playground3,
+  playground4,
+  playground5,
+  playground6
+]

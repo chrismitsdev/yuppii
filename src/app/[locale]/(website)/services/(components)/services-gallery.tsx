@@ -39,39 +39,40 @@ import {CustomImage} from '@/src/components/ui/custom-image'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 import * as gamesGalleryImages from '@/public/games/galleries'
 
-interface ImageGallery {
+type ImageGallery = {
   key: keyof Messages['Pages']['Services']['ServicesGallery']['galleries']
   images: React.ComponentProps<typeof CustomImage>['src'][]
 }
 
-const galleries: ImageGallery[] = (
-  [
-    {key: 'inflatables', images: gamesGalleryImages.inflatables},
-    {key: 'playground', images: gamesGalleryImages.playground},
-    {key: 'trampoline', images: gamesGalleryImages.trampoline},
-    {key: 'cinema', images: gamesGalleryImages.cinema},
-    {key: 'dryslope', images: gamesGalleryImages.dryslope},
-    {key: 'bumper-cars', images: gamesGalleryImages.bumperCars},
-    {key: 'junior', images: gamesGalleryImages.junior},
-    {key: 'formula-cars', images: gamesGalleryImages.formulaCars},
-    {key: 'survivor', images: gamesGalleryImages.survivor},
-    {key: 'carnival-games', images: gamesGalleryImages.carnivalGames},
-    {key: 'table-soccer', images: gamesGalleryImages.tableSoccer},
-    {key: 'basket', images: gamesGalleryImages.basket},
-    {key: 'kiddy-rides', images: gamesGalleryImages.kiddyRides},
-    {key: 'hawaiian-surfing', images: gamesGalleryImages.hawaiianSurfing},
-    {key: 'electric-cars', images: gamesGalleryImages.electricCars},
-    {key: 'air-hockey', images: gamesGalleryImages.airHockey},
-    {key: 'power-games', images: gamesGalleryImages.powerGames},
-    {key: 'cranes', images: gamesGalleryImages.cranes},
-    {key: 'lucky-games', images: gamesGalleryImages.luckyGames}
-  ] as const
-).map(function (game) {
-  return {
-    ...game,
-    images: Array.from(Object.values(game.images))
-  }
-})
+const galleries: ImageGallery[] = [
+  {key: 'air-hockey', images: gamesGalleryImages.airHockeyGallery},
+  {key: 'basket', images: gamesGalleryImages.basketGallery},
+  {key: 'bumper-cars', images: gamesGalleryImages.bumperCarsGallery},
+  {
+    key: 'bungee-trampoline',
+    images: gamesGalleryImages.bungeeTrampolineGallery
+  },
+  {key: 'carnival-games', images: gamesGalleryImages.carnivalGamesGallery},
+  {key: 'cinema', images: gamesGalleryImages.cinemaGallery},
+  {key: 'cranes', images: gamesGalleryImages.cranesGallery},
+  {key: 'dryslope', images: gamesGalleryImages.dryslopeGallery},
+  {key: 'electric-cars', images: gamesGalleryImages.electricCarsGallery},
+  {key: 'formula-cars', images: gamesGalleryImages.formulaCarsGallery},
+  {
+    key: 'hawaiian-surfing',
+    images: gamesGalleryImages.hawaiianSurfingGallery
+  },
+  {key: 'inflatables', images: gamesGalleryImages.inflatablesGallery},
+  {key: 'junior', images: gamesGalleryImages.juniorGallery},
+  {key: 'kiddy-rides', images: gamesGalleryImages.kiddyRidesGallery},
+  {key: 'lucky-games', images: gamesGalleryImages.luckyGamesGallery},
+  {key: 'playground', images: gamesGalleryImages.playgroundGallery},
+  {key: 'power-games', images: gamesGalleryImages.powerGamesGallery},
+  {key: 'survivor', images: gamesGalleryImages.survivorGallery},
+  {key: 'table-soccer', images: gamesGalleryImages.tableSoccerGallery},
+  {key: 'trampoline', images: gamesGalleryImages.trampolineGallery},
+  {key: 'ufo', images: gamesGalleryImages.ufoGallery}
+] as const
 
 const ServicesGallery: React.FC = () => {
   const [index, setIndex] = React.useState<number>(0)
@@ -174,7 +175,7 @@ const ServicesGallery: React.FC = () => {
                   className='h-[calc(100%-72px)]'
                   type='always'
                 >
-                  <ul className='px-6 space-y-4'>{renderedGames}</ul>
+                  <ul className='px-6 pb-24 space-y-4'>{renderedGames}</ul>
                 </ScrollArea>
                 <SheetClose
                   className='absolute top-4 right-3'

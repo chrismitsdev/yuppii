@@ -10,7 +10,7 @@ import {
 } from '@radix-ui/react-scroll-area'
 import {cn} from '@/src/lib/utils'
 
-type ScrollAreaProps = React.ComponentPropsWithRef<typeof Root> & {
+interface ScrollAreaProps extends React.ComponentPropsWithRef<typeof Root> {
   hasCorner?: boolean
   orientation?: 'horizontal' | 'vertical'
   invisible?: boolean
@@ -18,7 +18,7 @@ type ScrollAreaProps = React.ComponentPropsWithRef<typeof Root> & {
   isFlex?: boolean
 }
 
-const ScrollArea: React.FC<ScrollAreaProps> = ({
+function ScrollArea({
   className,
   children,
   hasCorner = true,
@@ -27,7 +27,7 @@ const ScrollArea: React.FC<ScrollAreaProps> = ({
   showShadows = false,
   isFlex = false,
   ...props
-}) => {
+}: ScrollAreaProps) {
   return (
     <Root
       className={cn('relative overflow-hidden', className)}
@@ -48,14 +48,25 @@ const ScrollArea: React.FC<ScrollAreaProps> = ({
   )
 }
 
-const ScrollAreaViewport: React.FC<
-  React.ComponentPropsWithRef<typeof Viewport> & {
-    showShadows?: boolean
-    isFlex?: boolean
-  }
-> = ({className, showShadows, children, isFlex, ...props}) => {
+function ScrollAreaViewport({
+  className,
+  showShadows,
+  children,
+  isFlex,
+  ...props
+}: React.ComponentPropsWithRef<typeof Viewport> & {
+  showShadows?: boolean
+  isFlex?: boolean
+}) {
   const [canScrollLeft, setCanScrollLeft] = React.useState<boolean>(false)
   const [canScrollRight, setCanScrollRight] = React.useState<boolean>(true)
+
+  function handleShowShadows(e: React.UIEvent<HTMLDivElement, UIEvent>) {
+    if (!showShadows) return
+    const {scrollLeft, scrollWidth, clientWidth} = e.currentTarget
+    setCanScrollLeft(scrollLeft > 0)
+    setCanScrollRight(scrollWidth - scrollLeft !== clientWidth)
+  }
 
   if (!showShadows) {
     return (
@@ -70,13 +81,6 @@ const ScrollAreaViewport: React.FC<
         {children}
       </Viewport>
     )
-  }
-
-  function handleShowShadows(e: React.UIEvent<HTMLDivElement, UIEvent>) {
-    if (!showShadows) return
-    const {scrollLeft, scrollWidth, clientWidth} = e.currentTarget
-    setCanScrollLeft(scrollLeft > 0)
-    setCanScrollRight(scrollWidth - scrollLeft !== clientWidth)
   }
 
   return (
@@ -103,11 +107,14 @@ const ScrollAreaViewport: React.FC<
   )
 }
 
-const ScrollBar: React.FC<
-  React.ComponentPropsWithRef<typeof ScrollAreaScrollbar> & {
-    invisible?: boolean
-  }
-> = ({className, orientation, invisible, ...props}) => {
+function ScrollBar({
+  className,
+  orientation,
+  invisible,
+  ...props
+}: React.ComponentPropsWithRef<typeof ScrollAreaScrollbar> & {
+  invisible?: boolean
+}) {
   return (
     <ScrollAreaScrollbar
       className={cn(

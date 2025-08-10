@@ -11,28 +11,8 @@ import {
   Description,
   Close
 } from '@radix-ui/react-dialog'
-import {cva, type VariantProps} from 'class-variance-authority'
+import {type VariantProps, cva} from 'class-variance-authority'
 import {cn} from '@/src/lib/utils'
-
-const Sheet = Root
-const SheetTrigger = Trigger
-const SheetPortal = Portal
-const SheetClose = Close
-
-const SheetOverlay: React.FC<React.ComponentPropsWithRef<typeof Overlay>> = ({
-  className,
-  ...props
-}) => {
-  return (
-    <Overlay
-      className={cn(
-        'fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
-        className
-      )}
-      {...props}
-    />
-  )
-}
 
 const sheetContentProps = cva(
   ['fixed', 'overflow-hidden', 'z-1', 'bg-primary', 'shadow-md'],
@@ -66,10 +46,6 @@ const sheetContentProps = cva(
           'rounded-lg',
           'w-[calc(100%-16px)]',
           'h-[calc(100%-16px)]',
-          // 'inset-y-0',
-          // 'left-0',
-          // 'h-full',
-          // 'w-full',
           'data-open:animate-sheet-left-open',
           'data-closed:animate-sheet-left-close',
           'sm:max-w-lg'
@@ -82,15 +58,33 @@ const sheetContentProps = cva(
   }
 )
 
-const SheetContent: React.FC<
-  React.ComponentPropsWithRef<typeof Content> &
-    VariantProps<typeof sheetContentProps>
-> = ({
+const Sheet = Root
+const SheetTrigger = Trigger
+const SheetPortal = Portal
+const SheetClose = Close
+
+function SheetOverlay({
+  className,
+  ...props
+}: React.ComponentPropsWithRef<typeof Overlay>) {
+  return (
+    <Overlay
+      className={cn(
+        'fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function SheetContent({
   side = 'right',
   className,
   'aria-describedby': ariaDescribedBy = undefined,
   ...props
-}) => {
+}: React.ComponentPropsWithRef<typeof Content> &
+  VariantProps<typeof sheetContentProps>) {
   return (
     <Content
       className={cn(sheetContentProps({side}), className)}
@@ -100,10 +94,10 @@ const SheetContent: React.FC<
   )
 }
 
-const SheetHeader: React.FC<React.ComponentPropsWithRef<'div'>> = ({
+function SheetHeader({
   className,
   ...props
-}) => {
+}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
       className={cn('flex flex-col space-y-2 sm:text-left', className)}
@@ -112,10 +106,10 @@ const SheetHeader: React.FC<React.ComponentPropsWithRef<'div'>> = ({
   )
 }
 
-const SheetTitle: React.FC<React.ComponentPropsWithRef<typeof Title>> = ({
+function SheetTitle({
   className,
   ...props
-}) => {
+}: React.ComponentPropsWithRef<typeof Title>) {
   return (
     <Title
       className={cn(
@@ -127,9 +121,10 @@ const SheetTitle: React.FC<React.ComponentPropsWithRef<typeof Title>> = ({
   )
 }
 
-const SheetDescription: React.FC<
-  React.ComponentPropsWithRef<typeof Description>
-> = ({className, ...props}) => {
+function SheetDescription({
+  className,
+  ...props
+}: React.ComponentPropsWithRef<typeof Description>) {
   return (
     <Description
       className={cn('text-muted-foreground text-sm', className)}
@@ -138,10 +133,10 @@ const SheetDescription: React.FC<
   )
 }
 
-const SheetFooter: React.FC<React.ComponentPropsWithRef<'div'>> = ({
+function SheetFooter({
   className,
   ...props
-}) => {
+}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
       className={cn(

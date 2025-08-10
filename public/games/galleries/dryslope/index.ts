@@ -1,6 +1,15 @@
-export {default as dryslope1} from './ALE_0520.webp'
-export {default as dryslope2} from './ALE_0525.webp'
-export {default as dryslope3} from './ALE_0529.webp'
-export {default as dryslope4} from './ALE_0540.webp'
-export {default as dryslope5} from './ALE_0629.webp'
-export {default as dryslope6} from './ALE_5316.webp'
+import dryslope1 from './1.webp'
+import dryslope2 from './2.webp'
+import dryslope3 from './3.webp'
+import dryslope4 from './4.webp'
+import dryslope5 from './5.webp'
+import dryslope6 from './6.webp'
+
+export const dryslopeGallery = [
+  dryslope1,
+  dryslope2,
+  dryslope3,
+  dryslope4,
+  dryslope5,
+  dryslope6
+]

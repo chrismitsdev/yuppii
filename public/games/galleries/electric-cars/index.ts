@@ -1,6 +1,15 @@
-export {default as electricCars1} from './IMG_7684.webp'
-export {default as electricCars2} from './IMG_7686.webp'
-export {default as electricCars3} from './IMG_7688.webp'
-export {default as electricCars4} from './IMG_7690.webp'
-export {default as electricCars5} from './IMG_7691.webp'
-export {default as electricCars6} from './IMG_7692.webp'
+import electricCars1 from './1.webp'
+import electricCars2 from './2.webp'
+import electricCars3 from './3.webp'
+import electricCars4 from './4.webp'
+import electricCars5 from './5.webp'
+import electricCars6 from './6.webp'
+
+export const electricCarsGallery = [
+  electricCars1,
+  electricCars2,
+  electricCars3,
+  electricCars4,
+  electricCars5,
+  electricCars6
+]
