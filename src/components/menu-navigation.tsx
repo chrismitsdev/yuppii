@@ -59,7 +59,7 @@ const MenuNavigationLink: React.FC<
   return (
     <Link
       className={cn(
-        'p-4 relative flex-shrink-0 text-accent/30 duration-375 font-bold select-none after:h-1 after:absolute after:-bottom-1 after:inset-x-0 after:rounded-t-lg after:duration-375 sm:px-3',
+        'p-4 relative shrink-0 text-accent/30 duration-375 font-bold select-none after:h-1 after:absolute after:-bottom-1 after:inset-x-0 after:rounded-t-lg after:duration-375 sm:px-3',
         isActive && 'text-accent after:bg-secondary after:bottom-0',
         className
       )}

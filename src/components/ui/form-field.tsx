@@ -31,7 +31,7 @@ const FormField: React.FC<FormFieldProps> = ({
 }) => {
   const locale = useLocale()
   const baseClass =
-    'pt-0.5 pl-0 sm:pl-5.5 mb-3 w-full leading-6 focus:outline-none disabled:cursor-not-allowed'
+    'pt-0.5 mb-3 w-full leading-6 focus:outline-none disabled:cursor-not-allowed'
 
   return (
     <div
@@ -40,10 +40,10 @@ const FormField: React.FC<FormFieldProps> = ({
         disabled && 'opacity-50'
       )}
     >
-      <div className='pb-0.5 flex items-center gap-1.5'>
+      <div className='pb-0.5 flex items-center gap-2'>
         {React.createElement(icon, {size: 16})}
         <label
-          className='mt-1 grow text-sm uppercase font-bold leading-5 tracking-wider'
+          className='mt-0.5 grow text-sm uppercase font-bold leading-5 tracking-wider'
           htmlFor={id}
           lang={isoLocaleMap[locale]}
           aria-disabled={disabled}
@@ -76,9 +76,9 @@ const FormField: React.FC<FormFieldProps> = ({
       )}
 
       {error && (
-        <div className='absolute bottom-0 left-4 sm:left-9.5'>
+        <div className='absolute bottom-0 right-4'>
           <Typography
-            className='font-semibold text-red-800'
+            className='font-semibold text-red-600 tracking-wide'
             variant='tiny'
           >
             {error}

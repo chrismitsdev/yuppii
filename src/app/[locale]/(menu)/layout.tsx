@@ -5,8 +5,8 @@ import {MenuHeader} from '@/src/components/menu-header'
 export default function MenuLayout({
   params,
   children
-}: Readonly<React.PropsWithChildren<Params>>) {
-  const {locale} = React.use(params)
+}: LayoutProps<'/[locale]'>) {
+  const {locale} = React.use(params as Params['params'])
   setRequestLocale(locale)
 
   return (

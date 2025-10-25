@@ -35,7 +35,7 @@ const ContactFormInternal: React.FC<
       </Head>
       <Tailwind>
         <Body className='m-0 bg-[#cee9ef] text-[#020303]'>
-          <Container className='max-w-[576px]'>
+          <Container className='max-w-xl'>
             <Section className='px-4 pt-8 pb-6'>
               <Row className='mb-8'>
                 <Link href='https://yuppii.gr/gr'>
@@ -56,7 +56,7 @@ const ContactFormInternal: React.FC<
               </Row>
             </Section>
 
-            <Hr className='my-0 !border-t-[#020303]' />
+            <Hr className='my-0 border-t-[#020303]!' />
 
             <Section className='px-4 pt-6 pb-8'>
               <Row className='mb-6'>
@@ -67,7 +67,7 @@ const ContactFormInternal: React.FC<
                   >
                     Ονοματεπώνυμο:
                   </Heading>
-                  <Text className='!my-0'>{fullname}</Text>
+                  <Text className='my-0!'>{fullname}</Text>
                 </Column>
               </Row>
               <Row className='mb-6'>
@@ -110,7 +110,7 @@ const ContactFormInternal: React.FC<
                   >
                     Μήνυμα:
                   </Heading>
-                  <Text className='!my-0'>
+                  <Text className='my-0!'>
                     {message || 'Ο χρήστης δεν άφησε κάποιο μήνυμα'}
                   </Text>
                 </Column>

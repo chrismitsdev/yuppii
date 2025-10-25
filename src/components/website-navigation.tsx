@@ -62,11 +62,6 @@ const links: {
     key: 'Contact',
     href: '/contact',
     icon: (p?: LucideProps) => <MailIcon {...p} />
-  },
-  {
-    key: 'Menu',
-    href: `/menu${sourceQueryString}`,
-    icon: (p?: LucideProps) => <ClipboardListIcon {...p} />
   }
 ]
 
@@ -78,7 +73,7 @@ const WebsiteNavigation: React.FC = () => {
 
   React.useEffect(
     function () {
-      if (drawerOpen) setDrawerOpen(false)
+      setDrawerOpen(false)
     },
     [pathname]
   )
@@ -132,7 +127,7 @@ const WebsiteNavigation: React.FC = () => {
               <div className='p-8 h-full flex flex-col'>
                 <DrawerHandle
                   aria-hidden
-                  className='mb-10 !w-1/3 !bg-accent/50 shrink-0'
+                  className='mb-10 w-1/3! bg-accent/50! shrink-0'
                 />
 
                 <VisuallyHidden>
@@ -158,7 +153,16 @@ const WebsiteNavigation: React.FC = () => {
                     )
                   })}
                 </div>
-                <div className='space-x-4 flex justify-center'>
+                <div className='mx-auto space-x-4'>
+                  <Button
+                    variant='accent'
+                    size='icon'
+                    asChild
+                  >
+                    <Link href={`/menu${sourceQueryString}`}>
+                      <ClipboardListIcon />
+                    </Link>
+                  </Button>
                   <Button
                     variant='accent'
                     size='icon'

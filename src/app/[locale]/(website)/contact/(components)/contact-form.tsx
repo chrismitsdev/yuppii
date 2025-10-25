@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
         toast.error(t(`toast.error.${state.type}.description`))
       }
     },
-    [state]
+    [state, t]
   )
 
   return (

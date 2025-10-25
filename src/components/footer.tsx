@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
           >
             Copyright &copy; {new Date().getFullYear()} Yuppii Luna Park
           </Typography>
-          <FooterColumn className='mb-6 !space-y-0 space-x-4 order-1 sm:mb-0 sm:order-2'>
+          <FooterColumn className='mb-6 space-y-0! space-x-4 order-1 sm:mb-0 sm:order-2'>
             <Button
               variant='ghost-primary'
               size='icon'

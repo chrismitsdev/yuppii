@@ -13,8 +13,8 @@ export async function generateMetadata({params}: Params): Promise<Metadata> {
   }
 }
 
-export default function MenuPage({params}: Params) {
-  const {locale} = React.use(params)
+export default function MenuPage({params}: PageProps<'/[locale]/menu'>) {
+  const {locale} = React.use(params as Params['params'])
   setRequestLocale(locale)
 
   return (

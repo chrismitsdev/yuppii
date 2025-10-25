@@ -1,14 +1,21 @@
 import * as React from 'react'
 import {Metadata} from 'next'
-import {useMessages, type Messages} from 'next-intl'
+import {useMessages, type Locale, type Messages} from 'next-intl'
 import {setRequestLocale, getTranslations, getMessages} from 'next-intl/server'
 import {Container} from '@/src/components/container'
 import {CategoryProducts} from './(components)/category-products'
 import {CategoryNotFound} from './(components)/category-not-found'
 
+type ParamsWithCategory = {
+  params: Promise<{
+    locale: Locale
+    category: Category
+  }>
+}
+
 export async function generateMetadata({
   params
-}: MenuParams): Promise<Metadata> {
+}: ParamsWithCategory): Promise<Metadata> {
   const {locale, category} = await params
   const t = await getTranslations({locale})
   const messages = await getMessages({locale})
@@ -29,8 +36,41 @@ export async function generateMetadata({
   }
 }
 
-export default function CategoryPage({params}: MenuParams) {
-  const {locale, category} = React.use(params)
+export async function generateStaticParams() {
+  const messages = await getMessages({locale: 'en'})
+  const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
+
+  console.log(
+    categoryKeys.map(function (categoryKey) {
+      return {
+        category: categoryKey.toLowerCase()
+      }
+    })
+  )
+
+  return categoryKeys.map(function (categoryKey) {
+    return {
+      category: categoryKey.toLowerCase()
+    }
+  })
+}
+
+// export async function generateStaticParams({params}: ParamsWithCategory) {
+//   const {locale} = await params
+//   const messages = await getMessages({locale})
+//   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
+
+//   return categoryKeys.map(function (categoryKey) {
+//     return {
+//       category: categoryKey.toLowerCase()
+//     }
+//   })
+// }
+
+export default function CategoryPage({
+  params
+}: PageProps<'/[locale]/menu/[category]'>) {
+  const {locale, category} = React.use(params as ParamsWithCategory['params'])
   setRequestLocale(locale)
 
   const messages = useMessages()
@@ -47,17 +87,4 @@ export default function CategoryPage({params}: MenuParams) {
       )}
     </Container>
   )
-}
-
-// Statically generate routes at build time
-export async function generateStaticParams({params}: MenuParams) {
-  const {locale} = await params
-  const messages = await getMessages({locale})
-  const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
-
-  return categoryKeys.map(function (categoryKey) {
-    return {
-      category: categoryKey.toLowerCase() as Lowercase<keyof Messages['Menu']>
-    }
-  })
 }

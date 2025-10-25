@@ -15,8 +15,8 @@ export async function generateMetadata({params}: Params): Promise<Metadata> {
   }
 }
 
-export default function IndexPage({params}: Params) {
-  const {locale} = React.use(params)
+export default function IndexPage({params}: PageProps<'/[locale]'>) {
+  const {locale} = React.use(params as Params['params'])
   setRequestLocale(locale)
 
   return (
