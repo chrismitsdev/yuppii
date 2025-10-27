@@ -141,7 +141,7 @@ const WebsiteNavigation: React.FC = () => {
           </DrawerTrigger>
           <DrawerPortal>
             <DrawerOverlay />
-            <DrawerContent className='h-[calc(100%-88px)] rounded-t-lg'>
+            <DrawerContent className='h-4/5 rounded-t-lg'>
               <div className='p-8 h-full flex flex-col'>
                 <DrawerHandle
                   aria-hidden
