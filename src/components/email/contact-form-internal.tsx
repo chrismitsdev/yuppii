@@ -49,31 +49,34 @@ const ContactFormInternal: React.FC<
               <Row>
                 <Heading
                   className='my-0'
-                  as='h4'
+                  as='h3'
                 >
                   Νέα υποβολή φόρμας
                 </Heading>
               </Row>
             </Section>
 
-            <Hr className='my-0 border-t-[#020303]!' />
+            <Hr
+              style={{borderTop: '1px solid #020303'}}
+              className='my-0'
+            />
 
             <Section className='px-4 pt-6 pb-8'>
               <Row className='mb-6'>
                 <Column>
                   <Heading
-                    as='h5'
+                    as='h4'
                     className='my-0 leading-6'
                   >
                     Ονοματεπώνυμο:
                   </Heading>
-                  <Text className='my-0!'>{fullname}</Text>
+                  <Text className='my-0'>{fullname}</Text>
                 </Column>
               </Row>
               <Row className='mb-6'>
                 <Column>
                   <Heading
-                    as='h5'
+                    as='h4'
                     className='my-0 leading-6'
                   >
                     Email:
@@ -89,7 +92,7 @@ const ContactFormInternal: React.FC<
               <Row className='mb-6'>
                 <Column>
                   <Heading
-                    as='h5'
+                    as='h4'
                     className='my-0 leading-6'
                   >
                     Τηλέφωνο:
@@ -105,12 +108,12 @@ const ContactFormInternal: React.FC<
               <Row className='mb-6'>
                 <Column>
                   <Heading
-                    as='h5'
+                    as='h4'
                     className='my-0 leading-6'
                   >
                     Μήνυμα:
                   </Heading>
-                  <Text className='my-0!'>
+                  <Text className='my-0'>
                     {message || 'Ο χρήστης δεν άφησε κάποιο μήνυμα'}
                   </Text>
                 </Column>
