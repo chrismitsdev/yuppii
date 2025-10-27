@@ -41,27 +41,27 @@ import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 const links: {
   key: keyof Messages['Metadata']['Pages']
   href: string
-  icon: (props?: LucideProps) => React.ReactNode
+  icon: React.ComponentType<LucideProps>
 }[] = [
   {
     key: 'Home',
     href: '/',
-    icon: (p?: LucideProps) => <HomeIcon {...p} />
+    icon: HomeIcon
   },
   {
     key: 'Park',
     href: '/park',
-    icon: (p?: LucideProps) => <FerrisWheelIcon {...p} />
+    icon: FerrisWheelIcon
   },
   {
     key: 'Services',
     href: '/services',
-    icon: (p?: LucideProps) => <ListChecksIcon {...p} />
+    icon: ListChecksIcon
   },
   {
     key: 'Contact',
     href: '/contact',
-    icon: (p?: LucideProps) => <MailIcon {...p} />
+    icon: MailIcon
   }
 ]
 
@@ -82,7 +82,7 @@ const WebsiteNavigation: React.FC = () => {
     <React.Fragment>
       <nav className='hidden items-center gap-x-2 sm:flex'>
         <TooltipProvider delayDuration={0}>
-          {links.map(function (link) {
+          {links.map(function ({icon: Icon, ...link}) {
             return (
               <Tooltip key={link.key}>
                 <TooltipTrigger asChild>
@@ -93,7 +93,9 @@ const WebsiteNavigation: React.FC = () => {
                     size='icon'
                     asChild
                   >
-                    <Link href={link.href}>{link.icon()}</Link>
+                    <Link href={link.href}>
+                      <Icon />
+                    </Link>
                   </Button>
                 </TooltipTrigger>
                 <TooltipPortal>
@@ -102,8 +104,24 @@ const WebsiteNavigation: React.FC = () => {
               </Tooltip>
             )
           })}
+          <Separator orientation='vertical' />
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant='ghost-secondary'
+                size='icon'
+                asChild
+              >
+                <Link href={`/menu${sourceQueryString}`}>
+                  <ClipboardListIcon />
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipPortal>
+              <TooltipContent>{t('Menu')}</TooltipContent>
+            </TooltipPortal>
+          </Tooltip>
         </TooltipProvider>
-        <Separator orientation='vertical' />
         <SuspenseLocaleSwitcher />
       </nav>
 
@@ -135,7 +153,7 @@ const WebsiteNavigation: React.FC = () => {
                 </VisuallyHidden>
 
                 <div className='flex flex-col gap-y-4 flex-1'>
-                  {links.map(function (link) {
+                  {links.map(function ({icon: Icon, ...link}) {
                     return (
                       <Button
                         variant={
@@ -146,7 +164,7 @@ const WebsiteNavigation: React.FC = () => {
                         asChild
                       >
                         <Link href={link.href}>
-                          {link.icon({size: 20})}
+                          <Icon size={20} />
                           <Typography locale={locale}>{t(link.key)}</Typography>
                         </Link>
                       </Button>

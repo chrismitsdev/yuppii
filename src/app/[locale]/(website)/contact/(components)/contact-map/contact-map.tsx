@@ -57,7 +57,7 @@ const ContactMap: React.FC = () => {
                   <div className='flex items-center gap-2'>
                     <NavigationIcon size={14} />
                     <Typography
-                      className='underline !text-accent !font-[Arima] font-semibold'
+                      className='underline text-accent! font-[Arima]! font-semibold'
                       variant='small'
                       asChild
                     >
@@ -73,7 +73,7 @@ const ContactMap: React.FC = () => {
                   <div className='flex items-center gap-2'>
                     <PhoneIcon size={14} />
                     <Typography
-                      className='underline !text-accent !font-[Arima] font-semibold'
+                      className='underline text-accent! font-[Arima]! font-semibold'
                       variant='small'
                       asChild
                     >

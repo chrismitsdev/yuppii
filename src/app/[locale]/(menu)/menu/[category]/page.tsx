@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {Metadata} from 'next'
-import {useMessages, type Locale, type Messages} from 'next-intl'
+import {type Locale, type Messages, useMessages} from 'next-intl'
 import {setRequestLocale, getTranslations, getMessages} from 'next-intl/server'
 import {Container} from '@/src/components/container'
 import {CategoryProducts} from './(components)/category-products'
@@ -40,32 +40,14 @@ export async function generateStaticParams() {
   const messages = await getMessages({locale: 'en'})
   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
-  console.log(
-    categoryKeys.map(function (categoryKey) {
-      return {
-        category: categoryKey.toLowerCase()
-      }
-    })
-  )
-
-  return categoryKeys.map(function (categoryKey) {
+  const categories = categoryKeys.map(function (ctgKey) {
     return {
-      category: categoryKey.toLowerCase()
+      category: ctgKey.toLowerCase() as Lowercase<keyof Messages['Menu']>
     }
   })
+
+  return categories
 }
-
-// export async function generateStaticParams({params}: ParamsWithCategory) {
-//   const {locale} = await params
-//   const messages = await getMessages({locale})
-//   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
-
-//   return categoryKeys.map(function (categoryKey) {
-//     return {
-//       category: categoryKey.toLowerCase()
-//     }
-//   })
-// }
 
 export default function CategoryPage({
   params
@@ -76,15 +58,14 @@ export default function CategoryPage({
   const messages = useMessages()
   const categoryKey = (category.charAt(0).toUpperCase() +
     category.slice(1)) as keyof Messages['Menu']
-  const foundCategory = Object.hasOwn(messages.Menu, categoryKey)
+
+  if (!Object.hasOwn(messages.Menu, categoryKey)) {
+    return <CategoryNotFound />
+  }
 
   return (
     <Container>
-      {foundCategory ? (
-        <CategoryProducts categoryKey={categoryKey} />
-      ) : (
-        <CategoryNotFound />
-      )}
+      <CategoryProducts categoryKey={categoryKey} />
     </Container>
   )
 }
