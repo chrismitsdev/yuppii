@@ -1,6 +1,6 @@
 import '@/src/styles/index.css'
 import * as React from 'react'
-import type {Metadata, Viewport} from 'next'
+import type {Metadata} from 'next'
 import {notFound} from 'next/navigation'
 import {Arima} from 'next/font/google'
 import {NextIntlClientProvider, hasLocale} from 'next-intl'
@@ -40,11 +40,6 @@ export const metadata: Metadata = {
   }
 }
 
-export const viewport: Viewport = {
-  themeColor: '#cee9e7',
-  colorScheme: 'normal'
-}
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}))
 }
@@ -66,7 +61,7 @@ export default function LocaleLayout({
       lang={locale}
       className={font.className}
     >
-      <body>
+      <body className='bg-primary text-primary-foreground'>
         <NextIntlClientProvider>
           <div
             className='bg-primary text-primary-foreground'
