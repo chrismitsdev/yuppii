@@ -18,7 +18,10 @@ const font = Arima({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.yuppii.gr'),
-  title: 'Yuppii Luna Park',
+  title: {
+    template: '%s • Yuppii Luna Park',
+    default: 'Yuppii Luna Park'
+  },
   description: 'Yuppii Luna Park amusement park official website',
   alternates: {
     canonical: '/',

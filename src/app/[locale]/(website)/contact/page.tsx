@@ -10,7 +10,7 @@ export async function generateMetadata({params}: Params): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
 
   return {
-    title: `${t('Contact')} • Yuppii Luna Park`
+    title: t('Contact')
   }
 }
 

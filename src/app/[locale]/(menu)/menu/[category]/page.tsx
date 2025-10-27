@@ -21,18 +21,15 @@ export async function generateMetadata({
   const messages = await getMessages({locale})
   const categoryKey = (category.charAt(0).toUpperCase() +
     category.slice(1)) as keyof Messages['Menu']
-  const foundCategory = Object.hasOwn(messages.Menu, categoryKey)
+
+  if (!Object.hasOwn(messages.Menu, categoryKey)) {
+    return {
+      title: t('Components.CategoryNotFound.title')
+    }
+  }
 
   return {
-    title: foundCategory
-      ? `
-      ${t('Metadata.Pages.Menu')}
-      •
-      ${t(`Menu.${categoryKey}.name`)}
-      •
-      Yuppii Luna Park
-    `
-      : t('Components.CategoryNotFound.title')
+    title: t(`Menu.${categoryKey}.name`)
   }
 }
 
