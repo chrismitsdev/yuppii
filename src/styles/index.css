@@ -22,7 +22,7 @@
   }
 
   .leaflet-popup-content-wrapper {
-    @apply px-6 py-8 bg-[#dbbbc3] border border-secondary rounded;
+    @apply px-6 py-4 bg-[#dbbbc3] border border-secondary rounded;
 
     .leaflet-popup-content {
       @apply m-0 max-w-max;

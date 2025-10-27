@@ -14,8 +14,8 @@ export async function generateMetadata({params}: Params): Promise<Metadata> {
   }
 }
 
-export default function ContactPage({params}: Params) {
-  const {locale} = React.use(params)
+export default function ContactPage({params}: PageProps<'/[locale]/contact'>) {
+  const {locale} = React.use(params as Params['params'])
   setRequestLocale(locale)
 
   return (

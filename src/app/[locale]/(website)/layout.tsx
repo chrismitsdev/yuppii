@@ -5,8 +5,8 @@ import {WebsiteHeader} from '@/src/components/website-header'
 export default function WebsiteLayout({
   params,
   children
-}: Readonly<React.PropsWithChildren<Params>>) {
-  const {locale} = React.use(params)
+}: LayoutProps<'/[locale]'>) {
+  const {locale} = React.use(params as Params['params'])
   setRequestLocale(locale)
 
   return (

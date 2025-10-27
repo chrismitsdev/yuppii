@@ -18,10 +18,5 @@ declare global {
     }>
   }
 
-  type MenuParams = {
-    params: Promise<{
-      locale: Locale
-      category: Lowercase<keyof Messages['Menu']>
-    }>
-  }
+  type Category = Lowercase<keyof Messages['Menu']>
 }

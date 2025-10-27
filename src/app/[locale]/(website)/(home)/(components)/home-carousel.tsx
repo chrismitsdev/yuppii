@@ -43,8 +43,8 @@ const HomeCarousel: React.FC = () => {
           <EmblaViewport className='sm:rounded'>
             <EmblaContainer>{slides}</EmblaContainer>
           </EmblaViewport>
-          <EmblaButtonPrev className='-left-0 sm:-left-12' />
-          <EmblaButtonNext className='-right-0 sm:-right-12' />
+          <EmblaButtonPrev className='left-0 sm:-left-12' />
+          <EmblaButtonNext className='right-0 sm:-right-12' />
         </EmblaCarousel>
       </Section>
     </Container>

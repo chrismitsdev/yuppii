@@ -1,4 +1,5 @@
 import '@/src/styles/index.css'
+import * as React from 'react'
 import type {Metadata, Viewport} from 'next'
 import {notFound} from 'next/navigation'
 import {Arima} from 'next/font/google'
@@ -45,11 +46,11 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}))
 }
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   params,
   children
-}: Readonly<React.PropsWithChildren<Params>>) {
-  const {locale} = await params
+}: LayoutProps<'/[locale]'>) {
+  const {locale} = React.use(params as Params['params'])
 
   if (!hasLocale(routing.locales, locale)) {
     notFound()

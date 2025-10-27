@@ -41,32 +41,27 @@ import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 const links: {
   key: keyof Messages['Metadata']['Pages']
   href: string
-  icon: (props?: LucideProps) => React.ReactNode
+  icon: React.ComponentType<LucideProps>
 }[] = [
   {
     key: 'Home',
     href: '/',
-    icon: (p?: LucideProps) => <HomeIcon {...p} />
+    icon: HomeIcon
   },
   {
     key: 'Park',
     href: '/park',
-    icon: (p?: LucideProps) => <FerrisWheelIcon {...p} />
+    icon: FerrisWheelIcon
   },
   {
     key: 'Services',
     href: '/services',
-    icon: (p?: LucideProps) => <ListChecksIcon {...p} />
+    icon: ListChecksIcon
   },
   {
     key: 'Contact',
     href: '/contact',
-    icon: (p?: LucideProps) => <MailIcon {...p} />
-  },
-  {
-    key: 'Menu',
-    href: `/menu${sourceQueryString}`,
-    icon: (p?: LucideProps) => <ClipboardListIcon {...p} />
+    icon: MailIcon
   }
 ]
 
@@ -78,7 +73,7 @@ const WebsiteNavigation: React.FC = () => {
 
   React.useEffect(
     function () {
-      if (drawerOpen) setDrawerOpen(false)
+      setDrawerOpen(false)
     },
     [pathname]
   )
@@ -87,7 +82,7 @@ const WebsiteNavigation: React.FC = () => {
     <React.Fragment>
       <nav className='hidden items-center gap-x-2 sm:flex'>
         <TooltipProvider delayDuration={0}>
-          {links.map(function (link) {
+          {links.map(function ({icon: Icon, ...link}) {
             return (
               <Tooltip key={link.key}>
                 <TooltipTrigger asChild>
@@ -98,7 +93,9 @@ const WebsiteNavigation: React.FC = () => {
                     size='icon'
                     asChild
                   >
-                    <Link href={link.href}>{link.icon()}</Link>
+                    <Link href={link.href}>
+                      <Icon />
+                    </Link>
                   </Button>
                 </TooltipTrigger>
                 <TooltipPortal>
@@ -107,8 +104,24 @@ const WebsiteNavigation: React.FC = () => {
               </Tooltip>
             )
           })}
+          <Separator orientation='vertical' />
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant='ghost-secondary'
+                size='icon'
+                asChild
+              >
+                <Link href={`/menu${sourceQueryString}`}>
+                  <ClipboardListIcon />
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipPortal>
+              <TooltipContent>{t('Menu')}</TooltipContent>
+            </TooltipPortal>
+          </Tooltip>
         </TooltipProvider>
-        <Separator orientation='vertical' />
         <SuspenseLocaleSwitcher />
       </nav>
 
@@ -128,11 +141,11 @@ const WebsiteNavigation: React.FC = () => {
           </DrawerTrigger>
           <DrawerPortal>
             <DrawerOverlay />
-            <DrawerContent className='h-[calc(100%-88px)] rounded-t-lg'>
+            <DrawerContent className='h-4/5 rounded-t-lg'>
               <div className='p-8 h-full flex flex-col'>
                 <DrawerHandle
                   aria-hidden
-                  className='mb-10 !w-1/3 !bg-accent/50 shrink-0'
+                  className='mb-10 w-1/3! bg-accent/50! shrink-0'
                 />
 
                 <VisuallyHidden>
@@ -140,7 +153,7 @@ const WebsiteNavigation: React.FC = () => {
                 </VisuallyHidden>
 
                 <div className='flex flex-col gap-y-4 flex-1'>
-                  {links.map(function (link) {
+                  {links.map(function ({icon: Icon, ...link}) {
                     return (
                       <Button
                         variant={
@@ -151,14 +164,23 @@ const WebsiteNavigation: React.FC = () => {
                         asChild
                       >
                         <Link href={link.href}>
-                          {link.icon({size: 20})}
+                          <Icon size={20} />
                           <Typography locale={locale}>{t(link.key)}</Typography>
                         </Link>
                       </Button>
                     )
                   })}
                 </div>
-                <div className='space-x-4 flex justify-center'>
+                <div className='mx-auto space-x-4'>
+                  <Button
+                    variant='accent'
+                    size='icon'
+                    asChild
+                  >
+                    <Link href={`/menu${sourceQueryString}`}>
+                      <ClipboardListIcon />
+                    </Link>
+                  </Button>
                   <Button
                     variant='accent'
                     size='icon'

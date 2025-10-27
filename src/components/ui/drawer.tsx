@@ -16,7 +16,10 @@ const DrawerOverlay: React.FC<
 > = ({className, ...props}) => {
   return (
     <Vaul.Overlay
-      className={cn('fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px]')}
+      className={cn(
+        'fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px]',
+        className
+      )}
       {...props}
     />
   )
