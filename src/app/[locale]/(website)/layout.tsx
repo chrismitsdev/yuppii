@@ -1,5 +1,5 @@
-import * as React from 'react'
 import {setRequestLocale} from 'next-intl/server'
+import * as React from 'react'
 import {WebsiteHeader} from '@/src/components/website-header'
 
 export default function WebsiteLayout({

@@ -1,13 +1,13 @@
+import {CakeIcon, HandshakeIcon} from 'lucide-react'
 import Link from 'next/link'
 import {useTranslations} from 'next-intl'
-import {CakeIcon, HandshakeIcon} from 'lucide-react'
 import {Section} from '@/src/components/section'
 import {
   Card,
-  CardHeader,
-  CardTitle,
+  CardContent,
   CardDescription,
-  CardContent
+  CardHeader,
+  CardTitle
 } from '@/src/components/ui/card'
 
 const ServicesCards: React.FC = () => {

@@ -1,14 +1,14 @@
 'use client'
 
-import * as React from 'react'
 import {Globe} from 'lucide-react'
 import {useSearchParams} from 'next/navigation'
 import {useLocale} from 'next-intl'
-import {sourceQueryString} from '@/src/lib/utils'
-import {Link, usePathname} from '@/src/i18n/navigation'
-import {Button} from '@/src/components/ui/button'
-import {GreeceFlag} from '@/src/components/flags/greece-flag'
+import type * as React from 'react'
 import {EnglishFlag} from '@/src/components/flags/english-flag'
+import {GreeceFlag} from '@/src/components/flags/greece-flag'
+import {Button} from '@/src/components/ui/button'
+import {Link, usePathname} from '@/src/i18n/navigation'
+import {sourceQueryString} from '@/src/lib/utils'
 
 const flagLookup = {
   gr: (

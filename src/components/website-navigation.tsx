@@ -1,42 +1,42 @@
 'use client'
 
-import * as React from 'react'
-import {type Messages, useTranslations, useLocale} from 'next-intl'
 import {
-  type LucideProps,
-  HomeIcon,
-  FerrisWheelIcon,
-  ListChecksIcon,
-  MailIcon,
-  MenuIcon,
+  ClipboardListIcon,
   FacebookIcon,
+  FerrisWheelIcon,
+  HomeIcon,
   InstagramIcon,
+  ListChecksIcon,
+  type LucideProps,
+  MailIcon,
   MapIcon,
-  ClipboardListIcon
+  MenuIcon
 } from 'lucide-react'
-import {Link, usePathname} from '@/src/i18n/navigation'
+import {type Messages, useLocale, useTranslations} from 'next-intl'
+import * as React from 'react'
 import {sourceQueryString} from 'src/lib/utils'
 import {SuspenseLocaleSwitcher} from '@/src/components/suspense-locale-switcher'
-import {
-  TooltipProvider,
-  Tooltip,
-  TooltipTrigger,
-  TooltipPortal,
-  TooltipContent
-} from '@/src/components/ui/tooltip'
+import {Button} from '@/src/components/ui/button'
 import {
   Drawer,
-  DrawerTrigger,
-  DrawerPortal,
-  DrawerOverlay,
   DrawerContent,
+  DrawerHandle,
+  DrawerOverlay,
+  DrawerPortal,
   DrawerTitle,
-  DrawerHandle
+  DrawerTrigger
 } from '@/src/components/ui/drawer'
-import {Button} from '@/src/components/ui/button'
-import {Typography} from '@/src/components/ui/typography'
 import {Separator} from '@/src/components/ui/separator'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipPortal,
+  TooltipProvider,
+  TooltipTrigger
+} from '@/src/components/ui/tooltip'
+import {Typography} from '@/src/components/ui/typography'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
+import {Link, usePathname} from '@/src/i18n/navigation'
 
 const links: {
   key: keyof Messages['Metadata']['Pages']
@@ -71,39 +71,35 @@ const WebsiteNavigation: React.FC = () => {
   const locale = useLocale()
   const pathname = usePathname()
 
-  React.useEffect(
-    function () {
-      setDrawerOpen(false)
-    },
-    [pathname]
-  )
+  React.useEffect(() => {
+    if (!pathname) return
+    setDrawerOpen(false)
+  }, [pathname])
 
   return (
     <React.Fragment>
       <nav className='hidden items-center gap-x-2 sm:flex'>
         <TooltipProvider delayDuration={0}>
-          {links.map(function ({icon: Icon, ...link}) {
-            return (
-              <Tooltip key={link.key}>
-                <TooltipTrigger asChild>
-                  <Button
-                    variant={
-                      pathname === link.href ? 'accent' : 'ghost-secondary'
-                    }
-                    size='icon'
-                    asChild
-                  >
-                    <Link href={link.href}>
-                      <Icon />
-                    </Link>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipPortal>
-                  <TooltipContent>{t(link.key)}</TooltipContent>
-                </TooltipPortal>
-              </Tooltip>
-            )
-          })}
+          {links.map(({icon: Icon, ...link}) => (
+            <Tooltip key={link.key}>
+              <TooltipTrigger asChild>
+                <Button
+                  variant={
+                    pathname === link.href ? 'accent' : 'ghost-secondary'
+                  }
+                  size='icon'
+                  asChild
+                >
+                  <Link href={link.href}>
+                    <Icon />
+                  </Link>
+                </Button>
+              </TooltipTrigger>
+              <TooltipPortal>
+                <TooltipContent>{t(link.key)}</TooltipContent>
+              </TooltipPortal>
+            </Tooltip>
+          ))}
           <Separator orientation='vertical' />
           <Tooltip>
             <TooltipTrigger asChild>
@@ -153,23 +149,21 @@ const WebsiteNavigation: React.FC = () => {
                 </VisuallyHidden>
 
                 <div className='flex flex-col gap-y-4 flex-1'>
-                  {links.map(function ({icon: Icon, ...link}) {
-                    return (
-                      <Button
-                        variant={
-                          pathname === link.href ? 'accent' : 'ghost-secondary'
-                        }
-                        size='lg'
-                        key={link.key}
-                        asChild
-                      >
-                        <Link href={link.href}>
-                          <Icon size={20} />
-                          <Typography locale={locale}>{t(link.key)}</Typography>
-                        </Link>
-                      </Button>
-                    )
-                  })}
+                  {links.map(({icon: Icon, ...link}) => (
+                    <Button
+                      variant={
+                        pathname === link.href ? 'accent' : 'ghost-secondary'
+                      }
+                      size='lg'
+                      key={link.key}
+                      asChild
+                    >
+                      <Link href={link.href}>
+                        <Icon size={20} />
+                        <Typography locale={locale}>{t(link.key)}</Typography>
+                      </Link>
+                    </Button>
+                  ))}
                 </div>
                 <div className='mx-auto space-x-4'>
                   <Button
@@ -189,6 +183,7 @@ const WebsiteNavigation: React.FC = () => {
                     <a
                       href='https://www.facebook.com/yuppii.gr'
                       target='_blank'
+                      rel='noopener'
                     >
                       <FacebookIcon />
                     </a>
@@ -201,6 +196,7 @@ const WebsiteNavigation: React.FC = () => {
                     <a
                       href='https://www.instagram.com/yuppiilunapark/'
                       target='_blank'
+                      rel='noopener'
                     >
                       <InstagramIcon />
                     </a>
@@ -213,6 +209,7 @@ const WebsiteNavigation: React.FC = () => {
                     <a
                       href='https://goo.gl/maps/vWBvWk3Tvcw5XkF87'
                       target='_blank'
+                      rel='noopener'
                     >
                       <MapIcon />
                     </a>

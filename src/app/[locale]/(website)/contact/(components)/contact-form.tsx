@@ -1,20 +1,20 @@
 'use client'
 
-import * as React from 'react'
-import {useTranslations, useLocale} from 'next-intl'
-import {toast} from 'react-hot-toast'
 import {
-  UserIcon,
+  LoaderCircleIcon,
   MailIcon,
-  PhoneIcon,
   MessageSquareIcon,
+  PhoneIcon,
   SendHorizonalIcon,
-  LoaderCircleIcon
+  UserIcon
 } from 'lucide-react'
-import {type ContactFormActionState, contactFormAction} from '@/src/lib/actions'
+import {useLocale, useTranslations} from 'next-intl'
+import * as React from 'react'
+import {toast} from 'react-hot-toast'
 import {Section} from '@/src/components/section'
-import {FormField} from '@/src/components/ui/form-field'
 import {Button} from '@/src/components/ui/button'
+import {FormField} from '@/src/components/ui/form-field'
+import {type ContactFormActionState, contactFormAction} from '@/src/lib/actions'
 
 const initialState: ContactFormActionState = {
   data: {
@@ -35,18 +35,15 @@ const ContactForm: React.FC = () => {
   )
   const t = useTranslations('Pages.Contact.ContactForm')
 
-  React.useEffect(
-    function () {
-      if (state.ok === null) return
+  React.useEffect(() => {
+    if (state.ok === null) return
 
-      if (state.ok) {
-        toast.success(t('toast.success.description'))
-      } else if (!state.ok) {
-        toast.error(t(`toast.error.${state.type}.description`))
-      }
-    },
-    [state, t]
-  )
+    if (state.ok) {
+      toast.success(t('toast.success.description'))
+    } else if (!state.ok) {
+      toast.error(t(`toast.error.${state.type}.description`))
+    }
+  }, [state, t])
 
   return (
     <Section

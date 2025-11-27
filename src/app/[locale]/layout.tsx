@@ -1,14 +1,14 @@
 import '@/src/styles/index.css'
-import * as React from 'react'
-import type {Metadata} from 'next'
-import {notFound} from 'next/navigation'
-import {Arima} from 'next/font/google'
-import {NextIntlClientProvider, hasLocale} from 'next-intl'
-import {setRequestLocale} from 'next-intl/server'
 import {Analytics} from '@vercel/analytics/next'
+import type {Metadata} from 'next'
+import {Arima} from 'next/font/google'
+import {notFound} from 'next/navigation'
+import {hasLocale, NextIntlClientProvider} from 'next-intl'
+import {setRequestLocale} from 'next-intl/server'
+import * as React from 'react'
 import {Toaster} from 'react-hot-toast'
-import {routing} from '@/src/i18n/routing'
 import {Footer} from '@/src/components/footer'
+import {routing} from '@/src/i18n/routing'
 
 const font = Arima({
   weight: 'variable',

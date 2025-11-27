@@ -1,16 +1,16 @@
+import {type Messages, useMessages, useTranslations} from 'next-intl'
 import * as React from 'react'
-import {type Messages, useTranslations, useMessages} from 'next-intl'
-import {categoryIcons} from '@/src/lib/utils'
-import {Section} from '@/src/components/section'
 import {MenuProduct} from '@/src/components/menu-product'
+import {Section} from '@/src/components/section'
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-  AccordionContent
+  AccordionTrigger
 } from '@/src/components/ui/accordion'
-import {Typography} from '@/src/components/ui/typography'
 import {Separator} from '@/src/components/ui/separator'
+import {Typography} from '@/src/components/ui/typography'
+import {categoryIcons} from '@/src/lib/utils'
 
 const MenuCategories: React.FC = () => {
   const t = useTranslations('Menu')
@@ -23,7 +23,7 @@ const MenuCategories: React.FC = () => {
         className='space-y-6'
         type='multiple'
       >
-        {categoryKeys.map(function (categoryKey) {
+        {categoryKeys.map((categoryKey) => {
           const Icon = categoryIcons[categoryKey]
 
           return (
@@ -43,35 +43,29 @@ const MenuCategories: React.FC = () => {
               <AccordionContent className='p-0 border-t border-dashed border-t-secondary'>
                 <ul className='p-6'>
                   {Object.values(messages.Menu[categoryKey].products)
-                    .filter(function (product) {
-                      return !product.disabled
-                    })
-                    .map(function (product, i, a) {
-                      return (
-                        <React.Fragment key={product.name}>
-                          <MenuProduct {...product} />
-                          {i !== a.length - 1 && (
-                            <Separator
-                              className='my-6 bg-secondary/25'
-                              decorative
-                            />
-                          )}
-                        </React.Fragment>
-                      )
-                    })}
+                    .filter((product) => !product.disabled)
+                    .map((product, i, a) => (
+                      <React.Fragment key={product.name}>
+                        <MenuProduct {...product} />
+                        {i !== a.length - 1 && (
+                          <Separator
+                            className='my-6 bg-secondary/25'
+                            decorative
+                          />
+                        )}
+                      </React.Fragment>
+                    ))}
                 </ul>
                 {messages.Menu[categoryKey].notes && (
                   <ul className='py-6 pr-6 pl-9.5 border-t border-dashed border-t-secondary'>
-                    {messages.Menu[categoryKey].notes.map(function (note) {
-                      return (
-                        <li
-                          key={note}
-                          className='list-disc'
-                        >
-                          <Typography variant='small'>{note}</Typography>
-                        </li>
-                      )
-                    })}
+                    {messages.Menu[categoryKey].notes.map((note) => (
+                      <li
+                        key={note}
+                        className='list-disc'
+                      >
+                        <Typography variant='small'>{note}</Typography>
+                      </li>
+                    ))}
                   </ul>
                 )}
               </AccordionContent>

@@ -1,21 +1,21 @@
 'use server'
 
-import {type Locale} from 'next-intl'
+import type {Locale} from 'next-intl'
 import {
-  type InferOutput,
+  check,
+  email,
   flatten,
-  safeParse,
-  setSpecificMessage,
+  type InferOutput,
+  maxLength,
+  minLength,
+  nonEmpty,
   object,
   pipe,
+  regex,
+  safeParse,
+  setSpecificMessage,
   string,
-  trim,
-  nonEmpty,
-  minLength,
-  maxLength,
-  email,
-  check,
-  regex
+  trim
 } from 'valibot'
 import {sendContactForm} from '@/src/lib/send-contact-form'
 import {bannedKeywordPatterns} from '@/src/lib/utils'
@@ -26,9 +26,7 @@ setSpecificMessage(nonEmpty, 'Υποχρεωτικό πεδίο', 'gr')
 setSpecificMessage(nonEmpty, 'Mandatory field', 'en')
 
 function getValibotMessage(grMessage: string, enMessage: string) {
-  return function ({lang}: {lang?: string}) {
-    return lang === 'gr' ? grMessage : enMessage
-  }
+  return ({lang}: {lang?: string}) => (lang === 'gr' ? grMessage : enMessage)
 }
 
 const ContactFormSchema = object({
@@ -51,13 +49,10 @@ const ContactFormSchema = object({
     trim(),
     email(getValibotMessage('Μη έγκυρη μορφή email', 'Invalid email format')),
     check(
-      function (input) {
-        return ['@gmail.com', '@icloud.com', '@yahoo.com'].some(
-          function (provider) {
-            return input.endsWith(provider)
-          }
-        )
-      },
+      (input) =>
+        ['@gmail.com', '@icloud.com', '@yahoo.com'].some((provider) =>
+          input.endsWith(provider)
+        ),
       getValibotMessage(
         'Αποδεκτοί πάροχοι email: gmail, icloud, yahoo',
         'Accepted email providers: gmail, icloud, yahoo'
@@ -81,11 +76,7 @@ const ContactFormSchema = object({
     nonEmpty(),
     trim(),
     check(
-      function (input) {
-        return !bannedKeywordPatterns.some(function (pattern) {
-          return pattern.test(input)
-        })
-      },
+      (input) => !bannedKeywordPatterns.some((pattern) => pattern.test(input)),
       getValibotMessage(
         'Βρέθηκε ανεπιθύμητο μήνυμα. Δοκιμάστε να αναδιατυπώσετε.',
         'Spam-like message detected. Try rephrasing.'

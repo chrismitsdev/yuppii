@@ -1,21 +1,21 @@
-import {clsx, type ClassValue} from 'clsx'
-import {twMerge} from 'tailwind-merge'
-import {Messages} from 'next-intl'
+import {type ClassValue, clsx} from 'clsx'
 import {
-  type LucideIcon,
+  Beer,
   Coffee,
-  Milk,
   CupSoda,
   GlassWater,
-  Beer,
-  Zap,
-  Utensils,
-  Pizza,
-  SaladIcon,
+  HamburgerIcon,
+  type LucideIcon,
   Martini,
+  Milk,
+  Pizza,
   Popcorn,
-  HamburgerIcon
+  SaladIcon,
+  Utensils,
+  Zap
 } from 'lucide-react'
+import type {Messages} from 'next-intl'
+import {twMerge} from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

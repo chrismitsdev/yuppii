@@ -1,7 +1,7 @@
-import {useTranslations, useLocale} from 'next-intl'
+import {useLocale, useTranslations} from 'next-intl'
+import * as maps from '@/public/park/map'
 import {Section} from '@/src/components/section'
 import {CustomImage} from '@/src/components/ui/custom-image'
-import * as maps from '@/public/park/map'
 
 const imageMap = {
   gr: maps.mapGr,

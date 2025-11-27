@@ -1,12 +1,12 @@
 'use client'
 
-import * as React from 'react'
-import {useSearchParams} from 'next/navigation'
-import {type Messages, useTranslations, useLocale, useMessages} from 'next-intl'
 import {HomeIcon} from 'lucide-react'
+import {useSearchParams} from 'next/navigation'
+import {type Messages, useLocale, useMessages, useTranslations} from 'next-intl'
+import type * as React from 'react'
+import {ScrollArea} from '@/src/components/ui/scrollarea'
 import {Link, usePathname} from '@/src/i18n/navigation'
 import {cn, sourceQueryString} from '@/src/lib/utils'
-import {ScrollArea} from '@/src/components/ui/scrollarea'
 
 const MenuNavigation: React.FC = () => {
   const t = useTranslations('Menu')
@@ -36,17 +36,15 @@ const MenuNavigation: React.FC = () => {
           >
             {locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories'}
           </MenuNavigationLink>
-          {categoryKeys.map(function (categoryKey) {
-            return (
-              <MenuNavigationLink
-                key={categoryKey}
-                href={`/menu/${categoryKey.toLowerCase()}${queryString}`}
-                isActive={pathname.includes(categoryKey.toLowerCase())}
-              >
-                {t(`${categoryKey}.name`)}
-              </MenuNavigationLink>
-            )
-          })}
+          {categoryKeys.map((categoryKey) => (
+            <MenuNavigationLink
+              key={categoryKey}
+              href={`/menu/${categoryKey.toLowerCase()}${queryString}`}
+              isActive={pathname.includes(categoryKey.toLowerCase())}
+            >
+              {t(`${categoryKey}.name`)}
+            </MenuNavigationLink>
+          ))}
         </div>
       </ScrollArea>
     </nav>

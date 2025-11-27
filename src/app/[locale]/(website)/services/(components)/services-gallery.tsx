@@ -1,43 +1,43 @@
 'use client'
 
+import {ExpandIcon, PlusIcon, XIcon} from 'lucide-react'
+import {type Messages, useLocale, useTranslations} from 'next-intl'
 import * as React from 'react'
-import {type Messages, useTranslations, useLocale} from 'next-intl'
-import {XIcon, ExpandIcon, PlusIcon} from 'lucide-react'
-import {isoLocaleMap} from '@/src/lib/utils'
+import * as gamesGalleryImages from '@/public/games/galleries'
 import {Section} from '@/src/components/section'
-import {
-  EmblaCarousel,
-  EmblaViewport,
-  EmblaContainer,
-  EmblaSlide,
-  EmblaButtonPrev,
-  EmblaButtonNext
-} from '@/src/components/ui/embla-carousel'
-import {
-  Sheet,
-  SheetTrigger,
-  SheetPortal,
-  SheetOverlay,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetClose
-} from '@/src/components/ui/sheet'
+import {Button} from '@/src/components/ui/button'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {
   Dialog,
-  DialogTrigger,
-  DialogPortal,
-  DialogOverlay,
+  DialogClose,
   DialogContent,
+  DialogOverlay,
+  DialogPortal,
   DialogTitle,
-  DialogClose
+  DialogTrigger
 } from '@/src/components/ui/dialog'
+import {
+  EmblaButtonNext,
+  EmblaButtonPrev,
+  EmblaCarousel,
+  EmblaContainer,
+  EmblaSlide,
+  EmblaViewport
+} from '@/src/components/ui/embla-carousel'
 import {ScrollArea} from '@/src/components/ui/scrollarea'
-import {Button} from '@/src/components/ui/button'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetOverlay,
+  SheetPortal,
+  SheetTitle,
+  SheetTrigger
+} from '@/src/components/ui/sheet'
 import {Typography} from '@/src/components/ui/typography'
-import {CustomImage} from '@/src/components/ui/custom-image'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
-import * as gamesGalleryImages from '@/public/games/galleries'
+import {isoLocaleMap} from '@/src/lib/utils'
 
 type ImageGallery = {
   key: keyof Messages['Pages']['Services']['ServicesGallery']['galleries']
@@ -88,47 +88,41 @@ const ServicesGallery: React.FC = () => {
     setSheetOpen(false)
   }
 
-  const renderedGames = galleries.map(function (gallery) {
-    return (
-      <li key={gallery.key}>
-        <Button
-          className='w-full sm:justify-start'
-          variant={
-            selectedGallery.key === gallery.key ? 'accent' : 'ghost-secondary'
-          }
-          size='lg'
-          onClick={() => handleClick(gallery)}
-          locale={locale}
-        >
-          {t(`galleries.${gallery.key}.label`)}
-        </Button>
-      </li>
-    )
-  })
+  const renderedGames = galleries.map((gallery) => (
+    <li key={gallery.key}>
+      <Button
+        className='w-full sm:justify-start'
+        variant={
+          selectedGallery.key === gallery.key ? 'accent' : 'ghost-secondary'
+        }
+        size='lg'
+        onClick={() => handleClick(gallery)}
+        locale={locale}
+      >
+        {t(`galleries.${gallery.key}.label`)}
+      </Button>
+    </li>
+  ))
 
-  const triggers = selectedGallery.images.map(function (image, i) {
-    return (
-      <ServicesGalleryTrigger
-        key={image.src}
+  const triggers = selectedGallery.images.map((image, i) => (
+    <ServicesGalleryTrigger
+      key={image.src}
+      src={image}
+      alt={`Gallery thumbnail image ${i + 1}`}
+      onClick={() => setIndex(i)}
+    />
+  ))
+
+  const slides = selectedGallery.images.map((image, i) => (
+    <EmblaSlide key={image.src}>
+      <CustomImage
+        className='rounded'
         src={image}
-        alt={`Gallery thumbnail image ${i + 1}`}
-        onClick={() => setIndex(i)}
+        alt={`Gallery slide image ${i + 1}`}
+        sizes='(min-width: 1000px) 1000px, 100vw'
       />
-    )
-  })
-
-  const slides = selectedGallery.images.map(function (image, i) {
-    return (
-      <EmblaSlide key={image.src}>
-        <CustomImage
-          className='rounded'
-          src={image}
-          alt={`Gallery slide image ${i + 1}`}
-          sizes='(min-width: 1000px) 1000px, 100vw'
-        />
-      </EmblaSlide>
-    )
-  })
+    </EmblaSlide>
+  ))
 
   return (
     <Section
@@ -148,6 +142,7 @@ const ServicesGallery: React.FC = () => {
               <button
                 className='p-4 mb-10 space-y-1 bg-secondary/40 border border-secondary rounded-lg text-left shadow-md'
                 lang={isoLocaleMap[locale]}
+                type='button'
               >
                 <div className='flex items-center justify-between'>
                   <Typography variant='lead'>

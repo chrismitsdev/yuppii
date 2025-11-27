@@ -1,8 +1,8 @@
 'use client'
 
-import * as React from 'react'
-import {Root, Item, Header, Trigger, Content} from '@radix-ui/react-accordion'
-import {ChevronUpIcon, ChevronDownIcon} from 'lucide-react'
+import {Content, Header, Item, Root, Trigger} from '@radix-ui/react-accordion'
+import {ChevronDownIcon, ChevronUpIcon} from 'lucide-react'
+import type * as React from 'react'
 import {cn} from '@/src/lib/utils'
 
 const Accordion = Root

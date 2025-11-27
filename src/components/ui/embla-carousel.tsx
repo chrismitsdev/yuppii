@@ -1,29 +1,29 @@
 'use client'
 
-import * as React from 'react'
 import {Slot} from '@radix-ui/react-slot'
+import useEmblaCarousel from 'embla-carousel-react'
 import {
-  type LucideProps,
   ChevronLeftIcon,
   ChevronRightIcon,
   ImagesIcon,
+  type LucideProps,
   XIcon
 } from 'lucide-react'
-import useEmblaCarousel from 'embla-carousel-react'
-import {cn} from '@/src/lib/utils'
+import * as React from 'react'
+import {Button} from '@/src/components/ui/button'
+import {ScrollArea} from '@/src/components/ui/scrollarea'
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger
+} from '@/src/components/ui/sheet'
+import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 import {
   EmblaContext,
   useEmblaContext
 } from '@/src/context/embla-carousel-context'
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetTitle
-} from '@/src/components/ui/sheet'
-import {ScrollArea} from '@/src/components/ui/scrollarea'
-import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
-import {Button} from '@/src/components/ui/button'
+import {cn} from '@/src/lib/utils'
 
 type EmblaApiType = ReturnType<typeof useEmblaCarousel>[1]
 
@@ -49,34 +49,28 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
   )
   const Comp = asChild ? Slot : 'div'
 
-  const onPrevButtonClick = React.useCallback(
-    function () {
-      if (!emblaApi) return
+  const onPrevButtonClick = React.useCallback(() => {
+    if (!emblaApi) return
 
-      if (emblaApi.plugins()?.autoplay) {
-        emblaApi.plugins().autoplay.stop()
-      }
+    if (emblaApi.plugins()?.autoplay) {
+      emblaApi.plugins().autoplay.stop()
+    }
 
-      emblaApi.scrollPrev()
-    },
-    [emblaApi]
-  )
+    emblaApi.scrollPrev()
+  }, [emblaApi])
 
-  const onNextButtonClick = React.useCallback(
-    function () {
-      if (!emblaApi) return
+  const onNextButtonClick = React.useCallback(() => {
+    if (!emblaApi) return
 
-      if (emblaApi.plugins()?.autoplay) {
-        emblaApi.plugins().autoplay.stop()
-      }
+    if (emblaApi.plugins()?.autoplay) {
+      emblaApi.plugins().autoplay.stop()
+    }
 
-      emblaApi.scrollNext()
-    },
-    [emblaApi]
-  )
+    emblaApi.scrollNext()
+  }, [emblaApi])
 
   const onThumbButtonClick = React.useCallback(
-    function (index: number) {
+    (index: number) => {
       if (!emblaApi) return
 
       if (emblaApi.plugins()?.autoplay) {
@@ -88,19 +82,16 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({
     [emblaApi]
   )
 
-  const onSelect = React.useCallback(function (emblaApi: EmblaApiType) {
+  const onSelect = React.useCallback((emblaApi: EmblaApiType) => {
     if (!emblaApi) return
     setSelectedIndex(emblaApi.selectedScrollSnap())
   }, [])
 
-  React.useEffect(
-    function () {
-      if (!emblaApi) return
-      onSelect(emblaApi)
-      emblaApi.on('reInit', onSelect).on('select', onSelect)
-    },
-    [emblaApi, onSelect]
-  )
+  React.useEffect(() => {
+    if (!emblaApi) return
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onSelect).on('select', onSelect)
+  }, [emblaApi, onSelect])
 
   return (
     <EmblaContext

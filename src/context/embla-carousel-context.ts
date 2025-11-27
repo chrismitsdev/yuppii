@@ -1,5 +1,5 @@
+import type useEmblaCarousel from 'embla-carousel-react'
 import * as React from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
 
 interface EmblaContextProps {
   emblaRef: ReturnType<typeof useEmblaCarousel>[0]

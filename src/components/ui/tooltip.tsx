@@ -1,8 +1,8 @@
 'use client'
 
-import * as React from 'react'
-import {Provider, Root, Trigger, Portal, Content} from '@radix-ui/react-tooltip'
+import {Content, Portal, Provider, Root, Trigger} from '@radix-ui/react-tooltip'
 import {cva, type VariantProps} from 'class-variance-authority'
+import type * as React from 'react'
 import {cn} from '@/src/lib/utils'
 
 const TooltipProvider = Provider

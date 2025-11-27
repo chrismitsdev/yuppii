@@ -1,9 +1,9 @@
-import * as React from 'react'
-import {Metadata} from 'next'
+import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
+import * as React from 'react'
 import {Container} from '@/src/components/container'
-import {ServicesGallery} from './(components)/services-gallery'
 import {ServicesCards} from './(components)/services-cards'
+import {ServicesGallery} from './(components)/services-gallery'
 import {ServicesReviews} from './(components)/services-reviews'
 
 export async function generateMetadata({params}: Params): Promise<Metadata> {

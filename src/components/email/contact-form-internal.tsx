@@ -1,20 +1,20 @@
 import {
-  Html,
-  Head,
-  Font,
-  Tailwind,
   Body,
-  Container,
-  Img,
-  Hr,
-  Section,
-  Row,
   Column,
+  Container,
+  Font,
+  Head,
   Heading,
-  Text,
-  Link
+  Hr,
+  Html,
+  Img,
+  Link,
+  Row,
+  Section,
+  Tailwind,
+  Text
 } from '@react-email/components'
-import {ContactFormActionState} from '@/src/lib/actions'
+import type {ContactFormActionState} from '@/src/lib/actions'
 
 const ContactFormInternal: React.FC<
   Readonly<ContactFormActionState['data']>

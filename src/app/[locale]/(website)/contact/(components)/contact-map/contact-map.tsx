@@ -1,23 +1,24 @@
 'use client'
 
 import 'leaflet/dist/leaflet.css'
-import * as React from 'react'
+import {Marker} from '@adamscybot/react-leaflet-component-marker'
+import type L from 'leaflet'
+import type {LatLngTuple} from 'leaflet'
+import {MapPinIcon, NavigationIcon, PhoneIcon} from 'lucide-react'
 import Image from 'next/image'
 import {useTranslations} from 'next-intl'
-import {MapPinIcon, NavigationIcon, PhoneIcon} from 'lucide-react'
-import L, {type LatLngTuple} from 'leaflet'
-import {MapContainer, TileLayer, Popup} from 'react-leaflet'
-import {Marker} from '@adamscybot/react-leaflet-component-marker'
+import * as React from 'react'
+import {MapContainer, Popup, TileLayer} from 'react-leaflet'
+import logo from '@/public/logo.svg'
 import {Section} from '@/src/components/section'
 import {Typography} from '@/src/components/ui/typography'
-import logo from '@/public/logo.svg'
 
 const coords = [40.84334844866346, 25.87527152454368] satisfies LatLngTuple
 
 const ContactMap: React.FC = () => {
   const t = useTranslations('Pages.Contact.ContactMap')
 
-  const handleMarkerRef = React.useCallback(function (marker: L.Marker | null) {
+  const handleMarkerRef = React.useCallback((marker: L.Marker | null) => {
     if (marker) {
       marker.openPopup()
     }

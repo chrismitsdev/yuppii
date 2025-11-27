@@ -1,13 +1,13 @@
-import * as React from 'react'
+import {FacebookIcon, HeartIcon, InstagramIcon, MapIcon} from 'lucide-react'
 import Image from 'next/image'
-import {useTranslations, useLocale} from 'next-intl'
-import {FacebookIcon, InstagramIcon, MapIcon, HeartIcon} from 'lucide-react'
-import {cn} from '@/src/lib/utils'
-import {Link} from '@/src/i18n/navigation'
-import {Container} from '@/src/components/container'
-import {Typography} from '@/src/components/ui/typography'
-import {Button} from '@/src/components/ui/button'
+import {useLocale, useTranslations} from 'next-intl'
+import type * as React from 'react'
 import logo from '@/public/logo-full-light.svg'
+import {Container} from '@/src/components/container'
+import {Button} from '@/src/components/ui/button'
+import {Typography} from '@/src/components/ui/typography'
+import {Link} from '@/src/i18n/navigation'
+import {cn} from '@/src/lib/utils'
 
 const Footer: React.FC = () => {
   const t = useTranslations('Components.Footer.columns')
@@ -71,6 +71,7 @@ const Footer: React.FC = () => {
               className='hover:underline'
               href='https://startpilates.gr'
               target='_blank'
+              rel='noopener'
             >
               <Typography variant='small'>Start Pilates</Typography>
             </a>
@@ -97,6 +98,7 @@ const Footer: React.FC = () => {
               <a
                 href='https://www.facebook.com/yuppii.gr'
                 target='_blank'
+                rel='noopener'
               >
                 <FacebookIcon />
               </a>
@@ -109,6 +111,7 @@ const Footer: React.FC = () => {
               <a
                 href='https://www.instagram.com/yuppiilunapark/'
                 target='_blank'
+                rel='noopener'
               >
                 <InstagramIcon />
               </a>
@@ -121,6 +124,7 @@ const Footer: React.FC = () => {
               <a
                 href='https://goo.gl/maps/vWBvWk3Tvcw5XkF87'
                 target='_blank'
+                rel='noopener'
               >
                 <MapIcon />
               </a>

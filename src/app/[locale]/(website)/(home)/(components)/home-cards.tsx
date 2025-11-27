@@ -1,34 +1,34 @@
-import {useTranslations} from 'next-intl'
 import {
-  ChevronRightIcon,
   CastleIcon,
-  PartyPopperIcon,
+  ChevronRightIcon,
   FootprintsIcon,
+  PartyPopperIcon,
   XIcon
 } from 'lucide-react'
+import {useTranslations} from 'next-intl'
 import {ClientLink} from '@/src/components/client-link'
 import {Section} from '@/src/components/section'
+import {Button} from '@/src/components/ui/button'
 import {
   Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
   CardContent,
-  CardFooter
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
 } from '@/src/components/ui/card'
 import {
   Dialog,
-  DialogTrigger,
-  DialogPortal,
-  DialogOverlay,
+  DialogClose,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogDescription,
   DialogFooter,
-  DialogClose
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger
 } from '@/src/components/ui/dialog'
-import {Button} from '@/src/components/ui/button'
 
 const HomeCards: React.FC = () => {
   const t = useTranslations('Pages.Home.HomeCards')

@@ -1,58 +1,54 @@
 'use client'
 
-import * as React from 'react'
+import {ExpandIcon, XIcon} from 'lucide-react'
 import {useTranslations} from 'next-intl'
-import {XIcon, ExpandIcon} from 'lucide-react'
+import * as React from 'react'
+import {galleryImageList} from '@/public/home/gallery'
 import {Section} from '@/src/components/section'
+import {Button} from '@/src/components/ui/button'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {
   Dialog,
-  DialogTrigger,
-  DialogPortal,
-  DialogOverlay,
+  DialogClose,
   DialogContent,
+  DialogOverlay,
+  DialogPortal,
   DialogTitle,
-  DialogClose
+  DialogTrigger
 } from '@/src/components/ui/dialog'
 import {
+  EmblaButtonNext,
+  EmblaButtonPrev,
   EmblaCarousel,
-  EmblaViewport,
   EmblaContainer,
   EmblaSlide,
-  EmblaButtonPrev,
-  EmblaButtonNext
+  EmblaViewport
 } from '@/src/components/ui/embla-carousel'
-import {CustomImage} from '@/src/components/ui/custom-image'
-import {Button} from '@/src/components/ui/button'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
-import {galleryImageList} from '@/public/home/gallery'
 
 const HomeGallery: React.FC = () => {
   const [index, setIndex] = React.useState(0)
   const t = useTranslations('Pages.Home.HomeGallery')
 
-  const triggers = galleryImageList.map(function (image, i) {
-    return (
-      <HomeGalleryTrigger
-        key={image.src}
-        src={image}
-        alt={`Gallery thumbnail image ${i + 1}`}
-        onClick={() => setIndex(i)}
-      />
-    )
-  })
+  const triggers = galleryImageList.map((image, i) => (
+    <HomeGalleryTrigger
+      key={image.src}
+      src={image}
+      alt={`Gallery thumbnail image ${i + 1}`}
+      onClick={() => setIndex(i)}
+    />
+  ))
 
-  const slides = galleryImageList.map(function (image, i) {
-    return (
-      <EmblaSlide key={image.src}>
-        <CustomImage
-          className='rounded'
-          src={image}
-          alt={`Gallery slide image ${i + 1}`}
-          sizes='(min-width: 1000px) 1000px, 100vw'
-        />
-      </EmblaSlide>
-    )
-  })
+  const slides = galleryImageList.map((image, i) => (
+    <EmblaSlide key={image.src}>
+      <CustomImage
+        className='rounded'
+        src={image}
+        alt={`Gallery slide image ${i + 1}`}
+        sizes='(min-width: 1000px) 1000px, 100vw'
+      />
+    </EmblaSlide>
+  ))
 
   return (
     <Section

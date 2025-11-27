@@ -1,9 +1,9 @@
-import {Suspense} from 'react'
 import Image from 'next/image'
+import {Suspense} from 'react'
+import logo from '@/public/logo.svg'
 import {Container} from '@/src/components/container'
 import {MenuNavigation} from '@/src/components/menu-navigation'
 import {SuspenseLocaleSwitcher} from '@/src/components/suspense-locale-switcher'
-import logo from '@/public/logo.svg'
 
 const MenuHeader: React.FC = () => {
   return (

@@ -1,8 +1,8 @@
 import {useTranslations} from 'next-intl'
+import {parkImageList} from '@/public/park/information'
 import {Section} from '@/src/components/section'
 import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
-import {parkImageList} from '@/public/park/information'
 
 const ParkInfo: React.FC = () => {
   const t = useTranslations('Pages.Park.ParkInfo')

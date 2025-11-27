@@ -1,7 +1,7 @@
 import type {LucideProps} from 'lucide-react'
 import {useLocale} from 'next-intl'
-import {cn, isoLocaleMap} from '@/src/lib/utils'
 import {Typography} from '@/src/components/ui/typography'
+import {cn, isoLocaleMap} from '@/src/lib/utils'
 
 interface FormFieldProps {
   icon: React.ComponentType<LucideProps>

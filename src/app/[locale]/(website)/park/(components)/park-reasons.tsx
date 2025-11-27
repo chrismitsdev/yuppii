@@ -1,18 +1,18 @@
-import {useTranslations} from 'next-intl'
 import {
-  RocketIcon,
-  LogOutIcon,
-  UsersIcon,
-  FlameIcon,
   BabyIcon,
-  HeartIcon
+  FlameIcon,
+  HeartIcon,
+  LogOutIcon,
+  RocketIcon,
+  UsersIcon
 } from 'lucide-react'
+import {useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
 import {
   Accordion,
-  AccordionTrigger,
   AccordionContent,
-  AccordionItem
+  AccordionItem,
+  AccordionTrigger
 } from '@/src/components/ui/accordion'
 import {Typography} from '@/src/components/ui/typography'
 

@@ -1,6 +1,6 @@
-import * as React from 'react'
-import {cn} from '@/src/lib/utils'
+import type * as React from 'react'
 import {Typography} from '@/src/components/ui/typography'
+import {cn} from '@/src/lib/utils'
 
 interface SectionProps extends React.ComponentPropsWithRef<'section'> {
   title?: string

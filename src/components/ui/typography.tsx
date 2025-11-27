@@ -1,7 +1,7 @@
-import * as React from 'react'
 import {Slot} from '@radix-ui/react-slot'
-import {type Locale} from 'next-intl'
 import {cva, type VariantProps} from 'class-variance-authority'
+import type {Locale} from 'next-intl'
+import type * as React from 'react'
 import {cn, isoLocaleMap} from '@/src/lib/utils'
 
 const typographyProps = cva(['block', 'text-inherit', 'transition-colors'], {

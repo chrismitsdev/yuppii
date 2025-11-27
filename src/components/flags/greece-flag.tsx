@@ -7,6 +7,8 @@ const GreeceFlag: React.FC<
       width={size}
       height={size}
       viewBox='0 0 512 512'
+      role='img'
+      aria-hidden='true'
       {...props}
     >
       <mask id='circleFlagsGr0'>

@@ -1,9 +1,9 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import './animations.css';
-@import './colors.css';
-@import './data-attributes.css';
-@import './shadows.css';
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./animations.css";
+@import "./colors.css";
+@import "./data-attributes.css";
+@import "./shadows.css";
 
 /* Leaflet styling */
 .leaflet-map-pane,

@@ -1,5 +1,5 @@
-import * as React from 'react'
 import {setRequestLocale} from 'next-intl/server'
+import * as React from 'react'
 import {MenuHeader} from '@/src/components/menu-header'
 
 export default function MenuLayout({

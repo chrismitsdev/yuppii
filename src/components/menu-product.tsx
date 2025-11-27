@@ -1,6 +1,6 @@
-import {formatCurrency} from '@/src/lib/utils'
-import {Typography} from '@/src/components/ui/typography'
 import {Badge} from '@/src/components/ui/badge'
+import {Typography} from '@/src/components/ui/typography'
+import {formatCurrency} from '@/src/lib/utils'
 
 interface MenuProductProps {
   name: string
@@ -15,16 +15,14 @@ const MenuProduct: React.FC<MenuProductProps> = ({name, variants, price}) => {
       <Typography className='font-medium'>{formatCurrency(price)}</Typography>
       {variants && (
         <div className='flex flex-wrap items-center gap-1 col-span-full'>
-          {variants.map(function (variant) {
-            return (
-              <Badge
-                key={variant}
-                variant='secondary'
-              >
-                {variant}
-              </Badge>
-            )
-          })}
+          {variants.map((variant) => (
+            <Badge
+              key={variant}
+              variant='secondary'
+            >
+              {variant}
+            </Badge>
+          ))}
         </div>
       )}
     </li>

@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import {Link} from '@/src/i18n/navigation'
+import logo from '@/public/logo.svg'
 import {Container} from '@/src/components/container'
 import {WebsiteNavigation} from '@/src/components/website-navigation'
-import logo from '@/public/logo.svg'
+import {Link} from '@/src/i18n/navigation'
 
 const WebsiteHeader: React.FC = () => {
   return (

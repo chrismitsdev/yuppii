@@ -1,17 +1,17 @@
 'use client'
 
-import * as React from 'react'
 import {
-  Root,
-  Trigger,
-  Portal,
-  Overlay,
+  Close,
   Content,
-  Title,
   Description,
-  Close
+  Overlay,
+  Portal,
+  Root,
+  Title,
+  Trigger
 } from '@radix-ui/react-dialog'
-import {type VariantProps, cva} from 'class-variance-authority'
+import {cva, type VariantProps} from 'class-variance-authority'
+import type * as React from 'react'
 import {cn} from '@/src/lib/utils'
 
 const sheetContentProps = cva(

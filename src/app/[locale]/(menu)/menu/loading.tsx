@@ -1,5 +1,5 @@
-import {Section} from '@/src/components/section'
 import {LoaderCircle} from 'lucide-react'
+import {Section} from '@/src/components/section'
 
 export default function Loading() {
   return (

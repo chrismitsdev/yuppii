@@ -1,14 +1,14 @@
 'use client'
 
 import {
-  Root,
-  Trigger,
-  Portal,
-  Overlay,
-  Content,
   Close,
+  Content,
+  Description,
+  Overlay,
+  Portal,
+  Root,
   Title,
-  Description
+  Trigger
 } from '@radix-ui/react-dialog'
 import {cn} from '@/src/lib/utils'
 

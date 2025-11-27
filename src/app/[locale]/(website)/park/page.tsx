@@ -1,6 +1,6 @@
-import * as React from 'react'
-import {Metadata} from 'next'
+import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
+import * as React from 'react'
 import {Container} from '@/src/components/container'
 import {ParkInfo} from './(components)/park-info'
 import {ParkMap} from './(components)/park-map'

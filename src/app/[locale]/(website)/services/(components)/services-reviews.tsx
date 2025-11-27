@@ -1,19 +1,19 @@
 'use client'
 
-import * as React from 'react'
 import {useTranslations} from 'next-intl'
+import type * as React from 'react'
+import * as avatars from '@/public/games/avatars'
 import {Section} from '@/src/components/section'
+import {CustomImage} from '@/src/components/ui/custom-image'
 import {
+  EmblaButtonNext,
+  EmblaButtonPrev,
   EmblaCarousel,
-  EmblaViewport,
   EmblaContainer,
   EmblaSlide,
-  EmblaButtonPrev,
-  EmblaButtonNext
+  EmblaViewport
 } from '@/src/components/ui/embla-carousel'
-import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
-import * as avatars from '@/public/games/avatars'
 
 const ServicesReviews = () => {
   const t = useTranslations('Pages.Services.ServicesReviews')

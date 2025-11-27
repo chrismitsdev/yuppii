@@ -1,10 +1,10 @@
-import * as React from 'react'
-import {Metadata} from 'next'
+import type {Metadata} from 'next'
 import {type Locale, type Messages, useMessages} from 'next-intl'
-import {setRequestLocale, getTranslations, getMessages} from 'next-intl/server'
+import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server'
+import * as React from 'react'
 import {Container} from '@/src/components/container'
-import {CategoryProducts} from './(components)/category-products'
 import {CategoryNotFound} from './(components)/category-not-found'
+import {CategoryProducts} from './(components)/category-products'
 
 type ParamsWithCategory = {
   params: Promise<{
@@ -37,11 +37,9 @@ export async function generateStaticParams() {
   const messages = await getMessages({locale: 'en'})
   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
-  const categories = categoryKeys.map(function (ctgKey) {
-    return {
-      category: ctgKey.toLowerCase() as Lowercase<keyof Messages['Menu']>
-    }
-  })
+  const categories = categoryKeys.map((ctgKey) => ({
+    category: ctgKey.toLowerCase() as Lowercase<keyof Messages['Menu']>
+  }))
 
   return categories
 }
