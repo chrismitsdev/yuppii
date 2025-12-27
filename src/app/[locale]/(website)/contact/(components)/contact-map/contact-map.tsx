@@ -78,7 +78,7 @@ const ContactMap: React.FC = () => {
                       variant='small'
                       asChild
                     >
-                      <a href='tel:+302551012345'>{t('popup.phone')}</a>
+                      <a href='tel:+306973433980'>{t('popup.phone')}</a>
                     </Typography>
                   </div>
                 </div>
