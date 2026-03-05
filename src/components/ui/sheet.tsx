@@ -100,7 +100,7 @@ function SheetHeader({
 }: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn('p-6 space-y-4 sm:p-8', className)}
+      className={cn('p-6 space-y-4 border-b sm:p-8', className)}
       {...props}
     />
   )
@@ -136,7 +136,7 @@ function SheetDescription({
 function SheetBody({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn('px-6 sm:px-8', className)}
+      className={cn('px-6 py-1 sm:px-8', className)}
       {...props}
     />
   )

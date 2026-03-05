@@ -2,7 +2,7 @@
 
 import {ExpandIcon} from 'lucide-react'
 import {type Messages, useTranslations} from 'next-intl'
-import {useCallback, useMemo, useState} from 'react'
+import {type Ref, useCallback, useMemo, useRef, useState} from 'react'
 import * as gamesGalleryImages from '@/public/games/galleries'
 import {Section} from '@/src/components/section'
 import {Button} from '@/src/components/ui/button'
@@ -78,17 +78,23 @@ const galleries: ImageGallery[] = [
   {key: 'ufo', images: gamesGalleryImages.ufoGallery}
 ]
 
-function ServicesGallery() {
+function ServicesDialogCarousel() {
   const [index, setIndex] = useState(0)
   const [sheetOpen, setSheetOpen] = useState(false)
   const [selectedGallery, setSelectedGallery] = useState(galleries[0])
   const t = useTranslations('Pages.Services.ServicesGallery')
+  const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   const handleSelectGallery = useCallback((gallery: ImageGallery) => {
     setSelectedGallery(gallery)
     setSheetOpen(false)
     setIndex(0)
   }, [])
+
+  const handleFocusTrigger = (e: Event) => {
+    e.preventDefault()
+    triggerRefs.current[index]?.focus()
+  }
 
   const renderedGames = useMemo(() => {
     return galleries.map((gallery) => {
@@ -113,6 +119,9 @@ function ServicesGallery() {
           key={image.src}
           src={image}
           alt={`Gallery thumbnail image ${i + 1}`}
+          ref={(el) => {
+            triggerRefs.current[i] = el
+          }}
           onClick={() => setIndex(i)}
         />
       )
@@ -145,7 +154,7 @@ function ServicesGallery() {
             open={sheetOpen}
             onOpenChange={setSheetOpen}
           >
-            <SheetTrigger className='p-4 mb-10 w-full space-y-1 bg-secondary/40 border border-secondary rounded-lg text-left shadow-md'>
+            <SheetTrigger className='p-4 mb-10 w-full space-y-1 bg-secondary/40 border border-secondary rounded-lg text-left shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
               <Typography variant='h4'>
                 {t(`galleries.${selectedGallery.key}.label`)}
               </Typography>
@@ -162,7 +171,7 @@ function ServicesGallery() {
                 </SheetHeader>
 
                 <Scrollarea
-                  className='h-[calc(100%-72px)] sm:h-[calc(100%-88px)]'
+                  className='h-[calc(100%-73px)] sm:h-[calc(100%-89px)]'
                   type='always'
                 >
                   <ScrollareaViewport>
@@ -183,8 +192,9 @@ function ServicesGallery() {
             <DialogOverlay />
             <DialogContent
               className='bg-transparent'
-              onCloseAutoFocus={(e) => e.preventDefault()}
+              onCloseAutoFocus={handleFocusTrigger}
             >
+              <DialogClose />
               <VisuallyHidden>
                 <DialogTitle>Games page gallery images</DialogTitle>
               </VisuallyHidden>
@@ -195,7 +205,6 @@ function ServicesGallery() {
                 <ButtonPrev />
                 <ButtonNext />
               </Carousel>
-              <DialogClose />
             </DialogContent>
           </DialogPortal>
         </Dialog>
@@ -207,15 +216,18 @@ function ServicesGallery() {
 function ServicesGalleryTrigger({
   src,
   alt,
+  ref,
   onClick
 }: {
   src: React.ComponentProps<typeof CustomImage>['src']
   alt: string
+  ref: Ref<HTMLButtonElement>
   onClick: () => void
 }) {
   return (
     <DialogTrigger
-      className='relative overflow-hidden rounded shadow before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-0 group'
+      className='relative overflow-hidden rounded shadow before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent group'
+      ref={ref}
       onClick={onClick}
     >
       <CustomImage
@@ -238,7 +250,7 @@ function ServicesGalleryTrigger({
   )
 }
 
-ServicesGallery.displayName = 'ServicesGallery'
+ServicesDialogCarousel.displayName = 'ServicesDialogCarousel'
 ServicesGalleryTrigger.displayName = 'ServicesGalleryTrigger'
 
-export {ServicesGallery}
+export {ServicesDialogCarousel}

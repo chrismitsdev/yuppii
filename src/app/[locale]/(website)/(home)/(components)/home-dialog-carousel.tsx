@@ -25,7 +25,7 @@ import {
 } from '@/src/components/ui/dialog'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 
-function HomeGallery() {
+function HomeDialogCarousel() {
   const [index, setIndex] = useState(0)
   const t = useTranslations('Pages.Home.HomeGallery')
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
@@ -130,7 +130,7 @@ function HomeGalleryTrigger({
   )
 }
 
-HomeGallery.displayName = 'HomeGallery'
+HomeDialogCarousel.displayName = 'HomeDialogCarousel'
 HomeGalleryTrigger.displayName = 'HomeGalleryTrigger'
 
-export {HomeGallery}
+export {HomeDialogCarousel}

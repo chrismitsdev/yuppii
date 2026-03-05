@@ -135,7 +135,10 @@ function MobileNavigation() {
         shouldScaleBackground
       >
         <DrawerTrigger asChild>
-          <IconButton aria-label='Open drawer'>
+          <IconButton
+            aria-label='Open drawer'
+            variant='secondary'
+          >
             <MenuIcon />
           </IconButton>
         </DrawerTrigger>

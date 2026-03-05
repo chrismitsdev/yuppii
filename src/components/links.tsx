@@ -1,10 +1,15 @@
 import {FacebookIcon, InstagramIcon, MapPinIcon} from 'lucide-react'
 import {IconButton} from '@/src/components/ui/icon-button'
 
-function FacebookIconButton() {
+type IconButtonVariant = {
+  variant?: React.ComponentProps<typeof IconButton>['variant']
+}
+
+function FacebookIconButton({variant = 'secondary'}: IconButtonVariant) {
   return (
     <IconButton
       aria-label='Visit our Facebook page (Opens in new tab)'
+      variant={variant}
       asChild
     >
       <a
@@ -18,10 +23,11 @@ function FacebookIconButton() {
   )
 }
 
-function InstagramIconButton() {
+function InstagramIconButton({variant = 'secondary'}: IconButtonVariant) {
   return (
     <IconButton
       aria-label='Visit our Instagram page (Opens in new tab)'
+      variant={variant}
       asChild
     >
       <a
@@ -35,10 +41,11 @@ function InstagramIconButton() {
   )
 }
 
-function GoogleMapsIconButton() {
+function GoogleMapsIconButton({variant = 'secondary'}: IconButtonVariant) {
   return (
     <IconButton
       aria-label='Get directions on Google Maps (opens in new tab)'
+      variant={variant}
       asChild
     >
       <a

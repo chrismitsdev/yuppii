@@ -68,8 +68,8 @@ function ServicesReviews() {
             />
           </SlidesContainer>
         </CarouselViewport>
-        <ButtonPrev className='-left-3 sm:-left-12' />
-        <ButtonNext className='-right-3 sm:-right-12' />
+        <ButtonPrev className='-inset-s-2' />
+        <ButtonNext className='-inset-e-2' />
       </Carousel>
     </Section>
   )

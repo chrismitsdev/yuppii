@@ -6,6 +6,8 @@ interface CarouselContextProps {
   emblaApi: ReturnType<typeof useEmblaCarousel>[1]
   onPrevButtonClick(): void
   onNextButtonClick(): void
+  prevButtonDisabled: boolean
+  nextButtonDisabled: boolean
 }
 
 const CarouselContext = createContext<CarouselContextProps | null>(null)

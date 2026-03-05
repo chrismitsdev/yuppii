@@ -98,9 +98,9 @@ function Footer() {
             Copyright &copy; {new Date().getFullYear()} Yuppii Luna Park
           </Typography>
           <div className='space-x-6 not-sm:order-last'>
-            <FacebookIconButton />
-            <InstagramIconButton />
-            <GoogleMapsIconButton />
+            <FacebookIconButton variant='primary' />
+            <InstagramIconButton variant='primary' />
+            <GoogleMapsIconButton variant='primary' />
           </div>
           <Typography variant='small'>Designed & Developed by CM </Typography>
         </section>

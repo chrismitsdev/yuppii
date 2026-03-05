@@ -4,7 +4,7 @@ import {use} from 'react'
 import {Container} from '@/src/components/container'
 import {HomeCards} from './(components)/home-cards'
 import {HomeCarousel} from './(components)/home-carousel'
-import {HomeGallery} from './(components)/home-gallery'
+import {HomeDialogCarousel} from './(components)/home-dialog-carousel'
 
 export async function generateMetadata({params}: Params): Promise<Metadata> {
   const {locale} = await params
@@ -24,7 +24,7 @@ export default function IndexPage({params}: PageProps<'/[locale]'>) {
       <HomeCarousel />
       <Container>
         <HomeCards />
-        <HomeGallery />
+        <HomeDialogCarousel />
       </Container>
     </>
   )
