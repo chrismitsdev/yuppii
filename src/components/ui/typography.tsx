@@ -18,7 +18,10 @@ const typographyProps = cva(['block', 'transition-colors', 'text-balance'], {
     }
   },
   compoundVariants: [
-    {variant: ['h1', 'h2', 'h3', 'h4'], className: 'font-display font-bold'},
+    {
+      variant: ['h1', 'h2', 'h3', 'h4', 'lead'],
+      className: 'font-display font-bold'
+    },
     {variant: ['p', 'small', 'tiny'], className: 'leading-6'}
   ],
   defaultVariants: {

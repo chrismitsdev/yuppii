@@ -176,7 +176,7 @@ function ServicesGallery() {
             </SheetPortal>
           </Sheet>
 
-          <div className='grid grid-cols-3 gap-2 sm:gap-8'>
+          <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-8'>
             {renderedTriggers}
           </div>
           <DialogPortal>

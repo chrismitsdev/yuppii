@@ -23,7 +23,6 @@ function Section({
         <article className='text-center space-y-4'>
           {title && (
             <Typography
-              className='text-secondary'
               variant='h2'
               asChild
             >

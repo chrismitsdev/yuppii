@@ -89,7 +89,7 @@ function ServicesReviewSlide({
       <div className='p-8 space-y-3 h-full bg-secondary/40 border border-secondary rounded-lg'>
         <div className='flex items-center gap-3'>
           <CustomImage
-            width={40}
+            className='size-10'
             src={authorAvatar}
             alt={`Reviewer image avatar ${
               authorAvatar.src
@@ -97,19 +97,9 @@ function ServicesReviewSlide({
                 [authorAvatar.src.split('/').length - 1].split('.')[0]
             }`}
           />
-          <Typography
-            variant='lead'
-            className='mt-1 select-none'
-          >
-            {authorName}
-          </Typography>
+          <Typography variant='lead'>{authorName}</Typography>
         </div>
-        <Typography
-          variant='large'
-          className='sm:pl-12 select-none'
-        >
-          {authorReview}
-        </Typography>
+        <Typography className='sm:pl-12 select-none'>{authorReview}</Typography>
       </div>
     </Slide>
   )
