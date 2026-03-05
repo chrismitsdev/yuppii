@@ -7,24 +7,24 @@ interface SectionProps extends React.ComponentPropsWithRef<'section'> {
   subtitle?: string
 }
 
-const Section: React.FC<SectionProps> = ({
+function Section({
   title,
   subtitle,
   className,
   children,
   ...props
-}) => {
+}: SectionProps) {
   return (
     <section
       className={cn('py-20 space-y-20 first:pt-40 last:pb-40', className)}
       {...props}
     >
       {(title || subtitle) && (
-        <article className='flex flex-col space-y-4'>
+        <article className='text-center space-y-4'>
           {title && (
             <Typography
+              className='text-secondary'
               variant='h2'
-              className='text-center text-secondary'
               asChild
             >
               <h2>{title}</h2>
@@ -33,7 +33,6 @@ const Section: React.FC<SectionProps> = ({
           {subtitle && (
             <Typography
               variant='lead'
-              className='text-center'
               asChild
             >
               <p>{subtitle}</p>

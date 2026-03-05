@@ -1,7 +1,7 @@
 import '@/src/styles/index.css'
 import {Analytics} from '@vercel/analytics/next'
 import type {Metadata} from 'next'
-import {Arima} from 'next/font/google'
+import {Inter, Play} from 'next/font/google'
 import {notFound} from 'next/navigation'
 import {hasLocale, NextIntlClientProvider} from 'next-intl'
 import {setRequestLocale} from 'next-intl/server'
@@ -10,26 +10,34 @@ import {Toaster} from 'react-hot-toast'
 import {Footer} from '@/src/components/footer'
 import {routing} from '@/src/i18n/routing'
 
-const font = Arima({
-  weight: 'variable',
-  subsets: ['latin'],
-  display: 'swap'
+const mainFont = Inter({
+  subsets: ['latin', 'latin-ext', 'greek', 'cyrillic'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-main'
+})
+
+const displayFont = Play({
+  subsets: ['latin', 'latin-ext', 'greek', 'cyrillic'],
+  display: 'swap',
+  weight: ['400', '700'],
+  variable: '--font-display'
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.yuppii.gr'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'el-GR': '/el',
+      'en-US': '/en'
+    }
+  },
   title: {
     template: '%s • Yuppii Luna Park',
     default: 'Yuppii Luna Park'
   },
   description: 'Yuppii Luna Park amusement park official website',
-  alternates: {
-    canonical: '/',
-    languages: {
-      'el-GR': '/gr',
-      'en-US': '/en'
-    }
-  },
   openGraph: {
     title: 'Yuppii Luna Park',
     description: 'Yuppii Luna Park amusement park official website'
@@ -59,7 +67,7 @@ export default function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={font.className}
+      className={`${mainFont.variable} ${displayFont.variable}`}
     >
       <body className='bg-primary text-primary-foreground'>
         <NextIntlClientProvider>

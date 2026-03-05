@@ -7,10 +7,10 @@ import {cn} from '@/src/lib/utils'
 
 const Accordion = Root
 
-const AccordionItem: React.FC<React.ComponentPropsWithRef<typeof Item>> = ({
+function AccordionItem({
   className,
   ...props
-}) => {
+}: React.ComponentPropsWithRef<typeof Item>) {
   return (
     <Item
       className={cn(
@@ -22,9 +22,11 @@ const AccordionItem: React.FC<React.ComponentPropsWithRef<typeof Item>> = ({
   )
 }
 
-const AccordionTrigger: React.FC<
-  React.ComponentPropsWithRef<typeof Trigger>
-> = ({className, children, ...props}) => {
+function AccordionTrigger({
+  className,
+  children,
+  ...props
+}: React.ComponentPropsWithRef<typeof Trigger>) {
   return (
     <Header>
       <Trigger
@@ -44,9 +46,11 @@ const AccordionTrigger: React.FC<
   )
 }
 
-const AccordionContent: React.FC<
-  React.ComponentPropsWithRef<typeof Content>
-> = ({className, children, ...props}) => {
+function AccordionContent({
+  className,
+  children,
+  ...props
+}: React.ComponentPropsWithRef<typeof Content>) {
   return (
     <Content
       className='data-open:animate-accordion-open data-closed:animate-accordion-close'

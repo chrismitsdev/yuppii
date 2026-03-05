@@ -1,0 +1,4 @@
+@theme {
+  --font-sans: var(--font-main);
+  --font-display: var(--font-display);
+}

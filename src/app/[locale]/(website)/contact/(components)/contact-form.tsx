@@ -9,7 +9,7 @@ import {
   UserIcon
 } from 'lucide-react'
 import {useLocale, useTranslations} from 'next-intl'
-import * as React from 'react'
+import {useActionState, useEffect} from 'react'
 import {toast} from 'react-hot-toast'
 import {Section} from '@/src/components/section'
 import {Button} from '@/src/components/ui/button'
@@ -27,15 +27,15 @@ const initialState: ContactFormActionState = {
   ok: null
 }
 
-const ContactForm: React.FC = () => {
+function ContactForm() {
   const locale = useLocale()
-  const [state, action, isPending] = React.useActionState(
+  const [state, action, isPending] = useActionState(
     contactFormAction.bind(null, locale),
     initialState
   )
   const t = useTranslations('Pages.Contact.ContactForm')
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (state.ok === null) return
 
     if (state.ok) {
@@ -104,7 +104,6 @@ const ContactForm: React.FC = () => {
             <Button
               className='w-full sm:w-auto'
               size='lg'
-              locale={locale}
               disabled={isPending}
             >
               <span>{t('submit')}</span>

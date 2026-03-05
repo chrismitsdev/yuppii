@@ -16,7 +16,7 @@ import {
 } from '@/src/components/ui/accordion'
 import {Typography} from '@/src/components/ui/typography'
 
-const ParkReasons: React.FC = () => {
+function ParkReasons() {
   const t = useTranslations('Pages.Park.ParkReasons')
 
   return (

@@ -1,25 +1,24 @@
 import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
-import type {Locale} from 'next-intl'
-import type * as React from 'react'
-import {cn, isoLocaleMap} from '@/src/lib/utils'
+import {cn} from '@/src/lib/utils'
 
-const typographyProps = cva(['block', 'text-inherit', 'transition-colors'], {
+const typographyProps = cva(['block', 'transition-colors', 'text-balance'], {
   variants: {
     variant: {
-      h1: ['text-5xl', 'font-black'],
-      h2: ['text-3xl', 'sm:text-4xl'],
+      h1: ['text-5xl'],
+      h2: ['text-4xl'],
       h3: ['text-3xl'],
       h4: ['text-2xl'],
       lead: ['text-xl'],
-      large: ['text-lg', 'leading-8'],
-      p: ['text-base'],
-      small: ['text-sm'],
-      tiny: ['text-xs']
+      large: ['text-lg', 'leading-7'],
+      p: ['text-base', 'leading-6'],
+      small: ['text-sm', 'leading-5'],
+      tiny: ['text-xs', 'leading-4'],
+      mini: ['text-[10px]', 'leading-3', 'tracking-wider']
     }
   },
   compoundVariants: [
-    {variant: ['h2', 'h3', 'h4', 'lead'], className: 'font-semibold'},
+    {variant: ['h1', 'h2', 'h3', 'h4'], className: 'font-display font-bold'},
     {variant: ['p', 'small', 'tiny'], className: 'leading-6'}
   ],
   defaultVariants: {
@@ -28,25 +27,22 @@ const typographyProps = cva(['block', 'text-inherit', 'transition-colors'], {
 })
 
 interface TypographyProps
-  extends Omit<React.ComponentPropsWithRef<'span'>, 'color'>,
+  extends React.ComponentPropsWithRef<'span'>,
     VariantProps<typeof typographyProps> {
-  locale?: Locale
   asChild?: boolean
 }
 
-const Typography: React.FC<TypographyProps> = ({
+function Typography({
   className,
   variant = 'p',
   asChild = false,
-  locale,
   ...props
-}) => {
+}: TypographyProps) {
   const Comp = asChild ? Slot : 'span'
 
   return (
     <Comp
       className={cn(typographyProps({variant, className}))}
-      {...(locale ? {lang: isoLocaleMap[locale]} : {})}
       {...props}
     />
   )

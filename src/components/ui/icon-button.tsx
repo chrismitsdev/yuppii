@@ -2,19 +2,16 @@ import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
 import {cn} from '@/src/lib/utils'
 
-const buttonProps = cva(
+const iconButtonProps = cva(
   [
     'cursor-pointer',
     'inline-flex',
-    'items-center',
     'justify-center',
-    'text-sm',
-    'font-bold',
-    'uppercase',
-    'transition',
+    'items-center',
+    'rounded-md',
+    'transition-colors',
     'focus-visible:outline-2',
     'focus-visible:outline-offset-2',
-    'focus-visible:outline-accent',
     'disabled:opacity-50',
     'disabled:cursor-not-allowed'
   ],
@@ -41,11 +38,12 @@ const buttonProps = cva(
         ]
       },
       size: {
-        sm: 'px-2 h-8 gap-0.5 rounded-xs [&>svg]:size-4',
-        md: 'px-4 h-10 gap-1 rounded [&>svg]:size-5',
-        lg: 'px-6 h-12 gap-1.5 rounded-md [&>svg]:size-6'
+        sm: 'size-8 rounded-sm',
+        md: 'size-10 rounded-md',
+        lg: 'size-12 rounded-lg'
       }
     },
+    compoundVariants: [],
     defaultVariants: {
       variant: 'primary',
       size: 'md'
@@ -53,32 +51,39 @@ const buttonProps = cva(
   }
 )
 
-export interface ButtonProps
-  extends React.ComponentPropsWithRef<'button'>,
-    VariantProps<typeof buttonProps> {
+export interface IconButtonProps
+  extends Omit<
+      React.ComponentPropsWithRef<'button'>,
+      'aria-label' | 'aria-disabled'
+    >,
+    VariantProps<typeof iconButtonProps> {
+  'aria-label': string
   asChild?: boolean
 }
 
-function Button({
+function IconButton({
   className,
+  'aria-label': ariaLabel,
   variant,
   size,
   disabled,
   asChild = false,
   ...props
-}: ButtonProps) {
+}: IconButtonProps) {
   const Comp = asChild ? Slot : 'button'
+  const isButton = !asChild
 
   return (
     <Comp
-      className={cn(buttonProps({variant, size, className}))}
-      aria-disabled={disabled}
+      className={cn(iconButtonProps({variant, size, className}))}
+      aria-label={ariaLabel}
+      aria-disabled={!isButton ? disabled : undefined}
       disabled={disabled}
       {...props}
     />
   )
 }
 
-Button.displayName = 'Button'
+IconButton.displayName = 'IconButton'
 
-export {Button, buttonProps}
+export {IconButton}

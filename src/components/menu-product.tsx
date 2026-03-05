@@ -8,7 +8,7 @@ interface MenuProductProps {
   price: string
 }
 
-const MenuProduct: React.FC<MenuProductProps> = ({name, variants, price}) => {
+function MenuProduct({name, variants, price}: MenuProductProps) {
   return (
     <li className='grid grid-cols-[1fr_auto] gap-1'>
       <Typography className='font-medium'>{name}</Typography>

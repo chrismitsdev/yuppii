@@ -1,7 +1,7 @@
 import type {Metadata} from 'next'
 import {type Locale, type Messages, useMessages} from 'next-intl'
 import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server'
-import * as React from 'react'
+import {use} from 'react'
 import {Container} from '@/src/components/container'
 import {CategoryNotFound} from './(components)/category-not-found'
 import {CategoryProducts} from './(components)/category-products'
@@ -47,7 +47,7 @@ export async function generateStaticParams() {
 export default function CategoryPage({
   params
 }: PageProps<'/[locale]/menu/[category]'>) {
-  const {locale, category} = React.use(params as ParamsWithCategory['params'])
+  const {locale, category} = use(params as ParamsWithCategory['params'])
   setRequestLocale(locale)
 
   const messages = useMessages()

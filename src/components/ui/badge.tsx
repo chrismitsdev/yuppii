@@ -37,12 +37,7 @@ interface BadgeProps
   asChild?: boolean
 }
 
-const Badge: React.FC<BadgeProps> = ({
-  className,
-  variant,
-  asChild = false,
-  ...props
-}) => {
+function Badge({className, variant, asChild = false, ...props}: BadgeProps) {
   const Comp = asChild ? Slot : 'div'
 
   return (

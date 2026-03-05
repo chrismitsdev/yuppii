@@ -4,11 +4,11 @@ import {Section} from '@/src/components/section'
 import {CustomImage} from '@/src/components/ui/custom-image'
 
 const imageMap = {
-  gr: maps.mapGr,
+  el: maps.mapEl,
   en: maps.mapEn
 }
 
-const ParkMap: React.FC = () => {
+function ParkMap() {
   const t = useTranslations('Pages.Park.ParkMap')
   const locale = useLocale()
 

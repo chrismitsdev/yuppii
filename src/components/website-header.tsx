@@ -4,7 +4,7 @@ import {Container} from '@/src/components/container'
 import {WebsiteNavigation} from '@/src/components/website-navigation'
 import {Link} from '@/src/i18n/navigation'
 
-const WebsiteHeader: React.FC = () => {
+function WebsiteHeader() {
   return (
     <header className='py-6'>
       <Container className='max-w-7xl'>

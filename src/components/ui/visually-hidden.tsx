@@ -2,11 +2,7 @@
 
 import {Root} from '@radix-ui/react-visually-hidden'
 
-const VisuallyHidden: React.FC<React.ComponentPropsWithRef<typeof Root>> = (
-  props
-) => {
-  return <Root {...props} />
-}
+const VisuallyHidden = Root
 
 VisuallyHidden.displayName = 'VisuallyHidden'
 

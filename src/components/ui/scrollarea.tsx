@@ -3,144 +3,72 @@
 import {
   Corner,
   Root,
-  ScrollAreaScrollbar,
-  ScrollAreaThumb,
+  Scrollbar,
+  Thumb,
   Viewport
 } from '@radix-ui/react-scroll-area'
-import * as React from 'react'
 import {cn} from '@/src/lib/utils'
 
-interface ScrollAreaProps extends React.ComponentPropsWithRef<typeof Root> {
-  hasCorner?: boolean
-  orientation?: 'horizontal' | 'vertical'
-  invisible?: boolean
-  showShadows?: boolean
-  isFlex?: boolean
-}
+const ScrollareaCorner = Corner
 
-function ScrollArea({
+function Scrollarea({
   className,
-  children,
-  hasCorner = true,
-  orientation = 'vertical',
-  invisible = false,
-  showShadows = false,
-  isFlex = false,
   ...props
-}: ScrollAreaProps) {
+}: React.ComponentPropsWithRef<typeof Root>) {
   return (
     <Root
       className={cn('relative overflow-hidden', className)}
       {...props}
-    >
-      <ScrollAreaViewport
-        showShadows={showShadows}
-        isFlex={isFlex}
-      >
-        {children}
-      </ScrollAreaViewport>
-      <ScrollBar
-        orientation={orientation}
-        invisible={invisible}
-      />
-      {hasCorner && <Corner />}
-    </Root>
+    />
   )
 }
 
-function ScrollAreaViewport({
+function ScrollareaViewport({
   className,
-  showShadows,
-  children,
-  isFlex,
   ...props
-}: React.ComponentPropsWithRef<typeof Viewport> & {
-  showShadows?: boolean
-  isFlex?: boolean
-}) {
-  const [canScrollLeft, setCanScrollLeft] = React.useState<boolean>(false)
-  const [canScrollRight, setCanScrollRight] = React.useState<boolean>(true)
-
-  function handleShowShadows(e: React.UIEvent<HTMLDivElement, UIEvent>) {
-    if (!showShadows) return
-    const {scrollLeft, scrollWidth, clientWidth} = e.currentTarget
-    setCanScrollLeft(scrollLeft > 0)
-    setCanScrollRight(scrollWidth - scrollLeft !== clientWidth)
-  }
-
-  if (!showShadows) {
-    return (
-      <Viewport
-        className={cn(
-          'h-full w-full rounded-[inherit]',
-          isFlex && '[&>div]:!flex',
-          className
-        )}
-        {...props}
-      >
-        {children}
-      </Viewport>
-    )
-  }
-
+}: React.ComponentPropsWithRef<typeof Viewport>) {
   return (
-    <div
-      className={cn(
-        'relative',
-        'before:absolute before:-left-1 before:top-0 before:z-10 before:block before:h-full before:w-8 before:opacity-0 before:bg-gradient-to-r before:from-primary before:pointer-events-none',
-        'after:absolute after:-right-1 after:top-0 after:z-10 after:block after:h-full after:w-8 after:bg-gradient-to-l after:from-primary after:pointer-events-none',
-        canScrollLeft && 'before:opacity-100',
-        !canScrollRight && 'after:opacity-0'
-      )}
-    >
-      <Viewport
-        className={cn(
-          'h-full w-full rounded-[inherit] overscroll-none',
-          className
-        )}
-        onScroll={handleShowShadows}
-        {...props}
-      >
-        {children}
-      </Viewport>
-    </div>
+    <Viewport
+      className={cn('h-full w-full rounded-[inherit]', className)}
+      {...props}
+    />
   )
 }
 
-function ScrollBar({
+function ScrollareaBar({
   className,
-  orientation,
-  invisible,
+  orientation = 'vertical',
   ...props
-}: React.ComponentPropsWithRef<typeof ScrollAreaScrollbar> & {
-  invisible?: boolean
-}) {
+}: React.ComponentPropsWithRef<typeof Scrollbar>) {
   return (
-    <ScrollAreaScrollbar
+    <Scrollbar
       className={cn(
         'flex touch-none select-none transition-colors',
-        orientation === 'vertical' &&
-          'h-full w-3 border-l border-l-transparent p-0.5',
-        orientation === 'horizontal' &&
-          'h-3 border-t border-t-transparent p-0.5',
-        invisible && 'invisible',
+        orientation === 'vertical' && 'h-full w-2.5 p-px',
+        orientation === 'horizontal' && 'h-2.5 flex-col p-px',
         className
       )}
       orientation={orientation}
       {...props}
     >
-      <ScrollAreaThumb
-        className={cn(
-          orientation === 'vertical' && 'flex-1',
-          'relative rounded-full bg-accent/30 hover:bg-accent/50 transition-colors'
-        )}
-      />
-    </ScrollAreaScrollbar>
+      <Thumb className='flex-1 relative rounded-full bg-accent/30 hover:bg-accent/50 transition-colors' />
+    </Scrollbar>
   )
 }
 
-ScrollArea.displayName = 'ScrollArea'
-ScrollAreaViewport.displayName = 'ScrollAreaViewport'
-ScrollBar.displayName = 'ScrollBar'
+Scrollarea.displayName = 'Scrollarea'
+ScrollareaViewport.displayName = 'ScrollareaViewport'
+ScrollareaBar.displayName = 'ScrollareaBar'
+ScrollareaCorner.displayName = 'ScrollareaCorner'
 
-export {ScrollArea, ScrollBar}
+export {Scrollarea, ScrollareaViewport, ScrollareaBar, ScrollareaCorner}
+
+// ANATOMY
+// <ScrollArea>
+//   <ScrollareaViewport>
+//     <div>Some content ...</div>
+//   </ScrollareaViewport>
+//   <ScrollareaBar orientation='horizontal' />
+//   <ScrollareaBar orientation='vertical' />
+//   <ScrollareaCorner />
+// </ScrollArea>

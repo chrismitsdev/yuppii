@@ -1,11 +1,19 @@
 'use client'
 
-import {ExpandIcon, PlusIcon, XIcon} from 'lucide-react'
-import {type Messages, useLocale, useTranslations} from 'next-intl'
-import * as React from 'react'
+import {ExpandIcon} from 'lucide-react'
+import {type Messages, useTranslations} from 'next-intl'
+import {useCallback, useMemo, useState} from 'react'
 import * as gamesGalleryImages from '@/public/games/galleries'
 import {Section} from '@/src/components/section'
 import {Button} from '@/src/components/ui/button'
+import {
+  ButtonNext,
+  ButtonPrev,
+  Carousel,
+  CarouselViewport,
+  Slide,
+  SlidesContainer
+} from '@/src/components/ui/carousel'
 import {CustomImage} from '@/src/components/ui/custom-image'
 import {
   Dialog,
@@ -17,16 +25,13 @@ import {
   DialogTrigger
 } from '@/src/components/ui/dialog'
 import {
-  EmblaButtonNext,
-  EmblaButtonPrev,
-  EmblaCarousel,
-  EmblaContainer,
-  EmblaSlide,
-  EmblaViewport
-} from '@/src/components/ui/embla-carousel'
-import {ScrollArea} from '@/src/components/ui/scrollarea'
+  Scrollarea,
+  ScrollareaBar,
+  ScrollareaViewport
+} from '@/src/components/ui/scrollarea'
 import {
   Sheet,
+  SheetBody,
   SheetClose,
   SheetContent,
   SheetHeader,
@@ -37,7 +42,6 @@ import {
 } from '@/src/components/ui/sheet'
 import {Typography} from '@/src/components/ui/typography'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
-import {isoLocaleMap} from '@/src/lib/utils'
 
 type ImageGallery = {
   key: keyof Messages['Pages']['Services']['ServicesGallery']['galleries']
@@ -72,57 +76,63 @@ const galleries: ImageGallery[] = [
   {key: 'table-soccer', images: gamesGalleryImages.tableSoccerGallery},
   {key: 'trampoline', images: gamesGalleryImages.trampolineGallery},
   {key: 'ufo', images: gamesGalleryImages.ufoGallery}
-] as const
+]
 
-const ServicesGallery: React.FC = () => {
-  const [index, setIndex] = React.useState<number>(0)
-  const [sheetOpen, setSheetOpen] = React.useState<boolean>(false)
-  const [selectedGallery, setSelectedGallery] = React.useState<ImageGallery>(
-    galleries[0]
-  )
+function ServicesGallery() {
+  const [index, setIndex] = useState(0)
+  const [sheetOpen, setSheetOpen] = useState(false)
+  const [selectedGallery, setSelectedGallery] = useState(galleries[0])
   const t = useTranslations('Pages.Services.ServicesGallery')
-  const locale = useLocale()
 
-  function handleClick(gallery: ImageGallery) {
+  const handleSelectGallery = useCallback((gallery: ImageGallery) => {
     setSelectedGallery(gallery)
     setSheetOpen(false)
-  }
+    setIndex(0)
+  }, [])
 
-  const renderedGames = galleries.map((gallery) => (
-    <li key={gallery.key}>
-      <Button
-        className='w-full sm:justify-start'
-        variant={
-          selectedGallery.key === gallery.key ? 'accent' : 'ghost-secondary'
-        }
-        size='lg'
-        onClick={() => handleClick(gallery)}
-        locale={locale}
-      >
-        {t(`galleries.${gallery.key}.label`)}
-      </Button>
-    </li>
-  ))
+  const renderedGames = useMemo(() => {
+    return galleries.map((gallery) => {
+      return (
+        <Button
+          key={gallery.key}
+          className='w-full sm:justify-start'
+          size='lg'
+          variant={gallery.key === selectedGallery.key ? 'secondary' : 'ghost'}
+          onClick={() => handleSelectGallery(gallery)}
+        >
+          {t(`galleries.${gallery.key}.label`)}
+        </Button>
+      )
+    })
+  }, [selectedGallery.key, handleSelectGallery, t])
 
-  const triggers = selectedGallery.images.map((image, i) => (
-    <ServicesGalleryTrigger
-      key={image.src}
-      src={image}
-      alt={`Gallery thumbnail image ${i + 1}`}
-      onClick={() => setIndex(i)}
-    />
-  ))
+  const renderedTriggers = useMemo(() => {
+    return selectedGallery.images.map((image, i) => {
+      return (
+        <ServicesGalleryTrigger
+          key={image.src}
+          src={image}
+          alt={`Gallery thumbnail image ${i + 1}`}
+          onClick={() => setIndex(i)}
+        />
+      )
+    })
+  }, [selectedGallery.images])
 
-  const slides = selectedGallery.images.map((image, i) => (
-    <EmblaSlide key={image.src}>
-      <CustomImage
-        className='rounded'
-        src={image}
-        alt={`Gallery slide image ${i + 1}`}
-        sizes='(min-width: 1000px) 1000px, 100vw'
-      />
-    </EmblaSlide>
-  ))
+  const renderedSlides = useMemo(() => {
+    return selectedGallery.images.map((image, i) => {
+      return (
+        <Slide key={image.src}>
+          <CustomImage
+            className='rounded'
+            src={image}
+            alt={`Gallery slide image ${i + 1}`}
+            sizes='(min-width: 1000px) 1000px, 100vw'
+          />
+        </Slide>
+      )
+    })
+  }, [selectedGallery.images])
 
   return (
     <Section
@@ -135,91 +145,58 @@ const ServicesGallery: React.FC = () => {
             open={sheetOpen}
             onOpenChange={setSheetOpen}
           >
-            <SheetTrigger
-              className='w-full'
-              asChild
-            >
-              <button
-                className='p-4 mb-10 space-y-1 bg-secondary/40 border border-secondary rounded-lg text-left shadow-md'
-                lang={isoLocaleMap[locale]}
-                type='button'
-              >
-                <div className='flex items-center justify-between'>
-                  <Typography variant='lead'>
-                    {t(`galleries.${selectedGallery.key}.label`)}
-                  </Typography>
-                  <Button
-                    size='icon'
-                    asChild
-                  >
-                    <div>
-                      <PlusIcon />
-                    </div>
-                  </Button>
-                </div>
-                <Typography>{t('sheet-content-trigger')}</Typography>
-              </button>
+            <SheetTrigger className='p-4 mb-10 w-full space-y-1 bg-secondary/40 border border-secondary rounded-lg text-left shadow-md'>
+              <Typography variant='h4'>
+                {t(`galleries.${selectedGallery.key}.label`)}
+              </Typography>
+              <Typography variant='small'>
+                {t('sheet-content-trigger')}
+              </Typography>
             </SheetTrigger>
             <SheetPortal>
               <SheetOverlay />
               <SheetContent side='left'>
-                <SheetHeader className='p-6'>
+                <SheetClose />
+                <SheetHeader>
                   <SheetTitle>{t('sheet-content-header')}</SheetTitle>
                 </SheetHeader>
-                <ScrollArea
-                  className='h-[calc(100%-72px)]'
+
+                <Scrollarea
+                  className='h-[calc(100%-72px)] sm:h-[calc(100%-88px)]'
                   type='always'
                 >
-                  <ul className='px-6 pb-24 space-y-4'>{renderedGames}</ul>
-                </ScrollArea>
-                <SheetClose
-                  className='absolute top-4 right-3'
-                  asChild
-                >
-                  <Button
-                    size='icon'
-                    variant='ghost'
-                  >
-                    <XIcon />
-                  </Button>
-                </SheetClose>
+                  <ScrollareaViewport>
+                    <SheetBody className='pb-28 space-y-4'>
+                      {renderedGames}
+                    </SheetBody>
+                  </ScrollareaViewport>
+                  <ScrollareaBar />
+                </Scrollarea>
               </SheetContent>
             </SheetPortal>
           </Sheet>
 
-          <div className='grid grid-cols-3 gap-2 sm:gap-8'>{triggers}</div>
+          <div className='grid grid-cols-3 gap-2 sm:gap-8'>
+            {renderedTriggers}
+          </div>
           <DialogPortal>
-            <DialogOverlay>
-              <DialogContent
-                className='p-0 bg-transparent max-w-full sm:p-0 sm:max-w-[1000]'
-                onCloseAutoFocus={(e) => e.preventDefault()}
-              >
-                <VisuallyHidden>
-                  <DialogTitle>Games page gallery images</DialogTitle>
-                </VisuallyHidden>
-                <EmblaCarousel
-                  className='overflow-visible'
-                  options={{startIndex: index, loop: true}}
-                >
-                  <EmblaViewport className='rounded'>
-                    <EmblaContainer>{slides}</EmblaContainer>
-                  </EmblaViewport>
-                  <EmblaButtonPrev className='sm:-left-12' />
-                  <EmblaButtonNext className='sm:-right-12' />
-                </EmblaCarousel>
-              </DialogContent>
-              <DialogClose
-                className='absolute top-2 right-2 z-50'
-                asChild
-              >
-                <Button
-                  variant='secondary'
-                  size='icon'
-                >
-                  <XIcon />
-                </Button>
-              </DialogClose>
-            </DialogOverlay>
+            <DialogOverlay />
+            <DialogContent
+              className='bg-transparent'
+              onCloseAutoFocus={(e) => e.preventDefault()}
+            >
+              <VisuallyHidden>
+                <DialogTitle>Games page gallery images</DialogTitle>
+              </VisuallyHidden>
+              <Carousel options={{startIndex: index, loop: true}}>
+                <CarouselViewport className='rounded'>
+                  <SlidesContainer>{renderedSlides}</SlidesContainer>
+                </CarouselViewport>
+                <ButtonPrev />
+                <ButtonNext />
+              </Carousel>
+              <DialogClose />
+            </DialogContent>
           </DialogPortal>
         </Dialog>
       </article>
@@ -227,11 +204,15 @@ const ServicesGallery: React.FC = () => {
   )
 }
 
-const ServicesGalleryTrigger: React.FC<{
+function ServicesGalleryTrigger({
+  src,
+  alt,
+  onClick
+}: {
   src: React.ComponentProps<typeof CustomImage>['src']
   alt: string
   onClick: () => void
-}> = ({src, alt, onClick}) => {
+}) {
   return (
     <DialogTrigger
       className='relative overflow-hidden rounded shadow before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-0 group'

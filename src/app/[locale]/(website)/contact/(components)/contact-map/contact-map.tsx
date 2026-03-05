@@ -7,7 +7,7 @@ import type {LatLngTuple} from 'leaflet'
 import {MapPinIcon, NavigationIcon, PhoneIcon} from 'lucide-react'
 import Image from 'next/image'
 import {useTranslations} from 'next-intl'
-import * as React from 'react'
+import {useCallback} from 'react'
 import {MapContainer, Popup, TileLayer} from 'react-leaflet'
 import logo from '@/public/logo.svg'
 import {Section} from '@/src/components/section'
@@ -15,10 +15,10 @@ import {Typography} from '@/src/components/ui/typography'
 
 const coords = [40.84334844866346, 25.87527152454368] satisfies LatLngTuple
 
-const ContactMap: React.FC = () => {
+function ContactMap() {
   const t = useTranslations('Pages.Contact.ContactMap')
 
-  const handleMarkerRef = React.useCallback((marker: L.Marker | null) => {
+  const handleMarkerRef = useCallback((marker: L.Marker | null) => {
     if (marker) {
       marker.openPopup()
     }
@@ -29,7 +29,7 @@ const ContactMap: React.FC = () => {
       title={t('title')}
       subtitle={t('subtitle')}
     >
-      <div className='h-[500px] sm:h-[696px]'>
+      <div className='h-125 sm:h-174'>
         <MapContainer
           className='h-full rounded-lg shadow-md'
           center={coords}

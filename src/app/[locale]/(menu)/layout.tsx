@@ -1,12 +1,12 @@
 import {setRequestLocale} from 'next-intl/server'
-import * as React from 'react'
+import {use} from 'react'
 import {MenuHeader} from '@/src/components/menu-header'
 
 export default function MenuLayout({
   params,
   children
 }: LayoutProps<'/[locale]'>) {
-  const {locale} = React.use(params as Params['params'])
+  const {locale} = use(params as Params['params'])
   setRequestLocale(locale)
 
   return (

@@ -1,30 +1,29 @@
 'use client'
 
 import Autoplay from 'embla-carousel-autoplay'
-import type * as React from 'react'
 import {carouselImageList} from '@/public/home/carousel'
 import {Container} from '@/src/components/container'
 import {Section} from '@/src/components/section'
-import {CustomImage} from '@/src/components/ui/custom-image'
 import {
-  EmblaButtonNext,
-  EmblaButtonPrev,
-  EmblaCarousel,
-  EmblaContainer,
-  EmblaSlide,
-  EmblaViewport
-} from '@/src/components/ui/embla-carousel'
+  ButtonNext,
+  ButtonPrev,
+  Carousel,
+  CarouselViewport,
+  Slide,
+  SlidesContainer
+} from '@/src/components/ui/carousel'
+import {CustomImage} from '@/src/components/ui/custom-image'
 
-const HomeCarousel: React.FC = () => {
+function HomeCarousel() {
   const slides = carouselImageList.map((image, i) => (
-    <EmblaSlide key={image.src}>
+    <Slide key={image.src}>
       <CustomImage
         src={image}
         alt={`Home page carousel image slide ${i + 1}`}
         priority={i === 0}
         sizes='(min-width: 1000px) 1000px, 100vw'
       />
-    </EmblaSlide>
+    </Slide>
   ))
 
   return (
@@ -33,16 +32,16 @@ const HomeCarousel: React.FC = () => {
       asChild
     >
       <Section>
-        <EmblaCarousel
+        <Carousel
           className='overflow-visible'
           plugins={[Autoplay()]}
         >
-          <EmblaViewport className='sm:rounded'>
-            <EmblaContainer>{slides}</EmblaContainer>
-          </EmblaViewport>
-          <EmblaButtonPrev className='left-0 sm:-left-12' />
-          <EmblaButtonNext className='right-0 sm:-right-12' />
-        </EmblaCarousel>
+          <CarouselViewport className='sm:rounded'>
+            <SlidesContainer>{slides}</SlidesContainer>
+          </CarouselViewport>
+          <ButtonPrev className='left-0 sm:-left-12' />
+          <ButtonNext className='right-0 sm:-right-12' />
+        </Carousel>
       </Section>
     </Container>
   )
