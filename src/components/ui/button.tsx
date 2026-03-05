@@ -14,7 +14,6 @@ const buttonProps = cva(
     'transition',
     'focus-visible:outline-2',
     'focus-visible:outline-offset-2',
-    'focus-visible:outline-accent',
     'disabled:opacity-50',
     'disabled:cursor-not-allowed'
   ],
@@ -24,20 +23,23 @@ const buttonProps = cva(
         primary: [
           'bg-secondary',
           'text-secondary-foreground',
-          'hover:bg-secondary/75',
-          'focus-visible:outline-secondary'
+          'focus-visible:outline-secondary',
+          'hover:bg-secondary/80',
+          'focus-visible:bg-secondary/80'
         ],
         secondary: [
           'bg-accent',
           'text-accent-foreground',
-          'hover:bg-accent/75',
-          'focus-visible:outline-accent'
+          'focus-visible:outline-accent',
+          'hover:bg-accent/80',
+          'focus-visible:bg-accent/80'
         ],
         ghost: [
           'bg-transparent',
           'text-primary-foreground',
+          'focus-visible:outline-accent',
           'hover:bg-secondary',
-          'focus-visible:outline-accent'
+          'focus-visible:bg-secondary'
         ]
       },
       size: {

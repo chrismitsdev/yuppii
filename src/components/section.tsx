@@ -31,7 +31,7 @@ function Section({
           )}
           {subtitle && (
             <Typography
-              variant='lead'
+              variant='large'
               asChild
             >
               <p>{subtitle}</p>

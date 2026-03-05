@@ -9,7 +9,7 @@ const iconButtonProps = cva(
     'justify-center',
     'items-center',
     'rounded-md',
-    'transition-colors',
+    'transition',
     'focus-visible:outline-2',
     'focus-visible:outline-offset-2',
     'disabled:opacity-50',
@@ -21,20 +21,23 @@ const iconButtonProps = cva(
         primary: [
           'bg-secondary',
           'text-secondary-foreground',
-          'hover:bg-secondary/75',
-          'focus-visible:outline-secondary'
+          'focus-visible:outline-secondary',
+          'hover:bg-secondary/80',
+          'focus-visible:bg-secondary/80'
         ],
         secondary: [
           'bg-accent',
           'text-accent-foreground',
-          'hover:bg-accent/75',
-          'focus-visible:outline-accent'
+          'focus-visible:outline-accent',
+          'hover:bg-accent/80',
+          'focus-visible:bg-accent/80'
         ],
         ghost: [
           'bg-transparent',
           'text-primary-foreground',
+          'focus-visible:outline-accent',
           'hover:bg-secondary',
-          'focus-visible:outline-accent'
+          'focus-visible:bg-secondary'
         ]
       },
       size: {

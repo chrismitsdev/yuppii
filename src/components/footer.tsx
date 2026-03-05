@@ -62,21 +62,27 @@ function Footer() {
             className='sm:justify-self-end'
             title={t('brands.title')}
           >
-            <a
-              className='hover:underline'
+            <Link
+              href={`https://www.thechristmaslighthouse.gr/${locale}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Typography variant='small'>The Christmas Lighthouse</Typography>
+            </Link>
+            <Link
               href={`https://moccaliving.com/${locale}`}
               target='_blank'
+              rel='noopener noreferrer'
             >
               <Typography variant='small'>Mocca Living</Typography>
-            </a>
-            <a
-              className='hover:underline'
+            </Link>
+            <Link
               href='https://startpilates.gr'
               target='_blank'
-              rel='noopener'
+              rel='noopener noreferrer'
             >
               <Typography variant='small'>Start Pilates</Typography>
-            </a>
+            </Link>
           </FooterColumn>
         </section>
       </Container>
