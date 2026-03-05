@@ -8,7 +8,7 @@ function EspaBanner() {
 
   return (
     <a
-      className='mb-4 block w-max sm:ml-auto focus-visible:outline-2 focus-visible:outline-offset-2'
+      className='mb-4 block w-fit sm:ml-auto focus-visible:outline-2 focus-visible:outline-offset-2'
       href={espaPoster.src}
       target='_blank'
       rel='noopener noreferrer'
