@@ -2,15 +2,14 @@
 
 import {Content, Header, Item, Root, Trigger} from '@radix-ui/react-accordion'
 import {ChevronDownIcon, ChevronUpIcon} from 'lucide-react'
-import type * as React from 'react'
 import {cn} from '@/src/lib/utils'
 
 const Accordion = Root
 
-const AccordionItem: React.FC<React.ComponentPropsWithRef<typeof Item>> = ({
+function AccordionItem({
   className,
   ...props
-}) => {
+}: React.ComponentPropsWithRef<typeof Item>) {
   return (
     <Item
       className={cn(
@@ -22,31 +21,41 @@ const AccordionItem: React.FC<React.ComponentPropsWithRef<typeof Item>> = ({
   )
 }
 
-const AccordionTrigger: React.FC<
-  React.ComponentPropsWithRef<typeof Trigger>
-> = ({className, children, ...props}) => {
+function AccordionTrigger({
+  className,
+  children,
+  ...props
+}: React.ComponentPropsWithRef<typeof Trigger>) {
   return (
     <Header>
       <Trigger
         className={cn(
-          'p-6 w-full flex flex-1 items-center justify-between group',
+          'p-6 w-full flex flex-1 items-center justify-between rounded-lg focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-accent group',
           className
         )}
         {...props}
       >
         <div className='flex items-center gap-2 grow sm:gap-4'>{children}</div>
         <span className='relative w-6 h-6'>
-          <ChevronUpIcon className='size-4 absolute -top-0.5 left-1/2 -translate-x-1/2 group-data-open:translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition' />
-          <ChevronDownIcon className='size-4 absolute -bottom-0.5 left-1/2 -translate-x-1/2 group-data-open:-translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition' />
+          <ChevronUpIcon
+            className='size-4 absolute -top-0.5 left-1/2 -translate-x-1/2 group-data-open:translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition'
+            strokeWidth={3}
+          />
+          <ChevronDownIcon
+            className='size-4 absolute -bottom-0.5 left-1/2 -translate-x-1/2 group-data-open:-translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition'
+            strokeWidth={3}
+          />
         </span>
       </Trigger>
     </Header>
   )
 }
 
-const AccordionContent: React.FC<
-  React.ComponentPropsWithRef<typeof Content>
-> = ({className, children, ...props}) => {
+function AccordionContent({
+  className,
+  children,
+  ...props
+}: React.ComponentPropsWithRef<typeof Content>) {
   return (
     <Content
       className='data-open:animate-accordion-open data-closed:animate-accordion-close'

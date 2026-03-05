@@ -4,7 +4,7 @@ import {Section} from '@/src/components/section'
 import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
 
-const ParkInfo: React.FC = () => {
+function ParkInfo() {
   const t = useTranslations('Pages.Park.ParkInfo')
 
   return (

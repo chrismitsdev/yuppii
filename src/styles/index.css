@@ -1,7 +1,7 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "./animations.css";
 @import "./colors.css";
+@import "./font.css";
+@import "./animations.css";
 @import "./data-attributes.css";
 @import "./shadows.css";
 
@@ -22,7 +22,7 @@
   }
 
   .leaflet-popup-content-wrapper {
-    @apply px-6 py-4 bg-[#dbbbc3] border border-secondary rounded;
+    @apply p-6 bg-[#dbbbc3] border border-secondary rounded;
 
     .leaflet-popup-content {
       @apply m-0 max-w-max;

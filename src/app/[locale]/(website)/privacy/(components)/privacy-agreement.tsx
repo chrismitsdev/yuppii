@@ -1,7 +1,7 @@
 import {useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
 
-const PrivacyAgreement: React.FC = () => {
+function PrivacyAgreement() {
   const t = useTranslations('Pages.Privacy.PrivacyAgreement')
 
   return (

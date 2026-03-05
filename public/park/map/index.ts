@@ -1,2 +1,2 @@
+export {default as mapEl} from './map_el.webp'
 export {default as mapEn} from './map_en.webp'
-export {default as mapGr} from './map_gr.webp'

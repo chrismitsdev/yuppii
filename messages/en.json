@@ -7,8 +7,7 @@
       "Contact": "Contact",
       "Privacy": "Privacy",
       "Cookies": "Cookies",
-      "Menu": "Menu",
-      "LocaleContent": "Ορισμός γλώσσας σε Ελληνικά"
+      "Menu": "Menu"
     }
   },
   "Pages": {
@@ -162,6 +161,18 @@
           }
         }
       },
+      "ServicesCards": {
+        "title": "Events & Sales - Rentals",
+        "subtitle": "Learn about events, rentals, and sales at Yuppii Luna Park.",
+        "card1": {
+          "title": "Parties & Events",
+          "content": "Organize your party or any festive event at Yuppii Luna Park! You can inform us about the number of guests so that appropriate table reservations can be made."
+        },
+        "card2": {
+          "title": "Rentals & Sales",
+          "content": "After years of research at various exhibitions in Greece, Europe, Asia, and America, our company specializes in the sales of children's toys, offering you the best state-of-the-art toys from around the world at the best market prices. Contact us if you are interested in renting, purchasing, or importing children's toys, so he can guide you and assist you in making the most advantageous choices."
+        }
+      },
       "ServicesReviews": {
         "title": "Your comments",
         "subtitle": "Yuppii Luna Park has hosted thousands of young and old friends. Check out some of their comments!",
@@ -197,20 +208,6 @@
           "sideris": {
             "name": "Dimsideris",
             "review": "Excellent location with many games for both young and old. Friendly and welcoming staff, and affordable prices for games and activities!"
-          }
-        }
-      },
-      "ServicesCards": {
-        "title": "Events & Sales - Rentals",
-        "subtitle": "Learn about events, rentals, and sales at Yuppii Luna Park.",
-        "cards": {
-          "card1": {
-            "title": "Parties & Events",
-            "content": "Organize your party or any festive event at Yuppii Luna Park! You can inform us about the number of guests so that appropriate table reservations can be made."
-          },
-          "card2": {
-            "title": "Rentals & Sales",
-            "content": "After years of research at various exhibitions in Greece, Europe, Asia, and America, our company specializes in the sales of children's toys, offering you the best state-of-the-art toys from around the world at the best market prices. Contact <link>George Mokalis</link> if you are interested in renting, purchasing, or importing children's toys, so he can guide you and assist you in making the most advantageous choices."
           }
         }
       }
@@ -267,24 +264,27 @@
     }
   },
   "Components": {
+    "LocaleCycle": {
+      "label": "Set language to Greek"
+    },
     "Footer": {
       "columns": {
         "operating": {
           "title": "OPERATING",
-          "info1": "Summer season",
-          "info2": "Christmas season",
-          "info3": "National holidays",
-          "info4": "Daily 18:00 - 23:30"
-        },
-        "policies": {
-          "title": "TERMS & POLICIES",
-          "link1": "Privacy Policy",
-          "link2": "Use of Cookies"
+          "summer": "Summer season",
+          "christmas": "Christmas season",
+          "holidays": "National holidays",
+          "daily": "Daily 18:00 - 23:30"
         },
         "information": {
           "title": "INFORMATION",
-          "info1": "Port of Alexandroupoli",
-          "info2": "+30 6973433980"
+          "tel": "+30 6973433980",
+          "location": "Port of Alexandroupoli"
+        },
+        "links": {
+          "title": "USEFUL LINKS",
+          "privacy": "Privacy Policy",
+          "cookies": "Use of Cookies"
         },
         "brands": {
           "title": "OUR BRANDS"
@@ -294,6 +294,9 @@
     "CategoryNotFound": {
       "title": "Category not found",
       "subtitle": "There are no products in this category."
+    },
+    "EspaBanner": {
+      "label": "Funding from the Competitiveness Programme 2021-2027"
     }
   },
   "Menu": {

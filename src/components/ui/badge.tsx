@@ -1,6 +1,5 @@
 import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
-import type * as React from 'react'
 import {cn} from '@/src/lib/utils'
 
 const badgeProps = cva(
@@ -37,12 +36,7 @@ interface BadgeProps
   asChild?: boolean
 }
 
-const Badge: React.FC<BadgeProps> = ({
-  className,
-  variant,
-  asChild = false,
-  ...props
-}) => {
+function Badge({className, variant, asChild = false, ...props}: BadgeProps) {
   const Comp = asChild ? Slot : 'div'
 
   return (

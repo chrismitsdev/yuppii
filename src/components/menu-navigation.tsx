@@ -3,57 +3,60 @@
 import {HomeIcon} from 'lucide-react'
 import {useSearchParams} from 'next/navigation'
 import {type Messages, useLocale, useMessages, useTranslations} from 'next-intl'
-import type * as React from 'react'
-import {ScrollArea} from '@/src/components/ui/scrollarea'
+import {
+  Scrollarea,
+  ScrollareaBar,
+  ScrollareaViewport
+} from '@/src/components/ui/scrollarea'
 import {Link, usePathname} from '@/src/i18n/navigation'
-import {cn, sourceQueryString} from '@/src/lib/utils'
+import {cn} from '@/src/lib/utils'
 
-const MenuNavigation: React.FC = () => {
+function MenuNavigation() {
   const t = useTranslations('Menu')
   const locale = useLocale()
   const messages = useMessages()
   const pathname = usePathname()
   const isInternal = useSearchParams().get('src') === 'website'
-  const queryString = isInternal ? sourceQueryString : ''
   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
   return (
     <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-primary border-b border-b-secondary/25'>
-      <ScrollArea
-        orientation='horizontal'
-        invisible
-        isFlex
-      >
-        <div className='px-1 flex items-center shrink-0'>
-          {isInternal && (
-            <MenuNavigationLink href='/'>
-              <HomeIcon />
-            </MenuNavigationLink>
-          )}
-          <MenuNavigationLink
-            href={`/menu${queryString}`}
-            isActive={pathname === '/menu'}
-          >
-            {locale === 'gr' ? 'Όλες οι κατηγορίες' : 'All categories'}
-          </MenuNavigationLink>
-          {categoryKeys.map((categoryKey) => (
+      <Scrollarea>
+        <ScrollareaViewport>
+          <div className='px-1 flex items-center shrink-0'>
+            {isInternal && (
+              <MenuNavigationLink href='/'>
+                <HomeIcon />
+              </MenuNavigationLink>
+            )}
             <MenuNavigationLink
-              key={categoryKey}
-              href={`/menu/${categoryKey.toLowerCase()}${queryString}`}
-              isActive={pathname.includes(categoryKey.toLowerCase())}
+              href='/menu'
+              isActive={pathname === '/menu'}
             >
-              {t(`${categoryKey}.name`)}
+              {locale === 'el' ? 'Όλες οι κατηγορίες' : 'All categories'}
             </MenuNavigationLink>
-          ))}
-        </div>
-      </ScrollArea>
+            {categoryKeys.map((categoryKey) => (
+              <MenuNavigationLink
+                key={categoryKey}
+                href={`/menu/${categoryKey.toLowerCase()}`}
+                isActive={pathname.includes(categoryKey.toLowerCase())}
+              >
+                {t(`${categoryKey}.name`)}
+              </MenuNavigationLink>
+            ))}
+          </div>
+        </ScrollareaViewport>
+        <ScrollareaBar orientation='horizontal' />
+      </Scrollarea>
     </nav>
   )
 }
 
-const MenuNavigationLink: React.FC<
-  React.ComponentPropsWithRef<typeof Link> & {isActive?: boolean}
-> = ({className, isActive, ...props}) => {
+function MenuNavigationLink({
+  className,
+  isActive,
+  ...props
+}: React.ComponentPropsWithRef<typeof Link> & {isActive?: boolean}) {
   return (
     <Link
       className={cn(

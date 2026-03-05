@@ -11,9 +11,10 @@ const DrawerDescription = Vaul.Description
 const DrawerHandle = Vaul.Handle
 const DrawerClose = Vaul.Close
 
-const DrawerOverlay: React.FC<
-  React.ComponentPropsWithRef<typeof Vaul.Overlay>
-> = ({className, ...props}) => {
+function DrawerOverlay({
+  className,
+  ...props
+}: React.ComponentPropsWithRef<typeof Vaul.Overlay>) {
   return (
     <Vaul.Overlay
       className={cn(
@@ -25,13 +26,11 @@ const DrawerOverlay: React.FC<
   )
 }
 
-const DrawerContent: React.FC<
-  React.ComponentPropsWithRef<typeof Vaul.Content>
-> = ({
+function DrawerContent({
   className,
   'aria-describedby': ariaDescribedBy = undefined,
   ...props
-}) => {
+}: React.ComponentPropsWithRef<typeof Vaul.Content>) {
   return (
     <Vaul.Content
       className={cn(

@@ -1,7 +1,7 @@
 import {useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
 
-const CookiesInfo: React.FC = () => {
+function CookiesInfo() {
   const t = useTranslations('Pages.Cookies.CookiesInfo')
 
   return (

@@ -11,57 +11,13 @@ import {
   Trigger
 } from '@radix-ui/react-dialog'
 import {cva, type VariantProps} from 'class-variance-authority'
-import type * as React from 'react'
+import {XIcon} from 'lucide-react'
+import {IconButton} from '@/src/components/ui/icon-button'
 import {cn} from '@/src/lib/utils'
-
-const sheetContentProps = cva(
-  ['fixed', 'overflow-hidden', 'z-1', 'bg-primary', 'shadow-md'],
-  {
-    variants: {
-      side: {
-        top: [
-          'inset-x-0',
-          'top-0',
-          'data-open:animate-sheet-top-open',
-          'data-closed:animate-sheet-top-close'
-        ],
-        right: [
-          'inset-y-0',
-          'right-0',
-          'h-full',
-          'w-full',
-          'data-open:animate-sheet-right-open',
-          'data-closed:animate-sheet-right-close',
-          'sm:max-w-lg'
-        ],
-        bottom: [
-          'inset-x-0',
-          'bottom-0',
-          'data-open:animate-sheet-bottom-open',
-          'data-closed:animate-sheet-bottom-close'
-        ],
-        left: [
-          'top-2',
-          'left-2',
-          'rounded-lg',
-          'w-[calc(100%-16px)]',
-          'h-[calc(100%-16px)]',
-          'data-open:animate-sheet-left-open',
-          'data-closed:animate-sheet-left-close',
-          'sm:max-w-lg'
-        ]
-      }
-    },
-    defaultVariants: {
-      side: 'right'
-    }
-  }
-)
 
 const Sheet = Root
 const SheetTrigger = Trigger
 const SheetPortal = Portal
-const SheetClose = Close
 
 function SheetOverlay({
   className,
@@ -78,8 +34,52 @@ function SheetOverlay({
   )
 }
 
+const sheetContentProps = cva(
+  ['fixed', 'overflow-hidden', 'z-1', 'bg-primary', 'shadow-md'],
+  {
+    variants: {
+      side: {
+        top: [
+          'inset-x-0',
+          'inset-bs-0',
+          'data-open:animate-sheet-top-open',
+          'data-closed:animate-sheet-top-close'
+        ],
+        right: [
+          'inset-y-0',
+          'inset-e-0',
+          'h-full',
+          'w-full',
+          'data-open:animate-sheet-right-open',
+          'data-closed:animate-sheet-right-close',
+          'sm:max-w-lg'
+        ],
+        bottom: [
+          'inset-x-0',
+          'inset-be-0',
+          'data-open:animate-sheet-bottom-open',
+          'data-closed:animate-sheet-bottom-close'
+        ],
+        left: [
+          'inset-bs-2',
+          'inset-s-2',
+          'rounded-lg',
+          'w-[calc(100%-16px)]',
+          'h-[calc(100%-16px)]',
+          'data-open:animate-sheet-left-open',
+          'data-closed:animate-sheet-left-close',
+          'sm:max-w-lg'
+        ]
+      }
+    },
+    defaultVariants: {
+      side: 'left'
+    }
+  }
+)
+
 function SheetContent({
-  side = 'right',
+  side,
   className,
   'aria-describedby': ariaDescribedBy = undefined,
   ...props
@@ -100,7 +100,7 @@ function SheetHeader({
 }: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn('flex flex-col space-y-2 sm:text-left', className)}
+      className={cn('p-6 space-y-4 border-b sm:p-8', className)}
       {...props}
     />
   )
@@ -133,18 +133,33 @@ function SheetDescription({
   )
 }
 
-function SheetFooter({
-  className,
-  ...props
-}: React.ComponentPropsWithRef<'div'>) {
+function SheetBody({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn(
-        'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
-        className
-      )}
+      className={cn('px-6 py-1 sm:px-8', className)}
       {...props}
     />
+  )
+}
+
+function SheetClose({
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}: Omit<React.ComponentPropsWithRef<typeof Close>, 'asChild'>) {
+  return (
+    <Close
+      className={cn('absolute inset-bs-4 inset-e-4', className)}
+      {...props}
+      asChild
+    >
+      <IconButton
+        aria-label={ariaLabel || 'Close drawer'}
+        size='sm'
+      >
+        <XIcon />
+      </IconButton>
+    </Close>
   )
 }
 
@@ -156,7 +171,7 @@ SheetContent.displayName = 'SheetContent'
 SheetHeader.displayName = 'SheetHeader'
 SheetTitle.displayName = 'SheetTitle'
 SheetDescription.displayName = 'SheetDescription'
-SheetFooter.displayName = 'SheetFooter'
+SheetBody.displayName = 'SheetBody'
 SheetClose.displayName = 'SheetClose'
 
 export {
@@ -168,6 +183,6 @@ export {
   SheetHeader,
   SheetTitle,
   SheetDescription,
-  SheetFooter,
+  SheetBody,
   SheetClose
 }

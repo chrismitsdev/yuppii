@@ -1,5 +1,5 @@
 import {type Messages, useMessages, useTranslations} from 'next-intl'
-import * as React from 'react'
+import {Fragment} from 'react'
 import {MenuProduct} from '@/src/components/menu-product'
 import {Section} from '@/src/components/section'
 import {
@@ -12,7 +12,7 @@ import {Separator} from '@/src/components/ui/separator'
 import {Typography} from '@/src/components/ui/typography'
 import {categoryIcons} from '@/src/lib/utils'
 
-const MenuCategories: React.FC = () => {
+function MenuCategories() {
   const t = useTranslations('Menu')
   const messages = useMessages()
   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
@@ -45,7 +45,7 @@ const MenuCategories: React.FC = () => {
                   {Object.values(messages.Menu[categoryKey].products)
                     .filter((product) => !product.disabled)
                     .map((product, i, a) => (
-                      <React.Fragment key={product.name}>
+                      <Fragment key={product.name}>
                         <MenuProduct {...product} />
                         {i !== a.length - 1 && (
                           <Separator
@@ -53,7 +53,7 @@ const MenuCategories: React.FC = () => {
                             decorative
                           />
                         )}
-                      </React.Fragment>
+                      </Fragment>
                     ))}
                 </ul>
                 {messages.Menu[categoryKey].notes && (

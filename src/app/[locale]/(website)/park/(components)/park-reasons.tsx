@@ -16,7 +16,7 @@ import {
 } from '@/src/components/ui/accordion'
 import {Typography} from '@/src/components/ui/typography'
 
-const ParkReasons: React.FC = () => {
+function ParkReasons() {
   const t = useTranslations('Pages.Park.ParkReasons')
 
   return (
@@ -33,10 +33,7 @@ const ParkReasons: React.FC = () => {
           <AccordionItem value='item-1'>
             <AccordionTrigger>
               <RocketIcon />
-              <Typography
-                className='mt-1.5'
-                variant='lead'
-              >
+              <Typography variant='lead'>
                 {t('accordion.accordion1.title')}
               </Typography>
             </AccordionTrigger>
@@ -49,10 +46,7 @@ const ParkReasons: React.FC = () => {
           <AccordionItem value='item-2'>
             <AccordionTrigger>
               <LogOutIcon />
-              <Typography
-                className='mt-1.5'
-                variant='lead'
-              >
+              <Typography variant='lead'>
                 {t('accordion.accordion2.title')}
               </Typography>
             </AccordionTrigger>
@@ -65,10 +59,7 @@ const ParkReasons: React.FC = () => {
           <AccordionItem value='item-3'>
             <AccordionTrigger>
               <UsersIcon />
-              <Typography
-                className='mt-1.5'
-                variant='lead'
-              >
+              <Typography variant='lead'>
                 {t('accordion.accordion3.title')}
               </Typography>
             </AccordionTrigger>
@@ -81,10 +72,7 @@ const ParkReasons: React.FC = () => {
           <AccordionItem value='item-4'>
             <AccordionTrigger>
               <FlameIcon />
-              <Typography
-                className='mt-1.5'
-                variant='lead'
-              >
+              <Typography variant='lead'>
                 {t('accordion.accordion4.title')}
               </Typography>
             </AccordionTrigger>
@@ -97,10 +85,7 @@ const ParkReasons: React.FC = () => {
           <AccordionItem value='item-5'>
             <AccordionTrigger>
               <HeartIcon />
-              <Typography
-                className='mt-1.5'
-                variant='lead'
-              >
+              <Typography variant='lead'>
                 {t('accordion.accordion5.title')}
               </Typography>
             </AccordionTrigger>
@@ -113,10 +98,7 @@ const ParkReasons: React.FC = () => {
           <AccordionItem value='item-6'>
             <AccordionTrigger>
               <BabyIcon />
-              <Typography
-                className='mt-1.5'
-                variant='lead'
-              >
+              <Typography variant='lead'>
                 {t('accordion.accordion6.title')}
               </Typography>
             </AccordionTrigger>

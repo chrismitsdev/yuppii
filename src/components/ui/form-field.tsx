@@ -1,10 +1,9 @@
-import type {LucideProps} from 'lucide-react'
-import {useLocale} from 'next-intl'
+import type {LucideIcon} from 'lucide-react'
 import {Typography} from '@/src/components/ui/typography'
-import {cn, isoLocaleMap} from '@/src/lib/utils'
+import {cn} from '@/src/lib/utils'
 
 interface FormFieldProps {
-  icon: React.ComponentType<LucideProps>
+  icon: LucideIcon
   label: string
   fieldType?: 'input' | 'textarea'
   id: string
@@ -16,7 +15,7 @@ interface FormFieldProps {
   error?: string
 }
 
-const FormField: React.FC<FormFieldProps> = ({
+function FormField({
   icon: Icon,
   label,
   fieldType = 'input',
@@ -27,8 +26,7 @@ const FormField: React.FC<FormFieldProps> = ({
   type = 'text',
   autoComplete,
   error
-}) => {
-  const locale = useLocale()
+}: FormFieldProps) {
   const baseClass =
     'pt-1 pb-3 w-full leading-6 focus:outline-none disabled:cursor-not-allowed'
 
@@ -39,20 +37,19 @@ const FormField: React.FC<FormFieldProps> = ({
         disabled && 'opacity-50'
       )}
     >
-      <div className='pb-1 flex items-center gap-2'>
-        <Icon size={16} />
-        <label
-          className='mt-0.5 grow text-sm uppercase font-bold leading-5 tracking-wider'
-          htmlFor={id}
-          lang={isoLocaleMap[locale]}
-          aria-disabled={disabled}
+      <div className='flex items-center gap-2'>
+        <Icon className='w-4 h-lh' />
+        <Typography
+          className='grow'
+          variant='small'
+          asChild
         >
-          {label}
-        </label>
+          <label htmlFor={id}>{label}</label>
+        </Typography>
         {error && (
           <Typography
-            className='leading-5 font-semibold text-red-600 tracking-wide'
-            variant='tiny'
+            className='text-red-600'
+            variant='mini'
           >
             {error}
           </Typography>

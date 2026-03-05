@@ -2,16 +2,15 @@ import {
   CastleIcon,
   ChevronRightIcon,
   FootprintsIcon,
-  PartyPopperIcon,
-  XIcon
+  type LucideIcon,
+  PartyPopperIcon
 } from 'lucide-react'
-import {useTranslations} from 'next-intl'
-import {ClientLink} from '@/src/components/client-link'
+import {type Messages, useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
 import {Button} from '@/src/components/ui/button'
 import {
   Card,
-  CardContent,
+  CardBody,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -19,6 +18,7 @@ import {
 } from '@/src/components/ui/card'
 import {
   Dialog,
+  DialogBody,
   DialogClose,
   DialogContent,
   DialogDescription,
@@ -29,9 +29,70 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@/src/components/ui/dialog'
+import {Link} from '@/src/i18n/navigation'
+import {cn} from '@/src/lib/utils'
 
-const HomeCards: React.FC = () => {
+const data = [
+  {key: 'card1', icon: CastleIcon, href: '/services'},
+  {key: 'card2', icon: PartyPopperIcon, href: '/services'},
+  {key: 'card3', icon: FootprintsIcon, href: '/contact'}
+] satisfies {
+  key: keyof Messages['Pages']['Home']['HomeCards']
+  icon: LucideIcon
+  href: string
+}[]
+
+function HomeCards() {
   const t = useTranslations('Pages.Home.HomeCards')
+
+  const renderedCards = data.map(({key, icon: Icon, href}, i, a) => {
+    const isLastCard = i === a.length - 1
+
+    return (
+      <Card
+        key={key}
+        className={cn(
+          'bg-linear-to-br from-secondary/75 to-primary',
+          isLastCard && 'sm:col-span-2'
+        )}
+      >
+        <CardHeader className='h-56'>
+          <Icon className='size-24 m-auto' />
+        </CardHeader>
+        <CardBody>
+          <CardTitle>{t(`${key}.title`)}</CardTitle>
+          <CardDescription>{t(`${key}.description`)}</CardDescription>
+        </CardBody>
+        <CardFooter>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant='secondary'>
+                <span>{t('card1.trigger')}</span>
+                <ChevronRightIcon />
+              </Button>
+            </DialogTrigger>
+            <DialogPortal>
+              <DialogOverlay />
+              <DialogContent>
+                <DialogClose />
+                <DialogHeader>
+                  <DialogTitle>{t(`${key}.title`)}</DialogTitle>
+                </DialogHeader>
+                <DialogBody>
+                  <DialogDescription>{t(`${key}.content`)}</DialogDescription>
+                </DialogBody>
+                <DialogFooter>
+                  <Button asChild>
+                    <Link href={href}>{t('card1.trigger')}</Link>
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </DialogPortal>
+          </Dialog>
+        </CardFooter>
+      </Card>
+    )
+  })
 
   return (
     <Section
@@ -39,148 +100,7 @@ const HomeCards: React.FC = () => {
       title={t('title')}
       subtitle={t('subtitle')}
     >
-      <article className='grid gap-10 sm:grid-cols-2'>
-        <Card className='bg-gradient-to-b from-secondary/75 to-secondary/25'>
-          <CardHeader className='pb-0 h-56 items-center justify-center'>
-            <CastleIcon size={96} />
-          </CardHeader>
-          <CardContent>
-            <CardTitle>{t('card1.title')}</CardTitle>
-            <CardDescription>{t('card1.description')}</CardDescription>
-          </CardContent>
-          <CardFooter>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant='accent'>
-                  <span>{t('card1.trigger')}</span>
-                  <ChevronRightIcon />
-                </Button>
-              </DialogTrigger>
-              <DialogPortal>
-                <DialogOverlay />
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>{t('card1.title')}</DialogTitle>
-                    <DialogDescription>{t('card1.content')}</DialogDescription>
-                  </DialogHeader>
-                  <DialogFooter className='flex justify-end'>
-                    <Button asChild>
-                      <ClientLink href='/services'>
-                        {t('card1.trigger')}
-                      </ClientLink>
-                    </Button>
-                  </DialogFooter>
-                  <DialogClose
-                    className='absolute top-2 right-2'
-                    asChild
-                  >
-                    <Button
-                      variant='ghost'
-                      size='icon'
-                    >
-                      <XIcon />
-                    </Button>
-                  </DialogClose>
-                </DialogContent>
-              </DialogPortal>
-            </Dialog>
-          </CardFooter>
-        </Card>
-
-        <Card className='bg-gradient-to-b from-secondary/75 to-secondary/25'>
-          <CardHeader className='pb-0 h-56 items-center justify-center'>
-            <PartyPopperIcon size={96} />
-          </CardHeader>
-          <CardContent>
-            <CardTitle>{t('card2.title')}</CardTitle>
-            <CardDescription>{t('card2.description')}</CardDescription>
-          </CardContent>
-          <CardFooter>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant='accent'>
-                  <span>{t('card2.trigger')}</span>
-                  <ChevronRightIcon />
-                </Button>
-              </DialogTrigger>
-              <DialogPortal>
-                <DialogOverlay />
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>{t('card2.title')}</DialogTitle>
-                    <DialogDescription>{t('card2.content')}</DialogDescription>
-                  </DialogHeader>
-                  <DialogFooter className='flex justify-end'>
-                    <Button asChild>
-                      <ClientLink href='/services'>
-                        {t('card2.trigger')}
-                      </ClientLink>
-                    </Button>
-                  </DialogFooter>
-                  <DialogClose
-                    className='absolute top-2 right-2'
-                    asChild
-                  >
-                    <Button
-                      variant='ghost'
-                      size='icon'
-                    >
-                      <XIcon />
-                    </Button>
-                  </DialogClose>
-                </DialogContent>
-              </DialogPortal>
-            </Dialog>
-          </CardFooter>
-        </Card>
-
-        <Card className='bg-gradient-to-b from-secondary/75 to-secondary/25 sm:col-span-2'>
-          <CardHeader className='pb-0 h-56 items-center justify-center'>
-            <FootprintsIcon size={96} />
-          </CardHeader>
-          <CardContent>
-            <CardTitle>{t('card3.title')}</CardTitle>
-            <CardDescription>{t('card3.description')}</CardDescription>
-          </CardContent>
-          <CardFooter>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant='accent'>
-                  <span>{t('card3.trigger')}</span>
-                  <ChevronRightIcon />
-                </Button>
-              </DialogTrigger>
-              <DialogPortal>
-                <DialogOverlay />
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>{t('card3.title')}</DialogTitle>
-                    <DialogDescription>{t('card3.content')}</DialogDescription>
-                  </DialogHeader>
-                  <DialogFooter className='flex justify-end'>
-                    <Button asChild>
-                      <ClientLink href='/contact'>
-                        {t('card3.trigger')}
-                      </ClientLink>
-                    </Button>
-                  </DialogFooter>
-                  <DialogClose
-                    className='absolute top-2 right-2'
-                    asChild
-                  >
-                    <Button
-                      variant='ghost'
-                      size='icon'
-                    >
-                      <XIcon />
-                    </Button>
-                  </DialogClose>
-                </DialogContent>
-              </DialogPortal>
-            </Dialog>
-          </CardFooter>
-        </Card>
-      </article>
+      <article className='grid gap-10 sm:grid-cols-2'>{renderedCards}</article>
     </Section>
   )
 }

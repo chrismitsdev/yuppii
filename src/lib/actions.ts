@@ -20,13 +20,13 @@ import {
 import {sendContactForm} from '@/src/lib/send-contact-form'
 import {bannedKeywordPatterns} from '@/src/lib/utils'
 
-setSpecificMessage(string, 'Πρέπει να είναι γράμματα & αριθμοί', 'gr')
+setSpecificMessage(string, 'Πρέπει να είναι γράμματα & αριθμοί', 'el')
 setSpecificMessage(string, 'Must contain only letters & numbers', 'en')
-setSpecificMessage(nonEmpty, 'Υποχρεωτικό πεδίο', 'gr')
+setSpecificMessage(nonEmpty, 'Υποχρεωτικό πεδίο', 'el')
 setSpecificMessage(nonEmpty, 'Mandatory field', 'en')
 
-function getValibotMessage(grMessage: string, enMessage: string) {
-  return ({lang}: {lang?: string}) => (lang === 'gr' ? grMessage : enMessage)
+function getValibotMessage(elMessage: string, enMessage: string) {
+  return ({lang}: {lang?: string}) => (lang === 'el' ? elMessage : enMessage)
 }
 
 const ContactFormSchema = object({

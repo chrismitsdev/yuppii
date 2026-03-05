@@ -2,7 +2,7 @@ import {OctagonAlert} from 'lucide-react'
 import {useTranslations} from 'next-intl'
 import {Section} from '@/src/components/section'
 
-const CategoryNotFound: React.FC = () => {
+function CategoryNotFound() {
   const t = useTranslations('Components.CategoryNotFound')
 
   return (

@@ -34,11 +34,6 @@ export async function sleep(sleepTime: number = 1000) {
   await new Promise((resolve) => setTimeout(resolve, sleepTime))
 }
 
-export const isoLocaleMap = {
-  en: 'en-US',
-  gr: 'el-GR'
-}
-
 export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
   Coffee: Coffee,
   Beverage: CupSoda,
@@ -53,8 +48,6 @@ export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
   Food: Utensils,
   Burger: HamburgerIcon
 }
-
-export const sourceQueryString = '?src=website'
 
 export const bannedKeywordPatterns = [
   // Traffic‑boosting offers
