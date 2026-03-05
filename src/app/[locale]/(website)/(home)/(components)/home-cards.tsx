@@ -74,6 +74,7 @@ function HomeCards() {
             <DialogPortal>
               <DialogOverlay />
               <DialogContent>
+                <DialogClose />
                 <DialogHeader>
                   <DialogTitle>{t(`${key}.title`)}</DialogTitle>
                 </DialogHeader>
@@ -85,7 +86,6 @@ function HomeCards() {
                     <Link href={href}>{t('card1.trigger')}</Link>
                   </Button>
                 </DialogFooter>
-                <DialogClose />
               </DialogContent>
             </DialogPortal>
           </Dialog>

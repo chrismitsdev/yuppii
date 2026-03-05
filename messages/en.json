@@ -294,6 +294,9 @@
     "CategoryNotFound": {
       "title": "Category not found",
       "subtitle": "There are no products in this category."
+    },
+    "EspaBanner": {
+      "label": "Funding from the Competitiveness Programme 2021-2027"
     }
   },
   "Menu": {
