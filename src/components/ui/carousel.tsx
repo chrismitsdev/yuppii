@@ -3,12 +3,10 @@
 import {Slot} from '@radix-ui/react-slot'
 import useEmblaCarousel from 'embla-carousel-react'
 import {ChevronLeftIcon, ChevronRightIcon} from 'lucide-react'
-import {useCallback, useEffect, useState} from 'react'
+import {useCallback, useMemo} from 'react'
 import {IconButton} from '@/src/components/ui/icon-button'
 import {CarouselContext, useCarousel} from '@/src/context/carousel-context'
 import {cn} from '@/src/lib/utils'
-
-type EmblaApiType = ReturnType<typeof useEmblaCarousel>[1]
 
 interface CarouselProps extends React.ComponentPropsWithRef<'div'> {
   options?: Parameters<typeof useEmblaCarousel>[0]
@@ -18,76 +16,41 @@ interface CarouselProps extends React.ComponentPropsWithRef<'div'> {
 
 function Carousel({
   className,
-  options = {
-    loop: true,
-    startIndex: 0
-  },
+  options,
   plugins,
   asChild = false,
   ...props
 }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins)
-  const [selectedIndex, setSelectedIndex] = useState<number>(
-    options.startIndex ?? 0
-  )
   const Comp = asChild ? Slot : 'div'
+
+  const stopAutoplay = useCallback(() => {
+    emblaApi?.plugins()?.autoplay?.stop()
+  }, [emblaApi])
 
   const onPrevButtonClick = useCallback(() => {
     if (!emblaApi) return
-
-    if (emblaApi.plugins()?.autoplay) {
-      emblaApi.plugins().autoplay.stop()
-    }
-
+    stopAutoplay()
     emblaApi.scrollPrev()
-  }, [emblaApi])
+  }, [emblaApi, stopAutoplay])
 
   const onNextButtonClick = useCallback(() => {
     if (!emblaApi) return
-
-    if (emblaApi.plugins()?.autoplay) {
-      emblaApi.plugins().autoplay.stop()
-    }
-
+    stopAutoplay()
     emblaApi.scrollNext()
-  }, [emblaApi])
+  }, [emblaApi, stopAutoplay])
 
-  const onThumbButtonClick = useCallback(
-    (index: number) => {
-      if (!emblaApi) return
-
-      if (emblaApi.plugins()?.autoplay) {
-        emblaApi.plugins().autoplay.stop()
-      }
-
-      emblaApi.scrollTo(index)
-    },
-    [emblaApi]
-  )
-
-  const onSelect = useCallback((emblaApi: EmblaApiType) => {
-    if (!emblaApi) return
-    setSelectedIndex(emblaApi.selectedScrollSnap())
-  }, [])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    onSelect(emblaApi)
-    emblaApi.on('reInit', onSelect).on('select', onSelect)
-  }, [emblaApi, onSelect])
+  const contextValue = useMemo(() => {
+    return {
+      emblaRef,
+      emblaApi,
+      onPrevButtonClick,
+      onNextButtonClick
+    }
+  }, [emblaRef, emblaApi, onPrevButtonClick, onNextButtonClick])
 
   return (
-    <CarouselContext.Provider
-      value={{
-        emblaRef,
-        emblaApi,
-        selectedIndex,
-        onPrevButtonClick,
-        onNextButtonClick,
-        onThumbButtonClick
-      }}
-    >
+    <CarouselContext.Provider value={contextValue}>
       <Comp
         className={cn('relative', className)}
         {...props}

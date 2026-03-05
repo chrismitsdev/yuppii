@@ -2,7 +2,7 @@
 
 import {ExpandIcon} from 'lucide-react'
 import {useTranslations} from 'next-intl'
-import {useState} from 'react'
+import {type Ref, useRef, useState} from 'react'
 import {galleryImageList} from '@/public/home/gallery'
 import {Section} from '@/src/components/section'
 import {
@@ -28,12 +28,21 @@ import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 function HomeGallery() {
   const [index, setIndex] = useState(0)
   const t = useTranslations('Pages.Home.HomeGallery')
+  const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
+
+  const handleFocusTrigger = (e: Event) => {
+    e.preventDefault()
+    triggerRefs.current[index]?.focus()
+  }
 
   const renderedTriggers = galleryImageList.map((image, i) => (
     <HomeGalleryTrigger
       key={image.src}
       src={image}
       alt={`Gallery thumbnail image ${i + 1}`}
+      ref={(el) => {
+        triggerRefs.current[i] = el
+      }}
       onClick={() => setIndex(i)}
     />
   ))
@@ -63,8 +72,9 @@ function HomeGallery() {
             <DialogOverlay />
             <DialogContent
               className='bg-transparent'
-              onCloseAutoFocus={(e) => e.preventDefault()}
+              onCloseAutoFocus={handleFocusTrigger}
             >
+              <DialogClose />
               <VisuallyHidden>
                 <DialogTitle>Home page gallery images</DialogTitle>
               </VisuallyHidden>
@@ -75,7 +85,6 @@ function HomeGallery() {
                 <ButtonPrev />
                 <ButtonNext />
               </Carousel>
-              <DialogClose />
             </DialogContent>
           </DialogPortal>
         </Dialog>
@@ -87,15 +96,18 @@ function HomeGallery() {
 function HomeGalleryTrigger({
   src,
   alt,
+  ref,
   onClick
 }: {
   src: React.ComponentProps<typeof CustomImage>['src']
   alt: string
+  ref: Ref<HTMLButtonElement>
   onClick: () => void
 }) {
   return (
     <DialogTrigger
-      className='relative overflow-hidden rounded shadow-md before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-0 group'
+      className='relative overflow-hidden rounded shadow-md before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent group'
+      ref={ref}
       onClick={onClick}
     >
       <CustomImage

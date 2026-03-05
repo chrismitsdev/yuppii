@@ -4,10 +4,8 @@ import {createContext, useContext} from 'react'
 interface CarouselContextProps {
   emblaRef: ReturnType<typeof useEmblaCarousel>[0]
   emblaApi: ReturnType<typeof useEmblaCarousel>[1]
-  selectedIndex: number
   onPrevButtonClick(): void
   onNextButtonClick(): void
-  onThumbButtonClick(index: number): void
 }
 
 const CarouselContext = createContext<CarouselContextProps | null>(null)

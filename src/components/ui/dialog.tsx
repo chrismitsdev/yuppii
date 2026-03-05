@@ -25,7 +25,7 @@ function DialogOverlay({
   return (
     <Overlay
       className={cn(
-        'fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
+        'fixed inset-0 z-50 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
         className
       )}
       {...props}
@@ -40,7 +40,7 @@ function DialogContent({
   return (
     <Content
       className={cn(
-        'w-full max-w-[calc(100%-24px)] fixed left-1/2 top-1/2 -translate-1/2 origin-center z-1 bg-primary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:max-w-5xl',
+        'w-full max-w-[calc(100%-24px)] fixed left-1/2 top-1/2 -translate-1/2 z-50 origin-center bg-primary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:max-w-5xl',
         className
       )}
       {...props}
@@ -112,7 +112,7 @@ function DialogClose({
 }: Omit<React.ComponentPropsWithRef<typeof Close>, 'asChild'>) {
   return (
     <Close
-      className={cn('absolute inset-bs-4 inset-e-4', className)}
+      className={cn('absolute inset-bs-4 inset-e-4 z-50', className)}
       {...props}
       asChild
     >
