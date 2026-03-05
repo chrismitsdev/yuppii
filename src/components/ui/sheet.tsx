@@ -26,7 +26,7 @@ function SheetOverlay({
   return (
     <Overlay
       className={cn(
-        'fixed inset-0 z-1 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
+        'fixed inset-0 z-50 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
         className
       )}
       {...props}
@@ -35,7 +35,7 @@ function SheetOverlay({
 }
 
 const sheetContentProps = cva(
-  ['fixed', 'overflow-hidden', 'z-1', 'bg-primary', 'shadow-md'],
+  ['fixed', 'overflow-hidden', 'z-51', 'bg-primary', 'shadow-md'],
   {
     variants: {
       side: {
@@ -149,7 +149,7 @@ function SheetClose({
 }: Omit<React.ComponentPropsWithRef<typeof Close>, 'asChild'>) {
   return (
     <Close
-      className={cn('absolute inset-bs-4 inset-e-4', className)}
+      className={cn('absolute inset-bs-4 inset-e-4 z-52', className)}
       {...props}
       asChild
     >

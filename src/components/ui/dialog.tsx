@@ -40,7 +40,7 @@ function DialogContent({
   return (
     <Content
       className={cn(
-        'w-full max-w-[calc(100%-24px)] fixed left-1/2 top-1/2 -translate-1/2 z-50 origin-center bg-primary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:max-w-5xl',
+        'w-full max-w-[calc(100%-24px)] fixed left-1/2 top-1/2 -translate-1/2 z-51 origin-center bg-primary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:max-w-5xl',
         className
       )}
       {...props}
@@ -112,7 +112,7 @@ function DialogClose({
 }: Omit<React.ComponentPropsWithRef<typeof Close>, 'asChild'>) {
   return (
     <Close
-      className={cn('absolute inset-bs-4 inset-e-4 z-50', className)}
+      className={cn('absolute inset-bs-4 inset-e-4 z-52', className)}
       {...props}
       asChild
     >
