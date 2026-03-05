@@ -18,7 +18,7 @@ interface CarouselProps extends React.ComponentPropsWithRef<'div'> {
 
 function Carousel({
   className,
-  options,
+  options = {loop: true},
   plugins,
   asChild = false,
   ...props

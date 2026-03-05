@@ -31,15 +31,21 @@ function AccordionTrigger({
     <Header>
       <Trigger
         className={cn(
-          'p-6 w-full flex flex-1 items-center justify-between group',
+          'p-6 w-full flex flex-1 items-center justify-between rounded-lg focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-accent group',
           className
         )}
         {...props}
       >
         <div className='flex items-center gap-2 grow sm:gap-4'>{children}</div>
         <span className='relative w-6 h-6'>
-          <ChevronUpIcon className='size-4 absolute -top-0.5 left-1/2 -translate-x-1/2 group-data-open:translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition' />
-          <ChevronDownIcon className='size-4 absolute -bottom-0.5 left-1/2 -translate-x-1/2 group-data-open:-translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition' />
+          <ChevronUpIcon
+            className='size-4 absolute -top-0.5 left-1/2 -translate-x-1/2 group-data-open:translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition'
+            strokeWidth={3}
+          />
+          <ChevronDownIcon
+            className='size-4 absolute -bottom-0.5 left-1/2 -translate-x-1/2 group-data-open:-translate-y-2 group-data-open:duration-750 group-data-closed:duration-375 transition'
+            strokeWidth={3}
+          />
         </span>
       </Trigger>
     </Header>

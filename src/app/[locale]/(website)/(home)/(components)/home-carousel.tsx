@@ -39,8 +39,8 @@ function HomeCarousel() {
           <CarouselViewport className='sm:rounded'>
             <SlidesContainer>{slides}</SlidesContainer>
           </CarouselViewport>
-          <ButtonPrev className='left-0 sm:-left-12' />
-          <ButtonNext className='right-0 sm:-right-12' />
+          <ButtonPrev className='inset-s-2 sm:-inset-s-12' />
+          <ButtonNext className='inset-e-2 sm:-inset-e-12' />
         </Carousel>
       </Section>
     </Container>

@@ -23,7 +23,10 @@ function ServicesReviews() {
       title={t('title')}
       subtitle={t('subtitle')}
     >
-      <Carousel className='overflow-visible'>
+      <Carousel
+        className='overflow-visible'
+        options={{loop: false}}
+      >
         <CarouselViewport className='rounded-lg'>
           <SlidesContainer>
             <ServicesReviewSlide
