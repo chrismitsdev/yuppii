@@ -1,5 +1,4 @@
 import {type Messages, useMessages} from 'next-intl'
-// import * as React from 'react'
 import {Fragment} from 'react'
 import {MenuProduct} from '@/src/components/menu-product'
 import {Section} from '@/src/components/section'

@@ -3,7 +3,6 @@
 import {HomeIcon} from 'lucide-react'
 import {useSearchParams} from 'next/navigation'
 import {type Messages, useLocale, useMessages, useTranslations} from 'next-intl'
-import type * as React from 'react'
 import {
   Scrollarea,
   ScrollareaBar,

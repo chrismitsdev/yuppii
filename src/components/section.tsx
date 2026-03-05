@@ -1,4 +1,3 @@
-import type * as React from 'react'
 import {Typography} from '@/src/components/ui/typography'
 import {cn} from '@/src/lib/utils'
 

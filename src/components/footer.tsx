@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import {useLocale, useTranslations} from 'next-intl'
-import type * as React from 'react'
 import logo from '@/public/logo-full-light.svg'
 import {Container} from '@/src/components/container'
 import {

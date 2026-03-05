@@ -1,6 +1,6 @@
 import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
-import * as React from 'react'
+import {use} from 'react'
 import {Container} from '@/src/components/container'
 import {ParkInfo} from './(components)/park-info'
 import {ParkMap} from './(components)/park-map'
@@ -16,7 +16,7 @@ export async function generateMetadata({params}: Params): Promise<Metadata> {
 }
 
 export default function ParkPage({params}: PageProps<'/[locale]/park'>) {
-  const {locale} = React.use(params as Params['params'])
+  const {locale} = use(params as Params['params'])
   setRequestLocale(locale)
 
   return (

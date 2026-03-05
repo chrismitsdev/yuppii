@@ -1,7 +1,6 @@
 'use client'
 
 import {useTranslations} from 'next-intl'
-import type * as React from 'react'
 import * as avatars from '@/public/games/avatars'
 import {Section} from '@/src/components/section'
 import {

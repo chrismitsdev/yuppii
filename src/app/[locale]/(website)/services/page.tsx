@@ -1,6 +1,6 @@
 import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
-import * as React from 'react'
+import {use} from 'react'
 import {Container} from '@/src/components/container'
 import {ServicesCards} from './(components)/services-cards'
 import {ServicesDialogCarousel} from './(components)/services-dialog-carousel'
@@ -18,7 +18,7 @@ export async function generateMetadata({params}: Params): Promise<Metadata> {
 export default function ServicesPage({
   params
 }: PageProps<'/[locale]/services'>) {
-  const {locale} = React.use(params as Params['params'])
+  const {locale} = use(params as Params['params'])
   setRequestLocale(locale)
 
   return (

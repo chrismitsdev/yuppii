@@ -2,7 +2,6 @@
 
 import {Content, Header, Item, Root, Trigger} from '@radix-ui/react-accordion'
 import {ChevronDownIcon, ChevronUpIcon} from 'lucide-react'
-import type * as React from 'react'
 import {cn} from '@/src/lib/utils'
 
 const Accordion = Root
