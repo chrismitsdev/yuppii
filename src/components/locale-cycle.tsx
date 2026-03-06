@@ -1,5 +1,6 @@
 'use client'
 
+import {LoaderCircleIcon} from 'lucide-react'
 import {useLocale, useTranslations} from 'next-intl'
 import {useTransition} from 'react'
 import {EnglishFlag} from '@/src/components/flags/english-flag'
@@ -21,7 +22,7 @@ function LocaleCycle({
   onClick,
   ...props
 }: Omit<React.ComponentProps<typeof IconButton>, 'aria-label'>) {
-  const [_, startTransition] = useTransition()
+  const [isPending, startTransition] = useTransition()
   const router = useRouter()
   const pathname = usePathname()
   const locale = useLocale()
@@ -43,9 +44,10 @@ function LocaleCycle({
       aria-label={t('label')}
       variant={variant}
       onClick={handleClick}
+      disabled={isPending}
       {...props}
     >
-      <Flag />
+      {isPending ? <LoaderCircleIcon className='animate-spin' /> : <Flag />}
     </IconButton>
   )
 }

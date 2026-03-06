@@ -1,47 +1,19 @@
 import {Slot} from '@radix-ui/react-slot'
-import {cva, type VariantProps} from 'class-variance-authority'
 import {cn} from '@/src/lib/utils'
 
-const badgeProps = cva(
-  [
-    'px-2',
-    'py-0.5',
-    'inline-flex',
-    'items-center',
-    'text-sm',
-    'tracking-wide',
-    'border',
-    'rounded',
-    'shrink-0',
-    'transition-colors'
-  ],
-  {
-    variants: {
-      variant: {
-        brand: 'bg-brand/50 text-brand-foreground border-brand',
-        secondary: 'bg-secondary/50 text-secondary-foreground border-secondary',
-        accent: 'bg-accent/50 text-accent-foreground border-accent',
-        outline: 'bg-transparent text-accent'
-      }
-    },
-    defaultVariants: {
-      variant: 'brand'
-    }
-  }
-)
-
-interface BadgeProps
-  extends React.ComponentPropsWithRef<'div'>,
-    VariantProps<typeof badgeProps> {
+interface BadgeProps extends React.ComponentPropsWithRef<'div'> {
   asChild?: boolean
 }
 
-function Badge({className, variant, asChild = false, ...props}: BadgeProps) {
-  const Comp = asChild ? Slot : 'div'
+function Badge({className, asChild = false, ...props}: BadgeProps) {
+  const Comp = asChild ? Slot : 'span'
 
   return (
     <Comp
-      className={cn(badgeProps({variant}), className)}
+      className={cn(
+        'px-2 py-0.5 inline-flex justify-center items-center bg-accent text-accent-foreground rounded text-xs font-bold font-display',
+        className
+      )}
       {...props}
     />
   )

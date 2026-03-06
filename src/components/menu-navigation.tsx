@@ -46,7 +46,10 @@ function MenuNavigation() {
             ))}
           </div>
         </ScrollareaViewport>
-        <ScrollareaBar orientation='horizontal' />
+        <ScrollareaBar
+          className='invisible'
+          orientation='horizontal'
+        />
       </Scrollarea>
     </nav>
   )

@@ -10,18 +10,13 @@ interface MenuProductProps {
 
 function MenuProduct({name, variants, price}: MenuProductProps) {
   return (
-    <li className='grid grid-cols-[1fr_auto] gap-1'>
-      <Typography className='font-medium'>{name}</Typography>
-      <Typography className='font-medium'>{formatCurrency(price)}</Typography>
-      {variants && (
-        <div className='flex flex-wrap items-center gap-1 col-span-full'>
+    <li className='grid grid-cols-[1fr_auto] gap-2'>
+      <Typography>{name}</Typography>
+      <Typography>{formatCurrency(price)}</Typography>
+      {variants && variants.length > 0 && (
+        <div className='col-span-full flex flex-wrap items-center gap-1'>
           {variants.map((variant) => (
-            <Badge
-              key={variant}
-              variant='secondary'
-            >
-              {variant}
-            </Badge>
+            <Badge key={variant}>{variant}</Badge>
           ))}
         </div>
       )}
