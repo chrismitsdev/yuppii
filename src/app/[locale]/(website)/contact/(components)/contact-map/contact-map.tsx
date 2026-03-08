@@ -37,12 +37,7 @@ function ContactMap() {
           <Marker
             position={coords}
             ref={handleMarkerRef}
-            icon={
-              <MapPinIcon
-                size={32}
-                className='fill-secondary text-accent'
-              />
-            }
+            icon={<MapPinIcon className='fill-secondary text-accent' />}
           >
             <Popup offset={[0, -8]}>
               <div className='space-y-2'>

@@ -1,6 +1,5 @@
 import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
-import {cn} from '@/src/lib/utils'
 
 const iconButtonProps = cva(
   [
@@ -8,12 +7,13 @@ const iconButtonProps = cva(
     'inline-flex',
     'justify-center',
     'items-center',
-    'rounded-md',
     'transition',
     'focus-visible:outline-2',
     'focus-visible:outline-offset-2',
     'disabled:opacity-50',
-    'disabled:cursor-not-allowed'
+    'disabled:cursor-not-allowed',
+    'aria-disabled:opacity-50',
+    'aria-disabled:cursor-not-allowed'
   ],
   {
     variants: {
@@ -46,7 +46,6 @@ const iconButtonProps = cva(
         lg: 'size-12 rounded-lg'
       }
     },
-    compoundVariants: [],
     defaultVariants: {
       variant: 'primary',
       size: 'md'
@@ -70,18 +69,19 @@ function IconButton({
   variant,
   size,
   disabled,
+  type = 'button',
   asChild = false,
   ...props
 }: IconButtonProps) {
   const Comp = asChild ? Slot : 'button'
-  const isButton = !asChild
 
   return (
     <Comp
-      className={cn(iconButtonProps({variant, size, className}))}
       aria-label={ariaLabel}
-      aria-disabled={!isButton ? disabled : undefined}
-      disabled={disabled}
+      aria-disabled={disabled}
+      className={iconButtonProps({variant, size, className})}
+      type={asChild ? undefined : type}
+      disabled={asChild ? undefined : disabled}
       {...props}
     />
   )

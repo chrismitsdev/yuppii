@@ -80,7 +80,7 @@ function Carousel({
   return (
     <CarouselContext.Provider value={contextValue}>
       <Comp
-        className={cn('relative', className)}
+        className={cn('relative [--slides-gap:--spacing(4)]', className)}
         {...props}
       />
     </CarouselContext.Provider>
@@ -108,7 +108,7 @@ function SlidesContainer({
 }: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn('h-full flex', className)}
+      className={cn('-ml-(--slides-gap) h-full flex', className)}
       {...props}
     />
   )
@@ -118,7 +118,7 @@ function Slide({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
       className={cn(
-        'mr-4 grow-0 shrink-0 basis-full min-w-0 select-none',
+        'pl-(--slides-gap) grow-0 shrink-0 basis-full min-w-0 select-none',
         className
       )}
       {...props}

@@ -99,18 +99,15 @@ function ContactForm() {
               name='message'
               fieldType='textarea'
             />
-          </div>
-          <div className='flex sm:justify-end'>
             <Button
-              className='w-full sm:w-auto'
-              size='lg'
+              type='submit'
               disabled={isPending}
             >
               <span>{t('submit')}</span>
               {isPending ? (
-                <LoaderCircleIcon className='size-4 animate-spin' />
+                <LoaderCircleIcon className='animate-spin' />
               ) : (
-                <SendHorizonalIcon className='size-4' />
+                <SendHorizonalIcon />
               )}
             </Button>
           </div>

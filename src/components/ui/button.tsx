@@ -1,6 +1,5 @@
 import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
-import {cn} from '@/src/lib/utils'
 
 const buttonProps = cva(
   [
@@ -15,7 +14,9 @@ const buttonProps = cva(
     'focus-visible:outline-2',
     'focus-visible:outline-offset-2',
     'disabled:opacity-50',
-    'disabled:cursor-not-allowed'
+    'disabled:cursor-not-allowed',
+    'aria-disabled:opacity-50',
+    'aria-disabled:cursor-not-allowed'
   ],
   {
     variants: {
@@ -56,7 +57,7 @@ const buttonProps = cva(
 )
 
 export interface ButtonProps
-  extends React.ComponentPropsWithRef<'button'>,
+  extends Omit<React.ComponentPropsWithRef<'button'>, 'aria-disabled'>,
     VariantProps<typeof buttonProps> {
   asChild?: boolean
 }
@@ -66,6 +67,7 @@ function Button({
   variant,
   size,
   disabled,
+  type = 'button',
   asChild = false,
   ...props
 }: ButtonProps) {
@@ -73,9 +75,10 @@ function Button({
 
   return (
     <Comp
-      className={cn(buttonProps({variant, size, className}))}
       aria-disabled={disabled}
-      disabled={disabled}
+      className={buttonProps({variant, size, className})}
+      type={asChild ? undefined : type}
+      disabled={asChild ? undefined : disabled}
       {...props}
     />
   )

@@ -35,7 +35,7 @@ function SheetOverlay({
 }
 
 const sheetContentProps = cva(
-  ['fixed', 'overflow-hidden', 'z-51', 'bg-primary', 'shadow-md'],
+  ['fixed', 'overflow-hidden', 'z-50', 'bg-primary', 'shadow-md'],
   {
     variants: {
       side: {
@@ -87,7 +87,7 @@ function SheetContent({
   VariantProps<typeof sheetContentProps>) {
   return (
     <Content
-      className={cn(sheetContentProps({side}), className)}
+      className={sheetContentProps({side, className})}
       aria-describedby={ariaDescribedBy}
       {...props}
     />
@@ -100,7 +100,10 @@ function SheetHeader({
 }: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn('p-6 space-y-4 border-b sm:p-8', className)}
+      className={cn(
+        'p-6 space-y-4 border-b border-b-accent/10 sm:p-8',
+        className
+      )}
       {...props}
     />
   )
@@ -149,7 +152,7 @@ function SheetClose({
 }: Omit<React.ComponentPropsWithRef<typeof Close>, 'asChild'>) {
   return (
     <Close
-      className={cn('absolute inset-bs-4 inset-e-4 z-52', className)}
+      className={cn('absolute inset-bs-4 inset-e-4 z-50', className)}
       {...props}
       asChild
     >

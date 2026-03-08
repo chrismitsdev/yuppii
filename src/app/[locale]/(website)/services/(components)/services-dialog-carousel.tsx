@@ -241,10 +241,7 @@ function ServicesGalleryTrigger({
         '
       />
       <div className='hidden absolute inset-0 items-center justify-center group-hover:flex'>
-        <ExpandIcon
-          className='text-primary'
-          size={32}
-        />
+        <ExpandIcon className='text-primary' />
       </div>
     </DialogTrigger>
   )

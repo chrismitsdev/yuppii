@@ -1,6 +1,5 @@
 import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
-import {cn} from '@/src/lib/utils'
 
 const typographyProps = cva(['block', 'transition-colors', 'text-balance'], {
   variants: {
@@ -45,7 +44,7 @@ function Typography({
 
   return (
     <Comp
-      className={cn(typographyProps({variant, className}))}
+      className={typographyProps({variant, className})}
       {...props}
     />
   )
