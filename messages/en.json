@@ -96,68 +96,71 @@
         "sheet-content-trigger": "See all available games",
         "sheet-content-header": "Choose game",
         "galleries": {
-          "inflatables": {
-            "label": "Inflatables"
-          },
-          "playground": {
-            "label": "Playground"
-          },
-          "trampoline": {
-            "label": "Trampoline"
-          },
-          "bungee-trampoline": {
-            "label": "Bungee trampoline"
-          },
-          "ufo": {
-            "label": "UFO"
-          },
-          "cinema": {
-            "label": "Cinema 7D"
-          },
-          "dryslope": {
-            "label": "Dry slope"
-          },
-          "bumper-cars": {
-            "label": "Bumper cars"
-          },
-          "junior": {
-            "label": "Junior playground"
-          },
-          "formula-cars": {
-            "label": "Formula cars"
-          },
-          "carnival-games": {
-            "label": "Carnival games"
-          },
-          "table-soccer": {
-            "label": "Table soccer"
+          "air-hockey": {
+            "label": "Air hockey"
           },
           "basket": {
             "label": "Basketball"
           },
-          "kiddy-rides": {
-            "label": "Kiddy rides"
+          "bumper-cars": {
+            "label": "Bumper cars"
           },
-          "hawaiian-surfing": {
-            "label": "Hawaiian surfing"
+          "bungee-trampoline": {
+            "label": "Bungee trampoline"
           },
-          "electric-cars": {
-            "label": "Electric cars"
+          "carnival-games": {
+            "label": "Carnival games"
           },
-          "air-hockey": {
-            "label": "Air hockey"
-          },
-          "power-games": {
-            "label": "Power games"
+          "cinema": {
+            "label": "Cinema 7D"
           },
           "cranes": {
             "label": "Gift cranes"
           },
+          "dryslope": {
+            "label": "Dry slope"
+          },
+          "electric-cars": {
+            "label": "Electric cars"
+          },
+          "formula-cars": {
+            "label": "Formula cars"
+          },
+          "hawaiian-surfing": {
+            "label": "Hawaiian surfing"
+          },
+          "inflatables": {
+            "label": "Inflatables"
+          },
+          "junior": {
+            "label": "Junior playground"
+          },
+          "kiddy-rides": {
+            "label": "Kiddy rides"
+          },
           "lucky-games": {
             "label": "Lucky games"
           },
+          "playground": {
+            "label": "Playground"
+          },
+          "power-games": {
+            "label": "Power games"
+          },
           "survivor": {
             "label": "Survivor"
+          },
+          "table-soccer": {
+            "label": "Table soccer"
+          },
+          "trampoline": {
+            "label": "Trampoline"
+          },
+          "ufo": {
+            "label": "UFO"
+          },
+          "wipeout": {
+            "label": "Wipeout"
           }
         }
       },

@@ -3,7 +3,30 @@
 import {ExpandIcon} from 'lucide-react'
 import {type Messages, useTranslations} from 'next-intl'
 import {type Ref, useCallback, useMemo, useRef, useState} from 'react'
-import * as gamesGalleryImages from '@/public/games/galleries'
+import {
+  airHockeyGallery,
+  basketGallery,
+  bumperCarsGallery,
+  bungeeTrampolineGallery,
+  carnivalGamesGallery,
+  cinemaGallery,
+  cranesGallery,
+  dryslopeGallery,
+  electricCarsGallery,
+  formulaCarsGallery,
+  hawaiianSurfingGallery,
+  inflatablesGallery,
+  juniorGallery,
+  kiddyRidesGallery,
+  luckyGamesGallery,
+  playgroundGallery,
+  powerGamesGallery,
+  survivorGallery,
+  tableSoccerGallery,
+  trampolineGallery,
+  ufoGallery,
+  wipeoutGallery
+} from '@/public/games/galleries'
 import {Section} from '@/src/components/section'
 import {Button} from '@/src/components/ui/button'
 import {
@@ -49,33 +72,28 @@ type ImageGallery = {
 }
 
 const galleries: ImageGallery[] = [
-  {key: 'air-hockey', images: gamesGalleryImages.airHockeyGallery},
-  {key: 'basket', images: gamesGalleryImages.basketGallery},
-  {key: 'bumper-cars', images: gamesGalleryImages.bumperCarsGallery},
-  {
-    key: 'bungee-trampoline',
-    images: gamesGalleryImages.bungeeTrampolineGallery
-  },
-  {key: 'carnival-games', images: gamesGalleryImages.carnivalGamesGallery},
-  {key: 'cinema', images: gamesGalleryImages.cinemaGallery},
-  {key: 'cranes', images: gamesGalleryImages.cranesGallery},
-  {key: 'dryslope', images: gamesGalleryImages.dryslopeGallery},
-  {key: 'electric-cars', images: gamesGalleryImages.electricCarsGallery},
-  {key: 'formula-cars', images: gamesGalleryImages.formulaCarsGallery},
-  {
-    key: 'hawaiian-surfing',
-    images: gamesGalleryImages.hawaiianSurfingGallery
-  },
-  {key: 'inflatables', images: gamesGalleryImages.inflatablesGallery},
-  {key: 'junior', images: gamesGalleryImages.juniorGallery},
-  {key: 'kiddy-rides', images: gamesGalleryImages.kiddyRidesGallery},
-  {key: 'lucky-games', images: gamesGalleryImages.luckyGamesGallery},
-  {key: 'playground', images: gamesGalleryImages.playgroundGallery},
-  {key: 'power-games', images: gamesGalleryImages.powerGamesGallery},
-  {key: 'survivor', images: gamesGalleryImages.survivorGallery},
-  {key: 'table-soccer', images: gamesGalleryImages.tableSoccerGallery},
-  {key: 'trampoline', images: gamesGalleryImages.trampolineGallery},
-  {key: 'ufo', images: gamesGalleryImages.ufoGallery}
+  {key: 'air-hockey', images: airHockeyGallery},
+  {key: 'basket', images: basketGallery},
+  {key: 'bumper-cars', images: bumperCarsGallery},
+  {key: 'bungee-trampoline', images: bungeeTrampolineGallery},
+  {key: 'carnival-games', images: carnivalGamesGallery},
+  {key: 'cinema', images: cinemaGallery},
+  {key: 'cranes', images: cranesGallery},
+  {key: 'dryslope', images: dryslopeGallery},
+  {key: 'electric-cars', images: electricCarsGallery},
+  {key: 'formula-cars', images: formulaCarsGallery},
+  {key: 'hawaiian-surfing', images: hawaiianSurfingGallery},
+  {key: 'inflatables', images: inflatablesGallery},
+  {key: 'junior', images: juniorGallery},
+  {key: 'kiddy-rides', images: kiddyRidesGallery},
+  {key: 'lucky-games', images: luckyGamesGallery},
+  {key: 'playground', images: playgroundGallery},
+  {key: 'power-games', images: powerGamesGallery},
+  {key: 'survivor', images: survivorGallery},
+  {key: 'table-soccer', images: tableSoccerGallery},
+  {key: 'trampoline', images: trampolineGallery},
+  {key: 'ufo', images: ufoGallery},
+  {key: 'wipeout', images: wipeoutGallery}
 ]
 
 function GamesDialogCarousel() {

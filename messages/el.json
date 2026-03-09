@@ -96,68 +96,71 @@
         "sheet-content-trigger": "Δείτε όλα τα διαθέσιμα παιχνίδια",
         "sheet-content-header": "Επέλεξε παιχνίδι",
         "galleries": {
-          "inflatables": {
-            "label": "Φουσκωτά"
-          },
-          "playground": {
-            "label": "Παιχνιδοκατασκευή"
-          },
-          "trampoline": {
-            "label": "Τραμπολίνο"
-          },
-          "bungee-trampoline": {
-            "label": "Τραμπολίνο bungee"
-          },
-          "ufo": {
-            "label": "UFO"
-          },
-          "cinema": {
-            "label": "Cinema 7D"
-          },
-          "dryslope": {
-            "label": "Τσουλήθρα"
-          },
-          "bumper-cars": {
-            "label": "Συγκρουόμενα"
-          },
-          "junior": {
-            "label": "Παιδότοπος junior"
-          },
-          "formula-cars": {
-            "label": "Φόρμουλες"
-          },
-          "carnival-games": {
-            "label": "Παιχνίδια carnival"
-          },
-          "table-soccer": {
-            "label": "Ποδοσφαιράκια"
+          "air-hockey": {
+            "label": "Air hockey"
           },
           "basket": {
             "label": "Μπάσκετ"
           },
-          "kiddy-rides": {
-            "label": "Κουνιστά"
+          "bumper-cars": {
+            "label": "Συγκρουόμενα"
           },
-          "hawaiian-surfing": {
-            "label": "Hawaiian surfing"
+          "bungee-trampoline": {
+            "label": "Τραμπολίνο bungee"
           },
-          "electric-cars": {
-            "label": "Ηλεκτροκίνητα oχήματα"
+          "carnival-games": {
+            "label": "Παιχνίδια carnival"
           },
-          "air-hockey": {
-            "label": "Air hockey"
-          },
-          "power-games": {
-            "label": "Παιχνίδια δύναμης"
+          "cinema": {
+            "label": "Cinema 7D"
           },
           "cranes": {
             "label": "Γερανοί δώρων"
           },
+          "dryslope": {
+            "label": "Τσουλήθρα"
+          },
+          "electric-cars": {
+            "label": "Ηλεκτροκίνητα oχήματα"
+          },
+          "formula-cars": {
+            "label": "Φόρμουλες"
+          },
+          "hawaiian-surfing": {
+            "label": "Hawaiian surfing"
+          },
+          "inflatables": {
+            "label": "Φουσκωτά"
+          },
+          "junior": {
+            "label": "Παιδότοπος junior"
+          },
+          "kiddy-rides": {
+            "label": "Κουνιστά"
+          },
           "lucky-games": {
             "label": "Δωρομηχανές"
           },
+          "playground": {
+            "label": "Παιχνιδοκατασκευή"
+          },
+          "power-games": {
+            "label": "Παιχνίδια δύναμης"
+          },
           "survivor": {
             "label": "Survivor"
+          },
+          "table-soccer": {
+            "label": "Ποδοσφαιράκια"
+          },
+          "trampoline": {
+            "label": "Τραμπολίνο"
+          },
+          "ufo": {
+            "label": "UFO"
+          },
+          "wipeout": {
+            "label": "Wipeout"
           }
         }
       },
