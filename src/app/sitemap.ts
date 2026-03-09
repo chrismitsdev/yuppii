@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/park',
     '/games',
-    '/services',
+    '/games',
     '/contact',
     '/privacy',
     '/cookies'

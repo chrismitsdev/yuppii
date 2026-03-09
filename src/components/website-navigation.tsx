@@ -3,11 +3,11 @@
 import {
   ClipboardListIcon,
   FerrisWheelIcon,
-  HomeIcon,
-  ListChecksIcon,
   type LucideIcon,
   MailIcon,
-  MenuIcon
+  MenuIcon,
+  RollerCoasterIcon,
+  StoreIcon
 } from 'lucide-react'
 import {type Messages, useTranslations} from 'next-intl'
 import {Fragment, useEffect, useId, useState} from 'react'
@@ -39,9 +39,9 @@ import {LocaleCycle} from './locale-cycle'
 import {IconButton} from './ui/icon-button'
 
 const links = [
-  {key: 'Home', href: '/', icon: HomeIcon},
+  {key: 'Home', href: '/', icon: StoreIcon},
   {key: 'Park', href: '/park', icon: FerrisWheelIcon},
-  {key: 'Services', href: '/services', icon: ListChecksIcon},
+  {key: 'Games', href: '/games', icon: RollerCoasterIcon},
   {key: 'Contact', href: '/contact', icon: MailIcon},
   {key: 'Menu', href: '/menu', icon: ClipboardListIcon}
 ] satisfies {

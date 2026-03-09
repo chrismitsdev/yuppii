@@ -44,7 +44,7 @@ import {Typography} from '@/src/components/ui/typography'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 
 type ImageGallery = {
-  key: keyof Messages['Pages']['Services']['ServicesGallery']['galleries']
+  key: keyof Messages['Pages']['Games']['GamesGallery']['galleries']
   images: React.ComponentProps<typeof CustomImage>['src'][]
 }
 
@@ -78,11 +78,11 @@ const galleries: ImageGallery[] = [
   {key: 'ufo', images: gamesGalleryImages.ufoGallery}
 ]
 
-function ServicesDialogCarousel() {
+function GamesDialogCarousel() {
   const [index, setIndex] = useState(0)
   const [sheetOpen, setSheetOpen] = useState(false)
   const [selectedGallery, setSelectedGallery] = useState(galleries[0])
-  const t = useTranslations('Pages.Services.ServicesGallery')
+  const t = useTranslations('Pages.Games.GamesGallery')
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
 
   const handleSelectGallery = useCallback((gallery: ImageGallery) => {
@@ -115,7 +115,7 @@ function ServicesDialogCarousel() {
   const renderedTriggers = useMemo(() => {
     return selectedGallery.images.map((image, i) => {
       return (
-        <ServicesGalleryTrigger
+        <GamesGalleryTrigger
           key={image.src}
           src={image}
           alt={`Gallery thumbnail image ${i + 1}`}
@@ -213,7 +213,7 @@ function ServicesDialogCarousel() {
   )
 }
 
-function ServicesGalleryTrigger({
+function GamesGalleryTrigger({
   src,
   alt,
   ref,
@@ -247,7 +247,7 @@ function ServicesGalleryTrigger({
   )
 }
 
-ServicesDialogCarousel.displayName = 'ServicesDialogCarousel'
-ServicesGalleryTrigger.displayName = 'ServicesGalleryTrigger'
+GamesDialogCarousel.displayName = 'GamesDialogCarousel'
+GamesGalleryTrigger.displayName = 'GamesGalleryTrigger'
 
-export {ServicesDialogCarousel}
+export {GamesDialogCarousel}

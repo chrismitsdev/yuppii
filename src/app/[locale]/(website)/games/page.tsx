@@ -2,30 +2,28 @@ import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
-import {ServicesCards} from './(components)/services-cards'
-import {ServicesDialogCarousel} from './(components)/services-dialog-carousel'
-import {ServicesReviews} from './(components)/services-reviews'
+import {GamesCards} from './(components)/games-cards'
+import {GamesDialogCarousel} from './(components)/games-dialog-carousel'
+import {GamesReviews} from './(components)/games-reviews'
 
 export async function generateMetadata({params}: Params): Promise<Metadata> {
   const {locale} = await params
   const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
 
   return {
-    title: t('Services')
+    title: t('Games')
   }
 }
 
-export default function ServicesPage({
-  params
-}: PageProps<'/[locale]/services'>) {
+export default function GamesPage({params}: PageProps<'/[locale]/games'>) {
   const {locale} = use(params as Params['params'])
   setRequestLocale(locale)
 
   return (
     <Container>
-      <ServicesDialogCarousel />
-      <ServicesCards />
-      <ServicesReviews />
+      <GamesDialogCarousel />
+      <GamesCards />
+      <GamesReviews />
     </Container>
   )
 }

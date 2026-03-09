@@ -13,12 +13,12 @@ const data = [
   {key: 'card1', icon: CakeIcon},
   {key: 'card2', icon: HandshakeIcon}
 ] satisfies {
-  key: keyof Messages['Pages']['Services']['ServicesCards']
+  key: keyof Messages['Pages']['Games']['GamesCards']
   icon: LucideIcon
 }[]
 
-function ServicesCards() {
-  const t = useTranslations('Pages.Services.ServicesCards')
+function GamesCards() {
+  const t = useTranslations('Pages.Games.GamesCards')
 
   const renderedCards = data.map(({key, icon: Icon}) => {
     return (
@@ -47,6 +47,6 @@ function ServicesCards() {
   )
 }
 
-ServicesCards.displayName = 'ServicesCards'
+GamesCards.displayName = 'GamesCards'
 
-export {ServicesCards}
+export {GamesCards}

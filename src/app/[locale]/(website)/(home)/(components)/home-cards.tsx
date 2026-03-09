@@ -33,8 +33,8 @@ import {Link} from '@/src/i18n/navigation'
 import {cn} from '@/src/lib/utils'
 
 const data = [
-  {key: 'card1', icon: CastleIcon, href: '/services'},
-  {key: 'card2', icon: PartyPopperIcon, href: '/services'},
+  {key: 'card1', icon: CastleIcon, href: '/games'},
+  {key: 'card2', icon: PartyPopperIcon, href: '/games'},
   {key: 'card3', icon: FootprintsIcon, href: '/contact'}
 ] satisfies {
   key: keyof Messages['Pages']['Home']['HomeCards']

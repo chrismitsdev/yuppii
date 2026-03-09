@@ -3,7 +3,7 @@
     "Pages": {
       "Home": "Home",
       "Park": "Park",
-      "Services": "Services",
+      "Games": "Games",
       "Contact": "Contact",
       "Privacy": "Privacy",
       "Cookies": "Cookies",
@@ -89,8 +89,8 @@
         }
       }
     },
-    "Services": {
-      "ServicesGallery": {
+    "Games": {
+      "GamesGallery": {
         "title": "Our Games",
         "subtitle": "With over 40 unique and different games from around the world, we cater to all ages.",
         "sheet-content-trigger": "See all available games",
@@ -161,7 +161,7 @@
           }
         }
       },
-      "ServicesCards": {
+      "GamesCards": {
         "title": "Events & Sales - Rentals",
         "subtitle": "Learn about events, rentals, and sales at Yuppii Luna Park.",
         "card1": {
@@ -173,7 +173,7 @@
           "content": "After years of research at various exhibitions in Greece, Europe, Asia, and America, our company specializes in the sales of children's toys, offering you the best state-of-the-art toys from around the world at the best market prices. Contact us if you are interested in renting, purchasing, or importing children's toys, so he can guide you and assist you in making the most advantageous choices."
         }
       },
-      "ServicesReviews": {
+      "GamesReviews": {
         "title": "Your comments",
         "subtitle": "Yuppii Luna Park has hosted thousands of young and old friends. Check out some of their comments!",
         "reviews": {

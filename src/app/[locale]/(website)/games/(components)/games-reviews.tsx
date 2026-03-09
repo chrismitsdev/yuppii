@@ -14,8 +14,8 @@ import {
 import {CustomImage} from '@/src/components/ui/custom-image'
 import {Typography} from '@/src/components/ui/typography'
 
-function ServicesReviews() {
-  const t = useTranslations('Pages.Services.ServicesReviews')
+function GamesReviews() {
+  const t = useTranslations('Pages.Games.GamesReviews')
 
   return (
     <Section
@@ -28,42 +28,42 @@ function ServicesReviews() {
       >
         <CarouselViewport className='rounded-lg'>
           <SlidesContainer>
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.elena}
               authorName={t('reviews.elena.name')}
               authorReview={t('reviews.elena.review')}
             />
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.olga}
               authorName={t('reviews.olga.name')}
               authorReview={t('reviews.olga.review')}
             />
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.petros}
               authorName={t('reviews.petros.name')}
               authorReview={t('reviews.petros.review')}
             />
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.zoe}
               authorName={t('reviews.zoe.name')}
               authorReview={t('reviews.zoe.review')}
             />
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.iosif}
               authorName={t('reviews.iosif.name')}
               authorReview={t('reviews.iosif.review')}
             />
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.stella}
               authorName={t('reviews.stella.name')}
               authorReview={t('reviews.stella.review')}
             />
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.papagewrgiou}
               authorName={t('reviews.papagewrgiou.name')}
               authorReview={t('reviews.papagewrgiou.review')}
             />
-            <ServicesReviewSlide
+            <GamesReviewSlide
               authorAvatar={avatars.sideris}
               authorName={t('reviews.sideris.name')}
               authorReview={t('reviews.sideris.review')}
@@ -77,7 +77,7 @@ function ServicesReviews() {
   )
 }
 
-function ServicesReviewSlide({
+function GamesReviewSlide({
   authorAvatar,
   authorName,
   authorReview
@@ -107,7 +107,7 @@ function ServicesReviewSlide({
   )
 }
 
-ServicesReviews.displayName = 'ServicesReviews'
-ServicesReviewSlide.displayName = 'ServicesReviewSlide'
+GamesReviews.displayName = 'GamesReviews'
+GamesReviewSlide.displayName = 'GamesReviewSlide'
 
-export {ServicesReviews}
+export {GamesReviews}
