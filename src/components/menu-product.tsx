@@ -10,9 +10,10 @@ interface MenuProductProps {
 
 function MenuProduct({name, variants, price}: MenuProductProps) {
   return (
-    <li className='grid grid-cols-[1fr_auto] gap-2'>
-      <Typography>{name}</Typography>
-      <Typography>{formatCurrency(price)}</Typography>
+    <li className='py-4 grid grid-cols-[auto_1fr_auto] items-baseline gap-2'>
+      <Typography variant='small'>{name}</Typography>
+      <span className='border-b border-dotted' />
+      <Typography variant='small'>{formatCurrency(price)}</Typography>
       {variants && variants.length > 0 && (
         <div className='col-span-full flex flex-wrap items-center gap-1'>
           {variants.map((variant) => (

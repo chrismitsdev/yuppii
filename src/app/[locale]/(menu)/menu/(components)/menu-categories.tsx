@@ -1,5 +1,4 @@
 import {type Messages, useMessages, useTranslations} from 'next-intl'
-import {Fragment} from 'react'
 import {MenuProduct} from '@/src/components/menu-product'
 import {Section} from '@/src/components/section'
 import {
@@ -8,14 +7,13 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/src/components/ui/accordion'
-import {Separator} from '@/src/components/ui/separator'
 import {Typography} from '@/src/components/ui/typography'
 import {categoryIcons} from '@/src/lib/utils'
 
 function MenuCategories() {
   const t = useTranslations('Menu')
   const messages = useMessages()
-  const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
+  const menuKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
   return (
     <Section className='first:pt-20 last:pb-20'>
@@ -23,7 +21,9 @@ function MenuCategories() {
         className='space-y-6'
         type='multiple'
       >
-        {categoryKeys.map((categoryKey) => {
+        {menuKeys.map((categoryKey) => {
+          const products = Object.values(messages.Menu[categoryKey].products)
+          const notes = messages.Menu[categoryKey].notes
           const Icon = categoryIcons[categoryKey]
 
           return (
@@ -32,40 +32,38 @@ function MenuCategories() {
               value={categoryKey}
             >
               <AccordionTrigger>
-                {Icon && <Icon aria-hidden={true} />}
-                <Typography
-                  className='mt-1.5 leading-6'
-                  variant='lead'
-                >
+                <Icon />
+                <Typography variant='lead'>
                   {t(`${categoryKey}.name`)}
                 </Typography>
               </AccordionTrigger>
-              <AccordionContent className='p-0 border-t border-dashed border-t-secondary'>
-                <ul className='p-6'>
-                  {Object.values(messages.Menu[categoryKey].products)
+              <AccordionContent className='space-y-4 sm:pl-16'>
+                <ul>
+                  {products
                     .filter((product) => !product.disabled)
-                    .map((product, i, a) => (
-                      <Fragment key={product.name}>
-                        <MenuProduct {...product} />
-                        {i !== a.length - 1 && (
-                          <Separator
-                            className='my-6 bg-secondary/25'
-                            decorative
-                          />
-                        )}
-                      </Fragment>
-                    ))}
+                    .map((product) => {
+                      return (
+                        <MenuProduct
+                          key={product.name}
+                          {...product}
+                        />
+                      )
+                    })}
                 </ul>
-                {messages.Menu[categoryKey].notes && (
-                  <ul className='py-6 pr-6 pl-9.5 border-t border-dashed border-t-secondary'>
-                    {messages.Menu[categoryKey].notes.map((note) => (
-                      <li
-                        key={note}
-                        className='list-disc'
-                      >
-                        <Typography variant='small'>{note}</Typography>
-                      </li>
-                    ))}
+                {notes && (
+                  <ul className='list-inside list-disc'>
+                    {notes.map((note) => {
+                      return (
+                        <Typography
+                          key={note}
+                          className='list-item'
+                          variant='small'
+                          asChild
+                        >
+                          <li>{note}</li>
+                        </Typography>
+                      )
+                    })}
                   </ul>
                 )}
               </AccordionContent>

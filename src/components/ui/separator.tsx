@@ -18,8 +18,8 @@ function Separator({
     <Root
       className={cn(
         'shrink-0',
-        variant === 'primary' && 'bg-primary/15',
-        variant === 'secondary' && 'bg-secondary/15',
+        variant === 'primary' && 'bg-primary/20',
+        variant === 'secondary' && 'bg-secondary/20',
         orientation === 'horizontal' ? 'my-2 w-full h-px' : 'mx-2 h-full w-px',
         className
       )}

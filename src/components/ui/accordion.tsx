@@ -61,7 +61,7 @@ function AccordionContent({
       className='data-open:animate-accordion-open data-closed:animate-accordion-close'
       {...props}
     >
-      <div className={cn('p-6', className)}>{children}</div>
+      <div className={cn('px-6 pb-6', className)}>{children}</div>
     </Content>
   )
 }

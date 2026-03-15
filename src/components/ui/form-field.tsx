@@ -33,7 +33,7 @@ function FormField({
   return (
     <div
       className={cn(
-        'p-3 relative bg-secondary/40 border border-secondary rounded-lg shadow-md transition sm:p-4',
+        'p-3 relative bg-secondary/50 border border-secondary rounded-lg shadow-md transition sm:p-4',
         disabled && 'opacity-50'
       )}
     >

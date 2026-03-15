@@ -1,7 +1,5 @@
 'use client'
 
-import {HomeIcon} from 'lucide-react'
-import {useSearchParams} from 'next/navigation'
 import {type Messages, useLocale, useMessages, useTranslations} from 'next-intl'
 import {
   Scrollarea,
@@ -16,34 +14,34 @@ function MenuNavigation() {
   const locale = useLocale()
   const messages = useMessages()
   const pathname = usePathname()
-  const isInternal = useSearchParams().get('src') === 'website'
   const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
+  const renderedLinks = categoryKeys.map((categoryKey) => {
+    const path = categoryKey.toLowerCase()
+
+    return (
+      <MenuNavigationLink
+        key={categoryKey}
+        href={`/menu/${path}`}
+        isActive={pathname.includes(path)}
+      >
+        {t(`${categoryKey}.name`)}
+      </MenuNavigationLink>
+    )
+  })
+
   return (
-    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-primary border-b border-b-secondary/25'>
+    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-primary border-b border-b-secondary'>
       <Scrollarea>
         <ScrollareaViewport>
-          <div className='px-1 flex items-center shrink-0'>
-            {isInternal && (
-              <MenuNavigationLink href='/'>
-                <HomeIcon />
-              </MenuNavigationLink>
-            )}
+          <div className='px-1 w-max flex items-center'>
             <MenuNavigationLink
               href='/menu'
               isActive={pathname === '/menu'}
             >
               {locale === 'el' ? 'Όλες οι κατηγορίες' : 'All categories'}
             </MenuNavigationLink>
-            {categoryKeys.map((categoryKey) => (
-              <MenuNavigationLink
-                key={categoryKey}
-                href={`/menu/${categoryKey.toLowerCase()}`}
-                isActive={pathname.includes(categoryKey.toLowerCase())}
-              >
-                {t(`${categoryKey}.name`)}
-              </MenuNavigationLink>
-            ))}
+            {renderedLinks}
           </div>
         </ScrollareaViewport>
         <ScrollareaBar
@@ -63,7 +61,7 @@ function MenuNavigationLink({
   return (
     <Link
       className={cn(
-        'p-4 relative shrink-0 text-accent/30 duration-375 font-bold select-none after:h-1 after:absolute after:-bottom-1 after:inset-x-0 after:rounded-t-lg after:duration-375 sm:px-3',
+        'shrink-0 p-3 relative text-accent/25 duration-375 font-bold select-none after:h-1 after:absolute after:inset-x-0 after:-bottom-1 after:rounded-t-lg after:duration-375',
         isActive && 'text-accent after:bg-secondary after:bottom-0',
         className
       )}

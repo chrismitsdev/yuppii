@@ -4,7 +4,7 @@ function Card({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
       className={cn(
-        'bg-secondary/40 border border-secondary rounded-lg shadow-md',
+        'bg-secondary/50 border border-secondary rounded-lg shadow-md',
         className
       )}
       {...props}

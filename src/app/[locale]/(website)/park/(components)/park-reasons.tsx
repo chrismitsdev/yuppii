@@ -26,9 +26,8 @@ function ParkReasons() {
     >
       <article>
         <Accordion
-          className='space-y-4'
-          type='single'
-          collapsible
+          className='space-y-6'
+          type='multiple'
         >
           <AccordionItem value='item-1'>
             <AccordionTrigger>
@@ -37,7 +36,7 @@ function ParkReasons() {
                 {t('accordion.accordion1.title')}
               </Typography>
             </AccordionTrigger>
-            <AccordionContent className='pt-0 sm:pl-16'>
+            <AccordionContent className='sm:pl-16'>
               <Typography variant='large'>
                 {t('accordion.accordion1.content')}
               </Typography>
@@ -50,7 +49,7 @@ function ParkReasons() {
                 {t('accordion.accordion2.title')}
               </Typography>
             </AccordionTrigger>
-            <AccordionContent className='pt-0 sm:pl-16'>
+            <AccordionContent className='sm:pl-16'>
               <Typography variant='large'>
                 {t('accordion.accordion2.content')}
               </Typography>
@@ -63,7 +62,7 @@ function ParkReasons() {
                 {t('accordion.accordion3.title')}
               </Typography>
             </AccordionTrigger>
-            <AccordionContent className='pt-0 sm:pl-16'>
+            <AccordionContent className='sm:pl-16'>
               <Typography variant='large'>
                 {t('accordion.accordion3.content')}
               </Typography>
@@ -76,7 +75,7 @@ function ParkReasons() {
                 {t('accordion.accordion4.title')}
               </Typography>
             </AccordionTrigger>
-            <AccordionContent className='pt-0 sm:pl-16'>
+            <AccordionContent className='sm:pl-16'>
               <Typography variant='large'>
                 {t('accordion.accordion4.content')}
               </Typography>
@@ -89,7 +88,7 @@ function ParkReasons() {
                 {t('accordion.accordion5.title')}
               </Typography>
             </AccordionTrigger>
-            <AccordionContent className='pt-0 sm:pl-16'>
+            <AccordionContent className='sm:pl-16'>
               <Typography variant='large'>
                 {t('accordion.accordion5.content')}
               </Typography>
@@ -102,7 +101,7 @@ function ParkReasons() {
                 {t('accordion.accordion6.title')}
               </Typography>
             </AccordionTrigger>
-            <AccordionContent className='pt-0 sm:pl-16'>
+            <AccordionContent className='sm:pl-16'>
               <Typography variant='large'>
                 {t('accordion.accordion6.content')}
               </Typography>

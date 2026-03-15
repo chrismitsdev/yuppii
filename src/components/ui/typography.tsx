@@ -10,10 +10,10 @@ const typographyProps = cva(['block', 'transition-colors', 'text-balance'], {
       h4: ['text-2xl'],
       lead: ['text-xl'],
       large: ['text-lg', 'leading-7'],
-      p: ['text-base', 'leading-6'],
-      small: ['text-sm', 'leading-5'],
-      tiny: ['text-xs', 'leading-4'],
-      mini: ['text-[10px]', 'leading-3', 'tracking-wider']
+      p: ['text-base'],
+      small: ['text-sm'],
+      tiny: ['text-xs'],
+      mini: ['text-[10px]', 'leading-4', 'tracking-wider']
     }
   },
   compoundVariants: [
@@ -36,7 +36,7 @@ interface TypographyProps
 
 function Typography({
   className,
-  variant = 'p',
+  variant,
   asChild = false,
   ...props
 }: TypographyProps) {
