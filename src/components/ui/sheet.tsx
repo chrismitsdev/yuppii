@@ -179,13 +179,13 @@ SheetClose.displayName = 'SheetClose'
 
 export {
   Sheet,
-  SheetTrigger,
-  SheetPortal,
-  SheetOverlay,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
   SheetBody,
-  SheetClose
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetOverlay,
+  SheetPortal,
+  SheetTitle,
+  SheetTrigger
 }

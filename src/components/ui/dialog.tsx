@@ -140,14 +140,14 @@ DialogClose.displayName = 'DialogClose'
 
 export {
   Dialog,
-  DialogTrigger,
-  DialogPortal,
-  DialogOverlay,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
   DialogBody,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
   DialogFooter,
-  DialogClose
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger
 }

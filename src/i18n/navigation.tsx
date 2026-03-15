@@ -25,4 +25,4 @@ function Link({
   )
 }
 
-export {Link, redirect, usePathname, useRouter, getPathname}
+export {getPathname, Link, redirect, usePathname, useRouter}

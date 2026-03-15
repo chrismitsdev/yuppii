@@ -63,4 +63,4 @@ FacebookIconButton.diplayName = 'FacebookIconButton'
 InstagramIconButton.diplayName = 'InstagramIconButton'
 GoogleMapsIconButton.diplayName = 'GoogleMapsIconButton'
 
-export {FacebookIconButton, InstagramIconButton, GoogleMapsIconButton}
+export {FacebookIconButton, GoogleMapsIconButton, InstagramIconButton}

@@ -67,4 +67,4 @@ CardDescription.displayName = 'CardDescription'
 CardBody.displayName = 'CardBody'
 CardFooter.displayName = 'CardFooter'
 
-export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardBody}
+export {Card, CardBody, CardDescription, CardFooter, CardHeader, CardTitle}
