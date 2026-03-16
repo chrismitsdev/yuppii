@@ -422,8 +422,8 @@
         }
       },
       "notes": [
-        "Addition of vegetable cream: +€0.50",
-        "Addition of caramel, hazelnut, or strawberry syrup: +€0.50"
+        "Addition of vegetable cream: + €0.50",
+        "Addition of caramel, hazelnut, or strawberry syrup: + €0.50"
       ]
     },
     "Beverage": {
@@ -484,7 +484,7 @@
           "disabled": true
         }
       },
-      "notes": ["Addition of caramel, hazelnut, or strawberry syrup: +€0.50"]
+      "notes": ["Addition of caramel, hazelnut, or strawberry syrup: + €0.50"]
     },
     "Refreshment": {
       "name": "Refreshment",

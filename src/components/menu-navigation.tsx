@@ -14,18 +14,18 @@ function MenuNavigation() {
   const locale = useLocale()
   const messages = useMessages()
   const pathname = usePathname()
-  const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
+  const categories = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
-  const renderedLinks = categoryKeys.map((categoryKey) => {
-    const path = categoryKey.toLowerCase()
+  const renderedLinks = categories.map((category) => {
+    const path = category.toLowerCase()
 
     return (
       <MenuNavigationLink
-        key={categoryKey}
+        key={category}
         href={`/menu/${path}`}
         isActive={pathname.includes(path)}
       >
-        {t(`${categoryKey}.name`)}
+        {t(`${category}.name`)}
       </MenuNavigationLink>
     )
   })

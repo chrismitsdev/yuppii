@@ -12,14 +12,16 @@ function CategoryProducts({
   const messages = useMessages()
   const category = messages.Menu[categoryKey]
 
-  const renderedProducts = Object.values(category.products).map((product) => {
-    return (
-      <MenuProduct
-        key={product.name}
-        {...product}
-      />
-    )
-  })
+  const renderedProducts = Object.values(category.products)
+    .filter((product) => !product.disabled)
+    .map((product) => {
+      return (
+        <MenuProduct
+          key={product.name}
+          {...product}
+        />
+      )
+    })
 
   const renderedNotes = category.notes?.map((note) => {
     return (
