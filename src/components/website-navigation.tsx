@@ -116,7 +116,7 @@ function MobileNavigation() {
         asChild
       >
         <Link href={href}>
-          <Icon className='size-5' />
+          <Icon />
           <span>{t(key)}</span>
         </Link>
       </Button>
