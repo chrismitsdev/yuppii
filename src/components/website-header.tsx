@@ -13,10 +13,10 @@ function WebsiteHeader() {
         <div className='flex justify-between'>
           <Link href='/'>
             <Image
-              priority
               src={logo}
               width={124}
               alt='Yuppii Luna Park'
+              preload
             />
           </Link>
           <WebsiteNavigation />

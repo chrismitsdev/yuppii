@@ -20,7 +20,7 @@ function Footer() {
     <footer className='py-20 bg-accent text-primary'>
       <FooterColumn className='space-y-10 sm:space-y-10'>
         <Image
-          className='mx-auto h-36'
+          className='mx-auto w-auto h-36'
           src={logo}
           alt='Yuppii luna park logo'
         />

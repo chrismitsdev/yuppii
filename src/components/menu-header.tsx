@@ -14,7 +14,7 @@ function MenuHeader() {
             src={logo}
             height={40}
             alt='Yuppii Luna Park'
-            priority
+            preload
           />
           <LocaleCycle />
         </Container>

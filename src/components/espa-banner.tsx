@@ -17,6 +17,7 @@ function EspaBanner() {
         className='sm:max-w-70'
         src={espaBanner}
         alt={t('label')}
+        preload
       />
     </a>
   )

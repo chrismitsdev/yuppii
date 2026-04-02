@@ -20,8 +20,8 @@ function HomeCarousel() {
       <CustomImage
         src={image}
         alt={`Home page carousel image slide ${i + 1}`}
-        priority={i === 0}
         sizes='(min-width: 1000px) 1000px, 100vw'
+        preload={i === 0}
       />
     </Slide>
   ))
