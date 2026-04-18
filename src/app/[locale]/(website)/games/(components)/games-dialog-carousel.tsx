@@ -19,6 +19,7 @@ import {
   juniorGallery,
   kiddyRidesGallery,
   luckyGamesGallery,
+  paragliderGallery,
   playgroundGallery,
   powerGamesGallery,
   survivorGallery,
@@ -87,6 +88,7 @@ const galleries: ImageGallery[] = [
   {key: 'junior', images: juniorGallery},
   {key: 'kiddy-rides', images: kiddyRidesGallery},
   {key: 'lucky-games', images: luckyGamesGallery},
+  {key: 'paraglider', images: paragliderGallery},
   {key: 'playground', images: playgroundGallery},
   {key: 'power-games', images: powerGamesGallery},
   {key: 'survivor', images: survivorGallery},
@@ -99,12 +101,12 @@ const galleries: ImageGallery[] = [
 function GamesDialogCarousel() {
   const [index, setIndex] = useState(0)
   const [sheetOpen, setSheetOpen] = useState(false)
-  const [selectedGallery, setSelectedGallery] = useState(galleries[0])
+  const [selectedGame, setSelectedGame] = useState<ImageGallery | null>(null)
   const t = useTranslations('Pages.Games.GamesGallery')
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
 
-  const handleSelectGallery = useCallback((gallery: ImageGallery) => {
-    setSelectedGallery(gallery)
+  const handleSelectGame = useCallback((gallery: ImageGallery) => {
+    setSelectedGame(gallery)
     setSheetOpen(false)
     setIndex(0)
   }, [])
@@ -121,17 +123,17 @@ function GamesDialogCarousel() {
           key={gallery.key}
           className='w-full sm:justify-start'
           size='lg'
-          variant={gallery.key === selectedGallery.key ? 'secondary' : 'ghost'}
-          onClick={() => handleSelectGallery(gallery)}
+          variant={gallery.key === selectedGame?.key ? 'secondary' : 'ghost'}
+          onClick={() => handleSelectGame(gallery)}
         >
           {t(`galleries.${gallery.key}.label`)}
         </Button>
       )
     })
-  }, [selectedGallery.key, handleSelectGallery, t])
+  }, [selectedGame?.key, handleSelectGame, t])
 
   const renderedTriggers = useMemo(() => {
-    return selectedGallery.images.map((image, i) => {
+    return selectedGame?.images.map((image, i) => {
       return (
         <GamesGalleryTrigger
           key={image.src}
@@ -144,10 +146,10 @@ function GamesDialogCarousel() {
         />
       )
     })
-  }, [selectedGallery.images])
+  }, [selectedGame?.images])
 
   const renderedSlides = useMemo(() => {
-    return selectedGallery.images.map((image, i) => {
+    return selectedGame?.images.map((image, i) => {
       return (
         <Slide key={image.src}>
           <CustomImage
@@ -159,7 +161,7 @@ function GamesDialogCarousel() {
         </Slide>
       )
     })
-  }, [selectedGallery.images])
+  }, [selectedGame?.images])
 
   return (
     <Section
@@ -174,7 +176,9 @@ function GamesDialogCarousel() {
           >
             <SheetTrigger className='p-4 mb-10 w-full space-y-1 bg-secondary/50 border border-secondary rounded-lg text-left shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
               <Typography variant='h4'>
-                {t(`galleries.${selectedGallery.key}.label`)}
+                {selectedGame
+                  ? t(`galleries.${selectedGame.key}.label`)
+                  : t('sheet-content-header')}
               </Typography>
               <Typography variant='small'>
                 {t('sheet-content-trigger')}
@@ -203,12 +207,19 @@ function GamesDialogCarousel() {
             </SheetPortal>
           </Sheet>
 
-          <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-8'>
-            {renderedTriggers}
-          </div>
+          {renderedTriggers && (
+            <div
+              key={selectedGame?.key}
+              className='grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-8 animate-fade-in'
+            >
+              {renderedTriggers}
+            </div>
+          )}
+
           <DialogPortal>
             <DialogOverlay />
             <DialogContent
+              aria-describedby={undefined}
               className='bg-transparent'
               onCloseAutoFocus={handleFocusTrigger}
             >
@@ -218,7 +229,9 @@ function GamesDialogCarousel() {
               </VisuallyHidden>
               <Carousel options={{startIndex: index, loop: true}}>
                 <CarouselViewport className='rounded'>
-                  <SlidesContainer>{renderedSlides}</SlidesContainer>
+                  {renderedSlides && (
+                    <SlidesContainer>{renderedSlides}</SlidesContainer>
+                  )}
                 </CarouselViewport>
                 <ButtonPrev />
                 <ButtonNext />
