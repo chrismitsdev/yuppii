@@ -100,7 +100,7 @@ const galleries: ImageGallery[] = [
 
 function GamesDialogCarousel() {
   const [index, setIndex] = useState(0)
-  const [sheetOpen, setSheetOpen] = useState(false)
+  const [sheetOpen, setSheetOpen] = useState(true)
   const [selectedGame, setSelectedGame] = useState<ImageGallery | null>(null)
   const t = useTranslations('Pages.Games.GamesGallery')
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
