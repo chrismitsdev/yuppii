@@ -312,13 +312,13 @@
         "GreekCoffee": {
           "name": "Greek coffee",
           "variants": null,
-          "price": "2",
+          "price": "2.5",
           "disabled": false
         },
         "DoubleGreekCoffee": {
           "name": "Greek coffee double",
           "variants": null,
-          "price": "2.5",
+          "price": "3",
           "disabled": false
         },
         "InstantCoffeeHot": {
@@ -599,7 +599,7 @@
             "Orangeade",
             "Grapefruit"
           ],
-          "price": "4",
+          "price": "5",
           "disabled": false
         },
         "Mastiqua": {
@@ -638,36 +638,9 @@
           "price": "5",
           "disabled": false
         },
-        "Prime": {
-          "name": "Prime 500ml",
-          "variants": [
-            "Ice Pop",
-            "Tropical Punch",
-            "Lemon Lime",
-            "Blue Raspberry",
-            "Strawberry",
-            "Watermelon",
-            "Banana"
-          ],
-          "price": "5",
-          "disabled": false
-        },
-        "Monster": {
-          "name": "Monster 500ml",
-          "variants": [
-            "Ripper",
-            "The Doctor",
-            "Lewis Hamilton",
-            "Mango Loco",
-            "Pipeline Punch",
-            "MIXXD Punch",
-            "Aussie Lemonade",
-            "Ultra Golden Pineapple",
-            "Ultra zero sugar",
-            "Green",
-            "Green zero sugar",
-            "Blue zero sugar"
-          ],
+        "Hell": {
+          "name": "Hell 250ml",
+          "variants": null,
           "price": "5",
           "disabled": false
         }
@@ -874,12 +847,6 @@
       "products": {
         "ToastCheese": {
           "name": "Toast with yellow cheese",
-          "variants": null,
-          "price": "1.5",
-          "disabled": false
-        },
-        "Toast": {
-          "name": "Toast",
           "variants": null,
           "price": "2",
           "disabled": false
