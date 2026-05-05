@@ -82,7 +82,7 @@ importers:
         version: 4.11.0(next@16.2.4(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react@19.2.5)(typescript@6.0.3)
       postcss:
         specifier: ^8.5.13
-        version: 8.5.13
+        version: 8.5.14
       react:
         specifier: ^19.2.5
         version: 19.2.5
@@ -91,7 +91,7 @@ importers:
         version: 19.2.5(react@19.2.5)
       react-email:
         specifier: ^6.0.7
-        version: 6.0.7(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+        version: 6.0.8(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react-hot-toast:
         specifier: ^2.6.0
         version: 2.6.0(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -1851,8 +1851,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.13:
-    resolution: {integrity: sha512-qif0+jGGZoLWdHey3UFHHWP0H7Gbmsk8T5VEqyYFbWqPr1XqvLGBbk/sl8V5exGmcYJklJOhOQq1pV9IcsiFag==}
+  postcss@8.5.14:
+    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier@3.8.3:
@@ -1873,8 +1873,8 @@ packages:
     peerDependencies:
       react: ^19.2.5
 
-  react-email@6.0.7:
-    resolution: {integrity: sha512-9ijVnS9o/k//r960VFK6zATM8BQfO3fbgg3GT2fPwRLGrk9GmwQ7Q5vRVu4BhvFSrHFHciVMidwagpwlIaE0Rw==}
+  react-email@6.0.8:
+    resolution: {integrity: sha512-/kArasUY1ahkrs8z8OG0wz+d7hedV/wUSZ8qaXI2TtB6omUMmMtm//FBHSSdnsEvkUnAZ5LzCyge1h6oQNhpTA==}
     engines: {node: '>=20.0.0'}
     hasBin: true
     peerDependencies:
@@ -3019,7 +3019,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.2.4
       '@tailwindcss/oxide': 4.2.4
-      postcss: 8.5.13
+      postcss: 8.5.14
       tailwindcss: 4.2.4
 
   '@types/cors@2.8.19':
@@ -3504,7 +3504,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.13:
+  postcss@8.5.14:
     dependencies:
       nanoid: 3.3.12
       picocolors: 1.1.1
@@ -3524,7 +3524,7 @@ snapshots:
       react: 19.2.5
       scheduler: 0.27.0
 
-  react-email@6.0.7(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
+  react-email@6.0.8(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
     dependencies:
       '@babel/parser': 7.27.0
       '@babel/traverse': 7.27.0
