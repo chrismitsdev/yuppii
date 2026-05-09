@@ -14,7 +14,8 @@ export async function sendContactForm(
       ...(process.env.NODE_ENV === 'production'
         ? {
             subject: 'Φόρμα επικοινωνίας - Yuppii Luna Park',
-            to: 'mokalis@gmail.com',
+            to: 'yuppiilunapark@gmail.com',
+            replyTo: formData.email,
             cc: 'chrismits88@gmail.com'
           }
         : {
