@@ -93,7 +93,7 @@ export default function LocaleLayout({
             }}
           />
         </NextIntlClientProvider>
-        <Analytics />
+        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
