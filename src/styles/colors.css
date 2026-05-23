@@ -13,3 +13,17 @@
 
   --color-border: hsl(180 14% 1%);
 }
+
+/*@theme {
+  --color-background: hsl(34 70% 96%);
+  --color-foreground: hsl(0 100% 0%);
+
+  --color-primary: hsl(37 48% 87%);
+  --color-primary-foreground: hsl(34 25% 11%);
+
+  --color-secondary: hsl(27 25% 52%);
+  --color-secondary-foreground: hsl(34 25% 11%);
+
+  --color-accent: hsl(34 25% 11%);
+  --color-accent-foreground: hsl(3 70% 35%);
+}*/
