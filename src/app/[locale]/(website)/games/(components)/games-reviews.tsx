@@ -70,8 +70,8 @@ function GamesReviews() {
             />
           </SlidesContainer>
         </CarouselViewport>
-        <ButtonPrev className='-inset-s-12' />
-        <ButtonNext className='-inset-e-12' />
+        <ButtonPrev className='-inset-s-2.5 sm:-inset-s-12' />
+        <ButtonNext className='-inset-e-2.5 sm:-inset-e-12' />
       </Carousel>
     </Section>
   )
