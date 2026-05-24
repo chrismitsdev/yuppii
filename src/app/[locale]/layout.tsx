@@ -67,7 +67,7 @@ export default function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${mainFont.variable} ${displayFont.variable}`}
+      className={`app-background ${mainFont.variable} ${displayFont.variable}`}
     >
       <body>
         <NextIntlClientProvider>
