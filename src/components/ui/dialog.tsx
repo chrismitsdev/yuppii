@@ -78,7 +78,7 @@ function DialogDescription({
 }: React.ComponentPropsWithRef<typeof Description>) {
   return (
     <Description
-      className={cn('text-lg text-accent', className)}
+      className={cn('text-accent', className)}
       {...props}
     />
   )

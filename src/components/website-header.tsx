@@ -13,7 +13,7 @@ function WebsiteHeader() {
         <div className='flex items-center justify-between'>
           <Link
             href='/'
-            aria-label='Home page'
+            aria-label='Go to home page'
           >
             <Image
               className='inline-full block-20'

@@ -4,6 +4,7 @@ function Card({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
       className={cn('scooped-border', className)}
+      // style={{'--fill': 'hsl(45 57% 86%)'} as React.CSSProperties}
       {...props}
     />
   )

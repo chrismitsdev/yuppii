@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
+import {DecorativeDivider} from '@/src/components/ui/decorative-divider'
 import {GamesCards} from './(components)/games-cards'
 import {GamesDialogCarousel} from './(components)/games-dialog-carousel'
 import {GamesReviews} from './(components)/games-reviews'
@@ -22,7 +23,9 @@ export default function GamesPage({params}: PageProps<'/[locale]/games'>) {
   return (
     <Container>
       <GamesDialogCarousel />
+      <DecorativeDivider />
       <GamesCards />
+      <DecorativeDivider />
       <GamesReviews />
     </Container>
   )

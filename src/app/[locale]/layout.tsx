@@ -69,7 +69,7 @@ export default function LocaleLayout({
       lang={locale}
       className={`${mainFont.variable} ${displayFont.variable}`}
     >
-      <body className='app-background text-foreground'>
+      <body>
         <NextIntlClientProvider>
           <div
             className='app-background text-foreground'

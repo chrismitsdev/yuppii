@@ -13,7 +13,8 @@ function AccordionItem({
   return (
     <Item
       className={cn(
-        'overflow-hidden bg-secondary/50 border border-secondary rounded-lg shadow-md transition',
+        // 'overflow-hidden bg-secondary rounded-lg shadow-md transition',
+        'overflow-hidden scooped-border transition',
         className
       )}
       {...props}

@@ -10,7 +10,7 @@ import {
   StoreIcon
 } from 'lucide-react'
 import {type Messages, useTranslations} from 'next-intl'
-import {Fragment, useEffect, useId, useState} from 'react'
+import {Fragment, useEffect, useState} from 'react'
 import {
   FacebookIconButton,
   GoogleMapsIconButton,
@@ -103,15 +103,14 @@ function DesktopNavigation() {
 
 function MobileNavigation() {
   const [open, setOpen] = useState(false)
-  const t = useTranslations('Metadata.Pages')
   const pathname = usePathname()
-  const triggerId = useId() // stable ID for DrawerTrigger
+  const t = useTranslations('Metadata.Pages')
 
   const renderedLinks = links.map(({key, href, icon: Icon}) => {
     return (
       <Button
         key={key}
-        variant={pathname === href ? 'secondary' : 'ghost'}
+        variant={pathname === href ? 'primary' : 'ghost'}
         size='lg'
         asChild
       >
@@ -135,10 +134,7 @@ function MobileNavigation() {
         onOpenChange={setOpen}
         shouldScaleBackground
       >
-        <DrawerTrigger
-          id={triggerId}
-          asChild
-        >
+        <DrawerTrigger asChild>
           <IconButton
             aria-label='Open drawer'
             variant='secondary'

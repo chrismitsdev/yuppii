@@ -93,15 +93,15 @@ function Footer() {
         asChild
       >
         <section className='flex flex-col items-center gap-6 sm:flex-row sm:justify-between'>
-          <Typography variant='small'>
+          <Typography variant='tiny'>
             Copyright &copy; {new Date().getFullYear()} Yuppii Luna Park
           </Typography>
-          <div className='space-x-6 not-sm:order-last'>
-            <FacebookIconButton variant='primary' />
-            <InstagramIconButton variant='primary' />
-            <GoogleMapsIconButton variant='primary' />
+          <div className='space-x-6 not-sm:order-first'>
+            <FacebookIconButton />
+            <InstagramIconButton />
+            <GoogleMapsIconButton />
           </div>
-          <Typography variant='small'>Designed & Developed by CM </Typography>
+          <Typography variant='tiny'>Designed & Developed by CM </Typography>
         </section>
       </Container>
     </footer>
@@ -122,7 +122,7 @@ function FooterColumn({
     >
       {title ? (
         <>
-          <Typography variant='large'>{title}</Typography>
+          <Typography variant='lead'>{title}</Typography>
           <div>{children}</div>
         </>
       ) : (

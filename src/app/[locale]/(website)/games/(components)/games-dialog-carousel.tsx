@@ -122,8 +122,8 @@ function GamesDialogCarousel() {
         <Button
           key={gallery.key}
           className='w-full sm:justify-start'
+          variant={gallery.key === selectedGame?.key ? 'primary' : 'ghost'}
           size='lg'
-          variant={gallery.key === selectedGame?.key ? 'secondary' : 'ghost'}
           onClick={() => handleSelectGame(gallery)}
         >
           {t(`galleries.${gallery.key}.label`)}
