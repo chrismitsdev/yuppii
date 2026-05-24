@@ -1,7 +1,7 @@
 import '@/src/styles/index.css'
 import {Analytics} from '@vercel/analytics/next'
 import type {Metadata} from 'next'
-import {Inter, Play} from 'next/font/google'
+import {Playfair_Display, Vollkorn} from 'next/font/google'
 import {notFound} from 'next/navigation'
 import {hasLocale, NextIntlClientProvider} from 'next-intl'
 import {setRequestLocale} from 'next-intl/server'
@@ -10,15 +10,15 @@ import {Toaster} from 'react-hot-toast'
 import {Footer} from '@/src/components/footer'
 import {routing} from '@/src/i18n/routing'
 
-const mainFont = Inter({
+const mainFont = Vollkorn({
   subsets: ['latin', 'latin-ext', 'greek', 'cyrillic'],
   display: 'swap',
   weight: ['400', '500', '600', '700'],
   variable: '--font-main'
 })
 
-const displayFont = Play({
-  subsets: ['latin', 'latin-ext', 'greek', 'cyrillic'],
+const displayFont = Playfair_Display({
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   display: 'swap',
   weight: ['400', '700'],
   variable: '--font-display'
