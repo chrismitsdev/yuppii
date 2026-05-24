@@ -67,12 +67,12 @@ export default function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`app-background ${mainFont.variable} ${displayFont.variable}`}
+      className={`bg-background ${mainFont.variable} ${displayFont.variable}`}
     >
       <body>
         <NextIntlClientProvider>
           <div
-            className='app-background text-foreground'
+            className='bg-background text-foreground'
             data-vaul-drawer-wrapper
           >
             {children}

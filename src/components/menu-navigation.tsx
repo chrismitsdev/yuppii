@@ -31,7 +31,7 @@ function MenuNavigation() {
   })
 
   return (
-    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center app-background border-b border-b-primary'>
+    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-background border-b border-b-primary'>
       <Scrollarea>
         <ScrollareaViewport>
           <div className='px-1 w-max flex items-center'>
