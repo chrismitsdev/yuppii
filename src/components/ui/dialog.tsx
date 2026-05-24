@@ -40,7 +40,7 @@ function DialogContent({
   return (
     <Content
       className={cn(
-        'w-full max-w-[calc(100%-24px)] fixed inset-s-1/2 inset-bs-1/2 -translate-1/2 z-50 origin-center bg-primary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:max-w-5xl',
+        'w-full max-w-[calc(100%-24px)] fixed inset-s-1/2 inset-bs-1/2 -translate-1/2 z-50 origin-center bg-secondary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:max-w-5xl',
         className
       )}
       {...props}

@@ -1,9 +1,10 @@
 @import "tailwindcss";
-@import "./colors.css";
-@import "./font.css";
 @import "./animations.css";
+@import "./colors.css";
 @import "./data-attributes.css";
+@import "./font.css";
 @import "./shadows.css";
+@import "./utilities.css";
 
 /* Leaflet styling */
 .leaflet-map-pane,

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '@/public/logo.svg'
+import logo from '@/public/yuppii-logo-new.png'
 import {Container} from '@/src/components/container'
 import {EspaBanner} from '@/src/components/espa-banner'
 import {WebsiteNavigation} from '@/src/components/website-navigation'
@@ -10,11 +10,14 @@ function WebsiteHeader() {
     <header className='py-6'>
       <Container className='max-w-7xl'>
         <EspaBanner />
-        <div className='flex justify-between'>
-          <Link href='/'>
+        <div className='flex items-center justify-between'>
+          <Link
+            href='/'
+            aria-label='Home page'
+          >
             <Image
+              className='inline-full block-20'
               src={logo}
-              width={124}
               alt='Yuppii Luna Park'
               preload
             />

@@ -3,10 +3,7 @@ import {cn} from '@/src/lib/utils'
 function Card({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn(
-        'bg-secondary/50 border border-secondary rounded-lg shadow-md',
-        className
-      )}
+      className={cn('scooped-border', className)}
       {...props}
     />
   )

@@ -174,7 +174,7 @@ function GamesDialogCarousel() {
             open={sheetOpen}
             onOpenChange={setSheetOpen}
           >
-            <SheetTrigger className='p-4 mb-10 w-full space-y-1 bg-secondary/50 border border-secondary rounded-lg text-left shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
+            <SheetTrigger className='p-4 mb-10 w-full space-y-1 bg-secondary rounded-lg text-left shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
               <Typography variant='h4'>
                 {selectedGame
                   ? t(`galleries.${selectedGame.key}.label`)

@@ -22,10 +22,7 @@ function GamesCards() {
 
   const renderedCards = data.map(({key, icon: Icon}) => {
     return (
-      <Card
-        key={key}
-        className='bg-linear-to-br from-secondary/75 to-primary'
-      >
+      <Card key={key}>
         <CardHeader className='h-56'>
           <Icon className='size-24 m-auto' />
         </CardHeader>

@@ -70,8 +70,8 @@ function GamesReviews() {
             />
           </SlidesContainer>
         </CarouselViewport>
-        <ButtonPrev className='-inset-s-2' />
-        <ButtonNext className='-inset-e-2' />
+        <ButtonPrev className='-inset-s-4' />
+        <ButtonNext className='-inset-e-4' />
       </Carousel>
     </Section>
   )
@@ -88,7 +88,7 @@ function GamesReviewSlide({
 }) {
   return (
     <Slide>
-      <div className='p-8 space-y-3 h-full bg-secondary/50 border border-secondary rounded-lg'>
+      <div className='p-8 space-y-3 h-full bg-secondary rounded-lg'>
         <div className='flex items-center gap-3'>
           <CustomImage
             className='size-10'

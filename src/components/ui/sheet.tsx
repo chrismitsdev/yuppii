@@ -35,7 +35,7 @@ function SheetOverlay({
 }
 
 const sheetContentProps = cva(
-  ['fixed', 'overflow-hidden', 'z-50', 'bg-primary', 'shadow-md'],
+  ['fixed', 'overflow-hidden', 'z-50', 'bg-secondary', 'shadow-md'],
   {
     variants: {
       side: {

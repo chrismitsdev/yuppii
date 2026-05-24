@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {useLocale, useTranslations} from 'next-intl'
-import logo from '@/public/logo-full-light.svg'
+import logo from '@/public/yuppii-logo-new.png'
 import {Container} from '@/src/components/container'
 import {
   FacebookIconButton,
@@ -17,7 +17,7 @@ function Footer() {
   const locale = useLocale()
 
   return (
-    <footer className='py-20 bg-accent text-primary'>
+    <footer className='py-20 bg-secondary border-t-4 border-t-secondary'>
       <FooterColumn className='space-y-10 sm:space-y-10'>
         <Image
           className='mx-auto w-auto h-36'

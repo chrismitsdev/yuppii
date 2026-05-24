@@ -69,7 +69,7 @@ function DesktopNavigation() {
         <TooltipTrigger asChild>
           <IconButton
             aria-label={`Navigate to ${key} page`}
-            variant={pathname === href ? 'secondary' : 'ghost'}
+            variant={pathname === href ? 'primary' : 'ghost'}
             asChild
           >
             <Link href={href}>
