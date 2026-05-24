@@ -10,13 +10,14 @@ function WebsiteHeader() {
     <header className='py-6'>
       <Container className='max-w-7xl'>
         <EspaBanner />
-        <div className='flex items-center justify-between'>
+        <div className='grid grid-cols-3'>
           <Link
+            className='col-start-2 not-sm:justify-self-center sm:col-start-1'
             href='/'
             aria-label='Go to home page'
           >
             <Image
-              className='inline-full block-20'
+              className='inline-auto block-20'
               src={logo}
               alt='Yuppii Luna Park'
               preload

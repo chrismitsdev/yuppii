@@ -32,7 +32,7 @@ function HomeCarousel() {
       className='px-0 sm:px-3'
       asChild
     >
-      <Section className='pt-10'>
+      <Section className='pt-5'>
         <Carousel
           className='overflow-visible'
           plugins={[Autoplay()]}

@@ -85,7 +85,7 @@ function DesktopNavigation() {
   })
 
   return (
-    <nav className='hidden space-x-2 sm:block'>
+    <nav className='hidden space-x-2 col-start-3 self-center justify-self-end sm:block'>
       <TooltipProvider delayDuration={0}>
         {renderedLinks}
         <Tooltip>
@@ -128,7 +128,7 @@ function MobileNavigation() {
   }, [pathname])
 
   return (
-    <div className='space-x-2 sm:hidden'>
+    <div className='space-x-2 justify-self-end sm:hidden'>
       <Drawer
         open={open}
         onOpenChange={setOpen}
@@ -160,12 +160,12 @@ function MobileNavigation() {
                 <FacebookIconButton />
                 <InstagramIconButton />
                 <GoogleMapsIconButton />
+                <LocaleCycle />
               </div>
             </div>
           </DrawerContent>
         </DrawerPortal>
       </Drawer>
-      <LocaleCycle />
     </div>
   )
 }
