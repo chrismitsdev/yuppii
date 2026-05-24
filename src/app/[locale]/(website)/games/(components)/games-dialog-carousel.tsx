@@ -104,11 +104,13 @@ function GamesDialogCarousel() {
   const [selectedGame, setSelectedGame] = useState<ImageGallery | null>(null)
   const t = useTranslations('Pages.Games.GamesGallery')
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const containerRef = useRef<HTMLDivElement | null>(null)
 
   const handleSelectGame = useCallback((gallery: ImageGallery) => {
     setSelectedGame(gallery)
     setSheetOpen(false)
     setIndex(0)
+    containerRef.current?.scrollIntoView({behavior: 'smooth'})
   }, [])
 
   const handleFocusTrigger = (e: Event) => {
@@ -168,13 +170,16 @@ function GamesDialogCarousel() {
       title={t('title')}
       subtitle={t('subtitle')}
     >
-      <article>
+      <article
+        className='scroll-mt-20'
+        ref={containerRef}
+      >
         <Dialog>
           <Sheet
             open={sheetOpen}
             onOpenChange={setSheetOpen}
           >
-            <SheetTrigger className='p-4 mb-10 w-full space-y-1 bg-secondary rounded-lg text-left shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
+            <SheetTrigger className='p-4 mb-10 w-full space-y-2 bg-secondary rounded-lg text-left shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
               <Typography variant='h4'>
                 {selectedGame
                   ? t(`galleries.${selectedGame.key}.label`)
@@ -208,10 +213,7 @@ function GamesDialogCarousel() {
           </Sheet>
 
           {renderedTriggers && (
-            <div
-              key={selectedGame?.key}
-              className='grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-8 animate-fade-in'
-            >
+            <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-8'>
               {renderedTriggers}
             </div>
           )}
@@ -219,8 +221,8 @@ function GamesDialogCarousel() {
           <DialogPortal>
             <DialogOverlay />
             <DialogContent
-              aria-describedby={undefined}
               className='bg-transparent'
+              aria-describedby={undefined}
               onCloseAutoFocus={handleFocusTrigger}
             >
               <DialogClose />
@@ -257,7 +259,7 @@ function GamesGalleryTrigger({
 }) {
   return (
     <DialogTrigger
-      className='relative overflow-hidden rounded shadow before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent group'
+      className='relative overflow-hidden rounded shadow before:absolute before:inset-0 before:duration-700 before:ease-yuppii hover:before:bg-black/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent animate-fade-in group'
       ref={ref}
       onClick={onClick}
     >
@@ -272,7 +274,7 @@ function GamesGalleryTrigger({
         '
       />
       <div className='hidden absolute inset-0 items-center justify-center group-hover:flex'>
-        <ExpandIcon className='text-primary' />
+        <ExpandIcon className='text-secondary' />
       </div>
     </DialogTrigger>
   )
