@@ -12,10 +12,7 @@ function AccordionItem({
 }: React.ComponentPropsWithRef<typeof Item>) {
   return (
     <Item
-      className={cn(
-        'overflow-hidden scooped-border [--scoop:14px] transition',
-        className
-      )}
+      className={cn('overflow-hidden scooped-border transition', className)}
       {...props}
     />
   )

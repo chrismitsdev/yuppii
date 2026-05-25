@@ -8,7 +8,7 @@ import {Link} from '@/src/i18n/navigation'
 function WebsiteHeader() {
   return (
     <header className='py-6'>
-      <Container className='max-w-7xl'>
+      <Container>
         <EspaBanner />
         <div className='grid grid-cols-3'>
           <Link

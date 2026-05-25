@@ -16,7 +16,7 @@ function MenuHeader() {
             aria-label='Go to home page'
           >
             <Image
-              className='inline-auto block-20'
+              className='inline-auto block-24'
               src={logo}
               alt='Yuppii Luna Park'
               preload

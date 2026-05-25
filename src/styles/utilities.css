@@ -1,6 +1,6 @@
 /* biome-ignore format: Make rule more readable */
 @utility scooped-border {
-  --scoop: 24px;
+  --scoop: 14px;
   --thickness: 2px;
   --fill: var(--color-secondary);
 
