@@ -12,7 +12,7 @@ function WebsiteHeader({withEspaBanner}: {withEspaBanner?: boolean}) {
         {withEspaBanner && <EspaBanner />}
         <div className='grid grid-cols-3'>
           <Link
-            className='col-start-2 not-sm:justify-self-center sm:col-start-1'
+            className='col-start-2 justify-self-center sm:col-start-1 sm:justify-self-start'
             href='/'
             aria-label='Go to home page'
           >

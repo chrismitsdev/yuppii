@@ -64,12 +64,15 @@ function DesktopNavigation() {
   const t = useTranslations()
 
   const renderedLinks = links.map(({key, href, icon: Icon}) => {
+    const isActive =
+      pathname === href || (href !== '/' && pathname.includes(href))
+
     return (
       <Tooltip key={key}>
         <TooltipTrigger asChild>
           <IconButton
             aria-label={`Navigate to ${key} page`}
-            variant={pathname === href ? 'primary' : 'ghost'}
+            variant={isActive ? 'primary' : 'ghost'}
             asChild
           >
             <Link href={href}>
