@@ -5,11 +5,11 @@ import {EspaBanner} from '@/src/components/espa-banner'
 import {WebsiteNavigation} from '@/src/components/website-navigation'
 import {Link} from '@/src/i18n/navigation'
 
-function WebsiteHeader() {
+function WebsiteHeader({withEspaBanner}: {withEspaBanner?: boolean}) {
   return (
     <header className='py-6'>
       <Container>
-        <EspaBanner />
+        {withEspaBanner && <EspaBanner />}
         <div className='grid grid-cols-3'>
           <Link
             className='col-start-2 not-sm:justify-self-center sm:col-start-1'

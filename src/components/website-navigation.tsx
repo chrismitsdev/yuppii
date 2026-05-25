@@ -128,7 +128,7 @@ function MobileNavigation() {
   }, [pathname])
 
   return (
-    <div className='space-x-2 justify-self-end sm:hidden'>
+    <div className='justify-self-end sm:hidden'>
       <Drawer
         open={open}
         onOpenChange={setOpen}

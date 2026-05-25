@@ -1,6 +1,7 @@
 import {setRequestLocale} from 'next-intl/server'
-import {use} from 'react'
-import {MenuHeader} from '@/src/components/menu-header'
+import {Suspense, use} from 'react'
+import {MenuNavigation} from '@/src/components/menu-navigation'
+import {WebsiteHeader} from '@/src/components/website-header'
 
 export default function MenuLayout({
   params,
@@ -11,7 +12,10 @@ export default function MenuLayout({
 
   return (
     <div className='min-h-screen grid grid-rows-[auto_auto_1fr]'>
-      <MenuHeader />
+      <WebsiteHeader />
+      <Suspense>
+        <MenuNavigation />
+      </Suspense>
       {children}
     </div>
   )
