@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {useLocale, useTranslations} from 'next-intl'
-import logo from '@/public/yuppii-logo-new.png'
+import logo from '@/public/yuppii-logo.png'
 import {Container} from '@/src/components/container'
 import {
   FacebookIconButton,

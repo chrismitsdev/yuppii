@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '@/public/yuppii-logo-new.png'
+import logo from '@/public/yuppii-logo.png'
 import {Container} from '@/src/components/container'
 import {EspaBanner} from '@/src/components/espa-banner'
 import {WebsiteNavigation} from '@/src/components/website-navigation'

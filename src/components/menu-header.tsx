@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {Suspense} from 'react'
-import logo from '@/public/yuppii-logo-new.png'
+import logo from '@/public/yuppii-logo.png'
 import {Container} from '@/src/components/container'
 import {LocaleCycle} from '@/src/components/locale-cycle'
 import {MenuNavigation} from '@/src/components/menu-navigation'
