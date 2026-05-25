@@ -110,10 +110,13 @@ function MobileNavigation() {
   const t = useTranslations('Metadata.Pages')
 
   const renderedLinks = links.map(({key, href, icon: Icon}) => {
+    const isActive =
+      pathname === href || (href !== '/' && pathname.includes(href))
+
     return (
       <Button
         key={key}
-        variant={pathname === href ? 'primary' : 'ghost'}
+        variant={isActive ? 'primary' : 'ghost'}
         size='lg'
         asChild
       >
