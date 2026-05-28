@@ -3,10 +3,8 @@ import {cn} from '@/src/lib/utils'
 function Card({className, ...props}: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn(
-        'bg-secondary/50 border border-secondary rounded-lg shadow-md',
-        className
-      )}
+      className={cn('scooped-border', className)}
+      // style={{'--fill': 'hsl(45 57% 86%)'} as React.CSSProperties}
       {...props}
     />
   )

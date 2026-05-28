@@ -35,7 +35,7 @@ function SheetOverlay({
 }
 
 const sheetContentProps = cva(
-  ['fixed', 'overflow-hidden', 'z-50', 'bg-primary', 'shadow-md'],
+  ['fixed', 'overflow-hidden', 'z-50', 'bg-secondary', 'shadow-md'],
   {
     variants: {
       side: {
@@ -100,10 +100,7 @@ function SheetHeader({
 }: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn(
-        'p-6 space-y-4 border-b border-b-accent/10 sm:p-8',
-        className
-      )}
+      className={cn('p-6 space-y-4 border-b sm:p-8', className)}
       {...props}
     />
   )
@@ -115,10 +112,7 @@ function SheetTitle({
 }: React.ComponentPropsWithRef<typeof Title>) {
   return (
     <Title
-      className={cn(
-        'text-foreground text-lg font-semibold leading-6',
-        className
-      )}
+      className={cn('text-xl font-display font-bold', className)}
       {...props}
     />
   )
@@ -130,7 +124,7 @@ function SheetDescription({
 }: React.ComponentPropsWithRef<typeof Description>) {
   return (
     <Description
-      className={cn('text-muted-foreground text-sm', className)}
+      className={cn('text-accent', className)}
       {...props}
     />
   )

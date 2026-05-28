@@ -4,7 +4,7 @@ import {Root} from '@radix-ui/react-separator'
 import {cn} from '@/src/lib/utils'
 
 interface SeparatorProps extends React.ComponentPropsWithRef<typeof Root> {
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'accent'
 }
 
 function Separator({
@@ -18,8 +18,8 @@ function Separator({
     <Root
       className={cn(
         'shrink-0',
-        variant === 'primary' && 'bg-primary/20',
-        variant === 'secondary' && 'bg-secondary/20',
+        variant === 'primary' && 'bg-primary',
+        variant === 'secondary' && 'bg-secondary',
         orientation === 'horizontal' ? 'my-2 w-full h-px' : 'mx-2 h-full w-px',
         className
       )}

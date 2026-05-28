@@ -1,20 +1,24 @@
 import Image from 'next/image'
-import logo from '@/public/logo.svg'
+import logo from '@/public/yuppii-logo.png'
 import {Container} from '@/src/components/container'
 import {EspaBanner} from '@/src/components/espa-banner'
 import {WebsiteNavigation} from '@/src/components/website-navigation'
 import {Link} from '@/src/i18n/navigation'
 
-function WebsiteHeader() {
+function WebsiteHeader({withEspaBanner}: {withEspaBanner?: boolean}) {
   return (
     <header className='py-6'>
-      <Container className='max-w-7xl'>
-        <EspaBanner />
-        <div className='flex justify-between'>
-          <Link href='/'>
+      <Container>
+        {withEspaBanner && <EspaBanner />}
+        <div className='grid grid-cols-3'>
+          <Link
+            className='col-start-2 justify-self-center sm:col-start-1 sm:justify-self-start'
+            href='/'
+            aria-label='Go to home page'
+          >
             <Image
+              className='inline-auto block-24'
               src={logo}
-              width={124}
               alt='Yuppii Luna Park'
               preload
             />

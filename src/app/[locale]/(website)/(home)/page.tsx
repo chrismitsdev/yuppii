@@ -2,9 +2,10 @@ import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
+import {DecorativeDivider} from '@/src/components/ui/decorative-divider'
 import {HomeCards} from './(components)/home-cards'
 import {HomeCarousel} from './(components)/home-carousel'
-import {HomeDialogCarousel} from './(components)/home-dialog-carousel'
+import {HomeGallery} from './(components)/home-gallery'
 
 export async function generateMetadata({params}: Params): Promise<Metadata> {
   const {locale} = await params
@@ -22,9 +23,13 @@ export default function IndexPage({params}: PageProps<'/[locale]'>) {
   return (
     <>
       <HomeCarousel />
+      <DecorativeDivider />
       <Container>
         <HomeCards />
-        <HomeDialogCarousel />
+      </Container>
+      <DecorativeDivider />
+      <Container>
+        <HomeGallery />
       </Container>
     </>
   )

@@ -18,6 +18,7 @@ function HomeCarousel() {
   const slides = carouselImageList.map((image, i) => (
     <Slide key={image.src}>
       <CustomImage
+        className='object-cover min-h-96'
         src={image}
         alt={`Home page carousel image slide ${i + 1}`}
         sizes='(min-width: 1000px) 1000px, 100vw'
@@ -31,7 +32,7 @@ function HomeCarousel() {
       className='px-0 sm:px-3'
       asChild
     >
-      <Section>
+      <Section className='pt-5'>
         <Carousel
           className='overflow-visible'
           plugins={[Autoplay()]}

@@ -13,6 +13,7 @@ const buttonProps = cva(
     'transition',
     'focus-visible:outline-2',
     'focus-visible:outline-offset-2',
+    'focus-visible:outline-accent',
     'disabled:opacity-50',
     'disabled:cursor-not-allowed',
     'aria-disabled:opacity-50',
@@ -22,23 +23,26 @@ const buttonProps = cva(
     variants: {
       variant: {
         primary: [
-          'bg-secondary',
-          'text-secondary-foreground',
-          'focus-visible:outline-secondary',
-          'hover:bg-secondary/80',
-          'focus-visible:bg-secondary/80'
+          'bg-primary',
+          'text-primary-foreground',
+          'hover:bg-primary/75',
+          'focus-visible:bg-primary/75'
         ],
         secondary: [
+          'bg-secondary',
+          'text-secondary-foreground',
+          'hover:bg-secondary/75',
+          'focus-visible:bg-secondary/75'
+        ],
+        accent: [
           'bg-accent',
           'text-accent-foreground',
-          'focus-visible:outline-accent',
-          'hover:bg-accent/80',
-          'focus-visible:bg-accent/80'
+          'hover:bg-accent/75',
+          'focus-visible:bg-accent/75'
         ],
         ghost: [
           'bg-transparent',
-          'text-primary-foreground',
-          'focus-visible:outline-accent',
+          'text-foreground',
           'hover:bg-secondary',
           'focus-visible:bg-secondary'
         ]

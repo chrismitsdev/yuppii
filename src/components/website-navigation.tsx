@@ -10,7 +10,7 @@ import {
   StoreIcon
 } from 'lucide-react'
 import {type Messages, useTranslations} from 'next-intl'
-import {Fragment, useEffect, useId, useState} from 'react'
+import {Fragment, useEffect, useState} from 'react'
 import {
   FacebookIconButton,
   GoogleMapsIconButton,
@@ -64,12 +64,15 @@ function DesktopNavigation() {
   const t = useTranslations()
 
   const renderedLinks = links.map(({key, href, icon: Icon}) => {
+    const isActive =
+      pathname === href || (href !== '/' && pathname.includes(href))
+
     return (
       <Tooltip key={key}>
         <TooltipTrigger asChild>
           <IconButton
             aria-label={`Navigate to ${key} page`}
-            variant={pathname === href ? 'secondary' : 'ghost'}
+            variant={isActive ? 'primary' : 'ghost'}
             asChild
           >
             <Link href={href}>
@@ -85,7 +88,7 @@ function DesktopNavigation() {
   })
 
   return (
-    <nav className='hidden space-x-2 sm:block'>
+    <nav className='hidden space-x-2 col-start-3 self-center justify-self-end sm:block'>
       <TooltipProvider delayDuration={0}>
         {renderedLinks}
         <Tooltip>
@@ -103,15 +106,17 @@ function DesktopNavigation() {
 
 function MobileNavigation() {
   const [open, setOpen] = useState(false)
-  const t = useTranslations('Metadata.Pages')
   const pathname = usePathname()
-  const triggerId = useId() // stable ID for DrawerTrigger
+  const t = useTranslations('Metadata.Pages')
 
   const renderedLinks = links.map(({key, href, icon: Icon}) => {
+    const isActive =
+      pathname === href || (href !== '/' && pathname.includes(href))
+
     return (
       <Button
         key={key}
-        variant={pathname === href ? 'secondary' : 'ghost'}
+        variant={isActive ? 'primary' : 'ghost'}
         size='lg'
         asChild
       >
@@ -129,16 +134,13 @@ function MobileNavigation() {
   }, [pathname])
 
   return (
-    <div className='space-x-2 sm:hidden'>
+    <div className='justify-self-end sm:hidden'>
       <Drawer
         open={open}
         onOpenChange={setOpen}
         shouldScaleBackground
       >
-        <DrawerTrigger
-          id={triggerId}
-          asChild
-        >
+        <DrawerTrigger asChild>
           <IconButton
             aria-label='Open drawer'
             variant='secondary'
@@ -164,12 +166,12 @@ function MobileNavigation() {
                 <FacebookIconButton />
                 <InstagramIconButton />
                 <GoogleMapsIconButton />
+                <LocaleCycle />
               </div>
             </div>
           </DrawerContent>
         </DrawerPortal>
       </Drawer>
-      <LocaleCycle />
     </div>
   )
 }

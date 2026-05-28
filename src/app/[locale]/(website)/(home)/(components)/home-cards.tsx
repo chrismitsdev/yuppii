@@ -30,7 +30,6 @@ import {
   DialogTrigger
 } from '@/src/components/ui/dialog'
 import {Link} from '@/src/i18n/navigation'
-import {cn} from '@/src/lib/utils'
 
 const data = [
   {key: 'card1', icon: CastleIcon, href: '/games'},
@@ -51,10 +50,7 @@ function HomeCards() {
     return (
       <Card
         key={key}
-        className={cn(
-          'bg-linear-to-br from-secondary/75 to-primary',
-          isLastCard && 'sm:col-span-2'
-        )}
+        className={isLastCard ? 'sm:col-span-2' : undefined}
       >
         <CardHeader className='h-56'>
           <Icon className='size-24 m-auto' />
@@ -66,7 +62,7 @@ function HomeCards() {
         <CardFooter>
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant='secondary'>
+              <Button>
                 <span>{t('card1.trigger')}</span>
                 <ChevronRightIcon />
               </Button>

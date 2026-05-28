@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import {useLocale, useTranslations} from 'next-intl'
-import logo from '@/public/logo-full-light.svg'
+import logo from '@/public/yuppii-logo.png'
 import {Container} from '@/src/components/container'
 import {
   FacebookIconButton,
@@ -17,7 +17,7 @@ function Footer() {
   const locale = useLocale()
 
   return (
-    <footer className='py-20 bg-accent text-primary'>
+    <footer className='py-20 bg-secondary border-t-4 border-t-secondary'>
       <FooterColumn className='space-y-10 sm:space-y-10'>
         <Image
           className='mx-auto w-auto h-36'
@@ -93,15 +93,15 @@ function Footer() {
         asChild
       >
         <section className='flex flex-col items-center gap-6 sm:flex-row sm:justify-between'>
-          <Typography variant='small'>
+          <Typography variant='tiny'>
             Copyright &copy; {new Date().getFullYear()} Yuppii Luna Park
           </Typography>
-          <div className='space-x-6 not-sm:order-last'>
-            <FacebookIconButton variant='primary' />
-            <InstagramIconButton variant='primary' />
-            <GoogleMapsIconButton variant='primary' />
+          <div className='space-x-6 not-sm:order-first'>
+            <FacebookIconButton />
+            <InstagramIconButton />
+            <GoogleMapsIconButton />
           </div>
-          <Typography variant='small'>Designed & Developed by CM </Typography>
+          <Typography variant='tiny'>Designed & Developed by CM </Typography>
         </section>
       </Container>
     </footer>
@@ -122,7 +122,7 @@ function FooterColumn({
     >
       {title ? (
         <>
-          <Typography variant='large'>{title}</Typography>
+          <Typography variant='lead'>{title}</Typography>
           <div>{children}</div>
         </>
       ) : (

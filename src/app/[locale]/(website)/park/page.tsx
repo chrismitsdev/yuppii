@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
+import {DecorativeDivider} from '@/src/components/ui/decorative-divider'
 import {ParkInfo} from './(components)/park-info'
 import {ParkMap} from './(components)/park-map'
 import {ParkReasons} from './(components)/park-reasons'
@@ -22,7 +23,9 @@ export default function ParkPage({params}: PageProps<'/[locale]/park'>) {
   return (
     <Container>
       <ParkInfo />
+      <DecorativeDivider />
       <ParkMap />
+      <DecorativeDivider />
       <ParkReasons />
     </Container>
   )

@@ -31,7 +31,7 @@ function MenuNavigation() {
   })
 
   return (
-    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-primary border-b border-b-secondary'>
+    <nav className='sticky top-0 z-10 overflow-x-hidden flex justify-center bg-background border-b border-b-primary'>
       <Scrollarea>
         <ScrollareaViewport>
           <div className='px-1 w-max flex items-center'>
@@ -62,7 +62,7 @@ function MenuNavigationLink({
     <Link
       className={cn(
         'shrink-0 p-3 relative text-accent/25 duration-375 font-bold select-none after:h-1 after:absolute after:inset-x-0 after:-bottom-1 after:rounded-t-lg after:duration-375',
-        isActive && 'text-accent after:bg-secondary after:bottom-0',
+        isActive && 'text-accent after:bg-primary after:bottom-0',
         className
       )}
       {...props}

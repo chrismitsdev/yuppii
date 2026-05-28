@@ -34,7 +34,7 @@ function DrawerContent({
   return (
     <Vaul.Content
       className={cn(
-        'fixed inset-x-0 bottom-0 z-1 flex flex-col bg-primary outline-none',
+        'fixed inset-x-0 bottom-0 z-1 flex flex-col bg-secondary outline-none',
         className
       )}
       aria-describedby={ariaDescribedBy}

@@ -5,22 +5,22 @@
   --animate-fade-in: fade-in 2000ms var(--ease-yuppii);
 
   --animate-overlay-open: overlay-open 750ms var(--ease-yuppii);
-  --animate-overlay-close: overlay-close 375ms var(--ease-yuppii);
+  --animate-overlay-close: overlay-close 750ms var(--ease-yuppii);
 
   --animate-dialog-open: dialog-open 750ms var(--ease-yuppii);
-  --animate-dialog-close: dialog-close 375ms var(--ease-yuppii);
+  --animate-dialog-close: dialog-close 750ms var(--ease-yuppii);
 
   --animate-accordion-open: accordion-open 750ms var(--ease-yuppii);
-  --animate-accordion-close: accordion-close 375ms var(--ease-yuppii);
+  --animate-accordion-close: accordion-close 750ms var(--ease-yuppii);
 
   --animate-sheet-top-open: sheet-top-open 750ms var(--ease-yuppii);
   --animate-sheet-right-open: sheet-right-open 750ms var(--ease-yuppii);
   --animate-sheet-bottom-open: sheet-bottom-open 750ms var(--ease-yuppii);
   --animate-sheet-left-open: sheet-left-open 750ms var(--ease-yuppii);
-  --animate-sheet-top-close: sheet-top-close 375ms var(--ease-yuppii);
-  --animate-sheet-right-close: sheet-right-close 375ms var(--ease-yuppii);
-  --animate-sheet-bottom-close: sheet-bottom-close 375ms var(--ease-yuppii);
-  --animate-sheet-left-close: sheet-left-close 375ms var(--ease-yuppii);
+  --animate-sheet-top-close: sheet-top-close 750ms var(--ease-yuppii);
+  --animate-sheet-right-close: sheet-right-close 750ms var(--ease-yuppii);
+  --animate-sheet-bottom-close: sheet-bottom-close 750ms var(--ease-yuppii);
+  --animate-sheet-left-close: sheet-left-close 750ms var(--ease-yuppii);
 
   /* Page animation */
   @keyframes page-appear {
@@ -165,7 +165,7 @@
 
   @keyframes sheet-left-open {
     from {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% - 8px));
     }
     to {
       transform: translateX(0);
@@ -177,7 +177,7 @@
       transform: translateX(0);
     }
     to {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% - 8px));
     }
   }
 }

@@ -1,15 +1,13 @@
 @theme {
-  --color-brand: hsl(174 46% 62%);
-  --color-brand-foreground: hsl(180 14% 1%);
+  --color-background: hsl(34 70% 96%);
+  --color-foreground: hsl(0 100% 0%);
 
-  --color-primary: hsl(176 38% 86%);
-  --color-primary-foreground: hsl(180 14% 1%);
+  --color-primary: hsl(359 70% 23%);
+  --color-primary-foreground: hsl(34 70% 96%);
 
-  --color-secondary: hsl(349 78% 70%);
-  --color-secondary-foreground: hsl(180 14% 1%);
+  --color-secondary: hsl(45 57% 86%);
+  --color-secondary-foreground: hsl(359 70% 23%);
 
-  --color-accent: hsl(180 14% 1%);
-  --color-accent-foreground: hsl(349 78% 70%);
-
-  --color-border: hsl(180 14% 1%);
+  --color-accent: hsl(0 100% 0%);
+  --color-accent-foreground: hsl(34 70% 96%);
 }

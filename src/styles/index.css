@@ -1,9 +1,10 @@
 @import "tailwindcss";
-@import "./colors.css";
-@import "./font.css";
 @import "./animations.css";
+@import "./colors.css";
 @import "./data-attributes.css";
+@import "./font.css";
 @import "./shadows.css";
+@import "./utilities.css";
 
 /* Leaflet styling */
 .leaflet-map-pane,
@@ -22,7 +23,8 @@
   }
 
   .leaflet-popup-content-wrapper {
-    @apply p-6 bg-[#dbbbc3] border border-secondary rounded;
+    /*@apply p-6 bg-[#dbbbc3] border border-secondary rounded;*/
+    @apply p-6 bg-secondary border border-primary rounded;
 
     .leaflet-popup-content {
       @apply m-0 max-w-max;
@@ -31,7 +33,7 @@
 
   .leaflet-popup-tip-container {
     .leaflet-popup-tip {
-      @apply bg-[#dbbbc3] border border-secondary;
+      @apply bg-secondary border border-primary;
     }
   }
 }

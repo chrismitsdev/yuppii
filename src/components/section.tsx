@@ -15,7 +15,7 @@ function Section({
 }: SectionProps) {
   return (
     <section
-      className={cn('py-20 space-y-20 first:pt-40 last:pb-40', className)}
+      className={cn('py-20 space-y-20', className)}
       {...props}
     >
       {(title || subtitle) && (

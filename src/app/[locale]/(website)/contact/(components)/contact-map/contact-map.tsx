@@ -44,7 +44,7 @@ function ContactMap() {
                 <div className='flex items-center gap-2'>
                   <NavigationIcon className='size-4 shrink-0' />
                   <a
-                    className='text-primary-foreground!'
+                    className='text-accent!'
                     href='https://www.google.com/maps/dir/?api=1&destination=Yuppii+Luna+Park'
                     target='_blank'
                     rel='noopener noreferrer'
@@ -55,7 +55,7 @@ function ContactMap() {
                 <div className='flex items-center gap-2'>
                   <PhoneIcon className='size-4 shrink-0' />
                   <a
-                    className='text-primary-foreground!'
+                    className='text-accent!'
                     href='tel:+306973433980'
                   >
                     {t('popup.phone')}

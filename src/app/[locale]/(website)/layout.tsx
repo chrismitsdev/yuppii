@@ -11,7 +11,7 @@ export default function WebsiteLayout({
 
   return (
     <div className='min-h-screen grid grid-rows-[auto_1fr]'>
-      <WebsiteHeader />
+      <WebsiteHeader withEspaBanner />
       {children}
     </div>
   )

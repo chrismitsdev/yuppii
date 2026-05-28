@@ -25,7 +25,7 @@ import {
 } from '@/src/components/ui/dialog'
 import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 
-function HomeDialogCarousel() {
+function HomeGallery() {
   const [index, setIndex] = useState(0)
   const t = useTranslations('Pages.Home.HomeGallery')
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
@@ -73,6 +73,7 @@ function HomeDialogCarousel() {
             <DialogContent
               className='bg-transparent'
               onCloseAutoFocus={handleFocusTrigger}
+              aria-describedby={undefined}
             >
               <DialogClose />
               <VisuallyHidden>
@@ -121,13 +122,13 @@ function HomeGalleryTrigger({
         '
       />
       <div className='hidden absolute inset-0 items-center justify-center group-hover:flex'>
-        <ExpandIcon className='text-primary' />
+        <ExpandIcon className='text-secondary' />
       </div>
     </DialogTrigger>
   )
 }
 
-HomeDialogCarousel.displayName = 'HomeDialogCarousel'
+HomeGallery.displayName = 'HomeGallery'
 HomeGalleryTrigger.displayName = 'HomeGalleryTrigger'
 
-export {HomeDialogCarousel}
+export {HomeGallery}

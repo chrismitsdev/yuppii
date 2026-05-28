@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {getTranslations, setRequestLocale} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
+import {DecorativeDivider} from '@/src/components/ui/decorative-divider'
 import {ContactForm} from './(components)/contact-form'
 import {ContactMap} from './(components)/contact-map'
 
@@ -21,6 +22,7 @@ export default function ContactPage({params}: PageProps<'/[locale]/contact'>) {
   return (
     <Container>
       <ContactForm />
+      <DecorativeDivider />
       <ContactMap />
     </Container>
   )

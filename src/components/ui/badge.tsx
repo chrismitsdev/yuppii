@@ -11,7 +11,7 @@ function Badge({className, asChild = false, ...props}: BadgeProps) {
   return (
     <Comp
       className={cn(
-        'px-2 py-0.5 inline-flex justify-center items-center bg-accent text-accent-foreground rounded text-xs font-bold font-display',
+        'px-2 py-0.5 inline-flex justify-center items-center bg-primary text-primary-foreground rounded text-xs font-bold font-display',
         className
       )}
       {...props}

@@ -1,0 +1,70 @@
+/* biome-ignore format: Make rule more readable */
+@utility scooped-border {
+  --scoop: 14px;
+  --thickness: 2px;
+  --fill: var(--color-secondary);
+
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: var(--color-primary);
+    mask:
+      radial-gradient(
+        var(--scoop) at var(--scoop) var(--scoop),
+        #0000 calc(100% - var(--thickness)),
+        #000 calc(100% - var(--thickness)) 100%,
+        #0000
+      )
+      calc(var(--scoop) * -1) calc(var(--scoop) * -1),
+      linear-gradient(
+        90deg,
+        #000 calc(var(--thickness) * 2),
+        #0000 0
+      )
+      calc(var(--thickness) * -1) 50%
+      / 100% calc(100% - calc(var(--scoop) * 2) + var(--thickness)) repeat-x,
+      linear-gradient(
+        #000 calc(var(--thickness) * 2),
+        #0000 0
+      )
+      50% calc(var(--thickness) * -1)
+      / calc(100% - calc(var(--scoop) * 2) + var(--thickness)) 100% repeat-y;
+  }
+
+  &::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--fill);
+    mask:
+      radial-gradient(
+        circle at 0% 0%,
+        #0000 var(--scoop),
+        #000 var(--scoop)
+      ),
+      radial-gradient(
+        circle at 100% 0%,
+        #0000 var(--scoop),
+        #000 var(--scoop)
+      ),
+      radial-gradient(
+        circle at 0% 100%,
+        #0000 var(--scoop),
+        #000 var(--scoop)
+      ),
+      radial-gradient(
+        circle at 100% 100%,
+        #0000 var(--scoop),
+        #000 var(--scoop)
+      );
+    mask-composite: intersect;
+  }
+}

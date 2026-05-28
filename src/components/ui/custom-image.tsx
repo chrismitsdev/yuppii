@@ -42,7 +42,7 @@ function spinner(w: number, h: number) {
       fill="none"
     >
       <!-- full-canvas background -->
-      <rect width="${w}" height="${h}" fill="#cee9e7" />
+      <rect width="${w}" height="${h}" fill="#f0e5c7" />
 
       <!-- scaled and centered spinner path -->
       <g
@@ -50,7 +50,7 @@ function spinner(w: number, h: number) {
       >
         <path
           d="M21 12a9 9 0 1 1-6.219-8.56"
-          stroke="#ee778d"
+          stroke="#641213"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
