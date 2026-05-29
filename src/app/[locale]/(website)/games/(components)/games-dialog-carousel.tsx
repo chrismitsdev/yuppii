@@ -102,27 +102,35 @@ function GamesDialogCarousel() {
   const [index, setIndex] = useState(0)
   const [sheetOpen, setSheetOpen] = useState(true)
   const [selectedGame, setSelectedGame] = useState<ImageGallery | null>(null)
+  const imageRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const articleRef = useRef<HTMLElement | null>(null)
   const t = useTranslations('Pages.Games.GamesGallery')
-  const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
-  const containerRef = useRef<HTMLDivElement | null>(null)
+
+  const handleAnimationEnd = () => {
+    if (!sheetOpen || !selectedGame) return
+    const activeGameButton = document.getElementById(selectedGame?.key)
+    if (!activeGameButton) return
+    activeGameButton.scrollIntoView({behavior: 'smooth'})
+  }
 
   const handleSelectGame = useCallback((gallery: ImageGallery) => {
     setSelectedGame(gallery)
     setSheetOpen(false)
     setIndex(0)
-    containerRef.current?.scrollIntoView({behavior: 'smooth'})
+    articleRef.current?.scrollIntoView({behavior: 'smooth'})
   }, [])
 
   const handleFocusTrigger = (e: Event) => {
     e.preventDefault()
-    triggerRefs.current[index]?.focus()
+    imageRefs.current[index]?.focus()
   }
 
-  const renderedGames = useMemo(() => {
+  const renderedButtonTriggers = useMemo(() => {
     return galleries.map((gallery) => {
       return (
         <Button
           key={gallery.key}
+          id={gallery.key}
           className='w-full sm:justify-start'
           variant={gallery.key === selectedGame?.key ? 'primary' : 'ghost'}
           size='lg'
@@ -134,15 +142,15 @@ function GamesDialogCarousel() {
     })
   }, [selectedGame?.key, handleSelectGame, t])
 
-  const renderedTriggers = useMemo(() => {
+  const renderedImageTriggers = useMemo(() => {
     return selectedGame?.images.map((image, i) => {
       return (
-        <GamesGalleryTrigger
+        <ImageTrigger
           key={image.src}
           src={image}
           alt={`Gallery thumbnail image ${i + 1}`}
           ref={(el) => {
-            triggerRefs.current[i] = el
+            imageRefs.current[i] = el
           }}
           onClick={() => setIndex(i)}
         />
@@ -171,15 +179,15 @@ function GamesDialogCarousel() {
       subtitle={t('subtitle')}
     >
       <article
-        className='scroll-mt-20'
-        ref={containerRef}
+        className='scroll-mt-10'
+        ref={articleRef}
       >
         <Dialog>
           <Sheet
             open={sheetOpen}
             onOpenChange={setSheetOpen}
           >
-            <SheetTrigger className='p-4 mb-10 w-full space-y-2 bg-secondary rounded-lg text-left shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
+            <SheetTrigger className='p-4 mb-10 w-full space-y-2 bg-secondary rounded-lg text-left shadow-md cursor-pointer hover:bg-secondary/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent'>
               <Typography variant='h4'>
                 {selectedGame
                   ? t(`galleries.${selectedGame.key}.label`)
@@ -191,19 +199,22 @@ function GamesDialogCarousel() {
             </SheetTrigger>
             <SheetPortal>
               <SheetOverlay />
-              <SheetContent side='left'>
+              <SheetContent
+                side='left'
+                onAnimationEnd={handleAnimationEnd}
+              >
                 <SheetClose />
                 <SheetHeader>
                   <SheetTitle>{t('sheet-content-header')}</SheetTitle>
                 </SheetHeader>
 
                 <Scrollarea
-                  className='h-[calc(100%-73px)] sm:h-[calc(100%-89px)]'
+                  className='h-[calc(100%-77px)] sm:h-[calc(100%-93px)]'
                   type='always'
                 >
                   <ScrollareaViewport>
                     <SheetBody className='pb-28 space-y-4'>
-                      {renderedGames}
+                      {renderedButtonTriggers}
                     </SheetBody>
                   </ScrollareaViewport>
                   <ScrollareaBar />
@@ -212,9 +223,9 @@ function GamesDialogCarousel() {
             </SheetPortal>
           </Sheet>
 
-          {renderedTriggers && (
+          {renderedImageTriggers && (
             <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-8'>
-              {renderedTriggers}
+              {renderedImageTriggers}
             </div>
           )}
 
@@ -246,7 +257,7 @@ function GamesDialogCarousel() {
   )
 }
 
-function GamesGalleryTrigger({
+function ImageTrigger({
   src,
   alt,
   ref,
@@ -281,6 +292,6 @@ function GamesGalleryTrigger({
 }
 
 GamesDialogCarousel.displayName = 'GamesDialogCarousel'
-GamesGalleryTrigger.displayName = 'GamesGalleryTrigger'
+ImageTrigger.displayName = 'ImageTrigger'
 
 export {GamesDialogCarousel}
