@@ -10,7 +10,7 @@ function CategoryNotFound() {
       title={t('title')}
       subtitle={t('subtitle')}
     >
-      <OctagonAlert className='size-40 text-secondary mx-auto' />
+      <OctagonAlert className='size-40 text-primary mx-auto' />
     </Section>
   )
 }
