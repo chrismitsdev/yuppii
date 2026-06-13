@@ -482,8 +482,14 @@
         },
         "Schweppes": {
           "name": "Schweppes 330ml",
-          "variants": ["Σόδα", "Τόνικ", "Λεμονάδα", "Πορτοκαλάδα", "Pink"],
+          "variants": ["Σόδα", "Τόνικ"],
           "price": "3",
+          "disabled": false
+        },
+        "SchweppesFlavor": {
+          "name": "Schweppes με γεύση 330ml",
+          "variants": ["Λεμονάδα", "Πορτοκαλάδα", "Pink Grapefruit"],
+          "price": "3.5",
           "disabled": false
         },
         "Sprite": {

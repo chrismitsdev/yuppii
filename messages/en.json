@@ -482,8 +482,14 @@
         },
         "Schweppes": {
           "name": "Schweppes 330ml",
-          "variants": ["Soda", "Tonic", "Lemon", "Orangeade", "Pink"],
+          "variants": ["Soda", "Tonic"],
           "price": "3",
+          "disabled": false
+        },
+        "SchweppesFlavor": {
+          "name": "Schweppes flavored 330ml",
+          "variants": ["Lemon", "Orangeade", "Pink Grapefruit"],
+          "price": "3.5",
           "disabled": false
         },
         "Sprite": {
