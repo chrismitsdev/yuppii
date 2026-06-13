@@ -1020,6 +1020,12 @@
           "price": "9",
           "disabled": false
         },
+        "PizzaMargheritaCroccantina": {
+          "name": "Πίτσα Μαργαρίτα",
+          "variants": ["Σάλτσα ντομάτας", "Μοτσαρέλα", "Βασιλικός"],
+          "price": "8.5",
+          "disabled": false
+        },
         "PizzaSpianataPicante": {
           "name": "Πίτσα Σπιανάτα Πικάντε",
           "variants": [
@@ -1034,12 +1040,6 @@
           "name": "Πίτσα με Καπνιστή Πανσέτα",
           "variants": ["Σάλτσα ντομάτας", "Μοτσαρέλα", "Καπνιστή πανσέτα"],
           "price": "9",
-          "disabled": false
-        },
-        "PizzaMargheritaCroccantina": {
-          "name": "Πίτσα Μαργαρίτα",
-          "variants": ["Σάλτσα ντομάτας", "Μοτσαρέλα", "Βασιλικός"],
-          "price": "8.5",
           "disabled": false
         }
       },
