@@ -19,29 +19,16 @@ export async function generateMetadata({
   const {locale, category} = await params
   const t = await getTranslations({locale})
   const messages = await getMessages({locale})
-  const categoryKey = (category.charAt(0).toUpperCase() +
-    category.slice(1)) as keyof Messages['Menu']
 
-  if (!Object.hasOwn(messages.Menu, categoryKey)) {
+  if (!Object.hasOwn(messages.Menu, category)) {
     return {
       title: t('Components.CategoryNotFound.title')
     }
   }
 
   return {
-    title: t(`Menu.${categoryKey}.name`)
+    title: t(`Menu.${category}.name`)
   }
-}
-
-export async function generateStaticParams() {
-  const messages = await getMessages({locale: 'en'})
-  const categoryKeys = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
-
-  const categories = categoryKeys.map((ctgKey) => ({
-    category: ctgKey.toLowerCase() as Lowercase<keyof Messages['Menu']>
-  }))
-
-  return categories
 }
 
 export default function CategoryPage({
@@ -51,16 +38,20 @@ export default function CategoryPage({
   setRequestLocale(locale)
 
   const messages = useMessages()
-  const categoryKey = (category.charAt(0).toUpperCase() +
-    category.slice(1)) as keyof Messages['Menu']
 
-  if (!Object.hasOwn(messages.Menu, categoryKey)) {
+  if (!Object.hasOwn(messages.Menu, category)) {
     return <CategoryNotFound />
   }
 
   return (
     <Container>
-      <CategoryProducts categoryKey={categoryKey} />
+      <CategoryProducts categoryKey={category} />
     </Container>
   )
+}
+
+export async function generateStaticParams() {
+  const messages = await getMessages({locale: 'en'})
+  const categories = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
+  return categories.map((category) => ({category}))
 }

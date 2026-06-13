@@ -26,18 +26,18 @@ export async function sleep(sleepTime: number = 1000) {
 }
 
 export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
-  Coffee: Coffee,
-  Beverage: CupSoda,
-  Refreshment: Milk,
-  Energy: Zap,
-  Spirits: GlassWater,
-  Beer: Beer,
-  Cocktail: Martini,
-  Pizza: Pizza,
-  Salad: SaladIcon,
-  Snack: Popcorn,
-  Food: Utensils,
-  Burger: HamburgerIcon
+  coffees: Coffee,
+  beverages: CupSoda,
+  refreshments: Milk,
+  energy: Zap,
+  alcoholic: GlassWater,
+  cocktails: Martini,
+  beers: Beer,
+  foods: Utensils,
+  pizzas: Pizza,
+  burgers: HamburgerIcon,
+  salads: SaladIcon,
+  snacks: Popcorn
 }
 
 export const bannedKeywordPatterns = [

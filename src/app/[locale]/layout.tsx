@@ -48,10 +48,6 @@ export const metadata: Metadata = {
   }
 }
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}))
-}
-
 export default function LocaleLayout({
   params,
   children
@@ -97,4 +93,8 @@ export default function LocaleLayout({
       </body>
     </html>
   )
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}))
 }

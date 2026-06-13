@@ -306,9 +306,21 @@
     }
   },
   "Menu": {
-    "Coffee": {
-      "name": "Καφές",
+    "coffees": {
+      "name": "Καφέδες",
       "products": {
+        "InstantCoffeeCold": {
+          "name": "Φραπέ",
+          "variants": null,
+          "price": "3",
+          "disabled": false
+        },
+        "InstantCoffeeHot": {
+          "name": "Ζεστός στιγμιαίος καφές",
+          "variants": null,
+          "price": "3",
+          "disabled": false
+        },
         "GreekCoffee": {
           "name": "Ελληνικός",
           "variants": null,
@@ -316,49 +328,19 @@
           "disabled": false
         },
         "DoubleGreekCoffee": {
-          "name": "Ελληνικός διπλός",
+          "name": "Διπλός ελληνικός",
           "variants": null,
           "price": "3",
           "disabled": false
-        },
-        "InstantCoffeeHot": {
-          "name": "Στιγμιαίος ζεστός",
-          "variants": null,
-          "price": "3",
-          "disabled": false
-        },
-        "InstantCoffeeCold": {
-          "name": "Φραπέ",
-          "variants": null,
-          "price": "3",
-          "disabled": false
-        },
-        "InstantCoffeeColdWithIcecream": {
-          "name": "Φραπέ με παγωτό",
-          "variants": ["Σοκολάτα", "Βανίλια"],
-          "price": "4",
-          "disabled": true
-        },
-        "FilteredCoffee": {
-          "name": "Φίλτρου",
-          "variants": null,
-          "price": "3",
-          "disabled": true
-        },
-        "FilteredCoffeewithCaramel": {
-          "name": "Φίλτρου με καραμέλα",
-          "variants": null,
-          "price": "3.5",
-          "disabled": true
         },
         "Espresso": {
           "name": "Εσπρέσο",
           "variants": null,
-          "price": "2.5",
+          "price": "3",
           "disabled": false
         },
-        "EspressoDouble": {
-          "name": "Εσπρέσο διπλός",
+        "DoubleEspresso": {
+          "name": "Διπλός εσπρέσο",
           "variants": null,
           "price": "3.5",
           "disabled": false
@@ -366,7 +348,13 @@
         "EspressoLungo": {
           "name": "Εσπρέσο λούγκο",
           "variants": null,
-          "price": "2.5",
+          "price": "3",
+          "disabled": false
+        },
+        "DoubleEspressoLungo": {
+          "name": "Διπλός εσπρέσο λούγκο",
+          "variants": null,
+          "price": "3.5",
           "disabled": false
         },
         "EspressoAmericano": {
@@ -375,8 +363,20 @@
           "price": "3",
           "disabled": false
         },
-        "EspressoAmericanoDouble": {
-          "name": "Εσπρέσο αμερικάνο διπλός",
+        "DoubleEspressoAmericano": {
+          "name": "Διπλός εσπρέσο αμερικάνο",
+          "variants": null,
+          "price": "3.5",
+          "disabled": false
+        },
+        "EspressoMacchiato": {
+          "name": "Εσπρέσο μακιάτο",
+          "variants": null,
+          "price": "3",
+          "disabled": false
+        },
+        "DoubleEspressoMacchiato": {
+          "name": "Διπλός εσπρέσο μακιάτο",
           "variants": null,
           "price": "3.5",
           "disabled": false
@@ -387,14 +387,8 @@
           "price": "3.5",
           "disabled": false
         },
-        "CappuccinoDouble": {
-          "name": "Καπουτσίνο διπλός",
-          "variants": null,
-          "price": "4",
-          "disabled": false
-        },
-        "CappuccinoCaramel": {
-          "name": "Καπουτσίνο με καραμέλα",
+        "DoubleCappuccino": {
+          "name": "Διπλός καπουτσίνο",
           "variants": null,
           "price": "4",
           "disabled": false
@@ -416,31 +410,19 @@
           "variants": null,
           "price": "3.5",
           "disabled": false
-        },
-        "FreddoCappuccinowithCaramel": {
-          "name": "Φρέντο καπουτσίνο με καραμέλα",
-          "variants": null,
-          "price": "4",
-          "disabled": false
         }
       },
       "notes": [
-        "Προσθήκη φυτικής κρέμας: + 0,50 €",
-        "Προσθήκη σιροπιού καραμέλας, φουντουκιού ή φράουλας: + 0,50 €"
+        "Προσθήκη σιροπιού καραμέλας, φουντουκιού, φράουλας ή καρύδας: + 0,50 €",
+        "Προαιρετική προσθήκη σαντιγί, γάλακτος βρώμης ή γάλακτος αμυγδάλου"
       ]
     },
-    "Beverage": {
-      "name": "Ρόφημα",
+    "beverages": {
+      "name": "Ροφήματα",
       "products": {
-        "HotTea": {
-          "name": "Ζεστό τσάι με γεύση",
-          "variants": [
-            "Μάυρο",
-            "Πράσινο",
-            "Χαμομήλι",
-            "Τζίντζερ",
-            "Φρούτα του δάσους"
-          ],
+        "Tea": {
+          "name": "Ζεστό τσάι",
+          "variants": ["Μαύρο", "Πράσινο", "Χαμομήλι", "Τζίντζερ"],
           "price": "3",
           "disabled": false
         },
@@ -450,22 +432,10 @@
           "price": "3.5",
           "disabled": false
         },
-        "ChocolateFlavored": {
-          "name": "Σοκολάτα με γεύση",
-          "variants": ["Ζεστή ή κρύα", "Καραμέλα", "Φουντούκι", "Φράουλα"],
-          "price": "4",
-          "disabled": false
-        },
         "ChocolateWhite": {
           "name": "Σοκολάτα λευκή",
           "variants": ["Ζεστή ή κρύα"],
           "price": "4",
-          "disabled": false
-        },
-        "ChocolateWhiteFlavored": {
-          "name": "Σοκολάτα λευκή με γεύση",
-          "variants": ["Ζεστή ή κρύα", "Καραμέλα", "Φουντούκι", "Φράουλα"],
-          "price": "4.5",
           "disabled": false
         },
         "Mochaccino": {
@@ -473,32 +443,22 @@
           "variants": ["Ζεστό ή κρύο"],
           "price": "4",
           "disabled": false
-        },
-        "MochaccinoFlavored": {
-          "name": "Μοκατσίνο με γεύση",
-          "variants": ["Ζεστό ή Κρύο", "Καραμέλα", "Φουντούκι", "Φράουλα"],
-          "price": "4.5",
-          "disabled": false
-        },
-        "Milkshake": {
-          "name": "Μιλκσέϊκ",
-          "variants": ["Σοκολάτα", "Βανίλια"],
-          "price": "4",
-          "disabled": true
         }
       },
-      "notes": ["Προσθήκη σιροπιού καραμέλας, φουντουκιού ή φράουλας: + 0,50 €"]
+      "notes": [
+        "Προσθήκη σιροπιού καραμέλας, φουντουκιού, φράουλας ή καρύδας: + 0,50 €"
+      ]
     },
-    "Refreshment": {
-      "name": "Αναψυκτικό",
+    "refreshments": {
+      "name": "Αναψυκτικά",
       "products": {
         "CocaCola": {
           "name": "Coca-Cola 330ml",
           "variants": [
             "Original",
             "Light",
-            "Xωρίς ζάχαρη",
-            "Xωρίς ζάχαρη & χωρίς καφεΐνη"
+            "Χωρίς ζάχαρη",
+            "Χωρίς ζάχαρη & χωρίς καφεΐνη"
           ],
           "price": "3",
           "disabled": false
@@ -515,47 +475,39 @@
           "disabled": false
         },
         "FantaΕxotic": {
-          "name": "Fanta Exotic χωρίς ζάχαρη 500ml",
-          "variants": null,
-          "price": "3.5",
-          "disabled": false
-        },
-        "FantaShokata": {
-          "name": "Fanta Shokata 500ml",
+          "name": "Fanta Exotic χωρίς ζάχαρη 330ml",
           "variants": null,
           "price": "3.5",
           "disabled": false
         },
         "Schweppes": {
           "name": "Schweppes 330ml",
-          "variants": ["Σόδα", "Τόνικ", "Λεμόνι", "Πορτοκάλι", "Pink"],
+          "variants": ["Σόδα", "Τόνικ"],
           "price": "3",
+          "disabled": false
+        },
+        "SchweppesFlavor": {
+          "name": "Schweppes με γεύση 330ml",
+          "variants": ["Λεμονάδα", "Πορτοκαλάδα", "Pink Grapefruit"],
+          "price": "3.5",
           "disabled": false
         },
         "Sprite": {
           "name": "Sprite 330ml",
-          "variants": null,
-          "price": "3",
-          "disabled": false
-        },
-        "AmitaJuice": {
-          "name": "Χυμός amita 330ml",
-          "variants": [
-            "Motion",
-            "100% Πορτοκάλι",
-            "Πορτοκάλι καρότο λεμόνι χωρίς ζάχαρη",
-            "Βύσσινο",
-            "Μπανάνα",
-            "Ροδάκινο",
-            "Πορτοκάλι βερίκοκο μήλο"
-          ],
+          "variants": ["Χωρίς ζάχαρη"],
           "price": "3",
           "disabled": false
         },
         "AmitaFun": {
-          "name": "Amita FUN! 250ml",
+          "name": "Amita FUN 250ml",
           "variants": ["Φράουλα", "Ανάμικτος 4 φρούτα"],
           "price": "2.5",
+          "disabled": false
+        },
+        "Amita": {
+          "name": "Χυμός amita 330ml",
+          "variants": ["Motion", "100% Πορτοκάλι", "Βύσσινο", "Ροδάκινο"],
+          "price": "3",
           "disabled": false
         },
         "LiptonIcedTea": {
@@ -565,28 +517,25 @@
           "disabled": false
         },
         "FuzeIcedTea": {
-          "name": "Fuze τσάι 500ml",
-          "variants": ["Καρπούζι", "Ροδάκινο", "Λεμόνι", "Passion fruit"],
+          "name": "Fuze τσάι 330ml",
+          "variants": ["Ροδάκινο", "Λεμόνι"],
           "price": "3.5",
           "disabled": false
         },
-        "OMGTea": {
-          "name": "OMG Bubble Tea 270ml",
+        "BubbleTea": {
+          "name": "Bubble Tea 275ml",
           "variants": [
-            "Φρούτα του πάθους - Μήλο",
+            "Φρούτα του πάθους - Πράσινο μήλο",
+            "Λεμόνι - Φράουλα",
             "Λεμόνι - Μάνγκο",
-            "Ροδάκινο - Φράουλα"
+            "Ροδάκινο - Φράουλα",
+            "Ροδάκινο - Μάνγκο",
+            "Βατόμουρο - Μύρτιλο"
           ],
           "price": "4.5",
           "disabled": false
         },
-        "Slush": {
-          "name": "Γρανίτα 330ml",
-          "variants": ["Φράουλα", "Λεμόνι"],
-          "price": "3.5",
-          "disabled": false
-        },
-        "LemonodasosJuice": {
+        "Lemonodasos": {
           "name": "Χυμός λεμονόδασος",
           "variants": [
             "100% Λεμόνι",
@@ -597,14 +546,15 @@
             "Μαστίχα Χίου",
             "Φραουλάδα με χυμό λεμόνι",
             "Πορτοκαλάδα",
-            "Γκρέϊπφρουτ"
+            "Γκρέϊπφρουτ",
+            "Λεμονάδα με φύλλα αποξηραμένου ιβίσκου"
           ],
           "price": "5",
           "disabled": false
         },
         "Mastiqua": {
           "name": "Μαστιχόνερο 330ml",
-          "variants": ["Ανθρακούχο", "Λεμόνι"],
+          "variants": ["Ανθρακούχο", "Greek Λεμονάδα", "Pink", "Sour Cherry"],
           "price": "4",
           "disabled": false
         },
@@ -620,6 +570,12 @@
           "price": "4",
           "disabled": false
         },
+        "Slush": {
+          "name": "Γρανίτα 330ml",
+          "variants": ["Φράουλα", "Λεμόνι"],
+          "price": "3.5",
+          "disabled": false
+        },
         "TableWater": {
           "name": "Εμφιαλωμένο νερό 500ml",
           "variants": null,
@@ -629,46 +585,104 @@
       },
       "notes": null
     },
-    "Energy": {
-      "name": "Ενεργειακό ποτό",
+    "energy": {
+      "name": "Ενεργειακά ποτά",
       "products": {
         "RedBull": {
           "name": "Red Bull 250ml",
-          "variants": ["Original", "Light"],
+          "variants": [
+            "Original",
+            "Sugarfree",
+            "Pink Grapefruit & Blossom",
+            "Coconut Berry",
+            "White Peach"
+          ],
           "price": "5",
           "disabled": false
         },
         "Hell": {
           "name": "Hell 250ml",
-          "variants": null,
+          "variants": [
+            "Classic",
+            "Zero Classic",
+            "Strong Watermelon",
+            "Strong Apple",
+            "Strong Red Grape",
+            "Black Cherry"
+          ],
           "price": "3",
           "disabled": false
         }
       },
       "notes": null
     },
-    "Spirits": {
-      "name": "Οινοπνευματώδη",
+    "alcoholic": {
+      "name": "Αλκοολούχα ποτά",
       "products": {
-        "RegularDrink": {
-          "name": "Ποτό απλό",
-          "variants": [
-            "Absolut Vodka",
-            "Gordons Gin",
-            "Famous Grouse",
-            "Campari",
-            "Jose Cuervo Blanco",
-            "Jose Cuervo Gold",
-            "Skinos",
-            "Bacardi Carta Blanca"
-          ],
-          "price": "6",
+        "GordonsGin": {
+          "name": "Gordon's Gin",
+          "variants": null,
+          "price": "7",
           "disabled": false
         },
-        "SpecialDrink": {
-          "name": "Ποτό special",
-          "variants": ["Chivas Regal 12"],
+        "AbsolutVodka": {
+          "name": "Absolut Vodka",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "FamousGrouse": {
+          "name": "Famous Grouse",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "TullamoreDew": {
+          "name": "Tullamore Dew",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "ChivasRegal": {
+          "name": "Chivas Regal 12",
+          "variants": null,
           "price": "8",
+          "disabled": false
+        },
+        "CuervoBlanco": {
+          "name": "Jose Cuervo Blanco",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "CuervoGold": {
+          "name": "Jose Cuervo Gold",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "Campari": {
+          "name": "Campari",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "Bacardi": {
+          "name": "Bacardi Carta Blanca",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "Aperol": {
+          "name": "Aperol",
+          "variants": null,
+          "price": "7",
+          "disabled": false
+        },
+        "Skinos": {
+          "name": "Skinos",
+          "variants": null,
+          "price": "7",
           "disabled": false
         },
         "AppleCider": {
@@ -678,22 +692,22 @@
           "disabled": false
         },
         "GordonsSpace": {
-          "name": "Gordon's space 275ml",
+          "name": "Gordon's Space 330ml",
           "variants": null,
           "price": "5",
           "disabled": false
         },
         "MiniWine187ml": {
           "name": "Ατομικό κρασί 187ml",
-          "variants": ["Ημίγλυκο Λευκό/Κόκκινο", "Ξηρό Λευκό/Κόκκινο"],
+          "variants": ["Ημίγλυκο λευκό ή κόκκινο", "Ξηρό λευκό ή κόκκινο"],
           "price": "4.5",
           "disabled": false
         }
       },
       "notes": null
     },
-    "Cocktail": {
-      "name": "Κόκτεϊλ",
+    "cocktails": {
+      "name": "Κόκτεϊλς",
       "products": {
         "AperolSpritz": {
           "name": "Άπερολ σπρίντζ",
@@ -770,8 +784,8 @@
       },
       "notes": null
     },
-    "Beer": {
-      "name": "Μπύρα",
+    "beers": {
+      "name": "Μπύρες",
       "products": {
         "Vergina": {
           "name": "Βεργίνα 330ml",
@@ -787,12 +801,6 @@
         },
         "Heineken": {
           "name": "Heineken 330ml",
-          "variants": null,
-          "price": "4",
-          "disabled": false
-        },
-        "HeinekenZero": {
-          "name": "Heineken χωρίς αλκοόλ 330ml",
           "variants": null,
           "price": "4",
           "disabled": false
@@ -832,17 +840,11 @@
           "variants": null,
           "price": "4",
           "disabled": false
-        },
-        "WeissDraftBeer": {
-          "name": "Βαρελίσια weiss 400ml",
-          "variants": null,
-          "price": "4",
-          "disabled": true
         }
       },
       "notes": null
     },
-    "Food": {
+    "foods": {
       "name": "Φαγητό",
       "products": {
         "ToastCheese": {
@@ -863,7 +865,7 @@
           "price": "2.5",
           "disabled": false
         },
-        "FriedFries": {
+        "FrenchFries": {
           "name": "Tηγανητές πατάτες",
           "variants": null,
           "price": "2.5",
@@ -871,7 +873,13 @@
         },
         "ChickenTortilla": {
           "name": "Τορτίγια κοτόπουλο",
-          "variants": ["Κοτοσαλάτα", "Ντομάτα", "Μαρούλι", "Καλαμπόκι"],
+          "variants": [
+            "Φιλέτο κοτόπουλο",
+            "Κοτοσαλάτα",
+            "Ντομάτα",
+            "Μαρούλι",
+            "Καλαμπόκι"
+          ],
           "price": "4.5",
           "disabled": false
         },
@@ -917,7 +925,7 @@
           "price": "5.5",
           "disabled": false
         },
-        "ColdCutsVariety": {
+        "BeerPlatter": {
           "name": "Ποικιλία μπύρας",
           "variants": null,
           "price": "9",
@@ -926,177 +934,118 @@
       },
       "notes": null
     },
-    "Pizza": {
-      "name": "Πίτσα",
+    "pizzas": {
+      "name": "Πίτσες & Pinsa Romana",
       "products": {
-        "MargheritaPizza": {
-          "name": "Πίτσα μαργαρίτα",
-          "variants": ["Γκούντα", "Σάλτσα ντομάτας", "Βασιλικός", "Ντομάτα"],
+        "PinsaMargherita": {
+          "name": "Pinsa Romana Μαργαρίτα",
+          "variants": ["Σάλτσα ντομάτας", "Μοτσαρέλα", "Βασιλικός"],
           "price": "8.5",
           "disabled": false
         },
-        "SpecialPizza": {
-          "name": "Πίτσα special",
+        "PinsaSpecial": {
+          "name": "Pinsa Romana Σπέσιαλ",
           "variants": [
-            "Γκούντα",
+            "Σάλτσα ντομάτας",
             "Μοτσαρέλα",
-            "Μπέϊκον",
+            "Μπέικον",
             "Πράσινη πιπεριά",
-            "Μανιτάρια",
-            "Σάλτσα ντομάτας"
+            "Μανιτάρια"
           ],
           "price": "9",
           "disabled": false
         },
-        "FourCheesePizza": {
-          "name": "Πίτσα 4 τυριά",
+        "PinsaFourCheese": {
+          "name": "Pinsa Romana Τέσσερα Τυριά",
           "variants": [
+            "Σάλτσα ντομάτας",
+            "Μοτσαρέλα",
             "Τσένταρ",
             "Γκούντα",
-            "Γκούντα Καπνιστό",
-            "Μοτσαρέλα",
-            "Σάλτσα ντομάτας"
+            "Καπνιστό Γκούντα"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
-        "GreekPizza": {
-          "name": "Πίτσα ελληνική",
+        "PinsaGreek": {
+          "name": "Pinsa Romana Ελληνική",
           "variants": [
+            "Σάλτσα ντομάτας",
+            "Μοτσαρέλα",
             "Φέτα",
             "Ελιές",
             "Ντομάτα",
-            "Γκούντα",
             "Ρίγανη",
-            "Κρεμμύδι",
-            "Σάλτσα ντομάτας"
+            "Κρεμμύδι"
           ],
           "price": "9",
           "disabled": false
         },
-        "ProsciuttoPizza": {
-          "name": "Πίτσα προσούτο",
+        "PinsaProsciutto": {
+          "name": "Pinsa Romana Προσούτο",
           "variants": [
-            "Προσούτο",
+            "Σάλτσα ντομάτας",
             "Μοτσαρέλα",
             "Τσένταρ",
-            "Ρόκα",
-            "Σάλτσα ντομάτας"
+            "Προσούτο",
+            "Ρόκα"
           ],
           "price": "9",
           "disabled": false
         },
-        "VegetarianPizza": {
-          "name": "Πίτσα vegetarian",
+        "PinsaVegetarian": {
+          "name": "Pinsa Romana Χορτοφαγική",
           "variants": [
+            "Σάλτσα ντομάτας",
             "Νηστίσιμο κασέρι",
             "Καλαμπόκι",
             "Πράσινη πιπεριά",
             "Μανιτάρια",
             "Ελιές"
           ],
-          "price": "8.5",
+          "price": "9",
           "disabled": false
         },
-        "ChickenPizza": {
-          "name": "Πίτσα κοτόπουλο",
+        "PinsaChicken": {
+          "name": "Pinsa Romana Κοτόπουλο",
           "variants": [
+            "Σάλτσα ντομάτας",
+            "Μοτσαρέλα",
             "Κοτόπουλο",
             "Τυρί κρέμα",
             "Βασιλικός",
             "Καλαμπόκι",
-            "Σως μουστάρδας",
-            "Γκούντα"
+            "Σως μουστάρδας"
           ],
           "price": "9",
           "disabled": false
         },
-        "ClassicCrepe": {
-          "name": "Κρέπα κλασική",
-          "variants": ["Γκούντα", "Καπνιστή γαλοπούλα"],
-          "price": "2.5",
-          "disabled": true
-        },
-        "LightCrepe": {
-          "name": "Κρέπα light",
+        "PizzaSpianataPicante": {
+          "name": "Πίτσα Σπιανάτα Πικάντε",
           "variants": [
-            "Καπνιστή γαλοπούλα",
-            "Καλαμπόκι",
-            "Τυρί χαμηλών λιπαρών",
-            "Ντομάτα"
+            "Σάλτσα ντομάτας",
+            "Μοτσαρέλα",
+            "Σαλάμι σπιανάτα πικάντε"
           ],
-          "price": "3.5",
-          "disabled": true
+          "price": "9",
+          "disabled": false
         },
-        "GreekCrepe": {
-          "name": "Κρέπα ελληνική",
-          "variants": ["Φέτα", "Ντομάτα", "Ελιές", "Πιπεριά", "Σως γιαουρτιού"],
-          "price": "4",
-          "disabled": true
+        "PizzaConPancettaAffumicata": {
+          "name": "Πίτσα με Καπνιστή Πανσέτα",
+          "variants": ["Σάλτσα ντομάτας", "Μοτσαρέλα", "Καπνιστή πανσέτα"],
+          "price": "9",
+          "disabled": false
         },
-        "SmokedCrepe": {
-          "name": "Κρέπα καπνιστή",
-          "variants": [
-            "Καπνιστή μπριζόλα",
-            "Ντομάτα",
-            "Τυροκαυτερή",
-            "Κεφαλοτύρι"
-          ],
-          "price": "4",
-          "disabled": true
-        },
-        "PhiladelphiaCrepe": {
-          "name": "Κρέπα philadelphia",
-          "variants": ["Γκούντα", "Αυγό", "Ντομάτα", "Philadelphia"],
-          "price": "4",
-          "disabled": true
-        },
-        "MediterraneanCrepe": {
-          "name": "Κρέπα mediterranean",
-          "variants": [
-            "Φιλέτο κοτόπουλο",
-            "Τσένταρ",
-            "Καλαμπόκι",
-            "Ντομάτα",
-            "Τυροσαλάτα"
-          ],
-          "price": "4.5",
-          "disabled": true
-        },
-        "BuenoCrepe": {
-          "name": "Κρέπα bueno",
-          "variants": ["Πραλίνα bueno", "Μπισκότο"],
-          "price": "3",
-          "disabled": true
-        },
-        "DoubleDreamCrepe": {
-          "name": "Κρέπα double dream",
-          "variants": ["Πραλίνα φράουλα", "Μπανάνα", "Μπισκότο", "Τρούφα"],
-          "price": "4.5",
-          "disabled": true
-        },
-        "EnergyCrepe": {
-          "name": "Κρέπα energy",
-          "variants": ["Nutella", "Μπανάνα", "Καρύδι", "Super food"],
-          "price": "4.5",
-          "disabled": true
-        },
-        "ChocolamaniaCrepe": {
-          "name": "Κρέπα σοκολατομάνια",
-          "variants": ["Πραλίνα σοκολάτα", "Oreo", "Smarties"],
-          "price": "5",
-          "disabled": true
-        },
-        "OnIceCrepe": {
-          "name": "Κρέπα on ice",
-          "variants": ["Παγωτό", "Πραλίνα σοκολάτα", "Oreo"],
-          "price": "5",
-          "disabled": true
+        "PizzaMargheritaCroccantina": {
+          "name": "Πίτσα Μαργαρίτα",
+          "variants": ["Σάλτσα ντομάτας", "Μοτσαρέλα", "Βασιλικός"],
+          "price": "8.5",
+          "disabled": false
         }
       },
       "notes": null
     },
-    "Burger": {
+    "burgers": {
       "name": "Μπέργκερ",
       "products": {
         "YuppiiBurger": {
@@ -1105,7 +1054,7 @@
             "Συνοδεύεται από τηγανητές πατάτες",
             "Ψωμί brioche",
             "Μπιφτέκι",
-            "Μπέϊκον",
+            "Μπέικον",
             "Ντομάτα",
             "Μαρούλι",
             "Σως Μπάρμπεκιου",
@@ -1134,8 +1083,9 @@
             "Ψωμί brioche",
             "Κοτόπουλο πανέ",
             "Σως μουστάρδας",
+            "Μαρούλι",
             "Τσένταρ",
-            "Μαρούλι"
+            "Κέτσαπ"
           ],
           "price": "5.5",
           "disabled": false
@@ -1143,8 +1093,8 @@
       },
       "notes": null
     },
-    "Salad": {
-      "name": "Σαλάτα",
+    "salads": {
+      "name": "Σαλάτες",
       "products": {
         "ChefSalad": {
           "name": "Σαλάτα του Σέφ",
@@ -1188,7 +1138,7 @@
       },
       "notes": null
     },
-    "Snack": {
+    "snacks": {
       "name": "Σνακ",
       "products": {
         "Popcorn": {
@@ -1214,12 +1164,6 @@
           "variants": ["Τσένταρ", "Κόκκινη σάλτσα"],
           "price": "4",
           "disabled": false
-        },
-        "Churros": {
-          "name": "Churros",
-          "variants": null,
-          "price": "3",
-          "disabled": true
         }
       },
       "notes": null
