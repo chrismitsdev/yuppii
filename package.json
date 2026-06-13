@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@adamscybot/react-leaflet-component-marker": "^2.0.3",
-    "@biomejs/biome": "^2.4.16",
+    "@biomejs/biome": "^2.5.0",
     "@radix-ui/react-accordion": "^1.2.13",
     "@radix-ui/react-dialog": "^1.1.16",
     "@radix-ui/react-scroll-area": "^1.2.11",
@@ -23,7 +23,7 @@
     "@radix-ui/react-tooltip": "^1.2.9",
     "@radix-ui/react-visually-hidden": "^1.2.5",
     "@react-email/ui": "^6.6.0",
-    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/postcss": "^4.3.1",
     "@types/leaflet": "^1.9.21",
     "@types/node": "^25.9.3",
     "@types/react": "^19.2.17",
@@ -48,7 +48,7 @@
     "rimraf": "^6.1.3",
     "sharp": "^0.35.1",
     "tailwind-merge": "^3.6.0",
-    "tailwindcss": "^4.3.0",
+    "tailwindcss": "^4.3.1",
     "typescript": "^6.0.3",
     "valibot": "^1.4.1",
     "vaul": "^1.1.2"
