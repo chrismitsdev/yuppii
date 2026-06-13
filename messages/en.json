@@ -1026,6 +1026,12 @@
           "price": "9",
           "disabled": false
         },
+        "PizzaMargheritaCroccantina": {
+          "name": "Pizza Margherita Croccantina",
+          "variants": ["Tomato sauce", "Mozzarella", "Basil"],
+          "price": "8.5",
+          "disabled": false
+        },
         "PizzaSpianataPicante": {
           "name": "Pizza Spianata Piccante",
           "variants": ["Tomato sauce", "Mozzarella", "Spicy Spianata salami"],
@@ -1036,12 +1042,6 @@
           "name": "Pizza con Pancetta Affumicata",
           "variants": ["Tomato sauce", "Mozzarella", "Smoked pancetta"],
           "price": "9",
-          "disabled": false
-        },
-        "PizzaMargheritaCroccantina": {
-          "name": "Pizza Margherita Croccantina",
-          "variants": ["Tomato sauce", "Mozzarella", "Basil"],
-          "price": "8.5",
           "disabled": false
         }
       },
