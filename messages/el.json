@@ -610,7 +610,7 @@
             "Strong Red Grape",
             "Black Cherry"
           ],
-          "price": "3",
+          "price": "3.5",
           "disabled": false
         }
       },
@@ -805,6 +805,18 @@
           "price": "4",
           "disabled": false
         },
+        "Fix": {
+          "name": "Φιξ 330ml",
+          "variants": null,
+          "price": "4",
+          "disabled": false
+        },
+        "FixFree": {
+          "name": "Φιξ χωρίς αλκοόλ 330ml",
+          "variants": null,
+          "price": "4",
+          "disabled": false
+        },
         "Amstel": {
           "name": "Amstel 330ml",
           "variants": null,
@@ -813,12 +825,6 @@
         },
         "AmstelFree": {
           "name": "Amstel χωρίς αλκοόλ 330ml",
-          "variants": null,
-          "price": "4",
-          "disabled": false
-        },
-        "FixFree": {
-          "name": "Fix χωρίς αλκοόλ 330ml",
           "variants": null,
           "price": "4",
           "disabled": false
@@ -844,7 +850,7 @@
       },
       "notes": null
     },
-    "foods": {
+    "food": {
       "name": "Φαγητό",
       "products": {
         "ToastCheese": {

@@ -18,7 +18,6 @@ const flags: Record<
 }
 
 function LocaleCycle({
-  variant = 'accent',
   onClick,
   ...props
 }: Omit<React.ComponentProps<typeof IconButton>, 'aria-label'>) {
@@ -42,7 +41,6 @@ function LocaleCycle({
   return (
     <IconButton
       aria-label={t('label')}
-      variant={variant}
       onClick={handleClick}
       disabled={isPending}
       {...props}

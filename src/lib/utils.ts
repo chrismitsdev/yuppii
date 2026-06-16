@@ -33,7 +33,7 @@ export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
   alcoholic: GlassWater,
   cocktails: Martini,
   beers: Beer,
-  foods: Utensils,
+  food: Utensils,
   pizzas: Pizza,
   burgers: HamburgerIcon,
   salads: SaladIcon,
