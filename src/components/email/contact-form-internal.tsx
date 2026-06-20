@@ -60,7 +60,9 @@ function ContactFormInternal({
             </Section>
 
             <Hr
-              style={{borderTop: '1px solid #020303'}}
+              style={{
+                borderTop: '1px solid #020303'
+              }}
               className='my-0'
             />
 

@@ -395,9 +395,7 @@
         },
         "Latte": {
           "name": "Latte",
-          "variants": [
-            "Hot or cold"
-          ],
+          "variants": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
@@ -424,36 +422,25 @@
       "products": {
         "Tea": {
           "name": "Hot tea",
-          "variants": [
-            "Black",
-            "Green",
-            "Chamomile",
-            "Ginger"
-          ],
+          "variants": ["Black", "Green", "Chamomile", "Ginger"],
           "price": "3",
           "disabled": false
         },
         "Chocolate": {
           "name": "Chocolate",
-          "variants": [
-            "Hot or cold"
-          ],
+          "variants": ["Hot or cold"],
           "price": "3.5",
           "disabled": false
         },
         "ChocolateWhite": {
           "name": "White chocolate",
-          "variants": [
-            "Hot or cold"
-          ],
+          "variants": ["Hot or cold"],
           "price": "4",
           "disabled": false
         },
         "Mochaccino": {
           "name": "Mochaccino",
-          "variants": [
-            "Hot or cold"
-          ],
+          "variants": ["Hot or cold"],
           "price": "4",
           "disabled": false
         }
@@ -495,67 +482,43 @@
         },
         "Schweppes": {
           "name": "Schweppes 330ml",
-          "variants": [
-            "Soda",
-            "Tonic"
-          ],
+          "variants": ["Soda", "Tonic"],
           "price": "3",
           "disabled": false
         },
         "SchweppesFlavor": {
           "name": "Schweppes flavored 330ml",
-          "variants": [
-            "Lemon",
-            "Orangeade",
-            "Pink Grapefruit"
-          ],
+          "variants": ["Lemon", "Orangeade", "Pink Grapefruit"],
           "price": "3.5",
           "disabled": false
         },
         "Sprite": {
           "name": "Sprite 330ml",
-          "variants": [
-            "Zero sugar"
-          ],
+          "variants": ["Zero sugar"],
           "price": "3",
           "disabled": false
         },
         "AmitaFun": {
           "name": "Amita FUN 250ml",
-          "variants": [
-            "Strawberry",
-            "4 fruits mixed"
-          ],
+          "variants": ["Strawberry", "4 fruits mixed"],
           "price": "2.5",
           "disabled": false
         },
         "Amita": {
           "name": "Amita juice 330ml",
-          "variants": [
-            "Motion",
-            "100% Orange",
-            "Sour cherry",
-            "Peach"
-          ],
+          "variants": ["Motion", "100% Orange", "Sour cherry", "Peach"],
           "price": "3",
           "disabled": false
         },
         "LiptonIcedTea": {
           "name": "Lipton iced tea 330ml",
-          "variants": [
-            "Lemon",
-            "Peach",
-            "Green"
-          ],
+          "variants": ["Lemon", "Peach", "Green"],
           "price": "3.5",
           "disabled": false
         },
         "FuzeIcedTea": {
           "name": "Fuze iced tea 330ml",
-          "variants": [
-            "Peach",
-            "Lemon"
-          ],
+          "variants": ["Peach", "Lemon"],
           "price": "3.5",
           "disabled": false
         },
@@ -591,12 +554,7 @@
         },
         "Mastiqua": {
           "name": "Mastiqua 330ml",
-          "variants": [
-            "Sparkling",
-            "Greek Lemonade",
-            "Pink",
-            "Sour Cherry"
-          ],
+          "variants": ["Sparkling", "Greek Lemonade", "Pink", "Sour Cherry"],
           "price": "4",
           "disabled": false
         },
@@ -614,10 +572,7 @@
         },
         "Slush": {
           "name": "Slush 330ml",
-          "variants": [
-            "Strawberry",
-            "Lemon"
-          ],
+          "variants": ["Strawberry", "Lemon"],
           "price": "3.5",
           "disabled": false
         },
@@ -744,10 +699,7 @@
         },
         "MiniWine187ml": {
           "name": "Mini wine 187ml",
-          "variants": [
-            "Semi-sweet white or red",
-            "Dry white or red"
-          ],
+          "variants": ["Semi-sweet white or red", "Dry white or red"],
           "price": "4.5",
           "disabled": false
         }
@@ -772,54 +724,31 @@
         },
         "JungleRide": {
           "name": "Jungle Ride",
-          "variants": [
-            "Vodka",
-            "Melon",
-            "Coconut",
-            "Pineapple"
-          ],
+          "variants": ["Vodka", "Melon", "Coconut", "Pineapple"],
           "price": "8",
           "disabled": false
         },
         "SunsetCarussel": {
           "name": "Sunset Carussel",
-          "variants": [
-            "Gin",
-            "Puree watermelon",
-            "Aperol",
-            "Lime"
-          ],
+          "variants": ["Gin", "Puree watermelon", "Aperol", "Lime"],
           "price": "8",
           "disabled": false
         },
         "MangoRush": {
           "name": "Mango Rush",
-          "variants": [
-            "Tequilla",
-            "Lime",
-            "Spicy mango"
-          ],
+          "variants": ["Tequilla", "Lime", "Spicy mango"],
           "price": "8",
           "disabled": false
         },
         "GingerRush": {
           "name": "Ginger Rush",
-          "variants": [
-            "Gin",
-            "Lemonade ginger",
-            "Lime"
-          ],
+          "variants": ["Gin", "Lemonade ginger", "Lime"],
           "price": "8",
           "disabled": false
         },
         "PinkCloud": {
           "name": "Pink Cloud (Alcohol free)",
-          "variants": [
-            "Strawberry",
-            "Lemonade ginger",
-            "Soda",
-            "Lime"
-          ],
+          "variants": ["Strawberry", "Lemonade ginger", "Soda", "Lime"],
           "price": "5",
           "disabled": false
         },
@@ -864,12 +793,7 @@
         },
         "LimoncelloSpritz": {
           "name": "Limoncello Spritz",
-          "variants": [
-            "Limoncello",
-            "Prosecco",
-            "Soda",
-            "Lemon"
-          ],
+          "variants": ["Limoncello", "Prosecco", "Soda", "Lemon"],
           "price": "7.5",
           "disabled": false
         },
@@ -893,10 +817,7 @@
         },
         "FlavoredMojito": {
           "name": "Flavored Mojito",
-          "variants": [
-            "Strawberry",
-            "Passion fruit"
-          ],
+          "variants": ["Strawberry", "Passion fruit"],
           "price": "7.5",
           "disabled": false
         },
@@ -932,20 +853,13 @@
         },
         "Daiquiri": {
           "name": "Daiquiri",
-          "variants": [
-            "Strawberry",
-            "Mango",
-            "Passion fruit"
-          ],
+          "variants": ["Strawberry", "Mango", "Passion fruit"],
           "price": "7.5",
           "disabled": false
         },
         "Caipirinha": {
           "name": "Caipirinha",
-          "variants": [
-            "Original",
-            "Ursus"
-          ],
+          "variants": ["Original", "Ursus"],
           "price": "7.5",
           "disabled": false
         },
@@ -1131,11 +1045,7 @@
       "products": {
         "PinsaMargherita": {
           "name": "Pinsa Romana Margherita",
-          "variants": [
-            "Tomato sauce",
-            "Mozzarella",
-            "Basil"
-          ],
+          "variants": ["Tomato sauce", "Mozzarella", "Basil"],
           "price": "8.5",
           "disabled": false
         },
@@ -1217,31 +1127,19 @@
         },
         "PizzaMargheritaCroccantina": {
           "name": "Pizza Margherita Croccantina",
-          "variants": [
-            "Tomato sauce",
-            "Mozzarella",
-            "Basil"
-          ],
+          "variants": ["Tomato sauce", "Mozzarella", "Basil"],
           "price": "8.5",
           "disabled": false
         },
         "PizzaSpianataPicante": {
           "name": "Pizza Spianata Piccante",
-          "variants": [
-            "Tomato sauce",
-            "Mozzarella",
-            "Spicy Spianata salami"
-          ],
+          "variants": ["Tomato sauce", "Mozzarella", "Spicy Spianata salami"],
           "price": "9",
           "disabled": false
         },
         "PizzaConPancettaAffumicata": {
           "name": "Pizza con Pancetta Affumicata",
-          "variants": [
-            "Tomato sauce",
-            "Mozzarella",
-            "Smoked pancetta"
-          ],
+          "variants": ["Tomato sauce", "Mozzarella", "Smoked pancetta"],
           "price": "9",
           "disabled": false
         }
@@ -1364,10 +1262,7 @@
         },
         "NachosWithSauce": {
           "name": "Nachos with sauce",
-          "variants": [
-            "Cheddar",
-            "Red sauce"
-          ],
+          "variants": ["Cheddar", "Red sauce"],
           "price": "4",
           "disabled": false
         }
