@@ -2,7 +2,13 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+    "includes": [
+      "**",
+      "!node_modules",
+      "!.next",
+      "!dist",
+      "!build"
+    ]
   },
   "vcs": {
     "enabled": true,
@@ -15,7 +21,7 @@
     "attributePosition": "multiline",
     "bracketSpacing": false,
     "bracketSameLine": false,
-    "expand": "auto",
+    "expand": "always",
     "lineEnding": "auto",
     "formatWithErrors": false,
     "indentWidth": 2,
