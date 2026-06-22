@@ -1,4 +1,4 @@
-import {Slot} from '@radix-ui/react-slot'
+import {Slot} from 'radix-ui'
 import {cn} from '@/src/lib/utils'
 
 interface ContainerProps extends React.ComponentPropsWithRef<'div'> {
@@ -6,7 +6,7 @@ interface ContainerProps extends React.ComponentPropsWithRef<'div'> {
 }
 
 function Container({className, asChild = false, ...props}: ContainerProps) {
-  const Comp = asChild ? Slot : 'div'
+  const Comp = asChild ? Slot.Root : 'div'
 
   return (
     <Comp

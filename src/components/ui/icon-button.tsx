@@ -1,5 +1,5 @@
-import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
+import {Slot} from 'radix-ui'
 
 const iconButtonProps = cva(
   [
@@ -77,7 +77,7 @@ function IconButton({
   asChild = false,
   ...props
 }: IconButtonProps) {
-  const Comp = asChild ? Slot : 'button'
+  const Comp = asChild ? Slot.Root : 'button'
 
   return (
     <Comp

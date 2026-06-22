@@ -1,22 +1,16 @@
 'use client'
 
-import {
-  Corner,
-  Root,
-  Scrollbar,
-  Thumb,
-  Viewport
-} from '@radix-ui/react-scroll-area'
+import {ScrollArea as RadixScrollArea} from 'radix-ui'
 import {cn} from '@/src/lib/utils'
 
-const ScrollareaCorner = Corner
+const ScrollareaCorner = RadixScrollArea.Corner
 
 function Scrollarea({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Root>) {
+}: React.ComponentPropsWithRef<typeof RadixScrollArea.Root>) {
   return (
-    <Root
+    <RadixScrollArea.Root
       className={cn('relative overflow-hidden', className)}
       {...props}
     />
@@ -26,9 +20,9 @@ function Scrollarea({
 function ScrollareaViewport({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Viewport>) {
+}: React.ComponentPropsWithRef<typeof RadixScrollArea.Viewport>) {
   return (
-    <Viewport
+    <RadixScrollArea.Viewport
       className={cn('h-full w-full rounded-[inherit]', className)}
       {...props}
     />
@@ -39,9 +33,9 @@ function ScrollareaBar({
   className,
   orientation = 'vertical',
   ...props
-}: React.ComponentPropsWithRef<typeof Scrollbar>) {
+}: React.ComponentPropsWithRef<typeof RadixScrollArea.Scrollbar>) {
   return (
-    <Scrollbar
+    <RadixScrollArea.Scrollbar
       className={cn(
         'flex touch-none select-none transition-colors',
         orientation === 'vertical' && 'h-full w-2.5 p-px',
@@ -51,8 +45,8 @@ function ScrollareaBar({
       orientation={orientation}
       {...props}
     >
-      <Thumb className='flex-1 relative rounded-full bg-accent/30 hover:bg-accent/50 transition-colors' />
-    </Scrollbar>
+      <RadixScrollArea.Thumb className='flex-1 relative rounded-full bg-accent/30 hover:bg-accent/50 transition-colors' />
+    </RadixScrollArea.Scrollbar>
   )
 }
 

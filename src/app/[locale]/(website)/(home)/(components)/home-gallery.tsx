@@ -23,7 +23,6 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@/src/components/ui/dialog'
-import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 
 function HomeGallery() {
   const [index, setIndex] = useState(0)
@@ -76,9 +75,9 @@ function HomeGallery() {
               aria-describedby={undefined}
             >
               <DialogClose />
-              <VisuallyHidden>
-                <DialogTitle>Home page gallery images</DialogTitle>
-              </VisuallyHidden>
+              <DialogTitle className='sr-only'>
+                Home page gallery images
+              </DialogTitle>
               <Carousel options={{startIndex: index, loop: true}}>
                 <CarouselViewport className='rounded'>
                   <SlidesContainer>{renderedSlides}</SlidesContainer>

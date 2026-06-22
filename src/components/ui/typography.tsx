@@ -1,5 +1,5 @@
-import {Slot} from '@radix-ui/react-slot'
 import {cva, type VariantProps} from 'class-variance-authority'
+import {Slot} from 'radix-ui'
 
 const typographyProps = cva(['block', 'transition-colors', 'text-balance'], {
   variants: {
@@ -40,7 +40,7 @@ function Typography({
   asChild = false,
   ...props
 }: TypographyProps) {
-  const Comp = asChild ? Slot : 'span'
+  const Comp = asChild ? Slot.Root : 'span'
 
   return (
     <Comp

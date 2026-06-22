@@ -1,30 +1,21 @@
 'use client'
 
-import {
-  Close,
-  Content,
-  Description,
-  Overlay,
-  Portal,
-  Root,
-  Title,
-  Trigger
-} from '@radix-ui/react-dialog'
 import {cva, type VariantProps} from 'class-variance-authority'
 import {XIcon} from 'lucide-react'
+import {Dialog} from 'radix-ui'
 import {IconButton} from '@/src/components/ui/icon-button'
 import {cn} from '@/src/lib/utils'
 
-const Sheet = Root
-const SheetTrigger = Trigger
-const SheetPortal = Portal
+const Sheet = Dialog.Root
+const SheetTrigger = Dialog.Trigger
+const SheetPortal = Dialog.Portal
 
 function SheetOverlay({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Overlay>) {
+}: React.ComponentPropsWithRef<typeof Dialog.Overlay>) {
   return (
-    <Overlay
+    <Dialog.Overlay
       className={cn(
         'fixed inset-0 z-50 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
         className
@@ -83,10 +74,10 @@ function SheetContent({
   className,
   'aria-describedby': ariaDescribedBy = undefined,
   ...props
-}: React.ComponentPropsWithRef<typeof Content> &
+}: React.ComponentPropsWithRef<typeof Dialog.Content> &
   VariantProps<typeof sheetContentProps>) {
   return (
-    <Content
+    <Dialog.Content
       className={sheetContentProps({side, className})}
       aria-describedby={ariaDescribedBy}
       {...props}
@@ -109,9 +100,9 @@ function SheetHeader({
 function SheetTitle({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Title>) {
+}: React.ComponentPropsWithRef<typeof Dialog.Title>) {
   return (
-    <Title
+    <Dialog.Title
       className={cn('text-xl font-display font-bold', className)}
       {...props}
     />
@@ -121,9 +112,9 @@ function SheetTitle({
 function SheetDescription({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Description>) {
+}: React.ComponentPropsWithRef<typeof Dialog.Description>) {
   return (
-    <Description
+    <Dialog.Description
       className={cn('text-accent', className)}
       {...props}
     />
@@ -143,9 +134,9 @@ function SheetClose({
   className,
   'aria-label': ariaLabel,
   ...props
-}: Omit<React.ComponentPropsWithRef<typeof Close>, 'asChild'>) {
+}: Omit<React.ComponentPropsWithRef<typeof Dialog.Close>, 'asChild'>) {
   return (
-    <Close
+    <Dialog.Close
       className={cn('absolute inset-bs-4 inset-e-4 z-50', className)}
       {...props}
       asChild
@@ -156,7 +147,7 @@ function SheetClose({
       >
         <XIcon />
       </IconButton>
-    </Close>
+    </Dialog.Close>
   )
 }
 

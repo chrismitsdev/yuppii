@@ -1,17 +1,17 @@
 'use client'
 
-import {Content, Header, Item, Root, Trigger} from '@radix-ui/react-accordion'
 import {ChevronDownIcon, ChevronUpIcon} from 'lucide-react'
+import {Accordion as RadixAccordion} from 'radix-ui'
 import {cn} from '@/src/lib/utils'
 
-const Accordion = Root
+const Accordion = RadixAccordion.Root
 
 function AccordionItem({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Item>) {
+}: React.ComponentPropsWithRef<typeof RadixAccordion.Item>) {
   return (
-    <Item
+    <RadixAccordion.Item
       className={cn('overflow-hidden scooped-border transition', className)}
       {...props}
     />
@@ -22,10 +22,10 @@ function AccordionTrigger({
   className,
   children,
   ...props
-}: React.ComponentPropsWithRef<typeof Trigger>) {
+}: React.ComponentPropsWithRef<typeof RadixAccordion.Trigger>) {
   return (
-    <Header>
-      <Trigger
+    <RadixAccordion.Header>
+      <RadixAccordion.Trigger
         className={cn(
           'p-6 w-full flex flex-1 items-center justify-between rounded-lg focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-accent group',
           className
@@ -43,8 +43,8 @@ function AccordionTrigger({
             strokeWidth={3}
           />
         </span>
-      </Trigger>
-    </Header>
+      </RadixAccordion.Trigger>
+    </RadixAccordion.Header>
   )
 }
 
@@ -52,14 +52,14 @@ function AccordionContent({
   className,
   children,
   ...props
-}: React.ComponentPropsWithRef<typeof Content>) {
+}: React.ComponentPropsWithRef<typeof RadixAccordion.Content>) {
   return (
-    <Content
+    <RadixAccordion.Content
       className='data-open:animate-accordion-open data-closed:animate-accordion-close'
       {...props}
     >
       <div className={cn('px-6 pb-6', className)}>{children}</div>
-    </Content>
+    </RadixAccordion.Content>
   )
 }
 

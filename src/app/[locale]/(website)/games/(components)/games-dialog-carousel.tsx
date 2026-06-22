@@ -65,7 +65,6 @@ import {
   SheetTrigger
 } from '@/src/components/ui/sheet'
 import {Typography} from '@/src/components/ui/typography'
-import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 
 type ImageGallery = {
   key: keyof Messages['Pages']['Games']['GamesGallery']['galleries']
@@ -237,9 +236,9 @@ function GamesDialogCarousel() {
               onCloseAutoFocus={handleFocusTrigger}
             >
               <DialogClose />
-              <VisuallyHidden>
-                <DialogTitle>Games page gallery images</DialogTitle>
-              </VisuallyHidden>
+              <DialogTitle className='sr-only'>
+                Games page gallery images
+              </DialogTitle>
               <Carousel options={{startIndex: index, loop: true}}>
                 <CarouselViewport className='rounded'>
                   {renderedSlides && (

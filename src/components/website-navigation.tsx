@@ -33,7 +33,6 @@ import {
   TooltipProvider,
   TooltipTrigger
 } from '@/src/components/ui/tooltip'
-import {VisuallyHidden} from '@/src/components/ui/visually-hidden'
 import {Link, usePathname} from '@/src/i18n/navigation'
 import {LocaleCycle} from './locale-cycle'
 import {IconButton} from './ui/icon-button'
@@ -156,9 +155,7 @@ function MobileNavigation() {
                 aria-hidden
                 className='mb-10 w-1/3! bg-accent/50! shrink-0'
               />
-              <VisuallyHidden>
-                <DrawerTitle>Menu</DrawerTitle>
-              </VisuallyHidden>
+              <DrawerTitle className='sr-only'>Menu</DrawerTitle>
               <div className='h-full flex flex-col gap-y-4'>
                 {renderedLinks}
               </div>

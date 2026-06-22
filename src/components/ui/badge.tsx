@@ -1,4 +1,4 @@
-import {Slot} from '@radix-ui/react-slot'
+import {Slot} from 'radix-ui'
 import {cn} from '@/src/lib/utils'
 
 interface BadgeProps extends React.ComponentPropsWithRef<'div'> {
@@ -6,7 +6,7 @@ interface BadgeProps extends React.ComponentPropsWithRef<'div'> {
 }
 
 function Badge({className, asChild = false, ...props}: BadgeProps) {
-  const Comp = asChild ? Slot : 'span'
+  const Comp = asChild ? Slot.Root : 'span'
 
   return (
     <Comp

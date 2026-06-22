@@ -1,8 +1,8 @@
 'use client'
 
-import {Slot} from '@radix-ui/react-slot'
 import useEmblaCarousel from 'embla-carousel-react'
 import {ChevronLeftIcon, ChevronRightIcon} from 'lucide-react'
+import {Slot} from 'radix-ui'
 import {useCallback, useEffect, useMemo, useState} from 'react'
 import {IconButton} from '@/src/components/ui/icon-button'
 import {CarouselContext, useCarousel} from '@/src/context/carousel-context'
@@ -26,7 +26,7 @@ function Carousel({
   const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins)
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(true)
   const [nextButtonDisabled, setNextButtonDisabled] = useState(true)
-  const Comp = asChild ? Slot : 'div'
+  const Comp = asChild ? Slot.Root : 'div'
 
   const stopAutoplay = useCallback(() => {
     emblaApi?.plugins()?.autoplay?.stop()

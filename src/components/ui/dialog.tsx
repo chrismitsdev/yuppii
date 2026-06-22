@@ -1,29 +1,20 @@
 'use client'
 
-import {
-  Close,
-  Content,
-  Description,
-  Overlay,
-  Portal,
-  Root,
-  Title,
-  Trigger
-} from '@radix-ui/react-dialog'
 import {XIcon} from 'lucide-react'
+import {Dialog as RadixDialog} from 'radix-ui'
 import {cn} from '@/src/lib/utils'
 import {IconButton} from './icon-button'
 
-const Dialog = Root
-const DialogTrigger = Trigger
-const DialogPortal = Portal
+const Dialog = RadixDialog.Root
+const DialogTrigger = RadixDialog.Trigger
+const DialogPortal = RadixDialog.Portal
 
 function DialogOverlay({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Overlay>) {
+}: React.ComponentPropsWithRef<typeof RadixDialog.Overlay>) {
   return (
-    <Overlay
+    <RadixDialog.Overlay
       className={cn(
         'fixed inset-0 z-50 bg-accent/50 backdrop-blur-[1px] data-open:animate-overlay-open data-closed:animate-overlay-close',
         className
@@ -36,9 +27,9 @@ function DialogOverlay({
 function DialogContent({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Content>) {
+}: React.ComponentPropsWithRef<typeof RadixDialog.Content>) {
   return (
-    <Content
+    <RadixDialog.Content
       className={cn(
         'w-full max-w-[calc(100%-24px)] fixed inset-s-1/2 inset-bs-1/2 -translate-1/2 z-50 origin-center bg-secondary rounded shadow-md data-open:animate-dialog-open data-closed:animate-dialog-close sm:max-w-5xl',
         className
@@ -63,9 +54,9 @@ function DialogHeader({
 function DialogTitle({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Title>) {
+}: React.ComponentPropsWithRef<typeof RadixDialog.Title>) {
   return (
-    <Title
+    <RadixDialog.Title
       className={cn('text-xl font-display font-bold', className)}
       {...props}
     />
@@ -75,9 +66,9 @@ function DialogTitle({
 function DialogDescription({
   className,
   ...props
-}: React.ComponentPropsWithRef<typeof Description>) {
+}: React.ComponentPropsWithRef<typeof RadixDialog.Description>) {
   return (
-    <Description
+    <RadixDialog.Description
       className={cn('text-accent', className)}
       {...props}
     />
@@ -109,9 +100,9 @@ function DialogClose({
   className,
   'aria-label': ariaLabel,
   ...props
-}: Omit<React.ComponentPropsWithRef<typeof Close>, 'asChild'>) {
+}: Omit<React.ComponentPropsWithRef<typeof RadixDialog.Close>, 'asChild'>) {
   return (
-    <Close
+    <RadixDialog.Close
       className={cn('absolute inset-bs-4 inset-e-4 z-50', className)}
       {...props}
       asChild
@@ -122,7 +113,7 @@ function DialogClose({
       >
         <XIcon />
       </IconButton>
-    </Close>
+    </RadixDialog.Close>
   )
 }
 

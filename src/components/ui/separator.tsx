@@ -1,9 +1,10 @@
 'use client'
 
-import {Root} from '@radix-ui/react-separator'
+import {Separator as RadixSeparator} from 'radix-ui'
 import {cn} from '@/src/lib/utils'
 
-interface SeparatorProps extends React.ComponentPropsWithRef<typeof Root> {
+interface SeparatorProps
+  extends React.ComponentPropsWithRef<typeof RadixSeparator.Root> {
   variant?: 'primary' | 'secondary' | 'accent'
 }
 
@@ -15,7 +16,7 @@ function Separator({
   ...props
 }: SeparatorProps) {
   return (
-    <Root
+    <RadixSeparator.Root
       className={cn(
         'shrink-0',
         variant === 'primary' && 'bg-primary',
