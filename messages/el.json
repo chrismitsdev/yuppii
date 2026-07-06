@@ -809,70 +809,77 @@
           "price": "7.5",
           "disabled": false
         },
-        "Mojito": {
-          "name": "Μοχίτο",
-          "variants": null,
-          "price": "7",
-          "disabled": false
-        },
-        "FlavoredMojito": {
-          "name": "Μοχίτο με γεύση",
-          "variants": ["Φράουλα", "Φρούτα του πάθους"],
-          "price": "7.5",
-          "disabled": false
-        },
         "AperolSpritz": {
           "name": "Άπερολ σπρίντζ",
-          "variants": null,
+          "variants": ["Άπερολ", "Προσέκο", "Σόδα"],
           "price": "7.5",
           "disabled": false
         },
         "Negroni": {
           "name": "Νεγκρόνι",
-          "variants": null,
+          "variants": ["Τζιν", "Καμπάρι", "Κόκκινο βερμούτ"],
           "price": "7.5",
           "disabled": false
         },
         "Paloma": {
           "name": "Παλόμα",
-          "variants": null,
+          "variants": ["Τεκίλα", "Σόδα γκρέϊπφρουτ", "Χυμός λάϊμ", "Αλάτι"],
           "price": "7.5",
           "disabled": false
         },
         "Margarita": {
           "name": "Μαργαρίτα",
-          "variants": null,
+          "variants": ["Τεκίλα", "Λικέρ πορτοκάλι", "Χυμός λάϊμ", "Αλάτι"],
           "price": "7.5",
           "disabled": false
         },
         "AppleMartini": {
           "name": "Άπλ Μαρτίνι",
-          "variants": null,
+          "variants": ["Βότκα", "Σνάπς πράσινου μήλου", "Χυμός λεμόνι"],
           "price": "7.5",
           "disabled": false
         },
         "Daiquiri": {
           "name": "Ντάκιρι",
-          "variants": ["Φράουλα", "Μάνγκο", "Φρούτα του πάθους"],
+          "variants": ["Λευκό ρούμι", "Χυμός λάϊμ", "Σιρόπι ζάχαρης"],
           "price": "7.5",
           "disabled": false
         },
         "Caipirinha": {
           "name": "Καϊπιρίνια",
-          "variants": ["Original", "Ursus"],
+          "variants": ["Κασάσα", "Χυμός λάϊμ", "Σιρόπι ζάχαρης"],
           "price": "7.5",
           "disabled": false
         },
         "Caipiroska": {
           "name": "Καϊπιρόσκα",
-          "variants": null,
+          "variants": ["Βότκα", "Χυμός λάϊμ", "Σιρόπι ζάχαρης"],
           "price": "7.5",
           "disabled": false
         },
-        "Caipassoa": {
-          "name": "Καϊπασόα",
-          "variants": null,
+        "FlavoredMojito": {
+          "name": "Μοχίτο με γεύση",
+          "variants": [
+            "Φράουλα ή φρούτα του πάθους",
+            "Λευκό ρούμι",
+            "Χυμός λάϊμ",
+            "Σόδα",
+            "Σιρόπι ζάχαρης",
+            "Φύλλα δυόσμου"
+          ],
           "price": "7.5",
+          "disabled": false
+        },
+        "Mojito": {
+          "name": "Μοχίτο",
+          "variants": [
+            "Λευκό ρούμι",
+            "Χυμός λάϊμ",
+            "Σόδα",
+            "Σιρόπι ζάχαρης",
+            "Φύλλα δυόσμου"
+          ],
+          "price": "7",
           "disabled": false
         }
       },

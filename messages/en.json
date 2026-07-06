@@ -809,70 +809,77 @@
           "price": "7.5",
           "disabled": false
         },
-        "Mojito": {
-          "name": "Mojito",
-          "variants": null,
-          "price": "7",
-          "disabled": false
-        },
-        "FlavoredMojito": {
-          "name": "Flavored Mojito",
-          "variants": ["Strawberry", "Passion fruit"],
-          "price": "7.5",
-          "disabled": false
-        },
         "AperolSpritz": {
           "name": "Aperol Spritz",
-          "variants": null,
+          "variants": ["Aperol", "Prosecco", "Soda"],
           "price": "7.5",
           "disabled": false
         },
         "Negroni": {
           "name": "Negroni",
-          "variants": null,
+          "variants": ["Gin", "Campari", "Red vermouth"],
           "price": "7.5",
           "disabled": false
         },
         "Paloma": {
           "name": "Paloma",
-          "variants": null,
+          "variants": ["Tequilla", "Grapefruit soda", "Lime juice", "Salt"],
           "price": "7.5",
           "disabled": false
         },
         "Margarita": {
           "name": "Margarita",
-          "variants": null,
+          "variants": ["Tequilla", "Orange liqueur", "Lime juice", "Salt"],
           "price": "7.5",
           "disabled": false
         },
         "AppleMartini": {
           "name": "Apple Martini",
-          "variants": null,
+          "variants": ["Vodka", "Green apple schnapps", "Lemon juice"],
           "price": "7.5",
           "disabled": false
         },
         "Daiquiri": {
           "name": "Daiquiri",
-          "variants": ["Strawberry", "Mango", "Passion fruit"],
+          "variants": ["White rum", "Lime juice", "Simple syrup"],
           "price": "7.5",
           "disabled": false
         },
         "Caipirinha": {
           "name": "Caipirinha",
-          "variants": ["Original", "Ursus"],
+          "variants": ["Cachaça", "Lime juice", "Simple syrup"],
           "price": "7.5",
           "disabled": false
         },
         "Caipiroska": {
           "name": "Caipiroska",
-          "variants": null,
+          "variants": ["Vodka", "Lime juice", "Simple syrup"],
           "price": "7.5",
           "disabled": false
         },
-        "Caipassoa": {
-          "name": "Caipassoa",
-          "variants": null,
+        "FlavoredMojito": {
+          "name": "Flavored Mojito",
+          "variants": [
+            "Strawberry or passion fruit",
+            "White rum",
+            "Lime juice",
+            "Soda",
+            "Simple syrup",
+            "Mint leaves"
+          ],
           "price": "7.5",
+          "disabled": false
+        },
+        "Mojito": {
+          "name": "Mojito",
+          "variants": [
+            "White rum",
+            "Lime juice",
+            "Soda",
+            "Simple syrup",
+            "Mint leaves"
+          ],
+          "price": "7",
           "disabled": false
         }
       },
