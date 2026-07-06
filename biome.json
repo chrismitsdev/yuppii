@@ -30,8 +30,6 @@
       }
     },
     "domains": {
-      "project": "recommended",
-      "types": "recommended",
       "next": "recommended",
       "react": "recommended"
     }
