@@ -17,7 +17,7 @@ function Link({
   return (
     <NextIntlLink
       className={cn(
-        'focus-visible:outline-2 focus-visible:outline-offset-2',
+        'block focus-visible:outline-2 focus-visible:outline-offset-2',
         className
       )}
       {...props}

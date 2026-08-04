@@ -126,3 +126,5 @@ export const bannedKeywordPatterns = [
   /\bdiet\b/i,
   /\bsupplements\b/i
 ]
+
+export const PHONE = '+306973433980'

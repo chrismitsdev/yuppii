@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {useLocale, useTranslations} from 'next-intl'
+import {useTranslations} from 'next-intl'
 import logo from '@/public/yuppii-logo.png'
 import {Container} from '@/src/components/container'
 import {
@@ -10,21 +10,23 @@ import {
 import {Separator} from '@/src/components/ui/separator'
 import {Typography} from '@/src/components/ui/typography'
 import {Link} from '@/src/i18n/navigation'
-import {cn} from '@/src/lib/utils'
+import {cn, PHONE} from '@/src/lib/utils'
 
 function Footer() {
   const t = useTranslations('Components.Footer.columns')
-  const locale = useLocale()
 
   return (
     <footer className='py-20 bg-secondary border-t-4 border-t-secondary'>
-      <FooterColumn className='space-y-10 sm:space-y-10'>
+      <Link
+        className='inline-fit mx-auto'
+        href='/'
+      >
         <Image
           className='mx-auto w-auto h-36'
           src={logo}
-          alt='Yuppii luna park logo'
+          alt='Yuppii Luna Park'
         />
-      </FooterColumn>
+      </Link>
 
       <Separator className='my-14' />
 
@@ -43,45 +45,53 @@ function Footer() {
             className='sm:justify-self-center'
             title={t('information.title')}
           >
-            <Typography variant='small'>{t('information.tel')}</Typography>
-            <Typography variant='small'>{t('information.location')}</Typography>
+            <FooterLink href={`tel:${PHONE}`}>
+              <Typography variant='small'>{t('information.tel')}</Typography>
+            </FooterLink>
+            <FooterLink
+              href='https://maps.google.com/?q=Yuppii+Luna+Park+Alexandroupoli'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Typography variant='small'>{t('information.map')}</Typography>
+            </FooterLink>
           </FooterColumn>
           <FooterColumn
             className='sm:justify-self-center'
             title={t('links.title')}
           >
-            <Link href='/privacy'>
+            <FooterLink href='/privacy'>
               <Typography variant='small'>{t('links.privacy')}</Typography>
-            </Link>
-            <Link href='/cookies'>
+            </FooterLink>
+            <FooterLink href='/cookies'>
               <Typography variant='small'>{t('links.cookies')}</Typography>
-            </Link>
+            </FooterLink>
           </FooterColumn>
           <FooterColumn
             className='sm:justify-self-end'
             title={t('brands.title')}
           >
-            <Link
-              href={`https://www.thechristmaslighthouse.gr/${locale}`}
+            <FooterLink
+              href='https://www.thechristmaslighthouse.gr'
               target='_blank'
               rel='noopener noreferrer'
             >
               <Typography variant='small'>The Christmas Lighthouse</Typography>
-            </Link>
-            <Link
-              href={`https://moccaliving.com/${locale}`}
+            </FooterLink>
+            <FooterLink
+              href='https://www.moccaliving.com'
               target='_blank'
               rel='noopener noreferrer'
             >
               <Typography variant='small'>Mocca Living</Typography>
-            </Link>
-            <Link
-              href='https://startpilates.gr'
+            </FooterLink>
+            <FooterLink
+              href='https://www.startpilates.gr'
               target='_blank'
               rel='noopener noreferrer'
             >
               <Typography variant='small'>Start Pilates</Typography>
-            </Link>
+            </FooterLink>
           </FooterColumn>
         </section>
       </Container>
@@ -94,7 +104,7 @@ function Footer() {
       >
         <section className='flex flex-col items-center gap-6 sm:flex-row sm:justify-between'>
           <Typography variant='tiny'>
-            Copyright &copy; {new Date().getFullYear()} Yuppii Luna Park
+            © {new Date().getFullYear()} Yuppii Luna Park
           </Typography>
           <div className='space-x-6 not-sm:order-first'>
             <FacebookIconButton />
@@ -114,25 +124,29 @@ function FooterColumn({
   children
 }: React.PropsWithChildren & {title?: string; className?: string}) {
   return (
-    <div
-      className={cn(
-        'space-y-2 text-center sm:text-left sm:space-y-4',
-        className
-      )}
-    >
-      {title ? (
-        <>
-          <Typography variant='lead'>{title}</Typography>
-          <div>{children}</div>
-        </>
-      ) : (
-        children
-      )}
+    <div className={cn('space-y-4 text-center sm:text-left', className)}>
+      {title && <Typography variant='lead'>{title}</Typography>}
+      <div className='flex flex-col items-center gap-y-2 sm:items-start'>
+        {children}
+      </div>
     </div>
+  )
+}
+
+function FooterLink({
+  className,
+  ...props
+}: React.ComponentPropsWithRef<typeof Link>) {
+  return (
+    <Link
+      className={cn('hover:underline', className)}
+      {...props}
+    />
   )
 }
 
 Footer.displayName = 'Footer'
 FooterColumn.displayName = 'FooterColumn'
+FooterLink.displayName = 'FooterLink'
 
 export {Footer}
