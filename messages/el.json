@@ -1,14 +1,12 @@
 {
   "Metadata": {
-    "Pages": {
-      "Home": "Αρχική",
-      "Park": "Πάρκο",
-      "Games": "Παιχνίδια",
-      "Contact": "Επικοινωνία",
-      "Privacy": "Απόρρητο",
-      "Cookies": "Cookies",
-      "Menu": "Μενού"
-    }
+    "Home": "Αρχική",
+    "Park": "Πάρκο",
+    "Games": "Παιχνίδια",
+    "Contact": "Επικοινωνία",
+    "Privacy": "Απόρρητο",
+    "Cookies": "Cookies",
+    "Menu": "Μενού"
   },
   "Pages": {
     "Home": {
@@ -284,7 +282,7 @@
         },
         "information": {
           "title": "ΠΛΗΡΟΦΟΡΙΕΣ",
-          "tel": "Καλέστε μας",
+          "tel": "Καλέστε μας στο {phone}",
           "map": "Βρείτε μας στον χάρτη"
         },
         "links": {

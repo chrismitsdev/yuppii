@@ -1,14 +1,12 @@
 {
   "Metadata": {
-    "Pages": {
-      "Home": "Home",
-      "Park": "Park",
-      "Games": "Games",
-      "Contact": "Contact",
-      "Privacy": "Privacy",
-      "Cookies": "Cookies",
-      "Menu": "Menu"
-    }
+    "Home": "Home",
+    "Park": "Park",
+    "Games": "Games",
+    "Contact": "Contact",
+    "Privacy": "Privacy",
+    "Cookies": "Cookies",
+    "Menu": "Menu"
   },
   "Pages": {
     "Home": {
@@ -284,7 +282,7 @@
         },
         "information": {
           "title": "INFORMATION",
-          "tel": "Call us",
+          "tel": "Call us at {phone}",
           "map": "Find us on the map"
         },
         "links": {

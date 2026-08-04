@@ -46,7 +46,9 @@ function Footer() {
             title={t('information.title')}
           >
             <FooterLink href={`tel:${PHONE}`}>
-              <Typography variant='small'>{t('information.tel')}</Typography>
+              <Typography variant='small'>
+                {t('information.tel', {phone: PHONE})}
+              </Typography>
             </FooterLink>
             <FooterLink
               href='https://maps.google.com/?q=Yuppii+Luna+Park+Alexandroupoli'
