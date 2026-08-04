@@ -44,7 +44,7 @@ const links = [
   {key: 'Contact', href: '/contact', icon: MailIcon},
   {key: 'Menu', href: '/menu', icon: ClipboardListIcon}
 ] satisfies {
-  key: keyof Messages['Metadata']['Pages']
+  key: keyof Messages['Metadata']
   href: string
   icon: LucideIcon
 }[]
@@ -80,7 +80,7 @@ function DesktopNavigation() {
           </IconButton>
         </TooltipTrigger>
         <TooltipPortal>
-          <TooltipContent>{t(`Metadata.Pages.${key}`)}</TooltipContent>
+          <TooltipContent>{t(`Metadata.${key}`)}</TooltipContent>
         </TooltipPortal>
       </Tooltip>
     )
@@ -106,7 +106,7 @@ function DesktopNavigation() {
 function MobileNavigation() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
-  const t = useTranslations('Metadata.Pages')
+  const t = useTranslations('Metadata')
 
   const renderedLinks = links.map(({key, href, icon: Icon}) => {
     const isActive =

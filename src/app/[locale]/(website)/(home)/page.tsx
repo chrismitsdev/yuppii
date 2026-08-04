@@ -1,25 +1,20 @@
 import type {Metadata} from 'next'
-import {getTranslations, setRequestLocale} from 'next-intl/server'
-import {use} from 'react'
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/src/components/container'
 import {DecorativeDivider} from '@/src/components/ui/decorative-divider'
 import {HomeCards} from './(components)/home-cards'
 import {HomeCarousel} from './(components)/home-carousel'
 import {HomeGallery} from './(components)/home-gallery'
 
-export async function generateMetadata({params}: Params): Promise<Metadata> {
-  const {locale} = await params
-  const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('Metadata')
 
   return {
     title: t('Home')
   }
 }
 
-export default function IndexPage({params}: PageProps<'/[locale]'>) {
-  const {locale} = use(params as Params['params'])
-  setRequestLocale(locale)
-
+export default function IndexPage() {
   return (
     <>
       <HomeCarousel />

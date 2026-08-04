@@ -1,12 +1,14 @@
 {
   "Metadata": {
-    "Home": "Αρχική",
-    "Park": "Πάρκο",
-    "Games": "Παιχνίδια",
-    "Contact": "Επικοινωνία",
-    "Privacy": "Απόρρητο",
-    "Cookies": "Cookies",
-    "Menu": "Μενού"
+    "Pages": {
+      "Home": "Αρχική",
+      "Park": "Πάρκο",
+      "Games": "Παιχνίδια",
+      "Contact": "Επικοινωνία",
+      "Privacy": "Απόρρητο",
+      "Cookies": "Cookies",
+      "Menu": "Μενού"
+    }
   },
   "Pages": {
     "Home": {

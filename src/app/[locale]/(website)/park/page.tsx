@@ -1,25 +1,20 @@
 import type {Metadata} from 'next'
-import {getTranslations, setRequestLocale} from 'next-intl/server'
-import {use} from 'react'
+import {getTranslations} from 'next-intl/server'
 import {Container} from '@/src/components/container'
 import {DecorativeDivider} from '@/src/components/ui/decorative-divider'
 import {ParkInfo} from './(components)/park-info'
 import {ParkMap} from './(components)/park-map'
 import {ParkReasons} from './(components)/park-reasons'
 
-export async function generateMetadata({params}: Params): Promise<Metadata> {
-  const {locale} = await params
-  const t = await getTranslations({locale, namespace: 'Metadata.Pages'})
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('Metadata')
 
   return {
     title: t('Park')
   }
 }
 
-export default function ParkPage({params}: PageProps<'/[locale]/park'>) {
-  const {locale} = use(params as Params['params'])
-  setRequestLocale(locale)
-
+export default function ParkPage() {
   return (
     <Container>
       <ParkInfo />

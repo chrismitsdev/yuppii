@@ -7,5 +7,4 @@ export default createMiddleware(routing)
 export const config: MiddlewareConfig = {
   // Match only internationalized pathnames
   matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)'
-  // matcher: ['/', '/(el|en)/:path*']
 }

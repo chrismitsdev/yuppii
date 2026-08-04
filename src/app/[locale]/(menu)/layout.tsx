@@ -1,15 +1,8 @@
-import {setRequestLocale} from 'next-intl/server'
-import {Suspense, use} from 'react'
+import {Suspense} from 'react'
 import {MenuNavigation} from '@/src/components/menu-navigation'
 import {WebsiteHeader} from '@/src/components/website-header'
 
-export default function MenuLayout({
-  params,
-  children
-}: LayoutProps<'/[locale]'>) {
-  const {locale} = use(params as Params['params'])
-  setRequestLocale(locale)
-
+export default function MenuLayout({children}: LayoutProps<'/[locale]'>) {
   return (
     <div className='min-h-screen grid grid-rows-[auto_auto_1fr]'>
       <WebsiteHeader />

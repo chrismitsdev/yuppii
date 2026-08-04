@@ -1,12 +1,14 @@
 {
   "Metadata": {
-    "Home": "Home",
-    "Park": "Park",
-    "Games": "Games",
-    "Contact": "Contact",
-    "Privacy": "Privacy",
-    "Cookies": "Cookies",
-    "Menu": "Menu"
+    "Pages": {
+      "Home": "Home",
+      "Park": "Park",
+      "Games": "Games",
+      "Contact": "Contact",
+      "Privacy": "Privacy",
+      "Cookies": "Cookies",
+      "Menu": "Menu"
+    }
   },
   "Pages": {
     "Home": {

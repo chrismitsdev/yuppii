@@ -1,6 +1,6 @@
 import type {Metadata} from 'next'
-import {type Locale, type Messages, useMessages} from 'next-intl'
-import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server'
+import {type Messages, useMessages} from 'next-intl'
+import {getMessages, getTranslations} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
 import {CategoryNotFound} from './(components)/category-not-found'
@@ -8,7 +8,6 @@ import {CategoryProducts} from './(components)/category-products'
 
 type ParamsWithCategory = {
   params: Promise<{
-    locale: Locale
     category: Category
   }>
 }
@@ -16,9 +15,9 @@ type ParamsWithCategory = {
 export async function generateMetadata({
   params
 }: ParamsWithCategory): Promise<Metadata> {
-  const {locale, category} = await params
-  const t = await getTranslations({locale})
-  const messages = await getMessages({locale})
+  const {category} = await params
+  const t = await getTranslations()
+  const messages = await getMessages()
 
   if (!Object.hasOwn(messages.Menu, category)) {
     return {
@@ -34,8 +33,7 @@ export async function generateMetadata({
 export default function CategoryPage({
   params
 }: PageProps<'/[locale]/menu/[category]'>) {
-  const {locale, category} = use(params as ParamsWithCategory['params'])
-  setRequestLocale(locale)
+  const {category} = use(params as ParamsWithCategory['params'])
 
   const messages = useMessages()
 
