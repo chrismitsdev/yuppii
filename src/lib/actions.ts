@@ -18,7 +18,9 @@ import {
   trim
 } from 'valibot'
 import {sendContactForm} from '@/src/lib/send-contact-form'
-import {bannedKeywordPatterns} from '@/src/lib/utils'
+import {bannedPatterns} from '@/src/lib/utils'
+
+const allowedProviders = ['@gmail.com', '@icloud.com', '@yahoo.com']
 
 setSpecificMessage(string, 'Πρέπει να είναι γράμματα & αριθμοί', 'el')
 setSpecificMessage(string, 'Must contain only letters & numbers', 'en')
@@ -49,10 +51,7 @@ const ContactFormSchema = object({
     trim(),
     email(getValibotMessage('Μη έγκυρη μορφή email', 'Invalid email format')),
     check(
-      (input) =>
-        ['@gmail.com', '@icloud.com', '@yahoo.com'].some((provider) =>
-          input.endsWith(provider)
-        ),
+      (input) => allowedProviders.some((provider) => input.endsWith(provider)),
       getValibotMessage(
         'Αποδεκτοί πάροχοι email: gmail, icloud, yahoo',
         'Accepted email providers: gmail, icloud, yahoo'
@@ -76,7 +75,7 @@ const ContactFormSchema = object({
     nonEmpty(),
     trim(),
     check(
-      (input) => !bannedKeywordPatterns.some((pattern) => pattern.test(input)),
+      (input) => !bannedPatterns.some((pattern) => pattern.test(input)),
       getValibotMessage(
         'Βρέθηκε ανεπιθύμητο μήνυμα. Δοκιμάστε να αναδιατυπώσετε.',
         'Spam-like message detected. Try rephrasing.'
@@ -87,7 +86,6 @@ const ContactFormSchema = object({
 
 type ContactFormData = InferOutput<typeof ContactFormSchema>
 type ContactFormErrors = Partial<Record<keyof ContactFormData, string>>
-
 type ContactFormResponse =
   | {ok: null}
   | {ok: true}
@@ -104,8 +102,9 @@ export async function contactFormAction(
   formData: FormData
 ): Promise<ContactFormActionState> {
   const data = Object.fromEntries(formData) as ContactFormData
-  const result = safeParse(ContactFormSchema, data, {lang: locale})
 
+  // Valibot
+  const result = safeParse(ContactFormSchema, data, {lang: locale})
   if (!result.success) {
     const issues = flatten<typeof ContactFormSchema>(result.issues)
 
@@ -122,6 +121,7 @@ export async function contactFormAction(
     }
   }
 
+  // Resend
   const error = await sendContactForm(result.output)
   if (error) {
     return {

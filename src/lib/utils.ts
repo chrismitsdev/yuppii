@@ -40,7 +40,7 @@ export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
   snacks: Popcorn
 }
 
-export const bannedKeywordPatterns = [
+export const bannedPatterns = [
   // Traffic‑boosting offers
   /\btraffic\b/i,
   /\bvisitors\b/i,
