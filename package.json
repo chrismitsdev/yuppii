@@ -47,5 +47,5 @@
     "valibot": "^1.4.2",
     "vaul": "^1.1.2"
   },
-  "packageManager": "pnpm@11.22.0"
+  "packageManager": "pnpm@11.24.0"
 }
