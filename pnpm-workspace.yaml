@@ -3,5 +3,3 @@ allowBuilds:
   "@swc/core": true
   esbuild: true
 minimumReleaseAge: 4320
-minimumReleaseAgeExclude:
-  - resend@6.25.0
