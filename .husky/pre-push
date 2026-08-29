@@ -1,5 +1,4 @@
-#!/bin/bash
-
+echo ""
 echo "🚀 Checking before pushing..."
 
 echo ""
