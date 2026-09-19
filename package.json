@@ -36,7 +36,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-email": "^6.9.5",
-    "react-hot-toast": "^2.6.0",
+    "react-hot-toast": "^2.6.1",
     "react-leaflet": "^5.0.0",
     "resend": "^6.28.1",
     "rimraf": "^6.1.3",
