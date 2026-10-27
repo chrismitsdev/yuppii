@@ -4,7 +4,6 @@ Repo of the Yuppii Luna Park website.
 You can take a look at the website [here](https://yuppii.gr).
 
 **Core project tools:**
-
 - [Next.js](https://nextjs.org/) as the meta-framework of choice
 - [Tailwind CSS](https://tailwindcss.com/) for all styling purposes
 - [next-intl](https://next-intl-docs.vercel.app/) as the internationalization solution

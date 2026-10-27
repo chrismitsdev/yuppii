@@ -2,7 +2,14 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+    "includes": [
+      "**",
+      "!node_modules",
+      "!.next",
+      "!dist",
+      "!build",
+      "!**/pnpm-lock.yaml"
+    ]
   },
   "vcs": {
     "enabled": true,
@@ -30,8 +37,11 @@
       }
     },
     "domains": {
+      "react": "recommended",
+      "types": "recommended",
+      "project": "recommended",
       "next": "recommended",
-      "react": "recommended"
+      "tailwind": "recommended"
     }
   },
   "assist": {
