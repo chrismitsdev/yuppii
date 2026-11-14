@@ -15,7 +15,7 @@
   "devDependencies": {
     "@adamscybot/react-leaflet-component-marker": "^2.0.3",
     "@biomejs/biome": "^2.6.6",
-    "@react-email/ui": "^6.11.6",
+    "@react-email/ui": "^6.11.11",
     "@tailwindcss/postcss": "^4.3.4",
     "@types/leaflet": "^1.9.22",
     "@types/node": "^26.6.6",
@@ -35,7 +35,7 @@
     "radix-ui": "^1.8.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "react-email": "^6.11.6",
+    "react-email": "^6.11.11",
     "react-hot-toast": "^2.6.1",
     "react-leaflet": "^5.0.0",
     "resend": "^6.37.0",
