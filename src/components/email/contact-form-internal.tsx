@@ -41,10 +41,10 @@ function ContactFormInternal({
           <Container className='max-w-xl'>
             <Section className='px-4 pt-8 pb-6'>
               <Row className='mb-8'>
-                <Link href='https://yuppii.gr/gr'>
+                <Link href='https://www.yuppii.gr/el'>
                   <Img
                     className='w-full'
-                    src='https://4y4jwmfhzutn57mw.myfritz.net:47971/nas/filelink.lua?id=04bcdecd70a484c5'
+                    src='https://www.yuppii.gr/email-logo.png'
                     alt='Yuppii luna park logo'
                   />
                 </Link>

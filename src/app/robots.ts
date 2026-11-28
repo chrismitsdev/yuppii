@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/'
     },
-    sitemap: 'https://yuppii.gr/sitemap.xml'
+    sitemap: 'https://www.yuppii.gr/sitemap.xml'
   }
 }
