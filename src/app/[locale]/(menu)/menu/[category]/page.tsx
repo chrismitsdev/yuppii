@@ -3,6 +3,7 @@ import type {Metadata} from 'next'
 import {getLocale, getTranslations} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
+import {localeAlternates} from '@/src/lib/seo'
 import {CategoryNotFound} from './(components)/category-not-found'
 import {CategoryProducts} from './(components)/category-products'
 
@@ -12,16 +13,20 @@ export async function generateMetadata({
   const {category: categoryId} = await params
   const category = getCategory('yuppii', categoryId)
 
+  const locale = await getLocale()
+  const alternates = localeAlternates(locale, `/menu/${categoryId}`)
+
   if (!category) {
     const t = await getTranslations('Components.CategoryNotFound')
     return {
-      title: t('title')
+      title: t('title'),
+      alternates
     }
   }
 
-  const locale = await getLocale()
   return {
-    title: category.name[locale]
+    title: category.name[locale],
+    alternates
   }
 }
 
