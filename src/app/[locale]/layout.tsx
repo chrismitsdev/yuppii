@@ -3,10 +3,11 @@ import {Analytics} from '@vercel/analytics/next'
 import type {Metadata} from 'next'
 import {Playfair_Display, Vollkorn} from 'next/font/google'
 import {NextIntlClientProvider} from 'next-intl'
-import {getLocale} from 'next-intl/server'
+import {getLocale, getTranslations} from 'next-intl/server'
 import {Toaster} from 'react-hot-toast'
 import {Footer} from '@/src/components/footer'
 import {routing} from '@/src/i18n/routing'
+import {siteUrl} from '@/src/lib/seo'
 
 const mainFont = Vollkorn({
   subsets: ['latin', 'latin-ext', 'greek', 'cyrillic'],
@@ -22,27 +23,23 @@ const displayFont = Playfair_Display({
   variable: '--font-display'
 })
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.yuppii.gr'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'el-GR': '/el',
-      'en-US': '/en'
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('Metadata')
+  return {
+    metadataBase: new URL(siteUrl),
+    title: {
+      template: '%s • Yuppii Luna Park',
+      default: 'Yuppii Luna Park'
+    },
+    description: t('Description'),
+    openGraph: {
+      title: 'Yuppii Luna Park',
+      description: t('Description')
+    },
+    formatDetection: {
+      email: true,
+      telephone: true
     }
-  },
-  title: {
-    template: '%s • Yuppii Luna Park',
-    default: 'Yuppii Luna Park'
-  },
-  description: 'Yuppii Luna Park amusement park official website',
-  openGraph: {
-    title: 'Yuppii Luna Park',
-    description: 'Yuppii Luna Park amusement park official website'
-  },
-  formatDetection: {
-    email: true,
-    telephone: true
   }
 }
 

@@ -1,13 +1,16 @@
 import type {Metadata} from 'next'
-import {getTranslations} from 'next-intl/server'
+import {getLocale, getTranslations} from 'next-intl/server'
 import {Container} from '@/src/components/container'
+import {localeAlternates} from '@/src/lib/seo'
 import {CookiesInfo} from './(components)/cookies-info'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('Metadata')
+  const locale = await getLocale()
 
   return {
-    title: t('Cookies')
+    title: t('Cookies'),
+    alternates: localeAlternates(locale, '/cookies')
   }
 }
 
