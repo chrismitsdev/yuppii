@@ -1,6 +1,7 @@
 import {type ClassValue, clsx} from 'clsx'
 import {
   Beer,
+  ClipboardList,
   Coffee,
   CupSoda,
   GlassWater,
@@ -14,7 +15,6 @@ import {
   Utensils,
   Zap
 } from 'lucide-react'
-import type {Messages} from 'next-intl'
 import {twMerge} from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
@@ -25,7 +25,7 @@ export async function sleep(sleepTime: number = 1000) {
   await new Promise((resolve) => setTimeout(resolve, sleepTime))
 }
 
-export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
+const categoryIcons: Record<string, LucideIcon> = {
   coffees: Coffee,
   beverages: CupSoda,
   refreshments: Milk,
@@ -38,6 +38,11 @@ export const categoryIcons: Record<keyof Messages['Menu'], LucideIcon> = {
   burgers: HamburgerIcon,
   salads: SaladIcon,
   snacks: Popcorn
+}
+
+/** The icon for a menu category, or a generic one for new categories. */
+export function getCategoryIcon(categoryId: string): LucideIcon {
+  return categoryIcons[categoryId] ?? ClipboardList
 }
 
 export const bannedPatterns = [

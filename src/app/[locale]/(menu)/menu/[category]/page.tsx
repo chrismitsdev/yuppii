@@ -1,55 +1,47 @@
+import {getCategory, getMenu} from '@chrismitsdev/menu-data'
 import type {Metadata} from 'next'
-import {type Messages, useMessages} from 'next-intl'
-import {getMessages, getTranslations} from 'next-intl/server'
+import {getLocale, getTranslations} from 'next-intl/server'
 import {use} from 'react'
 import {Container} from '@/src/components/container'
 import {CategoryNotFound} from './(components)/category-not-found'
 import {CategoryProducts} from './(components)/category-products'
 
-type ParamsWithCategory = {
-  params: Promise<{
-    category: Category
-  }>
-}
-
 export async function generateMetadata({
   params
-}: ParamsWithCategory): Promise<Metadata> {
-  const {category} = await params
-  const t = await getTranslations()
-  const messages = await getMessages()
+}: PageProps<'/[locale]/menu/[category]'>): Promise<Metadata> {
+  const {category: categoryId} = await params
+  const category = getCategory('yuppii', categoryId)
 
-  if (!Object.hasOwn(messages.Menu, category)) {
+  if (!category) {
+    const t = await getTranslations('Components.CategoryNotFound')
     return {
-      title: t('Components.CategoryNotFound.title')
+      title: t('title')
     }
   }
 
+  const locale = await getLocale()
   return {
-    title: t(`Menu.${category}.name`)
+    title: category.name[locale]
   }
 }
 
 export default function CategoryPage({
   params
 }: PageProps<'/[locale]/menu/[category]'>) {
-  const {category} = use(params as ParamsWithCategory['params'])
+  const {category: categoryId} = use(params)
+  const category = getCategory('yuppii', categoryId)
 
-  const messages = useMessages()
-
-  if (!Object.hasOwn(messages.Menu, category)) {
+  if (!category) {
     return <CategoryNotFound />
   }
 
   return (
     <Container>
-      <CategoryProducts categoryKey={category} />
+      <CategoryProducts category={category} />
     </Container>
   )
 }
 
-export async function generateStaticParams() {
-  const messages = await getMessages({locale: 'en'})
-  const categories = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
-  return categories.map((category) => ({category}))
+export function generateStaticParams() {
+  return getMenu('yuppii').map((category) => ({category: category.id}))
 }

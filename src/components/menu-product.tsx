@@ -4,8 +4,8 @@ import {Typography} from '@/src/components/ui/typography'
 
 interface MenuProductProps {
   name: string
-  variants: string[] | null
-  price: string
+  variants?: string[]
+  price: number
 }
 
 function MenuProduct({name, variants, price}: MenuProductProps) {
@@ -20,7 +20,7 @@ function MenuProduct({name, variants, price}: MenuProductProps) {
       <Typography>{name}</Typography>
       <span className='border-b border-dotted' />
       <Typography>
-        {format.number(Number.parseFloat(price), {
+        {format.number(price, {
           style: 'currency',
           currency: 'EUR'
         })}
