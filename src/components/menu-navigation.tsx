@@ -1,6 +1,6 @@
 'use client'
 
-import {type Messages, useLocale, useMessages, useTranslations} from 'next-intl'
+import {useLocale} from 'next-intl'
 import {
   Scrollarea,
   ScrollareaBar,
@@ -9,23 +9,23 @@ import {
 import {Link, usePathname} from '@/src/i18n/navigation'
 import {cn} from '@/src/lib/utils'
 
-function MenuNavigation() {
-  const t = useTranslations('Menu')
+type MenuNavigationProps = {
+  /** Menu categories with their names in the current locale. */
+  categories: {id: string; name: string}[]
+}
+
+function MenuNavigation({categories}: MenuNavigationProps) {
   const locale = useLocale()
-  const messages = useMessages()
   const pathname = usePathname()
-  const categories = Object.keys(messages.Menu) as (keyof Messages['Menu'])[]
 
   const renderedLinks = categories.map((category) => {
-    const path = category.toLowerCase()
-
     return (
       <MenuNavigationLink
-        key={category}
-        href={`/menu/${path}`}
-        isActive={pathname.includes(path)}
+        key={category.id}
+        href={`/menu/${category.id}`}
+        isActive={pathname.includes(category.id)}
       >
-        {t(`${category}.name`)}
+        {category.name}
       </MenuNavigationLink>
     )
   })

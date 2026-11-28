@@ -47,5 +47,8 @@
     "valibot": "^1.5.0",
     "vaul": "^1.1.2"
   },
-  "packageManager": "pnpm@11.22.0"
+  "packageManager": "pnpm@11.22.0",
+  "dependencies": {
+    "@chrismitsdev/menu-data": "github:chrismitsdev/menu-data#v1.0.0"
+  }
 }

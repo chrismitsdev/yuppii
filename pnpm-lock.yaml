@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@chrismitsdev/menu-data':
+        specifier: github:chrismitsdev/menu-data#v1.0.0
+        version: https://codeload.github.com/chrismitsdev/menu-data/tar.gz/4886615a0667ccd15b375e65f5d513a1bd8d6554
     devDependencies:
       '@adamscybot/react-leaflet-component-marker':
         specifier: ^2.0.3
@@ -233,6 +237,10 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
+
+  '@chrismitsdev/menu-data@https://codeload.github.com/chrismitsdev/menu-data/tar.gz/4886615a0667ccd15b375e65f5d513a1bd8d6554':
+    resolution: {gitHosted: true, integrity: sha512-zSyNKjj51VpaBxjvXN1EGibA0xJGetQuNAKO6qFa7LUP4eL1+BjT6VcdzsUKwhKJuU7wvq3drzQD0rflYRYMgg==, tarball: https://codeload.github.com/chrismitsdev/menu-data/tar.gz/4886615a0667ccd15b375e65f5d513a1bd8d6554}
+    version: 1.0.0
 
   '@eloqnt/config@0.1.2':
     resolution: {integrity: sha512-0pdjiCFur3M1fxuoPIoLS/ElTNerOdmkjToiLi399ITOLE/HRvHxJ5OjuOPQqPIZcbYXr2+WAWu3dnXMjt/WZg==}
@@ -2871,6 +2879,8 @@ snapshots:
 
   '@biomejs/cli-win32-x64@2.6.9':
     optional: true
+
+  '@chrismitsdev/menu-data@https://codeload.github.com/chrismitsdev/menu-data/tar.gz/4886615a0667ccd15b375e65f5d513a1bd8d6554': {}
 
   '@eloqnt/config@0.1.2': {}
 

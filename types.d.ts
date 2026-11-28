@@ -19,7 +19,6 @@ declare global {
       locale: Locale
     }>
   }
-  type Category = Lowercase<keyof Messages['Menu']>
   type CustomIconProps = React.SVGProps<SVGSVGElement> & {
     size?: number | string
   }
